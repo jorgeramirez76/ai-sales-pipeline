@@ -1,0 +1,8 @@
+# robots.txt for aisalespipeline.com
+# Allows all search engine crawlers full access
+
+User-agent: *
+Allow: /
+
+# Point to sitemap
+Sitemap: https://www.aisalespipeline.com/sitemap.xml
