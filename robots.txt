@@ -1,8 +1,32 @@
 # robots.txt for aisalespipeline.com
-# Allows all search engine crawlers full access
+# Allows all search engine crawlers and AI crawlers full access
 
 User-agent: *
 Allow: /
 
+# AI Crawler Permissions
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
 # Point to sitemap
 Sitemap: https://www.aisalespipeline.com/sitemap.xml
+
+# All crawlers have full access - AI Sales Pipeline welcomes indexing and crawling
