@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Lead Scoring AI | AI Sales Pipeline</title>
+    <meta name="description" content="Real estate lead scoring AI analyzes 50+ behavioral signals. Cold/Warm/Hot classification. Auto-routes to workflows. 40% reduction in wasted follow-up. 2.3x close rate on hot leads.">
+    <meta name="canonical" href="https://aisalespipeline.com/features/lead-scoring-real-estate.html">
+    <meta name="ai-content-declaration" content="This page contains AI-generated content created by AI Sales Pipeline">
+    <meta name="llm-context" content="Premium feature page for AI lead scoring in real estate. Focuses on behavioral analysis, lead classification, and workflow automation.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Real Estate Lead Scoring AI | AI Sales Pipeline">
+    <meta property="og:description" content="50+ behavioral signals analyzed. Cold/Warm/Hot classification. Auto-routes to correct workflow. 2.3x higher close rate on hot leads.">
+    <meta property="og:image" content="https://aisalespipeline.com/og-image-scoring.png">
+    <meta property="og:url" content="https://aisalespipeline.com/features/lead-scoring-real-estate.html">
+    <meta property="og:type" content="article">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Real Estate Lead Scoring AI | AI Sales Pipeline">
+    <meta name="twitter:description" content="40% reduction in wasted follow-up. 2.3x higher close rate on hot leads. Smart AI qualification.">
+    <meta name="twitter:image" content="https://aisalespipeline.com/og-image-scoring.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AI Lead Scoring for Real Estate",
+      "applicationCategory": "BusinessApplication",
+      "offers": {"@type": "Offer", "price": "Contact for pricing", "priceCurrency": "USD"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aisalespipeline.com"},
+        {"@type": "ListItem", "position": 2, "name": "Features", "item": "https://aisalespipeline.com/#features"},
+        {"@type": "ListItem", "position": 3, "name": "Real Estate Lead Scoring AI", "item": "https://aisalespipeline.com/features/lead-scoring-real-estate.html"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is real estate lead scoring AI?", "acceptedAnswer": {"@type": "Answer", "text": "AI analyzes 50+ behavioral signals (response time, page visits, email opens, clicks, property interests, conversation keywords) to classify leads as Cold, Warm, or Hot. Automatically routes leads to the right workflow and prioritizes hot leads for immediate follow-up."}},
+        {"@type": "Question", "name": "What signals does AI analyze?", "acceptedAnswer": {"@type": "Answer", "text": "AI analyzes: response time (seconds), email opens/clicks, page visit frequency, property interest level, property type preferences, message sentiment, urgency indicators, motivation keywords, timeline signals, budget clues, and 40+ more. Every interaction is a signal."}},
+        {"@type": "Question", "name": "How does lead routing work?", "acceptedAnswer": {"@type": "Answer", "text": "Once classified, leads are auto-routed to the correct workflow: Hot leads → immediate call + video. Warm leads → SMS sequences. Cold leads → gentle nurture sequences. Zero manual routing. Leads flow to the right agent at the right time."}},
+        {"@type": "Question", "name": "What is the close rate improvement on hot leads?", "acceptedAnswer": {"@type": "Answer", "text": "Hot leads (AI-qualified) close at 2.3x higher rate than untargeted leads. Why? Because you're focusing effort on leads that matter. Less time on cold leads. More time on qualified leads."}},
+        {"@type": "Question", "name": "How much wasted follow-up is eliminated?", "acceptedAnswer": {"@type": "Answer", "text": "40% reduction in wasted follow-up. AI knows which leads are cold. You stop chasing them. Focus effort on warm/hot leads instead. Same number of leads. Better conversion rate. Less exhaustion."}}
+      ]
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        /* Sticky Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1rem 2rem;
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ff6b35;
+            text-decoration: none;
+        }
+        
+        nav .links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        nav .links a {
+            color: #888;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        nav .links a:hover {
+            color: #ff6b35;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        
+        .breadcrumb a {
+            color: #ff6b35;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        
+        .hero-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: #888;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #ff6b35;
+            color: #0a0a0a;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+        }
+        
+        .cta-button:hover {
+            background-color: #ff8c5a;
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        /* Sections */
+        .section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        .section-intro {
+            font-size: 1.1rem;
+            color: #888;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        /* What Is Section */
+        .what-is-box {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* How It Works */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .step {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .step:hover {
+            background-color: rgba(255, 107, 53, 0.1);
+            border-color: rgba(255, 107, 53, 0.3);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #ff6b35;
+            color: #0a0a0a;
+            border-radius: 50%;
+            line-height: 50px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .step h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+        
+        .step p {
+            color: #888;
+            font-size: 0.95rem;
+        }
+        
+        /* Benefits Grid */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            background-color: rgba(255, 107, 53, 0.1);
+            border-color: rgba(255, 107, 53, 0.3);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+            transform: translateY(-4px);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+        
+        .benefit-card p {
+            color: #888;
+            font-size: 0.95rem;
+        }
+        
+        /* Scenario Box */
+        .scenario-box {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-left: 4px solid #ff6b35;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #888;
+            line-height: 1.8;
+        }
+        
+        /* Differentiators */
+        .differentiators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .differentiator {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .differentiator:hover {
+            border-color: rgba(255, 107, 53, 0.5);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.15);
+        }
+        
+        .differentiator h3 {
+            color: #ff6b35;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .differentiator p {
+            color: #888;
+            font-size: 0.95rem;
+        }
+        
+        /* Stats Row */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ff6b35;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #888;
+            font-size: 0.95rem;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            background-color: rgba(255, 107, 53, 0.1);
+            border-color: rgba(255, 107, 53, 0.3);
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: #888;
+            margin-top: 1rem;
+            display: none;
+            line-height: 1.8;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background-color: rgba(255, 107, 53, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 4rem 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            color: #888;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            text-align: center;
+            color: #888;
+            margin-top: 4rem;
+        }
+        
+        footer a {
+            color: #ff6b35;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero .subtitle { font-size: 1.1rem; }
+            .section h2 { font-size: 1.5rem; }
+            nav .links { gap: 1rem; }
+            .steps, .benefits, .differentiators { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="https://aisalespipeline.com" class="logo">📊 AI Sales Pipeline</a>
+            <ul class="links">
+                <li><a href="https://aisalespipeline.com/#features">Features</a></li>
+                <li><a href="https://aisalespipeline.com/#pricing">Pricing</a></li>
+                <li><a href="https://aisalespipeline.com/#contact" class="cta-button">Book Demo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="https://aisalespipeline.com">Home</a> > <a href="https://aisalespipeline.com/#features">Features</a> > Real Estate Lead Scoring AI
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-icon">📊</div>
+        <h1>Real Estate Lead Scoring AI</h1>
+        <p class="subtitle">50+ behavioral signals analyzed. Cold/Warm/Hot classification. Auto-routes to correct workflow. 2.3x higher close rate on hot leads.</p>
+        <a href="https://aisalespipeline.com/#contact" class="cta-button">Book a Demo</a>
+    </section>
+
+    <!-- What Is Lead Scoring -->
+    <section class="section">
+        <h2>What Is Real Estate Lead Scoring AI?</h2>
+        <div class="what-is-box">
+            <p class="section-intro">
+                <strong>Real estate lead scoring AI</strong> analyzes every interaction a lead makes—response time, email opens, clicks, property page visits, message sentiment, urgency keywords—and assigns a behavior-based score. Leads are classified as Cold, Warm, or Hot. Hot leads are automatically routed to immediate follow-up (voice calls, personalized video). Warm leads go to SMS sequences. Cold leads go to gentle nurture. Instead of treating all leads equally, you focus effort where it matters. 40% reduction in wasted follow-up. 2.3x higher close rate on qualified hot leads. This is the difference between spray-and-pray and precision targeting.
+            </p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section">
+        <h2>How AI Lead Scoring Works</h2>
+        <p class="section-intro">Every interaction is a signal. AI reads them all in real-time.</p>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Analyze Signals</h3>
+                <p>AI monitors: response time (how fast did they reply?), email open rate, click behavior, page visit frequency, property interest patterns, message sentiment, urgency keywords, timeline indicators. 50+ data points per lead.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Assign Score</h3>
+                <p>AI weighs signals and assigns a lead score (0-100). Hot leads (75+): immediate follow-up. Warm leads (50-74): scheduled sequences. Cold leads (below 50): automated nurture. Scoring updates in real-time as lead engages.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Auto-Route</h3>
+                <p>Lead score determines workflow automatically. No manual triage. Hot leads flow to voice calls. Warm leads to SMS. Cold leads to email nurture. Perfect lead reaches perfect workflow at perfect time.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Priority Queue</h3>
+                <p>Your CRM shows hot leads at the top. You make calls to the most qualified leads first. Zero wasted effort on cold leads. Maximum conversion from warm/hot leads.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="section">
+        <h2>Key Benefits of Lead Scoring AI</h2>
+        <p class="section-intro">Why lead scoring changes your follow-up strategy forever.</p>
+        <div class="benefits">
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <h3>40% Less Wasted Effort</h3>
+                <p>AI identifies cold leads immediately. You stop chasing them. Focus energy on warm/hot leads instead. Same lead volume. Better conversion rate. Less burnout.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📈</div>
+                <h3>2.3x Higher Close Rate</h3>
+                <p>Hot leads (AI-qualified) close at 2.3x higher rate than untargeted leads. Why? Because you're following up on actual intent, not guessing.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">⏱️</div>
+                <h3>Perfect Timing</h3>
+                <p>AI knows when a lead is hot. You call within minutes of maximum interest. Not days later. Cold lead warming up? AI accelerates follow-up. Timing advantage is everything.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🤖</div>
+                <h3>Fully Automated</h3>
+                <p>Zero manual lead qualification. AI routes leads to correct workflows. You focus on conversion, not triage. Leads flow to the right workflow instantly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real World Scenario -->
+    <section class="section">
+        <h2>Real World Scenario</h2>
+        <div class="scenario-box">
+            <p>
+                <strong>You receive 47 leads from Zillow today.</strong> Typical scenario? You scan them all, start calling, waste 2 hours on leads that have "no real interest." By the time you reach actual hot leads, they've already talked to 3 other agents.<br><br>
+                
+                <strong>With AI Lead Scoring:</strong><br><br>
+                
+                Leads arrive in your system. AI scores them instantly.<br><br>
+                
+                Lead 1: "Just browsing, no timeline." Score: 22 (Cold). Routed to email nurture sequence. You never see it.<br><br>
+                
+                Lead 2: Opens email 3 times. Clicks showing link. Visits 5 property pages. Says "very interested, timeline is 30 days." Score: 87 (Hot). AI flags it. You call within 30 minutes. Hot lead at maximum interest.<br><br>
+                
+                Lead 3: Opens email once. Doesn't click. Score: 43 (Cold). Routed to SMS gentle reminder for later. Not worth your time right now.<br><br>
+                
+                Lead 4: Clicks, visits 2 properties, asks 3 questions. Score: 68 (Warm). Routed to SMS sequence over next week. Might warm into hot.<br><br>
+                
+                <strong>You now have a priority queue:</strong> Call the 8 hot leads first (all scored 75+). They're actually interested. Real conversations. Real closures. THEN circle back to warm leads. Cold leads auto-nurture in the background.<br><br>
+                
+                <strong>Result: 2.3x higher close rate. 40% less wasted time. Same number of leads. Infinitely better outcomes.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- What Makes Ours Different -->
+    <section class="section">
+        <h2>What Makes Our Lead Scoring Different</h2>
+        <p class="section-intro">Most scoring models are static. Ours is dynamic and behavioral.</p>
+        <div class="differentiators">
+            <div class="differentiator">
+                <h3>1. Behavioral, Not Demographic</h3>
+                <p>We don't care if a lead is "25-34" or "married." We care: did they open your email? How fast? Did they click? Did they visit multiple properties? Urgency keywords? Real behavior > demographic assumptions.</p>
+            </div>
+            <div class="differentiator">
+                <h3>2. Real-Time Scoring</h3>
+                <p>Scores update as leads interact. Lead goes from Cold to Hot when they click. Hot lead goes to Warm when they stop engaging. Scores are dynamic, not static. Your routing is always current.</p>
+            </div>
+            <div class="differentiator">
+                <h3>3. 50+ Signal Analysis</h3>
+                <p>We don't just track opens. We analyze: response time, click patterns, property type interest, message sentiment, timeline keywords, urgency indicators, competitor awareness, and 40+ more factors. Holistic behavioral picture.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section">
+        <h2>Lead Scoring Performance Metrics</h2>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">40%</div>
+                <div class="stat-label">Reduction in Wasted Follow-Up</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">2.3x</div>
+                <div class="stat-label">Higher Close Rate on Hot Leads</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Behavioral Signals Analyzed</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What is real estate lead scoring AI?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                AI analyzes 50+ behavioral signals (response time, page visits, email opens, clicks, property interests, conversation keywords) to classify leads as Cold, Warm, or Hot. Automatically routes leads to the right workflow and prioritizes hot leads for immediate follow-up.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What signals does AI analyze?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                AI analyzes: response time (seconds), email opens/clicks, page visit frequency, property interest level, property type preferences, message sentiment, urgency indicators, motivation keywords, timeline signals, budget clues, and 40+ more. Every interaction is a signal.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How does lead routing work?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                Once classified, leads are auto-routed to the correct workflow: Hot leads → immediate call + video. Warm leads → SMS sequences. Cold leads → gentle nurture sequences. Zero manual routing. Leads flow to the right agent at the right time.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What is the close rate improvement on hot leads?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                Hot leads (AI-qualified) close at 2.3x higher rate than untargeted leads. Why? Because you're focusing effort on leads that matter. Less time on cold leads. More time on qualified leads.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How much wasted follow-up is eliminated?</span>
+                <span class="faq-toggle">▼</span>
+            </div>
+            <div class="faq-answer">
+                40% reduction in wasted follow-up. AI knows which leads are cold. You stop chasing them. Focus effort on warm/hot leads instead. Same number of leads. Better conversion rate. Less exhaustion.
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <h2>Ready to Get Started?</h2>
+        <p>Join hundreds of real estate agents using AI Sales Pipeline to prioritize their best leads and close more deals.</p>
+        <a href="https://aisalespipeline.com/#contact" class="cta-button">Book a Demo Today</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AI Sales Pipeline. All rights reserved. | <a href="https://aisalespipeline.com">Home</a> | <a href="https://aisalespipeline.com/#pricing">Pricing</a> | <a href="https://aisalespipeline.com/#contact">Contact</a></p>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

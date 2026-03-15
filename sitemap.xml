@@ -60,6 +60,70 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- FEATURE DETAIL PAGES -->
+  <url>
+    <loc>https://www.aisalespipeline.com/features/ai-sms-real-estate.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aisalespipeline.com/features/ai-email-real-estate.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aisalespipeline.com/features/ai-voice-calls-real-estate.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aisalespipeline.com/features/ai-clone-video-real-estate.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aisalespipeline.com/features/lead-scoring-real-estate.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aisalespipeline.com/features/facebook-retargeting-real-estate.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aisalespipeline.com/features/seller-workflows-real-estate.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aisalespipeline.com/features/buyer-workflows-real-estate.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aisalespipeline.com/features/custom-ai-brain-real-estate.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
   <!-- BLOG POSTS -->
   <url>
     <loc>https://www.aisalespipeline.com/blog/never-miss-real-estate-lead</loc>
