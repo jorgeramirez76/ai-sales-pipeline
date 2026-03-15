@@ -1190,7 +1190,7 @@
     <section class="infographic-section">
         <h2 class="infographic-title">See the Full System at a Glance</h2>
         <div class="infographic-container">
-            <img src="images/Business_Infographic.png" alt="AI Sales Pipeline System Overview">
+            <img src="images/infographic-new.png" alt="AI Sales Pipeline System Overview">
         </div>
     </section>
 
@@ -1412,6 +1412,18 @@
     </section>
 
     <!-- FOOTER -->
+    
+        <!-- INFOGRAPHIC SECTION -->
+        <section class="infographic-section" id="system">
+            <div class="section-inner">
+                <h2 class="section-title">See the Full System at a Glance</h2>
+                <p class="section-subtitle">From first touch to closed deal — fully automated, fully personalized.</p>
+                <div class="infographic-wrapper">
+                    <img src="images/infographic-new.png" alt="AI Sales Pipeline System" class="infographic-img" id="infographic-img">
+                </div>
+            </div>
+        </section>
+    
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -1639,6 +1651,21 @@
         window.addEventListener('load', () => {
             document.body.style.opacity = '1';
         });
+    
+        // Infographic unfold animation
+        const infographicImg = document.getElementById('infographic-img');
+        if (infographicImg) {
+            const infObs = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => entry.target.classList.add('visible'), 200);
+                        infObs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            infObs.observe(infographicImg);
+        }
+    
     </script>
 </body>
 </html>
