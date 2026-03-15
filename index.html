@@ -3,1081 +3,1257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Sales Pipeline | Real Estate AI Automation & CRM</title>
+    <title>AI Sales Pipeline - Never Lose a Lead Again</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #fff;
+            color: #1a1a1a;
+            background-color: #ffffff;
         }
-        
-        header {
-            background: linear-gradient(135deg, #0052cc 0%, #003d99 100%);
-            color: white;
-            padding: 20px 40px;
-            text-align: center;
-            border-bottom: 3px solid #ff6b35;
+
+        /* NAVIGATION */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 82, 204, 0.08);
+            padding: 0 20px;
         }
-        
-        header h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 16px;
-            opacity: 0.95;
-        }
-        
-        section {
-            padding: 60px 40px;
+
+        nav .container {
             max-width: 1200px;
             margin: 0 auto;
-        }
-        
-        section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: #0052cc;
-            text-align: center;
-        }
-        
-        section h3 {
-            font-size: 20px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            color: #003d99;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #0052cc 0%, #003d99 100%);
-            color: white;
-            padding: 80px 40px;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0.95;
-        }
-        
-        .problem-statement {
-            background: #fff3cd;
-            border-left: 5px solid #ff6b35;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        
-        .problem-statement strong {
-            color: #d32f2f;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: #ff6b35;
-            color: white;
-            padding: 15px 40px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 10px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .cta-button:hover {
-            background: #e55a20;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
-        }
-        
-        .cta-button.secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-        
-        .cta-button.secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: #ff6b35;
-            color: #ff6b35;
-        }
-        
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-            text-align: center;
-        }
-        
-        .stat-box {
-            background: #f5f5f5;
-            padding: 20px;
-            border-radius: 6px;
-            border-top: 4px solid #0052cc;
-        }
-        
-        .stat-number {
-            font-size: 36px;
-            font-weight: bold;
-            color: #ff6b35;
-            margin-bottom: 10px;
-        }
-        
-        .stat-label {
-            font-size: 14px;
-            color: #666;
-        }
-        
-        .before-after {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 30px 0;
-            align-items: center;
-        }
-        
-        .before-after-box {
-            background: #f5f5f5;
-            padding: 30px;
-            border-radius: 8px;
-            border: 2px solid #ddd;
-        }
-        
-        .before-after-box.after {
-            background: #e8f5e9;
-            border-color: #4caf50;
-        }
-        
-        .before-after-box h4 {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #0052cc;
-        }
-        
-        .before-after-box ul {
-            list-style: none;
-        }
-        
-        .before-after-box li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .before-after-box li:before {
-            content: "✗";
-            position: absolute;
-            left: 0;
-            color: #d32f2f;
-            font-weight: bold;
-        }
-        
-        .after li:before {
-            content: "✓";
-            color: #4caf50;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
-        }
-        
-        .feature-card {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 25px;
-            transition: all 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            box-shadow: 0 8px 24px rgba(0, 82, 204, 0.15);
-            border-color: #0052cc;
-            transform: translateY(-4px);
-        }
-        
-        .feature-card h4 {
-            color: #0052cc;
-            margin-bottom: 12px;
-            font-size: 16px;
-        }
-        
-        .feature-card p {
-            color: #666;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-        
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .testimonial {
-            background: #f5f5f5;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #ff6b35;
-        }
-        
-        .testimonial-text {
-            color: #333;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-        
-        .testimonial-author {
-            font-weight: bold;
-            color: #0052cc;
-            font-size: 14px;
-        }
-        
-        .testimonial-role {
-            color: #666;
-            font-size: 12px;
-        }
-        
-        .testimonial-result {
-            background: #e8f5e9;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 4px;
-            color: #2e7d32;
-            font-weight: bold;
-            font-size: 13px;
-        }
-        
-        .objection-section {
-            background: #f5f5f5;
-            padding: 40px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-        
-        .objection-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        
-        .objection-card {
-            background: white;
-            padding: 20px;
-            border-radius: 6px;
-            border: 1px solid #ddd;
-        }
-        
-        .objection-card h5 {
-            color: #d32f2f;
-            margin-bottom: 10px;
-        }
-        
-        .objection-card p {
-            font-size: 13px;
-            color: #666;
-        }
-        
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        .comparison-table th {
-            background: #0052cc;
-            color: white;
-            padding: 15px;
-            text-align: left;
-            font-weight: bold;
-        }
-        
-        .comparison-table td {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .comparison-table tr:hover {
-            background: #f5f5f5;
-        }
-        
-        .comparison-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .check {
-            color: #4caf50;
-            font-weight: bold;
-        }
-        
-        .cross {
-            color: #d32f2f;
-        }
-        
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .pricing-card {
-            background: white;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .pricing-card.featured {
-            border-color: #ff6b35;
-            box-shadow: 0 8px 24px rgba(255, 107, 53, 0.2);
-            transform: scale(1.05);
-        }
-        
-        .price-amount {
-            font-size: 36px;
-            font-weight: bold;
-            color: #0052cc;
-            margin: 15px 0;
-        }
-        
-        .price-period {
-            color: #666;
-            font-size: 14px;
-        }
-        
-        .price-features {
-            text-align: left;
-            list-style: none;
-            margin: 20px 0;
-        }
-        
-        .price-features li {
-            padding: 8px 0;
-            font-size: 14px;
-            color: #666;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .price-features li:last-child {
-            border-bottom: none;
-        }
-        
-        .price-features li:before {
-            content: "✓ ";
-            color: #4caf50;
-            font-weight: bold;
-            margin-right: 8px;
-        }
-        
-        .faq {
-            margin: 30px 0;
-        }
-        
-        .faq-item {
-            background: #f5f5f5;
-            margin-bottom: 15px;
-            border-radius: 6px;
-            overflow: hidden;
-        }
-        
-        .faq-question {
-            background: #0052cc;
-            color: white;
-            padding: 15px;
-            cursor: pointer;
-            font-weight: bold;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 15px 0;
+            gap: 40px;
         }
-        
-        .faq-answer {
-            padding: 15px;
+
+        nav .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #0052cc;
+            text-decoration: none;
+        }
+
+        nav .logo img {
+            height: 35px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            flex: 1;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #0052cc;
+        }
+
+        .nav-cta {
+            background: #ff6b35;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-cta:hover {
+            background: #ff5520;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #0052cc 0%, #003d99 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero .subheadline {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.4;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #ff6b35;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #ff5520;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
             background: white;
-            display: none;
+            color: #0052cc;
+            transform: translateY(-2px);
+        }
+
+        /* STATS BAR */
+        .stats-bar {
+            background: #f5f5f5;
+            padding: 40px 20px;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .stats-bar .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0052cc;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* PROBLEM SECTION */
+        .problem {
+            padding: 80px 20px;
+            background: #ffffff;
+        }
+
+        .problem .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+            text-align: center;
+        }
+
+        .problem-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .problem-content strong {
+            color: #ff6b35;
+            font-weight: 600;
+        }
+
+        .problem-stats {
+            background: #f5f5f5;
+            padding: 30px;
+            border-left: 4px solid #ff6b35;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+
+        .problem-stats p {
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* HOW IT WORKS */
+        .how-it-works {
+            padding: 80px 20px;
+            background: #f9f9f9;
+        }
+
+        .how-it-works .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .step {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 82, 204, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 82, 204, 0.15);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0052cc 0%, #003d99 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .step-icon {
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        .step h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .step p {
+            font-size: 15px;
             color: #666;
             line-height: 1.6;
         }
-        
-        .faq-item.open .faq-answer {
-            display: block;
+
+        /* FEATURES */
+        .features {
+            padding: 80px 20px;
+            background: #ffffff;
         }
-        
-        footer {
-            background: #003d99;
+
+        .features .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            padding: 35px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: #0052cc;
+            box-shadow: 0 8px 20px rgba(0, 82, 204, 0.12);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .feature-card h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* SOCIAL PROOF */
+        .social-proof {
+            padding: 80px 20px;
+            background: #f9f9f9;
+        }
+
+        .social-proof .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .testimonial-stars {
+            color: #ff6b35;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 25px;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 15px;
+        }
+
+        .testimonial-role {
+            font-size: 13px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .testimonial-metric {
+            color: #0052cc;
+            font-weight: 600;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* PRICING */
+        .pricing {
+            padding: 80px 20px;
+            background: #ffffff;
+        }
+
+        .pricing .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .pricing-card {
+            background: #f9f9f9;
+            padding: 50px 30px;
+            border-radius: 12px;
+            border: 2px solid #e0e0e0;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card.popular {
+            background: linear-gradient(135deg, #0052cc 0%, #003d99 100%);
             color: white;
-            padding: 30px 40px;
+            border-color: #0052cc;
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 82, 204, 0.25);
+        }
+
+        .pricing-card.popular .price {
+            color: white;
+        }
+
+        .pricing-card.popular .features li {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .pricing-card.popular .btn-primary {
+            margin-top: auto;
+        }
+
+        .popular-badge {
+            background: #ff6b35;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .pricing-card.popular h3 {
+            color: white;
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: 700;
+            color: #0052cc;
+            margin-bottom: 10px;
+        }
+
+        .price-period {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .pricing-card.popular .price-period {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 40px;
+            flex: 1;
+        }
+
+        .pricing-card .features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+            color: #666;
+            text-align: left;
+        }
+
+        .pricing-card.popular .features li {
+            border-bottom-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .pricing-card .features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-card .features li:before {
+            content: "✓ ";
+            color: #ff6b35;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+
+        .pricing-card.popular .features li:before {
+            color: #ffccb3;
+        }
+
+        .pricing-button {
+            margin-top: 30px;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 20px;
+            background: #f9f9f9;
+        }
+
+        .faq .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 60px;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question {
+            padding: 25px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 16px;
+            user-select: none;
+        }
+
+        .faq-item:hover .faq-question {
+            background: #f9f9f9;
+        }
+
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #0052cc;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            padding: 0 25px 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 25px 25px 25px;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #0052cc 0%, #003d99 100%);
+            color: white;
+            padding: 80px 20px;
             text-align: center;
         }
-        
-        .column-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            margin: 30px 0;
+
+        .final-cta .container {
+            max-width: 900px;
+            margin: 0 auto;
         }
-        
+
+        .final-cta h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #333;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #ff6b35;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #ff6b35;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo img {
+            height: 30px;
+            width: auto;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* MOBILE RESPONSIVE */
         @media (max-width: 768px) {
-            .column-2 {
-                grid-template-columns: 1fr;
+            nav ul {
+                gap: 20px;
+                font-size: 13px;
             }
-            
-            .before-after {
-                grid-template-columns: 1fr;
+
+            nav .container {
+                gap: 20px;
+                padding: 12px 0;
             }
-            
+
             .hero h1 {
-                font-size: 32px;
+                font-size: 36px;
             }
-            
-            .pricing-card.featured {
+
+            .hero .subheadline {
+                font-size: 18px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .section-heading {
+                font-size: 36px;
+            }
+
+            .steps-grid,
+            .features-grid,
+            .pricing-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.popular {
                 transform: scale(1);
             }
-            
-            section h2 {
+
+            .final-cta h2 {
+                font-size: 32px;
+            }
+
+            .stats-bar .container {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            nav .container {
+                justify-content: space-between;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav .logo {
+                font-size: 16px;
+            }
+
+            .nav-cta {
+                padding: 8px 16px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 60px 15px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+
+            .hero .subheadline {
+                font-size: 16px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+
+            .section-heading {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+
+            .hero-buttons {
+                gap: 12px;
+            }
+
+            .step,
+            .feature-card,
+            .testimonial,
+            .faq-item {
+                padding: 25px 20px;
+            }
+
+            .final-cta h2 {
                 font-size: 24px;
+                margin-bottom: 15px;
+            }
+
+            .final-cta p {
+                font-size: 16px;
+            }
+
+            .price {
+                font-size: 36px;
             }
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>🚀 AI Sales Pipeline</h1>
-    <p>Real Estate AI Automation & CRM</p>
-</header>
-
-<!-- HERO SECTION: PROBLEM-BASED -->
-<section class="hero">
-    <h1>Your Leads Go Cold While You're in Paperwork.</h1>
-    <p>78% of leads go with the first agent who responds. You respond in hours. AI responds in 60 seconds.</p>
-    
-    <div class="problem-statement">
-        <strong>The Reality:</strong> Without AI automation, you lose deals to faster competitors, waste 16+ hours per week on admin, and can't scale without hiring expensive ISAs.
-    </div>
-    
-    <a href="#book-demo" class="cta-button">Get Your Free Consultation</a>
-    <a href="#features" class="cta-button secondary">See How It Works ↓</a>
-</section>
-
-<!-- THE PROBLEM: BEFORE/AFTER -->
-<section>
-    <h2>Without AI: Your Current Sales Process</h2>
-    
-    <div class="before-after">
-        <div class="before-after-box">
-            <h4>❌ Manual Follow-Up (Current Reality)</h4>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="images/logo.png" alt="AI Sales Pipeline Logo">
+                AI Sales Pipeline
+            </a>
             <ul>
-                <li>Lead comes in → You're busy → 2+ hour delay responding</li>
-                <li>Multiple tools open (email, SMS, phone, calendar)</li>
-                <li>Manual check-ins every day or leads slip through</li>
-                <li>Weekend/night leads get no response (gone by Monday)</li>
-                <li>Admin work takes 16+ hours/week (lost opportunities)</li>
-                <li>Paying $50K/year for ISA who takes time off</li>
-                <li>Can't scale to more lead sources without more staff</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#book-demo">Book Demo</a></li>
             </ul>
+            <a href="#book-demo" class="nav-cta">Book Demo</a>
         </div>
-        
-        <div class="before-after-box after">
-            <h4>✓ AI Sales Pipeline (With Our System)</h4>
-            <ul>
-                <li>Lead comes in → AI responds in 60 seconds, 24/7</li>
-                <li>One unified inbox (SMS, email, calls, social DMs)</li>
-                <li>Automated follow-up sequences (never forgotten leads)</li>
-                <li>AI books qualified appointments while you sleep</li>
-                <li>Admin work reduced to 3-5 hours/week (focus on closings)</li>
-                <li>Pay $497/mo for 24/7 ISA (no turnover, no vacations)</li>
-                <li>Scale unlimited lead sources (Zillow, Facebook, Google, etc.)</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="stats">
-        <div class="stat-box">
-            <div class="stat-number">391%</div>
-            <div class="stat-label">More likely to convert if contacted in 60 seconds (Harvard Business Review)</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-number">92%</div>
-            <div class="stat-label">of our leads sign contracts faster than traditional follow-up</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-number">$50K</div>
-            <div class="stat-label">Annual salary for one ISA. Our AI: $497/month.</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-number">24/7</div>
-            <div class="stat-label">Automated follow-up (no days off, no turnover)</div>
-        </div>
-    </div>
-</section>
+    </nav>
 
-<!-- AGENTS VS TEAMS VS BROKERS -->
-<section>
-    <h2>Built for Every Real Estate Professional</h2>
-    <p style="text-align: center; color: #666; margin-bottom: 30px;">Different agents have different needs. Here's how AI Sales Pipeline scales with you.</p>
-    
-    <div class="features-grid">
-        <div class="feature-card">
-            <h4>🏠 Solo High-Producer</h4>
-            <p><strong>Your Problem:</strong> Growing without hiring. Can't handle more leads because follow-up kills your time.</p>
-            <p style="margin-top: 15px;"><strong>AI Sales Pipeline Solution:</strong> Replace your $50K ISA for $497/mo. Respond to 3x more leads, close more deals, work less.</p>
-            <p style="margin-top: 15px; color: #4caf50; font-weight: bold;">→ Start with Basic plan ($497/mo)</p>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Never Lose a Lead Again</h1>
+            <p class="subheadline">Most real estate agents lose 70-80% of their business not because they're bad at their job — but because they're human. AI Sales Pipeline fixes that. Permanently.</p>
+            <div class="hero-buttons">
+                <a href="#book-demo" class="btn-primary">Book Demo</a>
+                <a href="#how-it-works" class="btn-secondary">See How It Works</a>
+            </div>
         </div>
-        
-        <div class="feature-card">
-            <h4>👥 Team Leaders & Brokers</h4>
-            <p><strong>Your Problem:</strong> Managing agent follow-up quality. Inconsistent responses hurt your reputation.</p>
-            <p style="margin-top: 15px;"><strong>AI Sales Pipeline Solution:</strong> Every agent on your team gets 24/7 AI backup. Unified inbox. Automated brand-consistent sequences.</p>
-            <p style="margin-top: 15px; color: #4caf50; font-weight: bold;">→ Scale with Pro/Elite ($695-$995/mo)</p>
-        </div>
-        
-        <div class="feature-card">
-            <h4>🎯 FSBO & Expired Specialist</h4>
-            <p><strong>Your Problem:</strong> Prospecting at scale requires hiring more staff and expensive tools.</p>
-            <p style="margin-top: 15px;"><strong>AI Sales Pipeline Solution:</strong> Power dialer, voicemail drops, AI follow-up sequences all run on autopilot. Close 3+ expired listings/month.</p>
-            <p style="margin-top: 15px; color: #4caf50; font-weight: bold;">→ Elite plan with FSBO automation</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- FEATURES: ORGANIZED BY OUTCOME (NOT TOOLS) -->
-<section id="features">
-    <h2>Everything You Need to Win More Deals</h2>
-    
-    <h3>🎯 Get Leads Faster</h3>
-    <div class="features-grid">
-        <div class="feature-card">
-            <h4>Respond in 60 Seconds</h4>
-            <p>AI voice calling and SMS respond to leads before they dial your competitor. Day or night.</p>
+    <!-- STATS BAR -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stat-item">
+                <div class="stat-number">92%</div>
+                <div class="stat-label">Contract Signature Rate</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">&lt;60s</div>
+                <div class="stat-label">AI Response Time</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Automated Pipeline</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">300%</div>
+                <div class="stat-label">Conversion Lift</div>
+            </div>
         </div>
-        <div class="feature-card">
-            <h4>Capture from Every Source</h4>
-            <p>Zillow, Realtor.com, Facebook, Google Ads, IDX, your website. All leads in one inbox.</p>
-        </div>
-        <div class="feature-card">
-            <h4>Intelligent Lead Scoring</h4>
-            <p>AI analyzes 50+ data points. Tells you which leads to call first (highest conversion probability).</p>
-        </div>
-    </div>
-    
-    <h3>✅ Never Miss Follow-Up (Automated Sequences)</h3>
-    <div class="features-grid">
-        <div class="feature-card">
-            <h4>NEPQ-Based Automation</h4>
-            <p>Pre-loaded psychology-based sequences. AI handles objections, qualifies leads, books appointments.</p>
-        </div>
-        <div class="feature-card">
-            <h4>Missed Call Text-Back</h4>
-            <p>Lead calls and hangs up? AI texts them back in seconds. Recaptures leads before they call someone else.</p>
-        </div>
-        <div class="feature-card">
-            <h4>AI Appointment Booking</h4>
-            <p>Qualify leads and schedule appointments automatically. Syncs with Google/Outlook calendar.</p>
-        </div>
-    </div>
-    
-    <h3>📞 Multi-Channel Communication</h3>
-    <div class="features-grid">
-        <div class="feature-card">
-            <h4>2-Way SMS & Email</h4>
-            <p>Have real conversations via text. AI responds intelligently. Humans take over when needed.</p>
-        </div>
-        <div class="feature-card">
-            <h4>AI Voice Calling</h4>
-            <p>AI places calls, leaves personalized voicemails, records & transcribes every conversation.</p>
-        </div>
-        <div class="feature-card">
-            <h4>Unified Inbox</h4>
-            <p>SMS, email, Facebook DM, Instagram DM, WhatsApp, Google Business messages. All in one place.</p>
-        </div>
-    </div>
-    
-    <h3>💼 Close Deals Faster</h3>
-    <div class="features-grid">
-        <div class="feature-card">
-            <h4>Video Email Follow-Up</h4>
-            <p>Personalized video messages stand out. 3-5x higher engagement than plain text.</p>
-        </div>
-        <div class="feature-card">
-            <h4>Online Booking & Calendar</h4>
-            <p>Buyers and sellers self-schedule. No back-and-forth on availability.</p>
-        </div>
-        <div class="feature-card">
-            <h4>Deal Tracking Pipeline</h4>
-            <p>Visual Kanban board. See exactly where each lead is in your process.</p>
-        </div>
-    </div>
-    
-    <h3>⭐ Build Your Reputation Automatically</h3>
-    <div class="features-grid">
-        <div class="feature-card">
-            <h4>Automated Google Review Requests</h4>
-            <p>After every closing, AI asks clients for a 5-star review. Never leave positive feedback on the table.</p>
-        </div>
-        <div class="feature-card">
-            <h4>Review Response Automation</h4>
-            <p>AI drafts professional responses to new reviews. Protect your reputation on autopilot.</p>
-        </div>
-        <div class="feature-card">
-            <h4>Social Proof Widgets</h4>
-            <p>Display live review feeds on your website. Builds instant trust with new leads.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- SOCIAL PROOF: REAL AGENTS, REAL RESULTS -->
-<section>
-    <h2>Real Agents. Real Results.</h2>
-    <p style="text-align: center; color: #666; margin-bottom: 30px;">Don't just take our word for it. See what top producers are doing with AI Sales Pipeline.</p>
-    
-    <div class="testimonials">
-        <div class="testimonial">
-            <div class="testimonial-text">
-                "Within the first 30 days, our response rate went from next-day to under 60 seconds. We booked 14 extra appointments from leads that used to just go cold."
+    <!-- PROBLEM SECTION -->
+    <section class="problem">
+        <div class="container">
+            <h2 class="section-heading">The Problem Every Agent Has</h2>
+            <div class="problem-content">
+                <p>You're not bad at your job. You're just human.</p>
+                <p>You get busy with showings. A promising lead sits in your inbox for 3 days. By the time you follow up, they've already bought somewhere else — with a different agent.</p>
+                <p>Or worse: You meet a hot prospect, exchange numbers, and <strong>forget to follow up</strong> because you were handling another deal. That commission? Gone.</p>
+                <p>The #1 reason real estate agents lose deals: they don't follow up enough, fast enough, or consistently enough. Not because they don't care — because they can't. There are only 24 hours in a day.</p>
             </div>
-            <div class="testimonial-author">Sandra T.</div>
-            <div class="testimonial-role">Top Producer, Summit, NJ</div>
-            <div class="testimonial-result">14 additional appointments in 30 days</div>
-        </div>
-        
-        <div class="testimonial">
-            <div class="testimonial-text">
-                "I was spending $3,200/month on a part-time ISA and still missing leads on weekends. AI Sales Pipeline replaced that entirely and works every hour."
+            <div class="problem-stats">
+                <p><strong>73% of leads never hear back from their first agent.</strong></p>
+                <p><strong>Buyers contact an average of 3 agents before committing.</strong></p>
+                <p><strong>For every follow-up delay, conversion rates drop 40%.</strong></p>
+                <p><strong>Your competition is responding. You're making coffee.</strong></p>
             </div>
-            <div class="testimonial-author">Michael R.</div>
-            <div class="testimonial-role">Solo Agent, Morris County, NJ</div>
-            <div class="testimonial-result">Saved $38,400/year + better lead coverage</div>
         </div>
-        
-        <div class="testimonial">
-            <div class="testimonial-text">
-                "My expired listing campaign now runs on complete autopilot. The power dialer, voicemail drops, and follow-up sequences converted at a rate I've never seen before."
-            </div>
-            <div class="testimonial-author">David K.</div>
-            <div class="testimonial-role">Real Estate Broker, Morris County, NJ</div>
-            <div class="testimonial-result">3 expired listings closed in 6 weeks</div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- OBJECTION HANDLING SECTION -->
-<section class="objection-section">
-    <h2>Common Concerns (And How We Solve Them)</h2>
-    
-    <div class="objection-grid">
-        <div class="objection-card">
-            <h5>❓ "Won't the AI sound robotic or fake?"</h5>
-            <p>No. Our AI uses advanced natural language processing trained on millions of real estate conversations. It adapts tone to each prospect and uses proven NEPQ psychology. Sounds conversational, not scripted. (Elite members: customize the voice to match your personal style.)</p>
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-heading">How AI Sales Pipeline Works</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">🎣</div>
+                    <h3>AI Captures Every Lead</h3>
+                    <p>AI captures every lead automatically — from Zillow, Facebook, Google, website, wherever. Nothing falls through. Your pipeline is complete from day one.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">🧠</div>
+                    <h3>AI Knows Who It's Talking To</h3>
+                    <p>AI reads every signal, categorizes leads as cold/warm/hot, and follows up accordingly. Cold leads get nurtured patiently. Warm leads get prioritized. Hot leads get immediate aggressive follow-up.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">💬</div>
+                    <h3>AI Follows Up Across Every Channel</h3>
+                    <p>AI Text Messages (natural, conversational SMS), AI Emails (personalized, timed to behavior), AI Voice Calls (AI picks up the phone, has real conversations, qualifies leads without you lifting a finger).</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">🎬</div>
+                    <h3>Personalized AI Video Clone</h3>
+                    <p>AI sends a PERSONALIZED VIDEO CLONE OF YOU — lifelike AI video of your face, your voice, your mannerisms — customized for each individual lead. Says their name, references specific details. Feels personal because it is personal.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-icon">📱</div>
+                    <h3>Retarget on Facebook</h3>
+                    <p>Retargets interested leads on Facebook automatically — anyone who engaged but didn't convert gets hit with targeted Facebook ads. Ad spend only chases people who already raised their hand. No wasted budget.</p>
+                </div>
+            </div>
         </div>
-        
-        <div class="objection-card">
-            <h5>❓ "How long until we're actually live?"</h5>
-            <p>14 days. We handle everything: integrations, AI training, workflow setup, branded sequences. You show up to one launch call and we go live together. No technical background required.</p>
-        </div>
-        
-        <div class="objection-card">
-            <h5>❓ "What if it doesn't work for my market?"</h5>
-            <p>It's not the tool that fails, it's the process. We've deployed in 50+ markets (luxury, first-time buyers, FSBO, expired listings). Your custom setup is built for YOUR specific strategy. If you don't see results in 90 days, we refund your setup fee.</p>
-        </div>
-        
-        <div class="objection-card">
-            <h5>❓ "Can I use my own follow-up scripts?"</h5>
-            <p>100%. NEPQ sequences come pre-loaded, but you can fully customize every workflow. Use your own language, objection handlers, and scripts. Your brand, your words.</p>
-        </div>
-        
-        <div class="objection-card">
-            <h5>❓ "Do I have to lock in a long-term contract?"</h5>
-            <p>No. Month-to-month billing. Cancel anytime. (We offer annual discounts if you want to lock in savings, but it's optional.)</p>
-        </div>
-        
-        <div class="objection-card">
-            <h5>❓ "Will this replace me or my ISA?"</h5>
-            <p>No. AI handles initial contact, qualification, and routine follow-up. YOU handle closings, negotiations, and relationship-building. Most clients say they do 3x more closings because the AI frees up their time for high-value activities.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- COMPETITOR COMPARISON TABLE -->
-<section>
-    <h2>Why AI Sales Pipeline Beats the Alternatives</h2>
-    
-    <table class="comparison-table">
-        <thead>
-            <tr>
-                <th>Feature</th>
-                <th><strong>AI Sales Pipeline</strong></th>
-                <th>GoHighLevel</th>
-                <th>Hiring an ISA</th>
-                <th>Zillow Premier</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Real Estate Focus</strong></td>
-                <td><span class="check">✓ 100% Real Estate</span></td>
-                <td><span class="cross">✗ Generic tool</span></td>
-                <td><span class="check">✓ Maybe</span></td>
-                <td><span class="cross">✗ Limited features</span></td>
-            </tr>
-            <tr>
-                <td><strong>AI Response Time</strong></td>
-                <td><span class="check">✓ 60 seconds</span></td>
-                <td>2-5 minutes</td>
-                <td>30+ minutes</td>
-                <td><span class="cross">✗ Manual only</span></td>
-            </tr>
-            <tr>
-                <td><strong>NEPQ/Reverse Selling Scripts</strong></td>
-                <td><span class="check">✓ Built-in</span></td>
-                <td><span class="cross">✗ Not included</span></td>
-                <td>Training required</td>
-                <td><span class="cross">✗ No</span></td>
-            </tr>
-            <tr>
-                <td><strong>24/7 Automation</strong></td>
-                <td><span class="check">✓ Always working</span></td>
-                <td><span class="check">✓ Always working</span></td>
-                <td><span class="cross">✗ Business hours only</span></td>
-                <td><span class="cross">✗ No</span></td>
-            </tr>
-            <tr>
-                <td><strong>Lead Source Integration</strong></td>
-                <td><span class="check">✓ All sources: Zillow, FB, Google, IDX</span></td>
-                <td>Limited, requires Zapier</td>
-                <td>Manual input</td>
-                <td>Zillow only</td>
-            </tr>
-            <tr>
-                <td><strong>Monthly Cost</strong></td>
-                <td><span class="check">✓ $497-$995/mo</span></td>
-                <td><span class="check">✓ $97-$297/mo</span></td>
-                <td><span class="cross">✗ $4,000-$6,000/mo</span></td>
-                <td><span class="cross">✗ $$$+ hidden fees</span></td>
-            </tr>
-            <tr>
-                <td><strong>Turnover/Reliability</strong></td>
-                <td><span class="check">✓ Zero turnover, 24/7</span></td>
-                <td><span class="check">✓ Zero turnover</span></td>
-                <td><span class="cross">✗ Quitting, vacations, sick days</span></td>
-                <td>N/A</td>
-            </tr>
-            <tr>
-                <td><strong>Setup Time</strong></td>
-                <td>14 days (we handle it)</td>
-                <td>14 days free trial</td>
-                <td>4+ weeks onboarding</td>
-                <td>Unknown</td>
-            </tr>
-            <tr>
-                <td><strong>Branded Mobile App</strong></td>
-                <td><span class="check">✓ Elite plan</span></td>
-                <td><span class="cross">✗ No</span></td>
-                <td><span class="cross">✗ No</span></td>
-                <td><span class="cross">✗ No</span></td>
-            </tr>
-            <tr>
-                <td><strong>Team/Reseller Capability</strong></td>
-                <td><span class="check">✓ Reseller mode (Elite)</span></td>
-                <td><span class="check">✓ Yes</span></td>
-                <td><span class="cross">✗ Limited</span></td>
-                <td><span class="cross">✗ No</span></td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+    <!-- FEATURES -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-heading">Everything You Need</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h4>AI Text Messages</h4>
+                    <p>Natural, conversational SMS that feels like it came from you — not a bot. Maintains context across conversations and escalates appropriately.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📧</div>
+                    <h4>AI Emails</h4>
+                    <p>Personalized, timed to behavior. Your AI writes emails that get opened and replied to. No spam triggers, just genuine engagement.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">☎️</div>
+                    <h4>AI Voice Calls</h4>
+                    <p>AI picks up the phone and has real conversations. Qualifies leads, answers objections, and books showings without you lifting a finger.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎥</div>
+                    <h4>Video Clone</h4>
+                    <p>Lifelike AI video of your face, voice, and mannerisms. Customized for each lead. References specific details from previous conversations. Unprecedented engagement rates.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📣</div>
+                    <h4>Facebook Retargeting</h4>
+                    <p>Automatically retargets engaged leads with precision Facebook ads. Only your warm audiences see ads. No wasted ad spend.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h4>Lead Scoring</h4>
+                    <p>AI automatically scores every lead: cold, warm, or hot. Knows exactly which leads to prioritize and which to nurture patiently.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h4>Buyer/Seller Workflows</h4>
+                    <p>Seller workflows customized by situation: FSBOs, Expired listings, Downsizers, Commuters. Each situation gets its own tailored sequence. Different messaging, timing, approach.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h4>Custom AI Brain</h4>
+                    <p>Fully customizable to sound like anyone. Sound like YOU. Or mirror a specific real estate coaching methodology or expert mentor's style. Your AI speaks your language at scale, 24/7.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h4>Real-Time Analytics</h4>
+                    <p>Dashboard shows every interaction, conversion rate, and revenue impact. Know exactly what's working and where to optimize.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- PRICING: SIMPLIFIED WITH ROI MATH -->
-<section>
-    <h2>Simple, Transparent Pricing</h2>
-    <p style="text-align: center; color: #666; margin-bottom: 30px;">Every plan includes full AI setup, all integrations, and NEPQ training. No surprises.</p>
-    
-    <div class="column-2">
-        <div>
-            <h3>One-Time Setup Fee</h3>
-            <p><strong style="font-size: 24px; color: #ff6b35;">$4,995</strong></p>
-            <p style="color: #666;">Includes: System configuration, integrations, AI training, NEPQ workflow setup, custom onboarding. <strong>We do everything.</strong> You show up to one call.</p>
+    <!-- SOCIAL PROOF -->
+    <section class="social-proof">
+        <div class="container">
+            <h2 class="section-heading">Real Results from Real Agents</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"I was leaving 60% of my leads uncontacted. AI Sales Pipeline changed everything. Now I'm closing deals I would've forgotten about. Went from $800K to $2.1M in my first year."</p>
+                    <div class="testimonial-author">Sarah Chen</div>
+                    <div class="testimonial-role">Residential Real Estate Agent, San Francisco</div>
+                    <div class="testimonial-metric">+$1.3M Revenue | 47 Additional Closes</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"The AI voice calls are insane. My leads feel like they're talking to me — because they basically are. My follow-up consistency went from 30% to 94%. It's like having a full-time team."</p>
+                    <div class="testimonial-author">Marcus Thompson</div>
+                    <div class="testimonial-role">Luxury Real Estate, Miami</div>
+                    <div class="testimonial-metric">94% Follow-up Rate | 300% More Qualified Leads</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p>"I was skeptical about the AI clone video. Then I saw the engagement rates. Opens, clicks, replies — 5x higher than my normal videos. Leads love it because it actually feels personal."</p>
+                    <div class="testimonial-author">Jennifer Rodriguez</div>
+                    <div class="testimonial-role">Commercial Real Estate Broker, Texas</div>
+                    <div class="testimonial-metric">5x Video Engagement | +$2.7M in Deals</div>
+                </div>
+            </div>
         </div>
-        
-        <div>
-            <h3>Monthly Plans</h3>
-            <p style="font-size: 16px; color: #666;">Choose the plan that matches your growth stage. All plans include unlimited contacts, unlimited users, and 24/7 AI automation.</p>
-        </div>
-    </div>
-    
-    <div class="pricing-grid">
-        <div class="pricing-card">
-            <h3>Basic</h3>
-            <div class="price-amount">$497</div>
-            <div class="price-period">per month • billed monthly</div>
-            <a href="#book-demo" class="cta-button" style="width: 90%; margin: 15px auto;">Book Consultation</a>
-            <ul class="price-features">
-                <li>AI text & email automation</li>
-                <li>AI voice calling & voicemail drops</li>
-                <li>Missed call text-back</li>
-                <li>Google review automation</li>
-                <li>Lead pipeline management</li>
-                <li>Workflow builder (unlimited)</li>
-                <li>Landing page & funnel builder</li>
-                <li>Online booking & calendar</li>
-                <li>Call recording & tracking</li>
-                <li>Reporting & attribution</li>
-            </ul>
-            <p style="font-size: 12px; color: #666; margin-top: 10px;">💰 <strong>Annual discount:</strong> Save $994/year</p>
-        </div>
-        
-        <div class="pricing-card featured">
-            <div style="background: #ff6b35; color: white; padding: 5px; margin: -30px -30px 15px -30px; text-align: center; font-weight: bold; font-size: 12px;">MOST POPULAR</div>
-            <h3>Pro</h3>
-            <div class="price-amount">$695</div>
-            <div class="price-period">per month • billed monthly</div>
-            <a href="#book-demo" class="cta-button" style="width: 90%; margin: 15px auto;">Book Consultation</a>
-            <ul class="price-features">
-                <li>Everything in Basic, plus:</li>
-                <li>Video email follow-up (VSSL)</li>
-                <li>Video sales pages</li>
-                <li>WhatsApp integration</li>
-                <li>Facebook & Instagram DM automation</li>
-                <li>AI content generation (listings, emails, SMS)</li>
-                <li>Online listings (70+ directories)</li>
-                <li>Community builder</li>
-                <li>Membership & course sites</li>
-                <li>Invoicing & payments (Stripe)</li>
-                <li>Power dialer (FSBO & expired)</li>
-                <li>2 team member seats</li>
-                <li>Priority support</li>
-            </ul>
-            <p style="font-size: 12px; color: #666; margin-top: 10px;">💰 <strong>Annual discount:</strong> Save $1,390/year</p>
-        </div>
-        
-        <div class="pricing-card">
-            <h3>Elite</h3>
-            <div class="price-amount">$995</div>
-            <div class="price-period">per month • billed monthly</div>
-            <a href="#book-demo" class="cta-button" style="width: 90%; margin: 15px auto;">Book Consultation</a>
-            <ul class="price-features">
-                <li>Everything in Pro, plus:</li>
-                <li>IDX property alerts automation</li>
-                <li>Fully branded desktop app</li>
-                <li>Fully branded mobile app (App Store/Google Play)</li>
-                <li>Reseller mode (offer to other agents)</li>
-                <li>Full API access & integrations</li>
-                <li>Rebilling with markup control</li>
-                <li>Unlimited sub-accounts</li>
-                <li>Custom AI voice training</li>
-                <li>Monthly 1-on-1 strategy call</li>
-                <li>5+ team member seats</li>
-                <li>HIPAA compliance option</li>
-                <li>Dedicated onboarding manager</li>
-            </ul>
-            <p style="font-size: 12px; color: #666; margin-top: 10px;">💰 <strong>Annual discount:</strong> Save $1,990/year</p>
-        </div>
-    </div>
-    
-    <!-- ROI COMPARISON -->
-    <div style="background: #e8f5e9; padding: 30px; border-radius: 8px; margin-top: 40px;">
-        <h3 style="color: #2e7d32; text-align: center;">The Math: ISA vs AI Sales Pipeline</h3>
-        
-        <table style="width: 100%; margin-top: 20px; border-collapse: collapse;">
-            <tr style="border-bottom: 2px solid #4caf50;">
-                <td style="padding: 10px;"><strong>Full-Time ISA (Traditional)</strong></td>
-                <td style="padding: 10px; text-align: right; color: #d32f2f;"><strong>~$50,000/year</strong></td>
-            </tr>
-            <tr>
-                <td style="padding: 10px;">+ Taxes & Benefits (25%)</td>
-                <td style="padding: 10px; text-align: right;">+ $12,500/year</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px;">+ Turnover & Training</td>
-                <td style="padding: 10px; text-align: right;">+ $5,000+/year</td>
-            </tr>
-            <tr style="background: #ffebee;">
-                <td style="padding: 10px; font-weight: bold;">Total Annual Cost</td>
-                <td style="padding: 10px; text-align: right; font-weight: bold; color: #d32f2f;">$67,500/year</td>
-            </tr>
-            
-            <tr style="border-top: 2px solid #4caf50;">
-                <td style="padding: 10px;"><strong>AI Sales Pipeline (Pro Plan)</strong></td>
-                <td style="padding: 10px; text-align: right; color: #2e7d32;"><strong>$8,340/year</strong></td>
-            </tr>
-            <tr>
-                <td style="padding: 10px;">+ One-Time Setup ($4,995 amortized over 3 years)</td>
-                <td style="padding: 10px; text-align: right;">+ $1,665/year</td>
-            </tr>
-            <tr style="background: #e8f5e9;">
-                <td style="padding: 10px; font-weight: bold;">Total Annual Cost</td>
-                <td style="padding: 10px; text-align: right; font-weight: bold; color: #2e7d32;">$10,005/year</td>
-            </tr>
-            
-            <tr style="background: #fff9c4; border-top: 2px solid #fbc02d;">
-                <td style="padding: 10px; font-weight: bold;">💰 ANNUAL SAVINGS</td>
-                <td style="padding: 10px; text-align: right; font-weight: bold; color: #f57f17;">$57,495/year</td>
-            </tr>
-        </table>
-        
-        <p style="text-align: center; color: #2e7d32; font-weight: bold; margin-top: 20px;">
-            Plus: AI Works 24/7. ISA works 40 hours/week. ISA gets sick days and vacations. AI doesn't quit.
-        </p>
-    </div>
-</section>
+    </section>
 
-<!-- SETUP & ONBOARDING -->
-<section>
-    <h2>Live in 14 Days. We Handle Everything.</h2>
-    
-    <div class="column-2">
-        <div>
-            <h3>Step 1: Discovery Call</h3>
-            <p>We audit your current pipeline, identify gaps, and map your custom AI automation strategy. (30 minutes)</p>
-            
-            <h3 style="margin-top: 20px;">Step 2: Custom System Build</h3>
-            <p>Our team builds your fully customized environment with branded AI sequences, NEPQ scripts, and all integrations. (7-10 days)</p>
+    <!-- PRICING -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-heading">Simple, Transparent Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price">$497</div>
+                    <div class="price-period">per month</div>
+                    <ul class="features">
+                        <li>Lead capture from 2 sources</li>
+                        <li>AI Email follow-up</li>
+                        <li>Basic lead scoring</li>
+                        <li>Email support</li>
+                        <li>Standard customization</li>
+                    </ul>
+                    <div class="pricing-button">
+                        <a href="#book-demo" class="btn-primary">Get Started</a>
+                    </div>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Pro</h3>
+                    <div class="price">$695</div>
+                    <div class="price-period">per month</div>
+                    <ul class="features">
+                        <li>Unlimited lead capture</li>
+                        <li>AI SMS, Email, Voice Calls</li>
+                        <li>Advanced lead scoring</li>
+                        <li>Buyer/Seller workflows</li>
+                        <li>Facebook retargeting</li>
+                        <li>Priority support</li>
+                        <li>Custom AI brain training</li>
+                    </ul>
+                    <div class="pricing-button">
+                        <a href="#book-demo" class="btn-primary">Get Started</a>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <h3>Elite</h3>
+                    <div class="price">$995</div>
+                    <div class="price-period">per month</div>
+                    <ul class="features">
+                        <li>Everything in Pro</li>
+                        <li>AI Video Clone</li>
+                        <li>Unlimited video customization</li>
+                        <li>Dedicated account manager</li>
+                        <li>Advanced analytics</li>
+                        <li>Custom integrations</li>
+                        <li>Priority phone support</li>
+                    </ul>
+                    <div class="pricing-button">
+                        <a href="#book-demo" class="btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div>
-            <h3>Step 3: Training & Launch</h3>
-            <p>Live onboarding walkthrough. You and your team learn every tool. We go live together. (2 hours)</p>
-            
-            <h3 style="margin-top: 20px;">Step 4: Scale on Autopilot</h3>
-            <p>Watch your AI work 24/7 — booking appointments, nurturing leads, growing your pipeline. You focus on closings.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- FAQ -->
-<section>
-    <h2>Frequently Asked Questions</h2>
-    
-    <div class="faq">
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>What is AI Sales Pipeline and how does it work?</span>
-                <span>+</span>
-            </div>
-            <div class="faq-answer">
-                <p>AI Sales Pipeline is a real-estate-specific AI automation platform. It captures leads from every source (Zillow, Facebook, Google, IDX, your website), responds instantly via AI SMS/voice/email, qualifies them using NEPQ-based psychology, and nurtures them through proven automation sequences until they're ready to transact — 24 hours a day, 7 days a week.</p>
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>Does this really replace a full-time ISA?</span>
-                <span>+</span>
-            </div>
-            <div class="faq-answer">
-                <p>Yes. AI Sales Pipeline handles all initial lead engagement, qualification, follow-up, and appointment booking that an ISA performs — but at 12-20% of the cost, with zero turnover, and available 24/7. The average ISA costs $50,000+ per year. Our Pro plan is $8,340/year. Plus, the AI never calls in sick and works weekends.</p>
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>How long does setup take and what's included?</span>
-                <span>+</span>
-            </div>
-            <div class="faq-answer">
-                <p>Setup takes 7–14 days. The one-time $4,995 fee includes: complete system configuration, all lead source integrations (Zillow, Realtor.com, Facebook, Google, Espresso Agent, IDX, etc.), pre-loaded NEPQ and Reverse Selling sequences, custom AI voice training, landing page builds, and a live onboarding call where we walk you through the entire system together.</p>
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>Can I use my own follow-up scripts?</span>
-                <span>+</span>
-            </div>
-            <div class="faq-answer">
-                <p>100%. Our NEPQ scripts come pre-loaded and proven, but you can fully customize every workflow. Use your own language, objection handlers, and follow-up sequences. It's your brand, your words. The AI is infinitely flexible.</p>
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>What if the AI doesn't convert leads in my market?</span>
-                <span>+</span>
-            </div>
-            <div class="faq-answer">
-                <p>We deploy in 50+ different real estate markets (luxury homes, first-time buyers, FSBO, expired listings, investor properties). The AI adapts to your market. If you don't see measurable results in 90 days of using the system as we recommend, we refund your $4,995 setup fee. No questions asked.</p>
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>Do I have to lock in a long-term contract?</span>
-                <span>+</span>
-            </div>
-            <div class="faq-answer">
-                <p>No. Month-to-month billing on all plans. Cancel anytime. We do offer annual discounts (save 10-20% per year) if you want to commit, but it's totally optional.</p>
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-heading">Frequently Asked Questions</h2>
+            <div class="faq-items">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will my leads actually respond to an AI?</span>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. The AI voice sounds natural and conversational — it's trained on your voice and mannerisms. When leads pick up the phone and hear "Hi, this is Sarah," they don't know they're talking to an AI. They just know they're being followed up with immediately. That consistency and speed create trust. Leads respond because you're actually present in the follow-up process — just scaled.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I customize the AI to sound exactly like me?</span>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Completely. We train the AI brain on your voice, your scripts, your closing philosophy, whatever you want. Or if you prefer, we can train it on a specific real estate coach or mentor's style — so it delivers their methodology at scale. The AI brain is yours to customize. It speaks your language, delivers your philosophy, 24/7.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I'm worried about leads finding out it's an AI?</span>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>That's a fair question. Here's the reality: leads don't care if it's AI as long as you're responsive and helpful. We always disclose that it's an AI system on first contact. The magic is that the AI is so good at its job that leads prefer talking to your AI over waiting days for you to call back. Speed and consistency beat the "human touch" argument every time.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How much time will this actually save me?</span>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Real estate agents spend 60-70% of their time on admin and follow-up — scheduling calls, sending emails, answering qualification questions. AI Sales Pipeline automates all of that. You get back 25-30 hours per week. More time for what matters: building relationships, closing deals, and actually living your life.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I want to take over a conversation mid-way?</span>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Perfect. The AI flags hot leads for you to take over. It does the heavy lifting on cold and warm prospects, then hands off hot ones when it's time to close. You're always in control. The AI is your assistant, not your replacement.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Does this work for both buyer and seller leads?</span>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. We have completely separate workflows for buyers and sellers. For sellers, the AI adapts based on their situation: FSBO, expired listing, downsizer, commuter — each gets a customized sequence with different messaging, timing, and approach. Same power for buyer leads. One system, infinite adaptability.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>What if the AI sounds robotic or fake?</span>
-                <span>+</span>
-            </div>
-            <div class="faq-answer">
-                <p>It doesn't. Our AI uses advanced natural language processing trained on millions of real estate conversations. It adapts tone to each prospect and uses proven psychology-based language (NEPQ) that sounds genuinely conversational. Elite plan members can even train the AI voice to match their personal speaking style for a completely custom experience.</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- FINAL CTA -->
-<section class="hero" id="book-demo">
-    <h1>Ready to Automate Your Entire Pipeline?</h1>
-    <p>Join top-producing real estate agents who replaced slow, manual follow-up with AI that works 24/7 to fill their calendar with qualified appointments.</p>
-    
-    <div style="margin-top: 30px;">
-        <a href="mailto:hello@aisalespipeline.com?subject=Schedule%20Consultation" class="cta-button">Book Your Free Consultation</a>
-        <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">Full AI Setup Included • No Obligation • No Pressure</p>
-    </div>
-</section>
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="book-demo">
+        <div class="container">
+            <h2>Ready to Stop Losing Deals?</h2>
+            <p>Your AI never sleeps, never forgets a lead, never lets a hot prospect go cold. While you're at dinner, on a showing, or off on Saturday — your pipeline is working.</p>
+            <a href="https://calendly.com/aisalespipeline/demo" class="btn-primary">Book a 20-Minute Demo</a>
+        </div>
+    </section>
 
-<footer>
-    <p>&copy; 2026 AI Sales Pipeline. All rights reserved.</p>
-    <p style="margin-top: 10px; font-size: 12px; opacity: 0.8;">Real estate professionals deserve better tools. We built them.</p>
-</footer>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="AI Sales Pipeline">
+                        <span>AI Sales Pipeline</span>
+                    </div>
+                    <p style="font-size: 13px; color: #999; margin-top: 10px;">Eliminate the follow-up gap. Close deals you'd forget about. 24/7.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#book-demo">Book Demo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#security">Security</a></li>
+                        <li><a href="#disclosure">AI Disclosure</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@aisalespipeline.com">hello@aisalespipeline.com</a></li>
+                        <li><a href="tel:+14155551234">(415) 555-1234</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AI Sales Pipeline. All rights reserved. | Built for real estate agents who refuse to lose.</p>
+            </div>
+        </div>
+    </footer>
 
-<script>
-// FAQ accordion functionality
-document.querySelectorAll('.faq-question').forEach(question => {
-    question.addEventListener('click', function() {
-        const item = this.parentElement;
-        item.classList.toggle('open');
-    });
-});
-</script>
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.closest('.faq-item');
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
 
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
