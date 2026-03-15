@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | AI Sales Pipeline</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0052cc 0%, #003d99 100%);
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        
+        section {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #0052cc;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #003d99;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .pricing-card {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card.featured {
+            border-color: #ff6b35;
+            box-shadow: 0 8px 24px rgba(255, 107, 53, 0.2);
+            transform: scale(1.05);
+            position: relative;
+        }
+        
+        .pricing-card.featured::before {
+            content: "MOST POPULAR";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6b35;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .plan-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0052cc;
+            margin: 15px 0;
+        }
+        
+        .plan-description {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+            min-height: 40px;
+        }
+        
+        .price-amount {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ff6b35;
+            margin: 15px 0;
+        }
+        
+        .price-period {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .price-note {
+            font-size: 12px;
+            color: #2e7d32;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+            width: 90%;
+        }
+        
+        .cta-button:hover {
+            background: #e55a20;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            color: #ff6b35;
+            border: 2px solid #ff6b35;
+        }
+        
+        .cta-button.secondary:hover {
+            background: #ff6b35;
+            color: white;
+        }
+        
+        .price-features {
+            text-align: left;
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .price-features li {
+            padding: 12px 0;
+            font-size: 14px;
+            color: #666;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .price-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .price-features li:before {
+            content: "✓ ";
+            color: #4caf50;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .setup-fee {
+            background: #f5f5f5;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .setup-fee h3 {
+            color: #0052cc;
+            margin-top: 0;
+        }
+        
+        .setup-amount {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ff6b35;
+            margin: 10px 0;
+        }
+        
+        .roi-section {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            padding: 40px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .roi-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .roi-table tr {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .roi-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .roi-table td {
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .roi-table td:last-child {
+            text-align: right;
+            font-weight: bold;
+        }
+        
+        .roi-table tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .roi-total {
+            background: #fff9c4;
+            font-weight: bold;
+            color: #f57f17;
+            font-size: 16px;
+        }
+        
+        .roi-savings {
+            background: #e8f5e9;
+            font-weight: bold;
+            color: #2e7d32;
+            font-size: 18px;
+        }
+        
+        .faq {
+            margin: 30px 0;
+        }
+        
+        .faq-item {
+            background: #f5f5f5;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background: #0052cc;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 15px;
+            background: white;
+            display: none;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+        
+        .feature-highlight {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .annual-discount-box {
+            background: #fff3cd;
+            border: 2px solid #fbc02d;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .annual-discount-box strong {
+            color: #f57f17;
+            font-size: 14px;
+        }
+        
+        .comparison-light {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        
+        footer {
+            background: #003d99;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            section h2 {
+                font-size: 24px;
+            }
+            
+            .price-amount {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>💰 AI Sales Pipeline Pricing</h1>
+    <p>Simple, Transparent Plans. No Hidden Fees.</p>
+</header>
+
+<!-- ONE-TIME SETUP FEE -->
+<section>
+    <div class="setup-fee">
+        <h3>One-Time Setup & System Build</h3>
+        <p style="color: #666;">We build your complete system. You focus on selling.</p>
+        <div class="setup-amount">$4,995</div>
+        <p style="color: #666; font-size: 14px;">Includes: System configuration • Lead source integrations • AI training • NEPQ workflow setup • Custom onboarding • Live launch call</p>
+    </div>
+</section>
+
+<!-- PRICING PLANS -->
+<section>
+    <h2>Monthly Plans</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 40px;">Choose the plan that matches your growth stage. All plans include unlimited contacts, unlimited users, and 24/7 AI automation.</p>
+    
+    <div class="pricing-grid">
+        <!-- BASIC PLAN -->
+        <div class="pricing-card">
+            <div class="plan-name">Basic</div>
+            <div class="plan-description">Solo agents just getting started</div>
+            
+            <div class="price-amount">$497</div>
+            <div class="price-period">per month • billed monthly</div>
+            <div class="annual-discount-box">
+                <strong>💰 Annual: $4,970/year (Save $994)</strong>
+            </div>
+            
+            <a href="mailto:hello@aisalespipeline.com?subject=Schedule%20Consultation" class="cta-button">Book Consultation</a>
+            
+            <h4 style="text-align: left; margin-top: 20px; color: #0052cc;">Includes:</h4>
+            <ul class="price-features">
+                <li>AI Text & Email Automation</li>
+                <li>AI Voice Calling</li>
+                <li>Voicemail Drops</li>
+                <li>Missed Call Text-Back</li>
+                <li>Google Review Automation</li>
+                <li>Lead Pipeline Management</li>
+                <li>Workflow Builder (Unlimited)</li>
+                <li>Landing Page & Funnel Builder</li>
+                <li>Online Booking & Calendar</li>
+                <li>Form & Survey Builder</li>
+                <li>Call Recording & Tracking</li>
+                <li>Facebook & Google Reporting</li>
+                <li>Attribution Reporting</li>
+                <li>Social Media Planner</li>
+                <li>Unlimited Contacts & Users</li>
+                <li>Email & Chat Support</li>
+            </ul>
+            
+            <div class="feature-highlight">
+                <strong>Best for:</strong> Solo agents, first-time automation adopters, limited budget
+            </div>
+        </div>
+        
+        <!-- PRO PLAN (FEATURED) -->
+        <div class="pricing-card featured">
+            <div class="plan-name">Pro</div>
+            <div class="plan-description">Growing agents & small teams</div>
+            
+            <div class="price-amount">$695</div>
+            <div class="price-period">per month • billed monthly</div>
+            <div class="annual-discount-box">
+                <strong>💰 Annual: $6,950/year (Save $1,390)</strong>
+            </div>
+            
+            <a href="mailto:hello@aisalespipeline.com?subject=Schedule%20Consultation" class="cta-button">Book Consultation</a>
+            
+            <h4 style="text-align: left; margin-top: 20px; color: #0052cc;">Everything in Basic, plus:</h4>
+            <ul class="price-features">
+                <li>Video Email Follow-Up (VSSL)</li>
+                <li>Video Sales Pages</li>
+                <li>WhatsApp Integration</li>
+                <li>Facebook & Instagram DM Automation</li>
+                <li>AI Content Generation</li>
+                <li>Online Listings (70+ Directories)</li>
+                <li>Community Builder</li>
+                <li>Membership & Course Sites</li>
+                <li>Invoicing & Payments (Stripe)</li>
+                <li>Power Dialer (FSBO & Expired)</li>
+                <li>2 Team Member Seats</li>
+                <li>Priority Support</li>
+            </ul>
+            
+            <div class="feature-highlight">
+                <strong>Best for:</strong> Most real estate agents, teams, multi-channel campaigns, reseller potential
+            </div>
+        </div>
+        
+        <!-- ELITE PLAN -->
+        <div class="pricing-card">
+            <div class="plan-name">Elite</div>
+            <div class="plan-description">Full teams & brokerages</div>
+            
+            <div class="price-amount">$995</div>
+            <div class="price-period">per month • billed monthly</div>
+            <div class="annual-discount-box">
+                <strong>💰 Annual: $9,950/year (Save $1,990)</strong>
+            </div>
+            
+            <a href="mailto:hello@aisalespipeline.com?subject=Schedule%20Consultation" class="cta-button">Book Consultation</a>
+            
+            <h4 style="text-align: left; margin-top: 20px; color: #0052cc;">Everything in Pro, plus:</h4>
+            <ul class="price-features">
+                <li>IDX Property Alerts Automation</li>
+                <li>Fully Branded Desktop App</li>
+                <li>Fully Branded Mobile App</li>
+                <li>Reseller Mode (Offer to Other Agents)</li>
+                <li>Full API Access & Integrations</li>
+                <li>Rebilling with Markup Control</li>
+                <li>Unlimited Sub-Accounts</li>
+                <li>Custom AI Voice Training</li>
+                <li>Monthly 1-on-1 Strategy Call</li>
+                <li>5+ Team Member Seats</li>
+                <li>HIPAA Compliance Option</li>
+                <li>Dedicated Onboarding Manager</li>
+            </ul>
+            
+            <div class="feature-highlight">
+                <strong>Best for:</strong> Large teams, brokerages, agencies, resellers, enterprise needs
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ROI & COST COMPARISON -->
+<section class="roi-section">
+    <h2 style="color: #2e7d32;">The Economics: ISA vs AI Sales Pipeline</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Why AI is the better financial decision than hiring.</p>
+    
+    <table class="roi-table">
+        <tr>
+            <td><strong>Full-Time ISA (Traditional)</strong></td>
+            <td style="color: #d32f2f; font-weight: bold;">$50,000/year</td>
+        </tr>
+        <tr>
+            <td>+ Taxes & Benefits (25%)</td>
+            <td>+ $12,500/year</td>
+        </tr>
+        <tr>
+            <td>+ Turnover & Training Cost</td>
+            <td>+ $5,000+/year</td>
+        </tr>
+        <tr class="roi-total">
+            <td>Total Annual Cost</td>
+            <td style="color: #d32f2f;">$67,500/year</td>
+        </tr>
+        
+        <tr style="height: 20px;"></tr>
+        
+        <tr>
+            <td><strong>AI Sales Pipeline (Pro)</strong></td>
+            <td style="color: #2e7d32; font-weight: bold;">$8,340/year</td>
+        </tr>
+        <tr>
+            <td>+ One-Time Setup ($4,995 ÷ 3 years)</td>
+            <td>+ $1,665/year</td>
+        </tr>
+        <tr class="roi-total">
+            <td>Total Annual Cost</td>
+            <td style="color: #2e7d32;">$10,005/year</td>
+        </tr>
+        
+        <tr class="roi-savings">
+            <td>💰 ANNUAL SAVINGS</td>
+            <td style="color: #2e7d32;">$57,495/year</td>
+        </tr>
+    </table>
+    
+    <div style="background: white; padding: 20px; border-radius: 6px; margin-top: 20px; text-align: center;">
+        <p style="color: #666; margin-bottom: 10px;">Plus: AI works 24/7. ISA works 40 hours/week.</p>
+        <p style="color: #2e7d32; font-weight: bold;">ISA gets sick days, vacations, takes maternity leave. AI never stops.</p>
+    </div>
+</section>
+
+<!-- DETAILED COMPARISON -->
+<section>
+    <h2>How AI Sales Pipeline Compares</h2>
+    
+    <div class="comparison-light">
+        <h3 style="color: #2e7d32; margin-top: 0;">✓ Advantages Over Hiring an ISA</h3>
+        <ul style="list-style: none; color: #666;">
+            <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                <span style="position: absolute; left: 0; color: #4caf50; font-weight: bold;">✓</span>
+                <strong>Cost:</strong> 12-18% of ISA salary. Pays for itself in 9 client closings per year.
+            </li>
+            <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                <span style="position: absolute; left: 0; color: #4caf50; font-weight: bold;">✓</span>
+                <strong>Availability:</strong> Works 24/7/365. ISA takes weekends, holidays, vacation.
+            </li>
+            <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                <span style="position: absolute; left: 0; color: #4caf50; font-weight: bold;">✓</span>
+                <strong>Reliability:</strong> Zero turnover. ISA quits, gets pregnant, moves away.
+            </li>
+            <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                <span style="position: absolute; left: 0; color: #4caf50; font-weight: bold;">✓</span>
+                <strong>Speed:</strong> 60-second response. ISA takes 30+ minutes when busy.
+            </li>
+            <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                <span style="position: absolute; left: 0; color: #4caf50; font-weight: bold;">✓</span>
+                <strong>Consistency:</strong> Never forgets follow-ups. Same quality every interaction.
+            </li>
+            <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                <span style="position: absolute; left: 0; color: #4caf50; font-weight: bold;">✓</span>
+                <strong>Scalability:</strong> Can handle unlimited leads. ISA capacity capped at 50-100/day.
+            </li>
+        </ul>
+    </div>
+    
+    <div class="comparison-light" style="margin-top: 20px;">
+        <h3 style="color: #0052cc; margin-top: 0;">vs Traditional CRM Tools (HubSpot, Pipedrive, etc.)</h3>
+        <ul style="list-style: none; color: #666;">
+            <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                <span style="position: absolute; left: 0; color: #4caf50; font-weight: bold;">✓</span>
+                <strong>Real Estate Focus:</strong> Built FOR real estate. Not a generic tool adapted for it.
+            </li>
+            <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                <span style="position: absolute; left: 0; color: #4caf50; font-weight: bold;">✓</span>
+                <strong>AI Automation:</strong> AI responds to leads. Generic CRM requires YOU to respond.
+            </li>
+            <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                <span style="position: absolute; left: 0; color: #4caf50; font-weight: bold;">✓</span>
+                <strong>NEPQ Scripts Built-In:</strong> Proven psychology sequences pre-loaded. No training needed.
+            </li>
+            <li style="padding: 8px 0; padding-left: 25px; position: relative;">
+                <span style="position: absolute; left: 0; color: #4caf50; font-weight: bold;">✓</span>
+                <strong>All-In-One:</strong> SMS, email, voice, landing pages, booking, CRM. No Zapier needed.
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- PLAN SELECTION GUIDE -->
+<section>
+    <h2>Which Plan Is Right for You?</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0;">
+        <div style="background: #f5f5f5; padding: 25px; border-radius: 8px; border-left: 4px solid #0052cc;">
+            <h3 style="margin-top: 0; color: #0052cc;">Choose Basic ($497/mo) If:</h3>
+            <ul style="list-style: none; color: #666; padding: 0;">
+                <li style="padding: 8px 0;">✓ You're a solo agent just starting with AI</li>
+                <li style="padding: 8px 0;">✓ Your budget is limited</li>
+                <li style="padding: 8px 0;">✓ You want to test the AI before scaling</li>
+                <li style="padding: 8px 0;">✓ You primarily focus on SMS/email automation</li>
+                <li style="padding: 8px 0;">✓ You're handling 50-100 leads/month</li>
+            </ul>
+        </div>
+        
+        <div style="background: #e8f5e9; padding: 25px; border-radius: 8px; border-left: 4px solid #4caf50; border-top: 3px solid #ff6b35;">
+            <h3 style="margin-top: 0; color: #2e7d32;">Choose Pro ($695/mo) If:</h3>
+            <ul style="list-style: none; color: #666; padding: 0;">
+                <li style="padding: 8px 0;">✓ You want all features (video, WhatsApp, content gen)</li>
+                <li style="padding: 8px 0;">✓ You run FSBO or expired listing campaigns</li>
+                <li style="padding: 8px 0;">✓ You're handling 100-300 leads/month</li>
+                <li style="padding: 8px 0;">✓ You have 1-2 team members</li>
+                <li style="padding: 8px 0;">✓ <strong>This is the most popular choice</strong></li>
+            </ul>
+        </div>
+        
+        <div style="background: #f5f5f5; padding: 25px; border-radius: 8px; border-left: 4px solid #ff6b35;">
+            <h3 style="margin-top: 0; color: #ff6b35;">Choose Elite ($995/mo) If:</h3>
+            <ul style="list-style: none; color: #666; padding: 0;">
+                <li style="padding: 8px 0;">✓ You manage a team or brokerage</li>
+                <li style="padding: 8px 0;">✓ You want branded apps (Desktop & Mobile)</li>
+                <li style="padding: 8px 0;">✓ You want to resell to other agents</li>
+                <li style="padding: 8px 0;">✓ You need API access or custom integrations</li>
+                <li style="padding: 8px 0;">✓ You want monthly strategy calls</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- MONEY-BACK GUARANTEE -->
+<section style="background: #fff3cd; border: 2px solid #fbc02d; border-radius: 8px; padding: 30px;">
+    <h2 style="color: #f57f17; margin-top: 0;">90-Day Money-Back Guarantee</h2>
+    <p style="color: #666; font-size: 16px;">
+        If you don't see measurable results within 90 days of using AI Sales Pipeline as we recommend, we refund your $4,995 setup fee. No questions asked. We're confident in the system because we've deployed it in 50+ real estate markets.
+    </p>
+</section>
+
+<!-- ANNUAL DISCOUNT CALLOUT -->
+<section style="background: #e8f5e9; border-radius: 8px; padding: 30px; text-align: center;">
+    <h2 style="color: #2e7d32; margin-top: 0;">Save 10-20% With Annual Billing</h2>
+    <p style="color: #666; font-size: 16px; margin-bottom: 20px;">Pay annually and lock in these discounts:</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+        <div style="background: white; padding: 15px; border-radius: 6px;">
+            <p style="color: #666; margin: 0;">Basic Annual</p>
+            <p style="font-size: 24px; font-weight: bold; color: #2e7d32; margin: 10px 0;">$4,970/year</p>
+            <p style="font-size: 12px; color: #999; margin: 0;">Save $994/year</p>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 6px;">
+            <p style="color: #666; margin: 0;">Pro Annual</p>
+            <p style="font-size: 24px; font-weight: bold; color: #2e7d32; margin: 10px 0;">$6,950/year</p>
+            <p style="font-size: 12px; color: #999; margin: 0;">Save $1,390/year</p>
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 6px;">
+            <p style="color: #666; margin: 0;">Elite Annual</p>
+            <p style="font-size: 24px; font-weight: bold; color: #2e7d32; margin: 10px 0;">$9,950/year</p>
+            <p style="font-size: 12px; color: #999; margin: 0;">Save $1,990/year</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section>
+    <h2>Pricing Questions</h2>
+    
+    <div class="faq">
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What's included in the $4,995 setup fee?</span>
+                <span>+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Everything. Your complete system configuration, all lead source integrations (Zillow, Realtor.com, Facebook, Google, Espresso Agent, IDX Broker, etc.), pre-loaded NEPQ and Reverse Selling workflow sequences, custom AI voice training, landing page builds, and a live onboarding call where we walk you and your team through the entire system.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Is there a contract? Can I cancel?</span>
+                <span>+</span>
+            </div>
+            <div class="faq-answer">
+                <p>No contract. Month-to-month billing on all plans. You can cancel anytime, but we're confident you won't want to once you see the results. If you choose annual billing, you'll lock in significant savings (10-20% discount).</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Are there any hidden fees or overage charges?</span>
+                <span>+</span>
+            </div>
+            <div class="faq-answer">
+                <p>No. Your monthly plan includes all SMS, email, voice, and AI features. Unlimited contacts, unlimited users, unlimited campaigns. No per-contact fees. No overage charges. The price you see is the price you pay.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How many leads/month is each plan designed for?</span>
+                <span>+</span>
+            </div>
+            <div class="faq-answer">
+                <p><strong>Basic:</strong> 50-150 leads/month. <strong>Pro:</strong> 100-500+ leads/month. <strong>Elite:</strong> 500+ leads/month across unlimited sub-accounts. These are guidelines, not hard limits. If you exceed expectations, we'll help you scale without extra costs.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Can I upgrade or downgrade my plan?</span>
+                <span>+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes. Upgrade or downgrade anytime. If you upgrade, we'll prorate the difference. If you downgrade, we'll credit the overage to your next billing cycle. No penalties.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What payment methods do you accept?</span>
+                <span>+</span>
+            </div>
+            <div class="faq-answer">
+                <p>We accept all major credit cards (Visa, Mastercard, American Express) and ACH transfers for annual plans. Invoicing available for annual contracts. Payment is processed securely through Stripe.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Is there a free trial?</span>
+                <span>+</span>
+            </div>
+            <div class="faq-answer">
+                <p>We offer a personalized demo and consultation (free) to see if AI Sales Pipeline is right for you. Once you decide to move forward, we do a 14-day custom setup. The setup fee ($4,995) is a one-time investment that gets you live and trained.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What happens if the system doesn't work for my market?</span>
+                <span>+</span>
+            </div>
+            <div class="faq-answer">
+                <p>We have a 90-day money-back guarantee on the setup fee. If you don't see measurable results within 90 days (following our recommendations), we refund the $4,995. No questions asked. We've deployed in 50+ different real estate markets, so we're confident we can make it work for you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="text-align: center; background: linear-gradient(135deg, #0052cc 0%, #003d99 100%); color: white; border-radius: 8px;">
+    <h2 style="color: white; margin-top: 0;">Ready to Get Started?</h2>
+    <p style="color: #fff; margin-bottom: 20px;">Let's schedule your free consultation and demo. No obligation. We'll show you exactly how AI Sales Pipeline works for your business.</p>
+    <a href="mailto:hello@aisalespipeline.com?subject=Schedule%20Consultation" class="cta-button">Book Your Free Consultation</a>
+</section>
+
+<footer>
+    <p>&copy; 2026 AI Sales Pipeline. All rights reserved.</p>
+    <p style="margin-top: 10px; font-size: 12px; opacity: 0.8;">Questions? Email hello@aisalespipeline.com or call us.</p>
+</footer>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', function() {
+        const item = this.parentElement;
+        item.classList.toggle('open');
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features | AI Sales Pipeline</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0052cc 0%, #003d99 100%);
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        
+        section {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #0052cc;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 20px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #003d99;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #ff6b35;
+        }
+        
+        .feature-group {
+            margin-bottom: 50px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 82, 204, 0.15);
+            border-color: #0052cc;
+            transform: translateY(-4px);
+        }
+        
+        .feature-card .icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h4 {
+            color: #0052cc;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .feature-card.highlight {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            border: 2px solid #4caf50;
+        }
+        
+        .pricing-comparison {
+            background: #f5f5f5;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .feature-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .feature-table th {
+            background: #0052cc;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .feature-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature-table tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .check {
+            color: #4caf50;
+            font-weight: bold;
+        }
+        
+        .cross {
+            color: #d32f2f;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: #e55a20;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+        
+        .integration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .integration-badge {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .integration-badge:hover {
+            border-color: #0052cc;
+            color: #0052cc;
+        }
+        
+        footer {
+            background: #003d99;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            section h2 {
+                font-size: 24px;
+            }
+            
+            h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🚀 AI Sales Pipeline Features</h1>
+    <p>Everything You Need to Win More Deals</p>
+</header>
+
+<!-- FEATURES BY OUTCOME -->
+
+<section class="feature-group">
+    <h2>Get Leads Faster</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Respond to every lead before your competition. 391% more likely to convert if contacted in 60 seconds.</p>
+    
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">⚡</div>
+            <h4>60-Second Response</h4>
+            <p>AI voice and SMS respond to leads instantly, 24/7. Even when you're busy, sleeping, or on another call. Leads never go to voicemail again.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🌐</div>
+            <h4>Capture Every Lead Source</h4>
+            <p>Integrated with Zillow, Realtor.com, Facebook Ads, Google Ads, IDX Broker, your website forms, and more. All leads feed into one unified pipeline.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📊</div>
+            <h4>Intelligent Lead Scoring</h4>
+            <p>AI analyzes 50+ data points on every lead: engagement patterns, response time, property interest, demographics. Tells you who to call first.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🎯</div>
+            <h4>Smart Lists & Segmentation</h4>
+            <p>Auto-segment contacts by source, stage, behavior, and custom criteria. Send the right message to the right lead at the right time.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📱</div>
+            <h4>Lead Capture Forms</h4>
+            <p>Drag-and-drop form builder for your website, landing pages, and funnels. Auto-populates the CRM. Seller surveys, buyer questionnaires, all built-in.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🔔</div>
+            <h4>Real-Time Lead Notifications</h4>
+            <p>Get instant alerts when high-value leads come in. Never miss a hot lead. Desktop, mobile, and SMS notifications keep you always on top.</p>
+        </div>
+    </div>
+</section>
+
+<!-- OMNI-CHANNEL COMMUNICATION -->
+
+<section class="feature-group">
+    <h2>Omni-Channel Communication</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Communicate with leads where they are: SMS, email, voice, social media — all in one inbox.</p>
+    
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">💬</div>
+            <h4>2-Way SMS Automation</h4>
+            <p>Full two-way conversational SMS with AI responses. Leads text you questions. AI responds intelligently. Human takeover available when needed.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📧</div>
+            <h4>2-Way Email Automation</h4>
+            <p>Inbox-deliverable email sequences, newsletters, and drip campaigns. Full tracking (opens, clicks, replies). Works at scale.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">☎️</div>
+            <h4>AI Voice Calling</h4>
+            <p>AI places calls, delivers personalized voice messages, qualifies leads. Every call is recorded, transcribed, and analyzed for training and compliance.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📞</div>
+            <h4>Missed Call Text-Back</h4>
+            <p>Lead calls and hangs up? AI texts them back in seconds with a personalized message. Recaptures leads before they call your competitor.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🗣️</div>
+            <h4>Voicemail Drops</h4>
+            <p>Leave personalized voicemails at scale without the phone ringing. Perfect for FSBO, expired, and cold prospecting campaigns. Fully compliant.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📲</div>
+            <h4>WhatsApp Integration</h4>
+            <p>Reach international leads and tech-savvy buyers where they communicate most. International SMS, WhatsApp, all in one platform.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">👥</div>
+            <h4>Facebook & Instagram DM Automation</h4>
+            <p>Automatically respond to social media DMs with AI-driven conversation flows. Capture hot leads from your social ads instantly.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🏪</div>
+            <h4>Google Business Messaging</h4>
+            <p>Respond to Google Business Profile messages automatically. Never miss an inquiry from local search. Unified with other channels.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📥</div>
+            <h4>Unified Conversations Inbox</h4>
+            <p>Every channel in one inbox view: SMS, email, Facebook, Instagram, WhatsApp, Google Business, voice calls. No tool switching. Full context on every conversation.</p>
+        </div>
+    </div>
+</section>
+
+<!-- AUTOMATION & FOLLOW-UP -->
+
+<section class="feature-group">
+    <h2>Never Miss Follow-Up (Automated Sequences)</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Pre-loaded NEPQ and Reverse Selling sequences. Customizable workflows. 24/7 automation.</p>
+    
+    <div class="feature-grid">
+        <div class="feature-card highlight">
+            <div class="icon">🧠</div>
+            <h4>NEPQ Automation Sequences</h4>
+            <p><strong>Pre-loaded.</strong> Psychology-based follow-up flows designed to overcome objections, qualify leads, and build trust. No training needed. Just activate.</p>
+        </div>
+        
+        <div class="feature-card highlight">
+            <div class="icon">🔄</div>
+            <h4>Visual Workflow Builder</h4>
+            <p>Drag-and-drop automation sequences. Build multi-step workflows with triggers, conditions, and actions. No coding required. Fully customizable.</p>
+        </div>
+        
+        <div class="feature-card highlight">
+            <div class="icon">⏰</div>
+            <h4>Conditional Logic & If/Then Branching</h4>
+            <p>Smart sequences that adapt to each lead's behavior. If lead clicks link → send follow-up email. If lead ignores SMS → escalate to phone call.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🌍</div>
+            <h4>Time-Zone Smart Sending</h4>
+            <p>All messages delivered at the optimal time based on the lead's local time zone. Not everyone is in EST. AI knows.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🎬</div>
+            <h4>Multi-Touch Campaign Builder</h4>
+            <p>Build drip campaigns across SMS, email, voice, and social channels simultaneously. Single sequence touches leads on every channel they use.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🔗</div>
+            <h4>Intent Triggers</h4>
+            <p>Fire automation based on lead behavior: website visits, form fills, email opens, link clicks, property views. React instantly to buying signals.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🤖</div>
+            <h4>Premium Workflow Actions (AI)</h4>
+            <p>Use ChatGPT and AI content generation natively inside automation workflows. Generate personalized emails, SMS, and social posts on the fly.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">✋</div>
+            <h4>Human Handoff Capability</h4>
+            <p>AI handles initial conversation. When a lead is truly qualified, AI hands off to you for the close. Perfect blend of automation and personal touch.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CLOSE DEALS FASTER -->
+
+<section class="feature-group">
+    <h2>Close Deals Faster</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Convert more leads. Remove friction. Shorten sales cycles.</p>
+    
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">📹</div>
+            <h4>Video Email Follow-Up (VSSL)</h4>
+            <p>Send personalized video messages. 3-5x higher engagement than plain text. Stand out in crowded inboxes. Record once, send to many.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🎥</div>
+            <h4>Video Sales Pages</h4>
+            <p>Embed video sales letters on landing pages. Automate follow-up based on how far prospects watch. Measure engagement and intent.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📋</div>
+            <h4>Drag-and-Drop Pipeline Management</h4>
+            <p>Visual Kanban board to track every lead from first contact to closed deal. See exactly where each opportunity is. Customize stages for your process.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📅</div>
+            <h4>AI Appointment Setting</h4>
+            <p>AI qualifies leads and books appointments automatically. Syncs with Google/Outlook calendar. Buyers and sellers self-schedule from messages.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">✅</div>
+            <h4>Online Booking & Calendar Suite</h4>
+            <p>Self-scheduling page embedded on your website. Buyers and sellers pick their own time. Reduces back-and-forth. Fewer no-shows with automated reminders.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📞</div>
+            <h4>Power Dialer</h4>
+            <p>Auto-dial contact lists at scale. Perfect for FSBO, expired, circle prospecting. Built-in call recording and compliance. Voicemail drops included.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📝</div>
+            <h4>Contact Notes & Activity History</h4>
+            <p>Full activity timeline for every contact. Every call, email, SMS, website visit, form submission. Full context for smarter follow-up.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🎁</div>
+            <h4>Smart Contact Profiles</h4>
+            <p>Full profile with custom fields, tags, source tracking, communication preferences. Build a 360° view of every lead and client.</p>
+        </div>
+    </div>
+</section>
+
+<!-- WEBSITES & FUNNELS -->
+
+<section class="feature-group">
+    <h2>Websites, Funnels & Landing Pages</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Build high-converting funnels. No code required. Mobile-optimized. SEO-ready.</p>
+    
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">🌐</div>
+            <h4>Full Website Builder</h4>
+            <p>Build complete agent websites without code. Mobile-optimized. Drag-and-drop builder. Custom domains. WordPress hosting included.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📧</div>
+            <h4>High-Converting Funnels & Landing Pages</h4>
+            <p>Pre-built templates for buyer funnels, seller funnels, FSBO campaigns, expired listings, and more. Proven conversion layouts.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🏘️</div>
+            <h4>IDX Property Alert Pages</h4>
+            <p>Automated property listing alerts sent to buyer prospects. Keeps them engaged with fresh listings in their target area.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🔍</div>
+            <h4>Online Listings & Citations (70+ Directories)</h4>
+            <p>Automatic citation building across Google, Apple Maps, Yelp, and 70+ local directories. Boost local SEO. Your business info consistent everywhere.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📝</div>
+            <h4>Custom Form & Survey Builder</h4>
+            <p>Create buyer/seller intake forms, property surveys, and custom questionnaires. Auto-populate CRM fields. Smart conditional logic.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">💾</div>
+            <h4>WordPress Hosting</h4>
+            <p>Managed WordPress hosting included. Host your agent website on the same platform. Automatic backups and security.</p>
+        </div>
+    </div>
+</section>
+
+<!-- REPUTATION MANAGEMENT -->
+
+<section class="feature-group">
+    <h2>Build Your Reputation Automatically</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">5-star reviews drive more business. Make it automatic.</p>
+    
+    <div class="feature-grid">
+        <div class="feature-card highlight">
+            <div class="icon">⭐</div>
+            <h4>Automated Google Review Requests</h4>
+            <p>After every closing or milestone, AI automatically asks clients for a 5-star Google review. Smart timing. Perfect wording. Never leave positive feedback on the table.</p>
+        </div>
+        
+        <div class="feature-card highlight">
+            <div class="icon">💬</div>
+            <h4>Review Response Automation</h4>
+            <p>AI drafts and posts professional responses to new reviews on autopilot. Protect your reputation. Show future leads you care about feedback.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📊</div>
+            <h4>Reputation Dashboard</h4>
+            <p>Monitor your star rating and review volume across Google, Zillow, Yelp, and 50+ platforms in one place. Track trends over time.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🎯</div>
+            <h4>Social Proof Widgets</h4>
+            <p>Display live review feeds on your website and landing pages. Real-time testimonials build instant trust with new leads.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ANALYTICS & REPORTING -->
+
+<section class="feature-group">
+    <h2>Analytics, Reporting & Attribution</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Know your numbers. Optimize what works. Double down on winners.</p>
+    
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">📊</div>
+            <h4>AI Analytics Dashboard</h4>
+            <p>Real-time insights on lead flow, conversion rates, response times, pipeline health. See your business at a glance. Mobile-friendly.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🎯</div>
+            <h4>Attribution Reporting</h4>
+            <p>Know exactly which source — Zillow, Google, Facebook, organic — generates your best ROI. Track every lead from source to close.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📱</div>
+            <h4>Google Ads Reporting</h4>
+            <p>Full Google Ads campaign performance data inside your dashboard. CPL, conversion rates, ROAS. Integrated with CRM.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">👥</div>
+            <h4>Facebook Ads Reporting</h4>
+            <p>Monitor Meta ad spend, CPL, and conversion data alongside your organic lead sources. See which campaigns work best.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">☎️</div>
+            <h4>Call Tracking & Analytics</h4>
+            <p>Track which campaigns and sources are generating inbound calls and conversions. Record, transcribe, and analyze every call.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SOCIAL & CONTENT -->
+
+<section class="feature-group">
+    <h2>Social Media & Content</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Plan, create, schedule, analyze — all in one place.</p>
+    
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">📱</div>
+            <h4>Social Media Planner</h4>
+            <p>Schedule posts across Facebook, Instagram, LinkedIn, Google My Business, and TikTok from one dashboard. Plan weeks ahead. Auto-posting.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">✍️</div>
+            <h4>AI Content Generation</h4>
+            <p>AI writes listing descriptions, social posts, email copy, and follow-up messages for you. Save hours per week. Consistent brand voice.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📹</div>
+            <h4>Video Email Integration</h4>
+            <p>Send personalized video emails that stand out in crowded inboxes and dramatically lift response rates. 3-5x better engagement.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM & ADVANCED FEATURES -->
+
+<section class="feature-group">
+    <h2>Team & Advanced Features</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Scale with your team. For teams, brokers, and agencies.</p>
+    
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">👥</div>
+            <h4>Unlimited Team Members & Users</h4>
+            <p>Add as many agents, admins, and team members as you need. No per-seat fees. Unlimited sub-accounts (Pro/Elite plans).</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🎯</div>
+            <h4>Round-Robin Lead Assignment</h4>
+            <p>Automatically distribute leads fairly across your team. Appointment assignment automation. Prevents bottlenecks.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🔐</div>
+            <h4>Branded Desktop App (Elite)</h4>
+            <p>Your clients see your brand — your logo, your domain, your colors — not our platform. Full white-label desktop app.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📲</div>
+            <h4>Branded Mobile App (Elite)</h4>
+            <p>Launch your own branded iOS and Android app in the App Store and Google Play. Fully customized. Your brand.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🔌</div>
+            <h4>Full API Access & Custom Integrations (Elite)</h4>
+            <p>Connect to any third-party tool, MLS, or data provider via our platform's complete API. Unlimited custom integrations.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">💼</div>
+            <h4>Platform Reseller Mode (Elite)</h4>
+            <p>Package and resell AI Sales Pipeline to other agents in your market as your own software product. Recurring revenue stream.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">💳</div>
+            <h4>Rebilling with Markup Control (Elite)</h4>
+            <p>Mark up SMS, email, and AI usage costs and resell them to clients for additional revenue. Set your own margins.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🎙️</div>
+            <h4>Custom AI Voice Training (Elite)</h4>
+            <p>Train the AI voice to match your personal speaking style and brand for a truly custom experience. Your voice, your style.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">📞</div>
+            <h4>Monthly 1-on-1 Strategy Call (Elite)</h4>
+            <p>Private strategy session with our team each month to optimize your pipeline and maximize conversions. Dedicated support.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon">🛡️</div>
+            <h4>HIPAA Compliance Option (Elite)</h4>
+            <p>For healthcare-adjacent workflows. HIPAA-compliant data handling. Dedicated security team.</p>
+        </div>
+    </div>
+</section>
+
+<!-- INTEGRATIONS -->
+
+<section class="feature-group">
+    <h2>Integrations: Connects with Everything You Use</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px;">Native integrations with every major lead source, marketing platform, and real estate tool.</p>
+    
+    <div class="integration-grid">
+        <div class="integration-badge">🏠 Zillow</div>
+        <div class="integration-badge">🏡 Realtor.com</div>
+        <div class="integration-badge">🔵 Facebook Ads</div>
+        <div class="integration-badge">🔴 Google Ads</div>
+        <div class="integration-badge">📸 Instagram</div>
+        <div class="integration-badge">💼 LinkedIn</div>
+        <div class="integration-badge">▶️ YouTube</div>
+        <div class="integration-badge">🎵 TikTok</div>
+        <div class="integration-badge">☎️ Espresso Agent</div>
+        <div class="integration-badge">💬 WhatsApp</div>
+        <div class="integration-badge">📲 Twilio</div>
+        <div class="integration-badge">📧 Mailgun</div>
+        <div class="integration-badge">💳 Stripe</div>
+        <div class="integration-badge">📅 Google Calendar</div>
+        <div class="integration-badge">📋 Outlook</div>
+        <div class="integration-badge">🗺️ Google My Biz</div>
+        <div class="integration-badge">⭐ Yext</div>
+        <div class="integration-badge">📊 Google Analytics</div>
+        <div class="integration-badge">🔌 Zapier</div>
+        <div class="integration-badge">🤖 ChatGPT/OpenAI</div>
+        <div class="integration-badge">🌐 WordPress</div>
+        <div class="integration-badge">🏘️ IDX Broker</div>
+        <div class="integration-badge">🔒 DocuSign</div>
+        <div class="integration-badge">📞 Keller Williams</div>
+    </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+
+<section>
+    <h2>Feature Comparison by Plan</h2>
+    
+    <table class="feature-table">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Basic ($497/mo)</th>
+                <th>Pro ($695/mo)</th>
+                <th>Elite ($995/mo)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>AI Text & Email Automation</strong></td>
+                <td><span class="check">✓</span></td>
+                <td><span class="check">✓</span></td>
+                <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+                <td><strong>AI Voice Calling</strong></td>
+                <td><span class="check">✓</span></td>
+                <td><span class="check">✓</span></td>
+                <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+                <td><strong>Video Email Follow-Up</strong></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="check">✓</span></td>
+                <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+                <td><strong>WhatsApp Integration</strong></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="check">✓</span></td>
+                <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+                <td><strong>Facebook & Instagram DM Automation</strong></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="check">✓</span></td>
+                <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+                <td><strong>AI Content Generation</strong></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="check">✓</span></td>
+                <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+                <td><strong>Power Dialer (FSBO & Expired)</strong></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="check">✓</span></td>
+                <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+                <td><strong>IDX Property Alerts</strong></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+                <td><strong>Branded Desktop App</strong></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+                <td><strong>Branded Mobile App</strong></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+                <td><strong>Reseller Mode</strong></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+                <td><strong>Full API Access</strong></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+                <td><strong>Custom AI Voice Training</strong></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+                <td><strong>Monthly Strategy Call</strong></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="cross">✗</span></td>
+                <td><span class="check">✓</span></td>
+            </tr>
+            <tr>
+                <td><strong>Team Member Seats</strong></td>
+                <td>Unlimited</td>
+                <td>2 included</td>
+                <td>5+ included</td>
+            </tr>
+            <tr>
+                <td><strong>Support Level</strong></td>
+                <td>Email + Chat</td>
+                <td>Priority Support</td>
+                <td>Dedicated Manager</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- CTA -->
+
+<section style="text-align: center; background: linear-gradient(135deg, #0052cc 0%, #003d99 100%); color: white; border-radius: 8px;">
+    <h2 style="color: white;">Ready to See All Features in Action?</h2>
+    <p style="color: #fff; margin-bottom: 20px;">Book a personalized demo. See how AI Sales Pipeline works for your real estate business.</p>
+    <a href="mailto:hello@aisalespipeline.com?subject=Schedule%20Demo" class="cta-button">Schedule Your Free Demo</a>
+</section>
+
+<footer>
+    <p>&copy; 2026 AI Sales Pipeline. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
