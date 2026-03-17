@@ -673,6 +673,7 @@
             overflow: hidden;
             transition: all 0.3s ease;
             animation: slideInUp 0.8s ease-out;
+            cursor: pointer;
         }
 
         .feature-card::before {
@@ -683,6 +684,7 @@
             border-image: linear-gradient(135deg, rgba(255, 107, 53, 0.5), rgba(0, 212, 255, 0.5), rgba(255, 107, 53, 0.5)) 1;
             opacity: 0;
             transition: opacity 0.3s ease;
+            pointer-events: none;
         }
 
         .feature-card:hover::before {
@@ -2001,8 +2003,17 @@
             infographicObserver.observe(infographicContainer);
         }
 
-        // ============ BUTTON CLICK HANDLERS ============
-        // CTAs now use anchor links to #contact — no JS override needed
+        // ============ FEATURE CARD CLICK HANDLERS ============
+        document.querySelectorAll('.feature-card').forEach(card => {
+            const link = card.querySelector('a[href^="/features/"]');
+            if (link) {
+                card.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'A') {
+                        window.location.href = link.href;
+                    }
+                });
+            }
+        });
 
         // ============ GRADIENT TEXT ANIMATION ============
         const gradientElements = document.querySelectorAll('.hero h1, .section-title, .infographic-title');
