@@ -3,118 +3,578 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buyer Workflows for Real Estate | Automated Buyer Nurturing | AI Sales Pipeline</title>
-    <meta name="description" content="Automated buyer workflows for real estate agents. Intelligent lead qualification and nurturing that moves prospects through your pipeline 24/7.">
+    <title>Buyer Lead Workflows for Real Estate Agents | AI Sales Pipeline</title>
+    <meta name="description" content="AI-powered buyer lead nurturing for real estate agents. Qualify intent, track pre-approval, send property alerts, and book showings automatically.">
     <link rel="canonical" href="https://www.aisalespipeline.com/features/buyer-workflows-real-estate.html">
+    <meta property="og:title" content="Buyer Lead Workflows for Real Estate Agents | AI Sales Pipeline">
+    <meta property="og:description" content="AI-powered buyer lead nurturing for real estate agents. Qualify intent, track pre-approval, send property alerts, and book showings automatically.">
+    <meta property="og:url" content="https://www.aisalespipeline.com/features/buyer-workflows-real-estate.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.aisalespipeline.com/images/buyer-workflows-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Buyer Lead Workflows for Real Estate Agents | AI Sales Pipeline">
+    <meta name="twitter:description" content="AI-powered buyer lead nurturing for real estate agents. Qualify intent, track pre-approval, send property alerts, and book showings automatically.">
+    <meta name="llm-context" content="AI Sales Pipeline buyer workflows feature page. Intelligent buyer lead qualification and nurturing automation for real estate agents, including pre-approval tracking, IDX property alerts, long-term nurture campaigns, and automated showing appointment booking.">
+    <meta name="ai-content-declaration" content="This page describes AI-powered buyer lead nurturing workflows for real estate professionals.">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aisalespipeline.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://www.aisalespipeline.com/#features" },
+            { "@type": "ListItem", "position": 3, "name": "Buyer Workflows", "item": "https://www.aisalespipeline.com/features/buyer-workflows-real-estate.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does the AI qualify buyer leads automatically?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The AI engages buyer leads in natural conversation via SMS or email and asks qualifying questions about their timeline, budget, pre-approval status, must-haves, and location preferences. Based on their responses, the system assigns a readiness score and routes hot buyers to you immediately while placing longer-term prospects in nurture sequences."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the buyer workflow integrate with IDX and MLS property alerts?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. AI Sales Pipeline integrates with IDX feeds so the AI can send buyers personalized property alerts matching their criteria. When a new listing hits the market that matches a buyer's preferences, the system sends an instant notification with property details and offers to schedule a showing."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long can the buyer nurture sequences run?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Buyer nurture sequences can run for 6 to 12 months or longer. The system adjusts frequency based on engagement. Active buyers receive daily or weekly property alerts and check-ins. Long-term prospects receive monthly market updates and educational content to keep you top of mind until they are ready to purchase."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can the AI book showing appointments for buyer leads?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. When a buyer expresses interest in a property, the AI checks your calendar availability and offers time slots for a showing. It handles the back-and-forth scheduling, sends confirmation messages, and delivers reminders before the appointment. You receive a buyer brief with their qualification details before every showing."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What lead sources do the buyer workflows support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Buyer workflows support leads from Zillow, Realtor.com, Facebook and Instagram ads, Google PPC, your website IDX, open house sign-ins, and manual imports. Each lead source can have its own tailored initial response and follow-up sequence to match how the buyer found you."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the buyer survey automation work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "When a new buyer lead enters the system, the AI sends a conversational survey via text message that feels like a natural conversation, not a form. It asks about their ideal location, number of bedrooms, budget range, timeline, and whether they have been pre-approved. The responses automatically populate the lead's profile and determine which workflow path they follow."
+                }
+            }
+        ]
+    }
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --dark-bg: #0a0a0a; --dark-alt: #111111; --orange: #ff6b35; --orange-dark: #ff5a1f; --white: #ffffff; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: var(--dark-bg); color: var(--white); line-height: 1.6; }
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; background-color: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 107, 53, 0.2); }
+        :root {
+            --dark-bg: #0a0a0a;
+            --dark-alt: #111111;
+            --orange: #ff6b35;
+            --orange-dark: #ff5a1f;
+            --white: #ffffff;
+            --blue-accent: #00d4ff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+        }
         .nav-logo { font-size: 1.5rem; font-weight: 700; color: var(--white); text-decoration: none; }
         .nav-links { display: flex; gap: 2rem; list-style: none; }
         .nav-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
         .nav-links a:hover { color: var(--orange); }
-        .nav-cta { background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: var(--white); padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
-        .hero { padding: 8rem 2rem 4rem; background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, var(--dark-bg) 100%); text-align: center; }
-        .hero h1 { font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, var(--white), var(--orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
-        .hero-subtitle { font-size: 1.2rem; color: rgba(240, 240, 240, 0.8); max-width: 700px; margin: 0 auto 2rem; }
-        .section { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; }
-        .section h2 { font-size: 2rem; color: var(--orange); margin-bottom: 1.5rem; }
-        .section p { color: rgba(240, 240, 240, 0.8); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .feature-card { background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05)); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,107,53,0.2); }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .hero {
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, var(--dark-bg) 100%);
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--white), var(--orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: rgba(240, 240, 240, 0.8);
+            max-width: 750px;
+            margin: 0 auto 2rem;
+        }
+        .breadcrumb {
+            text-align: center;
+            padding: 1rem 2rem 0;
+            font-size: 0.85rem;
+            color: rgba(240,240,240,0.5);
+        }
+        .breadcrumb a { color: rgba(240,240,240,0.6); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--orange); }
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            font-size: 2rem;
+            color: var(--orange);
+            margin-bottom: 1.5rem;
+        }
+        .section h3 {
+            color: var(--orange);
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+        .section p, .section li {
+            color: rgba(240, 240, 240, 0.8);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .section a { color: var(--orange); text-decoration: none; }
+        .section a:hover { text-decoration: underline; }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .feature-card {
+            background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05));
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,107,53,0.2);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        .feature-card:hover {
+            border-color: var(--orange);
+            transform: translateY(-3px);
+        }
         .feature-card h3 { color: var(--orange); margin-bottom: 1rem; }
         .feature-card p { color: rgba(240, 240, 240, 0.7); font-size: 0.95rem; }
-        .stats-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 3rem 2rem; background: linear-gradient(90deg, rgba(255,107,53,0.1), rgba(0,212,255,0.1)); text-align: center; }
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 3rem 2rem;
+            background: linear-gradient(90deg, rgba(255,107,53,0.1), rgba(0,212,255,0.1));
+            text-align: center;
+        }
         .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--orange); }
         .stat-label { color: rgba(240, 240, 240, 0.7); font-size: 0.9rem; }
-        .cta-section { padding: 4rem 2rem; text-align: center; background: linear-gradient(135deg, rgba(255,107,53,0.15), var(--dark-bg)); }
-        .cta-button { display: inline-block; background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: var(--white); padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-top: 1.5rem; }
-        .back-link { display: inline-block; margin-top: 2rem; color: var(--orange); text-decoration: none; }
-        footer { background-color: var(--dark-alt); padding: 2rem; text-align: center; border-top: 1px solid rgba(255, 107, 53, 0.2); color: rgba(240, 240, 240, 0.6); }
-        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-links { display: none; } }
+        .workflow-step {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+        .step-number {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--white);
+        }
+        .step-content h3 { margin-bottom: 0.5rem; }
+        .step-content p { margin-bottom: 0; }
+        .use-case-card {
+            background: var(--dark-alt);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--orange);
+            margin-bottom: 1.5rem;
+        }
+        .use-case-card h3 { color: var(--orange); margin-bottom: 0.75rem; }
+        .use-case-card p { color: rgba(240,240,240,0.75); font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .impact-card {
+            background: var(--dark-alt);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0,212,255,0.15);
+            text-align: center;
+        }
+        .impact-card h3 { color: var(--blue-accent); margin-bottom: 0.75rem; }
+        .impact-card p { color: rgba(240,240,240,0.7); font-size: 0.95rem; }
+        .faq-item {
+            border-bottom: 1px solid rgba(255,107,53,0.15);
+            padding: 1.5rem 0;
+        }
+        .faq-item h3 { color: var(--white); font-size: 1.1rem; margin-bottom: 0.75rem; }
+        .faq-item p { color: rgba(240,240,240,0.75); font-size: 0.95rem; margin-bottom: 0; }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .related-card {
+            background: var(--dark-alt);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255,107,53,0.15);
+            text-decoration: none;
+            transition: border-color 0.3s, transform 0.3s;
+            display: block;
+        }
+        .related-card:hover { border-color: var(--orange); transform: translateY(-2px); }
+        .related-card h4 { color: var(--orange); margin-bottom: 0.5rem; font-size: 1rem; }
+        .related-card p { color: rgba(240,240,240,0.6); font-size: 0.85rem; margin-bottom: 0; }
+        .cta-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255,107,53,0.15), var(--dark-bg));
+        }
+        .cta-section h2 { color: var(--white); font-size: 2.2rem; margin-bottom: 1rem; }
+        .cta-section p { color: rgba(240,240,240,0.8); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .cta-button:hover { transform: scale(1.05); }
+        footer {
+            background-color: var(--dark-alt);
+            padding: 3rem 2rem 2rem;
+            border-top: 1px solid rgba(255, 107, 53, 0.2);
+        }
+        footer a { color: rgba(240,240,240,0.7); text-decoration: none; }
+        footer a:hover { color: var(--orange); }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .workflow-step { flex-direction: column; align-items: center; text-align: center; }
+        }
     </style>
 </head>
 <body>
+
     <nav>
         <a href="/" class="nav-logo">AI Sales Pipeline</a>
         <ul class="nav-links">
-            <li><a href="/features.html">Features</a></li>
+            <li><a href="/#features">Features</a></li>
             <li><a href="/pricing.html">Pricing</a></li>
-            <li><a href="/#how-it-works">How It Works</a></li>
+            <li><a href="/comparison.html">Compare</a></li>
+            <li><a href="/#faq">FAQ</a></li>
         </ul>
         <a href="/#contact" class="nav-cta">Book Demo</a>
     </nav>
 
     <section class="hero">
-        <h1>Buyer Workflows</h1>
-        <p class="hero-subtitle">Intelligent buyer qualification and nurturing that moves prospects through your pipeline 24/7 — from first inquiry to closing.</p>
+        <div class="breadcrumb">
+            <a href="/">Home</a> &rsaquo; <a href="/#features">Features</a> &rsaquo; Buyer Workflows
+        </div>
+        <h1>Buyer Lead Workflows for Real Estate Agents</h1>
+        <p class="hero-subtitle">Intelligent buyer qualification and nurturing that turns cold inquiries into closed deals. The AI qualifies intent, tracks pre-approval status, sends property alerts, and books showings while you focus on the buyers who are ready right now.</p>
     </section>
 
+    <!-- Stats Bar -->
     <div class="stats-bar">
-        <div><div class="stat-number">3x</div><div class="stat-label">Faster Response</div></div>
-        <div><div class="stat-number">45%</div><div class="stat-label">More Showings</div></div>
-        <div><div class="stat-number">28%</div><div class="stat-label">Higher Close Rate</div></div>
-        <div><div class="stat-number">100%</div><div class="stat-label">Automated</div></div>
+        <div>
+            <div class="stat-number">45%</div>
+            <div class="stat-label">More Showings Booked</div>
+        </div>
+        <div>
+            <div class="stat-number">&lt;90s</div>
+            <div class="stat-label">Average Response Time</div>
+        </div>
+        <div>
+            <div class="stat-number">12 mo</div>
+            <div class="stat-label">Long-Term Nurture</div>
+        </div>
+        <div>
+            <div class="stat-number">3x</div>
+            <div class="stat-label">Higher Close Rate</div>
+        </div>
     </div>
 
+    <!-- What It Is -->
     <section class="section">
-        <h2>Buyers Need Speed and Relevance</h2>
-        <p>Buyers are emotional and time-sensitive. They see a listing they love, they want information NOW. Wait an hour, and they've moved on to the next agent. Send generic listings, and they tune you out.</p>
-        <p>Buyer workflows are designed for the unique psychology of home shoppers. Fast response, relevant listings, and intelligent qualification that happens automatically. The AI learns what each buyer wants and delivers exactly that.</p>
-        <p>Whether they're first-time buyers nervous about the process, investors looking for deals, or move-up buyers with specific needs — the workflow adapts to their situation and timeline.</p>
+        <h2>What Is Buyer Lead Nurturing?</h2>
+        <p>Most buyer leads are not ready to purchase the day they inquire. Industry data shows that the average buyer takes 4 to 6 months from first search to signed contract. During that time, the agents who stay in consistent, relevant contact are the ones who win the deal. The agents who forget to follow up lose to competitors who did not.</p>
+        <p><strong>Real estate buyer lead nurturing</strong> from <a href="/">AI Sales Pipeline</a> solves the follow-up problem completely. The AI qualifies every buyer lead through natural conversation, determines their timeline and readiness, and then places them in the right workflow: immediate action for hot buyers, steady nurture for those who need more time.</p>
+        <p>The system does not just send generic drip emails. It engages buyers in two-way <a href="/features/ai-sms-real-estate.html">AI SMS</a> and <a href="/features/ai-email-real-estate.html">AI email</a> conversations, asking about their must-haves, budget, pre-approval status, and preferred neighborhoods. Every response updates the buyer's profile and adjusts the workflow accordingly. When a buyer is finally ready, the AI books a showing appointment on your calendar and hands you a complete buyer brief so you walk in prepared.</p>
+        <p>Whether your leads come from Zillow, Facebook ads, open houses, or your own website, buyer workflows make sure no lead falls through the cracks and every prospect gets the attention they deserve until they are ready to close.</p>
     </section>
 
+    <!-- How It Works -->
     <section class="section">
-        <h2>Workflow Capabilities</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>⚡ Instant Response</h3>
-                <p>Buyer inquiries trigger immediate, personalized responses. While other agents are still checking their voicemail, you've already sent relevant listings.</p>
+        <h2>How Buyer Workflows Work</h2>
+        <div class="workflow-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h3>Lead Enters the Pipeline</h3>
+                <p>A buyer submits an inquiry on Zillow, clicks a Facebook ad, signs in at your open house, or fills out a form on your website. The lead is captured instantly and the AI responds within 90 seconds with a personalized message referencing the specific property or search that caught their attention.</p>
             </div>
-            <div class="feature-card">
-                <h3>🔍 Smart Matching</h3>
-                <p>The AI analyzes their search criteria and behavior to recommend listings they'll actually love — not just what's in their price range.</p>
+        </div>
+        <div class="workflow-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3>Conversational Qualification</h3>
+                <p>The AI starts a natural text conversation that feels like chatting with a helpful agent, not filling out a form. It asks about their timeline ("Are you hoping to move this spring or are you starting to explore?"), budget ("Do you have a price range in mind?"), pre-approval status ("Have you had a chance to chat with a lender yet?"), and must-haves. Responses are captured automatically.</p>
             </div>
-            <div class="feature-card">
-                <h3>💰 Qualification</h3>
-                <p>Gentle but effective pre-approval and budget qualification built into the conversation. Know who's serious before you show houses.</p>
+        </div>
+        <div class="workflow-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3>Workflow Assignment</h3>
+                <p>Based on the qualification answers, the system assigns the buyer to the right path. Pre-approved buyers with a 30-day timeline go into the hot-buyer fast track. Browsers who are 6 months out enter the long-term nurture sequence. First-time buyers get an educational onboarding series. Each path is tailored to where the buyer actually is in their journey.</p>
             </div>
-            <div class="feature-card">
-                <h3>📅 Showing Booking</h3>
-                <p>Qualified buyers can book showings directly through the AI. It checks your calendar, confirms the appointment, and sends reminders.</p>
+        </div>
+        <div class="workflow-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <h3>Property Alerts and Engagement</h3>
+                <p>The AI sends personalized property alerts based on each buyer's criteria through IDX integration. When a listing matches their preferences, they receive an instant notification with photos, details, and a prompt to schedule a showing. Between alerts, the system sends market updates, neighborhood guides, and mortgage rate insights to keep the buyer engaged and informed.</p>
             </div>
-            <div class="feature-card">
-                <h3>📊 Market Education</h3>
-                <p>First-time buyers get educational content about the process. Investors get ROI data and market trends. Relevant to their needs.</p>
-            </div>
-            <div class="feature-card">
-                <h3>🔄 Long-Term Nurture</h3>
-                <p>Not ready to buy yet? The workflow keeps them engaged with market updates, new listings, and helpful content until they're ready.</p>
+        </div>
+        <div class="workflow-step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+                <h3>Showing Booked and Handoff</h3>
+                <p>When the buyer wants to see a property, the AI checks your calendar, offers available slots, and confirms the appointment. You receive a buyer brief with their qualification details, search history, communication preferences, and any concerns they have mentioned. You arrive at the showing with complete context, ready to close.</p>
             </div>
         </div>
     </section>
 
+    <!-- Key Capabilities -->
     <section class="section">
-        <h2>Buyer Journey Stages</h2>
-        <p><strong>Discovery:</strong> Just browsing — educational content, market insights, no pressure</p>
-        <p><strong>Active Search:</strong> Looking seriously — frequent listing alerts, showing availability, neighborhood guides</p>
-        <p><strong>Pre-Approved:</strong> Ready to buy — priority access to new listings, off-market opportunities, fast scheduling</p>
-        <p><strong>Under Contract:</strong> Deal in progress — inspection reminders, milestone check-ins, vendor recommendations</p>
-        <p><strong>Post-Close:</strong> New homeowner — move-in resources, referral requests, future investment opportunities</p>
+        <h2>Key Capabilities</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Buyer Intent Qualification</h3>
+                <p>The AI assesses buying intent through conversation, not forms. It determines timeline, motivation, financial readiness, and seriousness level. Hot buyers are flagged for immediate attention. Casual browsers enter nurture mode. You always know exactly who deserves your time right now.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Pre-Approval Status Tracking</h3>
+                <p>The system tracks whether each buyer is pre-approved, in the process of getting pre-approved, or has not started. For buyers without pre-approval, the AI gently encourages them to connect with a lender and can refer them to your preferred mortgage partners. Pre-approval status updates automatically as the conversation progresses.</p>
+            </div>
+            <div class="feature-card">
+                <h3>IDX Property Alert Integration</h3>
+                <p>Connected to your IDX feed so the AI can send buyers personalized listing alerts the moment a matching property hits the market. Alerts include property photos, key details, and a one-tap option to schedule a showing. Buyers stay engaged with relevant inventory instead of browsing other agents' sites.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Long-Term Nurture (6-12 Months)</h3>
+                <p>Not every buyer is ready now, but they will be eventually. The long-term nurture sequence sends monthly market updates, mortgage rate changes, new listing roundups, and seasonal buying tips. It keeps you top of mind without being annoying. When the buyer's engagement signals increase, the system automatically shifts to a more active cadence.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Automated Showing Booking</h3>
+                <p>When a qualified buyer wants to see a property, the AI handles the scheduling. It accesses your calendar, presents available time slots, confirms the appointment, and sends reminders to both you and the buyer. No phone tag, no missed opportunities, no back-and-forth scheduling delays.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Buyer Survey Automation</h3>
+                <p>A conversational intake survey via <a href="/features/ai-sms-real-estate.html">AI SMS</a> that feels natural, not clinical. The AI gathers location preferences, bedroom and bathroom requirements, budget, timeline, deal-breakers, and lifestyle priorities. This data populates the buyer profile and powers smarter property matching throughout the entire relationship.</p>
+            </div>
+        </div>
     </section>
 
+    <!-- Real Estate Use Cases -->
+    <section class="section">
+        <h2>Real Estate Use Cases</h2>
+
+        <div class="use-case-card">
+            <h3>Zillow Buyer Lead Qualification</h3>
+            <p>A lead submits an inquiry on Zillow for a 3-bedroom home in your area. Within 60 seconds, the AI sends a personalized text: "Hi Marcus, I saw you were checking out the home on Cedar Lane. That one's a great value for the neighborhood. Are you looking to move soon or just keeping an eye on the market?" The conversation continues naturally. Within five messages, the AI knows Marcus is pre-approved, needs to move by summer for a school district change, and prefers homes with a yard. He is flagged as a hot lead and a showing is booked for Saturday. You would have lost this lead if you had waited until morning to respond.</p>
+        </div>
+
+        <div class="use-case-card">
+            <h3>Facebook Ad Buyer Nurture</h3>
+            <p>Your Facebook ad generates 40 buyer leads this month. Most are early-stage browsers who clicked because a listing photo caught their eye. The AI qualifies each one through conversation and identifies 8 serious buyers and 32 long-term prospects. The 8 serious buyers get fast-tracked with property alerts and showing invitations. The 32 browsers enter a 6-month nurture sequence with market updates and educational content. Over the next quarter, 11 of those 32 warm up and convert to active buyers. Without the nurture workflow, you would have lost all 32 because you ran out of time to follow up manually.</p>
+        </div>
+
+        <div class="use-case-card">
+            <h3>Open House Follow-Up</h3>
+            <p>Twenty people sign in at your open house on Sunday. By Sunday evening, every attendee receives a personalized text from the AI: "Great meeting you at the open house on Maple Drive today! What did you think of the layout? I have a few similar homes coming to market next week that might interest you." The AI surveys each attendee about their timeline and preferences. Within 48 hours, you have qualified prospects scheduled for private showings and everyone else is in a buyer nurture sequence. Compare this to the typical agent who sends a generic email three days later and never follows up again.</p>
+        </div>
+
+        <div class="use-case-card">
+            <h3>Long-Term Buyer Who Is Not Ready Yet</h3>
+            <p>A young couple tells the AI they want to buy in about a year when their lease ends. Instead of forgetting about them, the AI places them in a 12-month nurture workflow. They receive monthly neighborhood spotlights, first-time buyer tips, and mortgage rate updates. At month eight, the couple starts opening every email and clicking on listings. The AI detects the engagement spike and shifts to active-buyer mode, sending daily listing alerts and asking if they are ready to start touring. By month ten, you have a pre-approved, highly motivated buyer couple who already trust you because you stayed in touch for nearly a year. That is the power of <a href="/features/lead-scoring-real-estate.html">AI lead scoring</a> combined with buyer workflows.</p>
+        </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section class="section">
+        <h2>Why Buyer Workflows Matter for Your Business</h2>
+        <div class="impact-grid">
+            <div class="impact-card">
+                <h3>Stop Losing Leads to Slow Follow-Up</h3>
+                <p>78% of buyers work with the first agent who responds. Buyer workflows guarantee a response within 90 seconds, 24 hours a day, 7 days a week. You never lose another lead to a faster competitor because the AI is always on.</p>
+            </div>
+            <div class="impact-card">
+                <h3>Work Only With Qualified Buyers</h3>
+                <p>Stop wasting weekends showing houses to unqualified browsers. The AI qualifies every lead before they reach your calendar. You only spend face-to-face time with buyers who have the motivation, timeline, and financial readiness to transact.</p>
+            </div>
+            <div class="impact-card">
+                <h3>Capture the Long-Term Opportunity</h3>
+                <p>Industry research shows that 67% of buyer leads convert between 6 and 18 months after initial inquiry. Without automated nurturing, most agents abandon these leads within two weeks. Buyer workflows keep you connected for the entire journey, turning dormant leads into closings months down the road.</p>
+            </div>
+        </div>
+        <p style="margin-top:2rem;">Pair buyer workflows with <a href="/features/seller-workflows-real-estate.html">seller workflows</a> to build a complete pipeline that covers both sides of the transaction. Visit our <a href="/pricing.html">pricing page</a> to see which plan includes the full buyer workflow suite, or <a href="/comparison.html">compare AI Sales Pipeline</a> to other CRMs to see why agents are switching.</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>How does the AI qualify buyer leads automatically?</h3>
+            <p>The AI engages buyer leads in natural conversation via SMS or email and asks qualifying questions about their timeline, budget, pre-approval status, must-haves, and location preferences. Based on their responses, the system assigns a readiness score and routes hot buyers to you immediately while placing longer-term prospects in nurture sequences.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Does the buyer workflow integrate with IDX and MLS property alerts?</h3>
+            <p>Yes. AI Sales Pipeline integrates with IDX feeds so the AI can send buyers personalized property alerts matching their criteria. When a new listing hits the market that matches a buyer's preferences, the system sends an instant notification with property details and offers to schedule a showing.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How long can the buyer nurture sequences run?</h3>
+            <p>Buyer nurture sequences can run for 6 to 12 months or longer. The system adjusts frequency based on engagement. Active buyers receive daily or weekly property alerts and check-ins. Long-term prospects receive monthly market updates and educational content to keep you top of mind until they are ready to purchase.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can the AI book showing appointments for buyer leads?</h3>
+            <p>Yes. When a buyer expresses interest in a property, the AI checks your calendar availability and offers time slots for a showing. It handles the back-and-forth scheduling, sends confirmation messages, and delivers reminders before the appointment. You receive a buyer brief with their qualification details before every showing.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What lead sources do the buyer workflows support?</h3>
+            <p>Buyer workflows support leads from Zillow, Realtor.com, Facebook and Instagram ads, Google PPC, your website IDX, open house sign-ins, and manual imports. Each lead source can have its own tailored initial response and follow-up sequence to match how the buyer found you.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How does the buyer survey automation work?</h3>
+            <p>When a new buyer lead enters the system, the AI sends a conversational survey via text message that feels like a natural conversation, not a form. It asks about their ideal location, number of bedrooms, budget range, timeline, and whether they have been pre-approved. The responses automatically populate the lead's profile and determine which workflow path they follow.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
     <section class="cta-section">
-        <h2>Convert More Buyers on Autopilot</h2>
-        <p>Intelligent buyer workflows that work 24/7.</p>
-        <a href="/#contact" class="cta-button">Start Free Trial →</a>
-        <br>
-        <a href="/" class="back-link">← Back to Home</a>
+        <h2>Never Lose Another Buyer Lead</h2>
+        <p>Automated qualification, intelligent nurturing, and showing booking that works 24/7. Turn every buyer inquiry into a relationship that closes.</p>
+        <a href="/#contact" class="cta-button">Book Your Demo</a>
+    </section>
+
+    <!-- Related Features -->
+    <section class="section">
+        <h2>Related Features</h2>
+        <div class="related-grid">
+            <a href="/features/seller-workflows-real-estate.html" class="related-card">
+                <h4>Seller Workflows</h4>
+                <p>FSBO, expired listing, and downsizer automation with NEPQ scripts for winning listing appointments.</p>
+            </a>
+            <a href="/features/lead-scoring-real-estate.html" class="related-card">
+                <h4>Lead Scoring</h4>
+                <p>AI-powered scoring that identifies your hottest buyer leads so you know exactly where to focus.</p>
+            </a>
+            <a href="/features/ai-sms-real-estate.html" class="related-card">
+                <h4>AI SMS</h4>
+                <p>Instant text message responses that engage buyer leads within seconds of their inquiry.</p>
+            </a>
+            <a href="/features/facebook-retargeting-real-estate.html" class="related-card">
+                <h4>Facebook Retargeting</h4>
+                <p>Keep your brand in front of buyer leads across Facebook and Instagram with automated retargeting.</p>
+            </a>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 AI Sales Pipeline. All rights reserved.</p>
+        <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem;">
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Features</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/features/ai-sms-real-estate.html">AI SMS</a></li>
+                    <li><a href="/features/ai-email-real-estate.html">AI Email</a></li>
+                    <li><a href="/features/ai-voice-calls-real-estate.html">AI Voice Calls</a></li>
+                    <li><a href="/features/ai-clone-video-real-estate.html">AI Clone Video</a></li>
+                    <li><a href="/features/lead-scoring-real-estate.html">Lead Scoring</a></li>
+                    <li><a href="/features/facebook-retargeting-real-estate.html">Facebook Retargeting</a></li>
+                    <li><a href="/features/seller-workflows-real-estate.html">Seller Workflows</a></li>
+                    <li><a href="/features/buyer-workflows-real-estate.html">Buyer Workflows</a></li>
+                    <li><a href="/features/custom-ai-brain-real-estate.html">Custom AI Brain</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Resources</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/ai-crm-real-estate.html">AI CRM for Real Estate</a></li>
+                    <li><a href="/ai-crm-new-jersey.html">AI CRM for NJ Agents</a></li>
+                    <li><a href="/fsbo-automation.html">FSBO Automation</a></li>
+                    <li><a href="/expired-listing-automation.html">Expired Listing Automation</a></li>
+                    <li><a href="/comparison.html">CRM Comparison</a></li>
+                    <li><a href="/pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Company</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/#contact">Contact Us</a></li>
+                    <li><a href="mailto:hello@aisalespipeline.com">hello@aisalespipeline.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align:center;padding-top:2rem;border-top:1px solid rgba(255,107,53,0.1);color:rgba(240,240,240,0.6);font-size:0.9rem;">
+            <p>&copy; 2026 AI Sales Pipeline. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>

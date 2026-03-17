@@ -29,4 +29,7 @@ Allow: /
 # Point to sitemap
 Sitemap: https://www.aisalespipeline.com/sitemap.xml
 
+# LLM reference file
+# llms.txt: https://www.aisalespipeline.com/llms.txt
+
 # All crawlers have full access - AI Sales Pipeline welcomes indexing and crawling

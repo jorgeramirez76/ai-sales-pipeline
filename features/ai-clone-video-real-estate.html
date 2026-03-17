@@ -3,117 +3,715 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Clone Video for Real Estate | Personalized AI Video Messages | AI Sales Pipeline</title>
-    <meta name="description" content="AI video cloning for real estate agents. Create personalized video messages at scale using your AI twin. Unprecedented engagement and conversion rates.">
+    <title>AI Clone Video for Real Estate Agents | AI Sales Pipeline</title>
+    <meta name="description" content="AI video for real estate agents. Generate personalized clone videos at scale that say each lead's name and reference their property interest. 3-5x engagement.">
+    <meta name="keywords" content="AI video for real estate agents, AI clone video, personalized video real estate, video prospecting, real estate video marketing">
     <link rel="canonical" href="https://www.aisalespipeline.com/features/ai-clone-video-real-estate.html">
+    <meta property="og:title" content="AI Clone Video for Real Estate Agents | AI Sales Pipeline">
+    <meta property="og:description" content="Generate lifelike personalized videos at scale. Your AI clone says each lead's name and references their property interest for unprecedented engagement rates.">
+    <meta property="og:url" content="https://www.aisalespipeline.com/features/ai-clone-video-real-estate.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AI Sales Pipeline">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Clone Video for Real Estate Agents | AI Sales Pipeline">
+    <meta name="twitter:description" content="Generate lifelike personalized videos at scale. Your AI clone says each lead's name and references their property interest for unprecedented engagement rates.">
+    <meta name="llm-context" content="AI Sales Pipeline is an AI-powered real estate CRM. This page covers the AI Clone Video feature which generates personalized video messages using an agent's likeness and voice.">
+    <meta name="ai-content-declaration" content="This page describes a real product feature of AI Sales Pipeline. Content is factual and describes actual platform capabilities.">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aisalespipeline.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://www.aisalespipeline.com/#features" },
+            { "@type": "ListItem", "position": 3, "name": "AI Clone Video", "item": "https://www.aisalespipeline.com/features/ai-clone-video-real-estate.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does AI clone video work for real estate agents?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You record a short 2-3 minute video sample of yourself speaking naturally. Our AI analyzes your face, voice, expressions, and mannerisms to build a digital twin. From that point forward, the system generates unlimited personalized videos where your clone says each lead's name, references their property interest, and delivers a custom message — all looking and sounding exactly like you."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do AI clone videos look realistic enough for real estate leads?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The technology has advanced to the point where AI clone videos are virtually indistinguishable from a real recording. Your facial expressions, lip movements, voice inflections, and speaking cadence are all replicated accurately. Leads consistently report feeling like the agent recorded the video personally for them."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does it take to set up my AI video clone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The initial setup takes about 15 minutes. You record a 2-3 minute sample video following our guided prompts, and the AI processes it within 24 hours. After that, every personalized video is generated automatically with zero effort from you."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can AI clone videos be embedded in email sequences and SMS?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. AI clone videos integrate directly with AI Sales Pipeline's email and SMS workflows. You can embed video thumbnails in email sequences, send video links via text message, or trigger videos automatically based on lead behavior like new inquiries, listing views, or pipeline stage changes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What kind of engagement rates do AI clone videos get compared to text?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Agents using AI clone videos typically see 3-5x higher engagement compared to text-only emails and SMS. Video emails see 300% higher click-through rates, and leads who receive personalized videos are significantly more likely to book appointments and respond to follow-up."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is it ethical to use AI-generated video in real estate outreach?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI Sales Pipeline is committed to ethical AI use. All AI clone videos include a brief disclosure that the video was generated with AI assistance. The content is truthful, the likeness is your own, and the purpose is to deliver a more personal experience at scale. Leads appreciate the effort and personalization."
+                }
+            }
+        ]
+    }
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --dark-bg: #0a0a0a; --dark-alt: #111111; --orange: #ff6b35; --orange-dark: #ff5a1f; --white: #ffffff; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: var(--dark-bg); color: var(--white); line-height: 1.6; }
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; background-color: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 107, 53, 0.2); }
-        .nav-logo { font-size: 1.5rem; font-weight: 700; color: var(--white); text-decoration: none; }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        :root {
+            --dark-bg: #0a0a0a;
+            --dark-alt: #111111;
+            --orange: #ff6b35;
+            --orange-dark: #ff5a1f;
+            --white: #ffffff;
+            --blue-accent: #00d4ff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        a { color: var(--orange); }
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
         .nav-links a:hover { color: var(--orange); }
-        .nav-cta { background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: var(--white); padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
-        .hero { padding: 8rem 2rem 4rem; background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, var(--dark-bg) 100%); text-align: center; }
-        .hero h1 { font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, var(--white), var(--orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
-        .hero-subtitle { font-size: 1.2rem; color: rgba(240, 240, 240, 0.8); max-width: 700px; margin: 0 auto 2rem; }
-        .section { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; }
-        .section h2 { font-size: 2rem; color: var(--orange); margin-bottom: 1.5rem; }
-        .section p { color: rgba(240, 240, 240, 0.8); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .feature-card { background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05)); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,107,53,0.2); }
-        .feature-card h3 { color: var(--orange); margin-bottom: 1rem; }
-        .feature-card p { color: rgba(240, 240, 240, 0.7); font-size: 0.95rem; }
-        .stats-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 3rem 2rem; background: linear-gradient(90deg, rgba(255,107,53,0.1), rgba(0,212,255,0.1)); text-align: center; }
-        .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--orange); }
-        .stat-label { color: rgba(240, 240, 240, 0.7); font-size: 0.9rem; }
-        .cta-section { padding: 4rem 2rem; text-align: center; background: linear-gradient(135deg, rgba(255,107,53,0.15), var(--dark-bg)); }
-        .cta-button { display: inline-block; background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: var(--white); padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-top: 1.5rem; }
-        .back-link { display: inline-block; margin-top: 2rem; color: var(--orange); text-decoration: none; }
-        footer { background-color: var(--dark-alt); padding: 2rem; text-align: center; border-top: 1px solid rgba(255, 107, 53, 0.2); color: rgba(240, 240, 240, 0.6); }
-        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-links { display: none; } }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .breadcrumb {
+            max-width: 1000px;
+            margin: 5.5rem auto 0;
+            padding: 0.8rem 2rem;
+            font-size: 0.85rem;
+            color: rgba(240, 240, 240, 0.5);
+        }
+        .breadcrumb a {
+            color: rgba(240, 240, 240, 0.6);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover { color: var(--orange); }
+        .hero {
+            padding: 2rem 2rem 4rem;
+            background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, var(--dark-bg) 100%);
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--white), var(--orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: rgba(240, 240, 240, 0.8);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            font-size: 2rem;
+            color: var(--orange);
+            margin-bottom: 1.5rem;
+        }
+        .section p, .section li {
+            color: rgba(240, 240, 240, 0.8);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .section ul { margin-left: 1.5rem; margin-bottom: 1.5rem; }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .feature-card {
+            background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05));
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,107,53,0.2);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--orange);
+        }
+        .feature-card h3 {
+            color: var(--orange);
+            margin-bottom: 1rem;
+            font-size: 1.15rem;
+        }
+        .feature-card p {
+            color: rgba(240, 240, 240, 0.7);
+            font-size: 0.95rem;
+        }
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 3rem 2rem;
+            background: linear-gradient(90deg, rgba(255,107,53,0.1), rgba(0,212,255,0.1));
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--orange);
+        }
+        .stat-label {
+            color: rgba(240, 240, 240, 0.7);
+            font-size: 0.9rem;
+        }
+        .step-list {
+            counter-reset: steps;
+            list-style: none;
+            margin: 2rem 0;
+            padding: 0;
+        }
+        .step-list li {
+            counter-increment: steps;
+            padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, rgba(255,107,53,0.06), rgba(0,212,255,0.03));
+            border-radius: 10px;
+            border-left: 3px solid var(--orange);
+            position: relative;
+        }
+        .step-list li::before {
+            content: counter(steps);
+            position: absolute;
+            left: 1.2rem;
+            top: 1.4rem;
+            width: 2rem;
+            height: 2rem;
+            background: var(--orange);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .step-list li strong {
+            color: var(--white);
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .use-case {
+            background: linear-gradient(135deg, rgba(255,107,53,0.06), rgba(0,212,255,0.03));
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,107,53,0.15);
+            margin-bottom: 1.5rem;
+        }
+        .use-case h3 {
+            color: var(--orange);
+            margin-bottom: 0.8rem;
+            font-size: 1.15rem;
+        }
+        .use-case p {
+            color: rgba(240, 240, 240, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        .use-case .example-script {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            margin-top: 0.8rem;
+            font-style: italic;
+            color: rgba(240, 240, 240, 0.65);
+            font-size: 0.92rem;
+            border-left: 2px solid var(--blue-accent);
+        }
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .impact-card {
+            background: rgba(255,107,53,0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255,107,53,0.1);
+            text-align: center;
+        }
+        .impact-card h4 {
+            color: var(--orange);
+            margin-bottom: 0.5rem;
+        }
+        .impact-card p {
+            color: rgba(240, 240, 240, 0.7);
+            font-size: 0.92rem;
+        }
+        .faq-section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .faq-section h2 {
+            font-size: 2rem;
+            color: var(--orange);
+            margin-bottom: 2rem;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(255,107,53,0.06), rgba(0,212,255,0.03));
+            border-radius: 10px;
+            border: 1px solid rgba(255,107,53,0.12);
+        }
+        .faq-item h3 {
+            color: var(--white);
+            font-size: 1.05rem;
+            margin-bottom: 0.8rem;
+        }
+        .faq-item p {
+            color: rgba(240, 240, 240, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .cta-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255,107,53,0.15), var(--dark-bg));
+        }
+        .cta-section h2 {
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 0.8rem;
+        }
+        .cta-section p {
+            color: rgba(240, 240, 240, 0.7);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .cta-button:hover { transform: scale(1.05); }
+        .related-features {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .related-features h2 {
+            font-size: 2rem;
+            color: var(--orange);
+            margin-bottom: 2rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .related-card {
+            background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05));
+            padding: 1.8rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,107,53,0.2);
+            text-decoration: none;
+            transition: transform 0.3s, border-color 0.3s;
+            display: block;
+        }
+        .related-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--orange);
+        }
+        .related-card h3 {
+            color: var(--orange);
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+        .related-card p {
+            color: rgba(240, 240, 240, 0.6);
+            font-size: 0.88rem;
+        }
+        footer {
+            background-color: var(--dark-alt);
+            padding: 3rem 2rem 2rem;
+            border-top: 1px solid rgba(255, 107, 53, 0.2);
+            color: rgba(240, 240, 240, 0.6);
+        }
+        footer a {
+            color: rgba(240, 240, 240, 0.7);
+            text-decoration: none;
+        }
+        footer a:hover { color: var(--orange); }
+        .inline-link {
+            color: var(--orange);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,107,53,0.3);
+        }
+        .inline-link:hover { border-bottom-color: var(--orange); }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .step-list li { padding-left: 3.8rem; }
+        }
     </style>
 </head>
 <body>
+
     <nav>
         <a href="/" class="nav-logo">AI Sales Pipeline</a>
         <ul class="nav-links">
-            <li><a href="/features.html">Features</a></li>
+            <li><a href="/#features">Features</a></li>
             <li><a href="/pricing.html">Pricing</a></li>
-            <li><a href="/#how-it-works">How It Works</a></li>
+            <li><a href="/comparison.html">Compare</a></li>
+            <li><a href="/#faq">FAQ</a></li>
         </ul>
         <a href="/#contact" class="nav-cta">Book Demo</a>
     </nav>
 
+    <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/#features">Features</a> &rsaquo; AI Clone Video
+    </div>
+
     <section class="hero">
-        <h1>AI Clone Video</h1>
-        <p class="hero-subtitle">Your AI twin creates personalized video messages for every lead. They see you, hear you, and feel like you're speaking directly to them — because you are, at scale.</p>
+        <h1>AI Clone Video for Real Estate Agents</h1>
+        <p class="hero-subtitle">Your AI twin creates lifelike personalized video messages for every lead. They see your face, hear your voice, and feel like you recorded it just for them. Because at scale, personal wins every time.</p>
     </section>
 
     <div class="stats-bar">
-        <div><div class="stat-number">8x</div><div class="stat-label">Higher Engagement</div></div>
-        <div><div class="stat-number">300%</div><div class="stat-label">More Click-Throughs</div></div>
-        <div><div class="stat-number">68%</div><div class="stat-label">Watch Completion</div></div>
-        <div><div class="stat-number">∞</div><div class="stat-label">Scalable</div></div>
+        <div>
+            <div class="stat-number">3-5x</div>
+            <div class="stat-label">Engagement vs Text</div>
+        </div>
+        <div>
+            <div class="stat-number">300%</div>
+            <div class="stat-label">Higher Click-Through</div>
+        </div>
+        <div>
+            <div class="stat-number">68%</div>
+            <div class="stat-label">Average Watch Rate</div>
+        </div>
+        <div>
+            <div class="stat-number">15 min</div>
+            <div class="stat-label">One-Time Setup</div>
+        </div>
     </div>
 
+    <!-- What It Is Section -->
     <section class="section">
-        <h2>Your AI Twin, Working 24/7</h2>
-        <p>Video is the most engaging form of communication. But recording personalized videos for every lead is impossible. Until now.</p>
-        <p>AI Clone Video creates a lifelike digital version of you. You record a short training video, and our AI learns your facial expressions, voice patterns, speaking style, and mannerisms. Then it generates unlimited personalized videos — each one customized with the lead's name, their specific interests, and your message.</p>
-        <p>The result? Leads receive a video that looks and sounds exactly like you recorded it just for them. They'll see you saying their name, referencing their property search, and addressing their specific situation. It's personal at a scale that was never possible before.</p>
+        <h2>What Is AI Clone Video?</h2>
+        <p>Imagine sending a personalized video to every single lead that comes into your <a href="/" class="inline-link">AI Sales Pipeline</a> — a video where you say their name, reference the property they asked about, and speak directly to their situation. Now imagine doing that without recording a single additional video yourself.</p>
+        <p>That is AI Clone Video. You record one short sample video of yourself talking naturally. Our AI studies your face, voice, expressions, and speaking patterns to create a digital twin — your AI clone. From that moment on, the system generates unlimited personalized videos that look and sound exactly like you recorded them personally.</p>
+        <p>This is not a generic template with a name dropped in. Your AI clone moves its mouth naturally, matches your vocal tone, and delivers a fully customized message for every lead. The lead hears you say their name. They hear you reference the listing at 42 Oak Street. They hear you mention that you noticed they were looking at homes in the $400K range.</p>
+        <p>For real estate agents, this is a breakthrough. Video has always been the most engaging way to communicate, but recording personalized videos for hundreds of leads is physically impossible. AI Clone Video removes that limitation entirely. Every lead gets the personal touch. Nobody falls through the cracks. And you spend zero additional time recording.</p>
     </section>
 
+    <!-- How It Works Section -->
     <section class="section">
-        <h2>How It Works</h2>
+        <h2>How AI Clone Video Works</h2>
+        <p>Getting started takes about 15 minutes. After that, everything runs automatically inside your <a href="/" class="inline-link">real estate CRM</a>.</p>
+        <ol class="step-list">
+            <li>
+                <strong>Record Your Sample Video</strong>
+                Follow our guided prompts and record a 2-3 minute video of yourself speaking naturally. Talk about your market, why you love helping buyers and sellers, anything comfortable. The AI needs to see your facial expressions, hear your voice, and learn your cadence.
+            </li>
+            <li>
+                <strong>AI Builds Your Digital Twin</strong>
+                Within 24 hours, our AI processes your video and creates a clone model. It maps your facial structure, lip movements, vocal patterns, pitch, speed, and natural pauses. The result is a digital version of you that can deliver any script while looking and sounding authentic.
+            </li>
+            <li>
+                <strong>Set Your Video Triggers</strong>
+                Choose when personalized videos should be generated. New lead comes in? Welcome video. Lead viewed a listing three times? Follow-up video. Past client anniversary? Check-in video. You define the triggers and the message templates once.
+            </li>
+            <li>
+                <strong>AI Generates Personalized Videos Automatically</strong>
+                When a trigger fires, the system pulls the lead's name, property interest, conversation history, and any relevant details. Your AI clone delivers a fully personalized message incorporating all of that context. Each video is unique.
+            </li>
+            <li>
+                <strong>Delivery Across Every Channel</strong>
+                Videos are automatically embedded in <a href="/features/ai-email-real-estate.html" class="inline-link">AI-powered email sequences</a>, sent as links via <a href="/features/ai-sms-real-estate.html" class="inline-link">AI SMS</a>, or shared through any channel. Every video gets a unique tracking link so you know exactly who watched and for how long.
+            </li>
+            <li>
+                <strong>Engagement Data Feeds Your Pipeline</strong>
+                When a lead watches your video, that data flows back into <a href="/features/lead-scoring-real-estate.html" class="inline-link">AI lead scoring</a>. A lead who watches 90% of your video is flagged as hot. A lead who replays it twice gets a priority notification sent straight to your phone.
+            </li>
+        </ol>
+    </section>
+
+    <!-- Key Capabilities Section -->
+    <section class="section">
+        <h2>Key Capabilities</h2>
         <div class="feature-grid">
             <div class="feature-card">
-                <h3>🎬 One-Time Training</h3>
-                <p>Record a 2-minute sample video. Our AI analyzes your face, voice, expressions, and speaking patterns to create your digital twin.</p>
+                <h3>Hyper-Personalized Content</h3>
+                <p>Every video references the lead by name, mentions their specific property interest, and can incorporate details from prior conversations stored in your CRM. No two videos are the same.</p>
             </div>
             <div class="feature-card">
-                <h3>✨ Dynamic Generation</h3>
-                <p>For each lead, the AI generates a unique video with their name, their property interests, and personalized messaging — all in your voice and likeness.</p>
+                <h3>Lifelike Realism</h3>
+                <p>Advanced AI replicates your facial movements, lip sync, vocal tone, and natural speaking patterns. Leads consistently report that the video feels like a personal recording, not a computer-generated message.</p>
             </div>
             <div class="feature-card">
-                <h3>📧 Multi-Channel Delivery</h3>
-                <p>Videos are embedded in emails, sent via SMS, or shared through any channel. Each video gets a unique link for tracking.</p>
+                <h3>Trigger-Based Automation</h3>
+                <p>Videos generate automatically based on lead behavior — new inquiry, listing view, price drop on a saved property, pipeline stage change, or any custom trigger you define. Set it once, run forever.</p>
             </div>
             <div class="feature-card">
-                <h3>📊 Engagement Tracking</h3>
-                <p>See who watched, how long they watched, and when they engaged. Use this data to prioritize your hottest leads.</p>
+                <h3>Multi-Channel Delivery</h3>
+                <p>Embed video thumbnails in email sequences, send video links via SMS, or generate shareable URLs for social media. The video meets your leads wherever they are most active.</p>
             </div>
             <div class="feature-card">
-                <h3>🔄 Trigger-Based</h3>
-                <p>Videos send automatically based on lead behavior — new inquiry, property view, price drop on a saved listing, etc.</p>
+                <h3>Watch Analytics & Tracking</h3>
+                <p>See exactly who opened your video, how many seconds they watched, whether they replayed it, and when they clicked through. Use this data to prioritize hot leads and refine your messaging.</p>
             </div>
             <div class="feature-card">
-                <h3>🔒 Privacy & Ethics</h3>
-                <p>Full disclosure that the video is AI-generated. Transparent, ethical, and compliant with all regulations.</p>
+                <h3>Conversation Context Awareness</h3>
+                <p>Your AI clone can reference past interactions — mentioning a showing you scheduled, a price range you discussed, or a neighborhood they expressed interest in. It feels like a natural continuation of your relationship.</p>
             </div>
         </div>
     </section>
 
+    <!-- Use Cases Section -->
     <section class="section">
-        <h2>Sample Use Cases</h2>
-        <p><strong>New Lead Welcome:</strong> "Hi Sarah! I'm Jorge. I saw you're interested in homes in Springfield. I actually grew up there and know every neighborhood. Let me show you three properties I think you'll love..."</p>
-        <p><strong>Price Drop Alert:</strong> "Hey Mike! Remember that listing on Oak Street you looked at last week? The price just dropped $15K. I wanted you to be the first to know..."</p>
-        <p><strong>Market Update:</strong> "Hi Jennifer! It's Jorge. Just wanted to give you a quick update on the Springfield market — inventory is up 12% this month, which means more options for buyers like you..."</p>
-        <p><strong>Follow-Up:</strong> "Hi David! We spoke last week about your home search. I found two off-market properties that match exactly what you're looking for. Let's talk..."</p>
+        <h2>Real Estate Use Cases</h2>
+        <p>AI clone video is not a gimmick. Here are the specific situations where agents see the biggest impact on their business.</p>
+
+        <div class="use-case">
+            <h3>New Lead Welcome Video</h3>
+            <p>A lead registers on your website or submits an inquiry on Zillow. Within minutes, they receive a video of you greeting them by name, acknowledging the property they asked about, and inviting them to schedule a showing. This first impression sets you apart from every other agent who sent a text-only autoresponder.</p>
+            <div class="example-script">"Hi Sarah! I'm Jorge with AI Sales Pipeline. I saw you were looking at the listing on 42 Maple Drive in Springfield — beautiful home, and that backyard is incredible. I'd love to show you around in person. What does your schedule look like this week?"</div>
+        </div>
+
+        <div class="use-case">
+            <h3>Listing Presentation Follow-Up</h3>
+            <p>After a listing appointment, send a personalized video summarizing your marketing plan, reinforcing your value, and thanking the seller for their time. This follow-up alone can be the difference between winning and losing the listing, especially for <a href="/fsbo-automation.html" class="inline-link">FSBO leads</a> or <a href="/expired-listing-automation.html" class="inline-link">expired listings</a> who are comparing multiple agents.</p>
+            <div class="example-script">"Hi Michael, thanks for taking the time to meet with me today about your home on Cedar Lane. As I mentioned, I think we can get your property sold within 30 days with the right pricing strategy. Here's a quick summary of my plan..."</div>
+        </div>
+
+        <div class="use-case">
+            <h3>Past Client Check-In</h3>
+            <p>Stay top of mind with past clients without spending hours on the phone. Send personalized videos on home purchase anniversaries, local market updates, or seasonal check-ins. When they are ready to sell or know someone who is buying, you are the first agent they think of.</p>
+            <div class="example-script">"Hey Lisa! Can you believe it's been two years since you closed on your home on Birch Street? I hope you and the family are loving it. Quick heads up — homes in your neighborhood are selling for about 12% more than when you bought. Let me know if you ever want an updated home value estimate."</div>
+        </div>
+
+        <div class="use-case">
+            <h3>Market Update Videos</h3>
+            <p>Instead of sending a generic newsletter that nobody reads, send a personalized market update video tailored to each lead's area of interest. A buyer searching in downtown gets downtown stats. A seller in the suburbs gets suburb-specific data. Relevance drives engagement.</p>
+            <div class="example-script">"Hi David, I wanted to give you a quick update on the Springfield market since I know you're looking for a 3-bedroom in the $350K-$400K range. Good news — five new listings hit the market this week that match your criteria. Want me to send them over?"</div>
+        </div>
     </section>
 
+    <!-- Why It Matters Section -->
+    <section class="section">
+        <h2>Why AI Clone Video Matters for Your Business</h2>
+        <p>The real estate industry runs on relationships and trust. Video builds both faster than any other medium. When a lead sees your face and hears your voice, you go from a name on a screen to a real person they feel connected to. That connection translates directly into appointments, listings, and closings.</p>
+        <p>The problem has always been scale. You cannot record a unique video for every lead when you have 200 active contacts. But your competitors who do send personal videos — even to a handful of leads — are winning those clients at a higher rate.</p>
+        <p>AI Clone Video gives you the best of both worlds: the engagement power of personal video with the scale of automation. Every single lead in your pipeline gets the personal touch, and you invest zero additional time after the initial setup.</p>
+
+        <div class="impact-grid">
+            <div class="impact-card">
+                <h4>Win More Listings</h4>
+                <p>Listing presentation follow-ups with personalized video close at significantly higher rates than email-only follow-ups. You stand out because nobody else does this.</p>
+            </div>
+            <div class="impact-card">
+                <h4>Convert More Leads</h4>
+                <p>New leads who receive a welcome video are 3-5x more likely to respond than those who receive a standard text or email. First impressions matter.</p>
+            </div>
+            <div class="impact-card">
+                <h4>Save Hours Every Week</h4>
+                <p>Agents who previously recorded 10-15 individual videos per week now generate hundreds automatically. That is hours of production time returned to prospecting and showing.</p>
+            </div>
+            <div class="impact-card">
+                <h4>Build Stronger Referral Networks</h4>
+                <p>Past clients who receive regular personalized check-ins refer more business. Video keeps the relationship warm even when months pass between transactions.</p>
+            </div>
+        </div>
+
+        <p style="margin-top: 2rem;">Combined with <a href="/features/ai-email-real-estate.html" class="inline-link">AI email automation</a> and <a href="/features/ai-voice-calls-real-estate.html" class="inline-link">AI voice calls</a>, clone video becomes part of a multi-channel outreach strategy that ensures no lead is ever ignored. See our <a href="/pricing.html" class="inline-link">pricing plans</a> to find the package that fits your business.</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>How does AI clone video work for real estate agents?</h3>
+            <p>You record a short 2-3 minute video sample of yourself speaking naturally. Our AI analyzes your face, voice, expressions, and mannerisms to build a digital twin. From that point forward, the system generates unlimited personalized videos where your clone says each lead's name, references their property interest, and delivers a custom message — all looking and sounding exactly like you.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do AI clone videos look realistic enough for real estate leads?</h3>
+            <p>Yes. The technology has advanced to the point where AI clone videos are virtually indistinguishable from a real recording. Your facial expressions, lip movements, voice inflections, and speaking cadence are all replicated accurately. Leads consistently report feeling like the agent recorded the video personally for them.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How long does it take to set up my AI video clone?</h3>
+            <p>The initial setup takes about 15 minutes. You record a 2-3 minute sample video following our guided prompts, and the AI processes it within 24 hours. After that, every personalized video is generated automatically with zero effort from you.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can AI clone videos be embedded in email sequences and SMS?</h3>
+            <p>Absolutely. AI clone videos integrate directly with AI Sales Pipeline's email and SMS workflows. You can embed video thumbnails in email sequences, send video links via text message, or trigger videos automatically based on lead behavior like new inquiries, listing views, or pipeline stage changes.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What kind of engagement rates do AI clone videos get compared to text?</h3>
+            <p>Agents using AI clone videos typically see 3-5x higher engagement compared to text-only emails and SMS. Video emails see 300% higher click-through rates, and leads who receive personalized videos are significantly more likely to book appointments and respond to follow-up.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is it ethical to use AI-generated video in real estate outreach?</h3>
+            <p>AI Sales Pipeline is committed to ethical AI use. All AI clone videos include a brief disclosure that the video was generated with AI assistance. The content is truthful, the likeness is your own, and the purpose is to deliver a more personal experience at scale. Leads appreciate the effort and personalization.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
     <section class="cta-section">
-        <h2>Create Your AI Twin Today</h2>
-        <p>Personalized video at scale. The future of real estate communication.</p>
-        <a href="/#contact" class="cta-button">Start Free Trial →</a>
+        <h2>Create Your AI Clone Today</h2>
+        <p>Stop choosing between personal touch and scale. Send personalized video to every lead in your pipeline — automatically. See how AI Sales Pipeline transforms your engagement rates.</p>
         <br>
-        <a href="/" class="back-link">← Back to Home</a>
+        <a href="/#contact" class="cta-button">Book Your Demo</a>
+    </section>
+
+    <!-- Related Features Section -->
+    <section class="related-features">
+        <h2>Related Features</h2>
+        <div class="related-grid">
+            <a href="/features/ai-email-real-estate.html" class="related-card">
+                <h3>AI Email Automation</h3>
+                <p>Embed AI clone videos in intelligent email sequences that adapt to lead behavior and maximize open rates.</p>
+            </a>
+            <a href="/features/ai-sms-real-estate.html" class="related-card">
+                <h3>AI SMS</h3>
+                <p>Send video links via text message for instant delivery. Combine the power of SMS speed with video engagement.</p>
+            </a>
+            <a href="/features/lead-scoring-real-estate.html" class="related-card">
+                <h3>AI Lead Scoring</h3>
+                <p>Video watch data feeds directly into lead scoring. Know which leads are hottest based on how they engage with your videos.</p>
+            </a>
+            <a href="/features/custom-ai-brain-real-estate.html" class="related-card">
+                <h3>Custom AI Brain</h3>
+                <p>Train the AI on your market knowledge so your clone videos reference local data, neighborhood details, and your expertise.</p>
+            </a>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 AI Sales Pipeline. All rights reserved.</p>
+        <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem;">
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Features</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/features/ai-sms-real-estate.html">AI SMS</a></li>
+                    <li><a href="/features/ai-email-real-estate.html">AI Email</a></li>
+                    <li><a href="/features/ai-voice-calls-real-estate.html">AI Voice Calls</a></li>
+                    <li><a href="/features/ai-clone-video-real-estate.html">AI Clone Video</a></li>
+                    <li><a href="/features/lead-scoring-real-estate.html">Lead Scoring</a></li>
+                    <li><a href="/features/facebook-retargeting-real-estate.html">Facebook Retargeting</a></li>
+                    <li><a href="/features/seller-workflows-real-estate.html">Seller Workflows</a></li>
+                    <li><a href="/features/buyer-workflows-real-estate.html">Buyer Workflows</a></li>
+                    <li><a href="/features/custom-ai-brain-real-estate.html">Custom AI Brain</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Resources</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/ai-crm-real-estate.html">AI CRM for Real Estate</a></li>
+                    <li><a href="/ai-crm-new-jersey.html">AI CRM for NJ Agents</a></li>
+                    <li><a href="/fsbo-automation.html">FSBO Automation</a></li>
+                    <li><a href="/expired-listing-automation.html">Expired Listing Automation</a></li>
+                    <li><a href="/comparison.html">CRM Comparison</a></li>
+                    <li><a href="/pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Company</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/#contact">Contact Us</a></li>
+                    <li><a href="mailto:hello@aisalespipeline.com">hello@aisalespipeline.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align:center;padding-top:2rem;border-top:1px solid rgba(255,107,53,0.1);color:rgba(240,240,240,0.6);font-size:0.9rem;">
+            <p>&copy; 2026 AI Sales Pipeline. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>

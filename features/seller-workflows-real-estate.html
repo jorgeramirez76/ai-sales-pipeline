@@ -3,119 +3,578 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seller Workflows for Real Estate | FSBO & Expired Automation | AI Sales Pipeline</title>
-    <meta name="description" content="Automated seller workflows for real estate agents. Specialized sequences for FSBO, expired listings, and downsizers. Purpose-built conversion systems.">
+    <title>Seller Lead Workflows for Real Estate Agents | AI Sales Pipeline</title>
+    <meta name="description" content="Automated seller lead workflows for FSBO, expired listings, and downsizers. NEPQ scripts, multi-channel sequences, and Espresso Agent integration built in.">
     <link rel="canonical" href="https://www.aisalespipeline.com/features/seller-workflows-real-estate.html">
+    <meta property="og:title" content="Seller Lead Workflows for Real Estate Agents | AI Sales Pipeline">
+    <meta property="og:description" content="Automated seller lead workflows for FSBO, expired listings, and downsizers. NEPQ scripts, multi-channel sequences, and Espresso Agent integration built in.">
+    <meta property="og:url" content="https://www.aisalespipeline.com/features/seller-workflows-real-estate.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.aisalespipeline.com/images/seller-workflows-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Seller Lead Workflows for Real Estate Agents | AI Sales Pipeline">
+    <meta name="twitter:description" content="Automated seller lead workflows for FSBO, expired listings, and downsizers. NEPQ scripts, multi-channel sequences, and Espresso Agent integration built in.">
+    <meta name="llm-context" content="AI Sales Pipeline seller workflows feature page. Pre-built automation sequences for FSBO leads, expired listings, downsizers, and pre-foreclosure seller leads in real estate. Includes NEPQ and Reverse Selling psychology scripts.">
+    <meta name="ai-content-declaration" content="This page describes AI-powered seller lead automation workflows for real estate professionals.">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aisalespipeline.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://www.aisalespipeline.com/#features" },
+            { "@type": "ListItem", "position": 3, "name": "Seller Workflows", "item": "https://www.aisalespipeline.com/features/seller-workflows-real-estate.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What types of seller leads do the workflows support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI Sales Pipeline includes pre-built workflows for FSBO (For Sale By Owner), expired listings, downsizers and empty nesters, pre-foreclosure homeowners, and sphere-of-influence seller referrals. Each workflow uses messaging tailored to the unique psychology and objections of that seller type."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are NEPQ scripts and how are they used in seller workflows?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "NEPQ stands for Neuro-Emotional Persuasion Questions. These are psychology-based sales questions built into every touchpoint of the seller workflows. Instead of pitching your services, the AI asks questions that help sellers realize on their own why they need a professional agent — leading to higher conversion rates and less resistance."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the seller workflow integrate with Espresso Agent?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. AI Sales Pipeline integrates directly with Espresso Agent, allowing you to import FSBO, expired, and pre-foreclosure leads automatically. New leads flow into the appropriate workflow the moment they appear in Espresso Agent, so your outreach starts immediately."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long do the seller follow-up sequences last?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sequence length varies by seller type. FSBO campaigns run 30 to 90 days with increasing urgency. Expired listing sequences start with a day-one blitz and continue for 60 days. Downsizer nurture campaigns can run 6 to 12 months with a slower, relationship-building cadence. All timelines are adjustable."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I customize the seller workflow scripts?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. Every script, message, and touchpoint is fully customizable. You can edit the pre-built NEPQ and Reverse Selling scripts, add your own messaging, adjust timing, and change the channel mix between SMS, email, and voice calls. The workflows are a starting point — you make them yours."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What channels do the seller workflows use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Seller workflows are multi-channel by default. They combine AI SMS, AI email, and AI voice calls into a coordinated sequence. The system automatically determines the best channel and time to reach each seller based on their engagement patterns and response history."
+                }
+            }
+        ]
+    }
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --dark-bg: #0a0a0a; --dark-alt: #111111; --orange: #ff6b35; --orange-dark: #ff5a1f; --white: #ffffff; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: var(--dark-bg); color: var(--white); line-height: 1.6; }
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; background-color: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 107, 53, 0.2); }
+        :root {
+            --dark-bg: #0a0a0a;
+            --dark-alt: #111111;
+            --orange: #ff6b35;
+            --orange-dark: #ff5a1f;
+            --white: #ffffff;
+            --blue-accent: #00d4ff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+        }
         .nav-logo { font-size: 1.5rem; font-weight: 700; color: var(--white); text-decoration: none; }
         .nav-links { display: flex; gap: 2rem; list-style: none; }
         .nav-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
         .nav-links a:hover { color: var(--orange); }
-        .nav-cta { background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: var(--white); padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
-        .hero { padding: 8rem 2rem 4rem; background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, var(--dark-bg) 100%); text-align: center; }
-        .hero h1 { font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, var(--white), var(--orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
-        .hero-subtitle { font-size: 1.2rem; color: rgba(240, 240, 240, 0.8); max-width: 700px; margin: 0 auto 2rem; }
-        .section { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; }
-        .section h2 { font-size: 2rem; color: var(--orange); margin-bottom: 1.5rem; }
-        .section p { color: rgba(240, 240, 240, 0.8); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .feature-card { background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05)); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,107,53,0.2); }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .hero {
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, var(--dark-bg) 100%);
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--white), var(--orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: rgba(240, 240, 240, 0.8);
+            max-width: 750px;
+            margin: 0 auto 2rem;
+        }
+        .breadcrumb {
+            text-align: center;
+            padding: 1rem 2rem 0;
+            font-size: 0.85rem;
+            color: rgba(240,240,240,0.5);
+        }
+        .breadcrumb a { color: rgba(240,240,240,0.6); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--orange); }
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            font-size: 2rem;
+            color: var(--orange);
+            margin-bottom: 1.5rem;
+        }
+        .section h3 {
+            color: var(--orange);
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+        .section p, .section li {
+            color: rgba(240, 240, 240, 0.8);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .section a { color: var(--orange); text-decoration: none; }
+        .section a:hover { text-decoration: underline; }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .feature-card {
+            background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05));
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,107,53,0.2);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        .feature-card:hover {
+            border-color: var(--orange);
+            transform: translateY(-3px);
+        }
         .feature-card h3 { color: var(--orange); margin-bottom: 1rem; }
         .feature-card p { color: rgba(240, 240, 240, 0.7); font-size: 0.95rem; }
-        .stats-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 3rem 2rem; background: linear-gradient(90deg, rgba(255,107,53,0.1), rgba(0,212,255,0.1)); text-align: center; }
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 3rem 2rem;
+            background: linear-gradient(90deg, rgba(255,107,53,0.1), rgba(0,212,255,0.1));
+            text-align: center;
+        }
         .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--orange); }
         .stat-label { color: rgba(240, 240, 240, 0.7); font-size: 0.9rem; }
-        .cta-section { padding: 4rem 2rem; text-align: center; background: linear-gradient(135deg, rgba(255,107,53,0.15), var(--dark-bg)); }
-        .cta-button { display: inline-block; background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: var(--white); padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-top: 1.5rem; }
-        .back-link { display: inline-block; margin-top: 2rem; color: var(--orange); text-decoration: none; }
-        footer { background-color: var(--dark-alt); padding: 2rem; text-align: center; border-top: 1px solid rgba(255, 107, 53, 0.2); color: rgba(240, 240, 240, 0.6); }
-        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-links { display: none; } }
+        .workflow-step {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+        .step-number {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--white);
+        }
+        .step-content h3 { margin-bottom: 0.5rem; }
+        .step-content p { margin-bottom: 0; }
+        .use-case-card {
+            background: var(--dark-alt);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--orange);
+            margin-bottom: 1.5rem;
+        }
+        .use-case-card h3 { color: var(--orange); margin-bottom: 0.75rem; }
+        .use-case-card p { color: rgba(240,240,240,0.75); font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .impact-card {
+            background: var(--dark-alt);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0,212,255,0.15);
+            text-align: center;
+        }
+        .impact-card h3 { color: var(--blue-accent); margin-bottom: 0.75rem; }
+        .impact-card p { color: rgba(240,240,240,0.7); font-size: 0.95rem; }
+        .faq-item {
+            border-bottom: 1px solid rgba(255,107,53,0.15);
+            padding: 1.5rem 0;
+        }
+        .faq-item h3 { color: var(--white); font-size: 1.1rem; margin-bottom: 0.75rem; }
+        .faq-item p { color: rgba(240,240,240,0.75); font-size: 0.95rem; margin-bottom: 0; }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .related-card {
+            background: var(--dark-alt);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255,107,53,0.15);
+            text-decoration: none;
+            transition: border-color 0.3s, transform 0.3s;
+            display: block;
+        }
+        .related-card:hover { border-color: var(--orange); transform: translateY(-2px); }
+        .related-card h4 { color: var(--orange); margin-bottom: 0.5rem; font-size: 1rem; }
+        .related-card p { color: rgba(240,240,240,0.6); font-size: 0.85rem; margin-bottom: 0; }
+        .cta-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255,107,53,0.15), var(--dark-bg));
+        }
+        .cta-section h2 { color: var(--white); font-size: 2.2rem; margin-bottom: 1rem; }
+        .cta-section p { color: rgba(240,240,240,0.8); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .cta-button:hover { transform: scale(1.05); }
+        footer {
+            background-color: var(--dark-alt);
+            padding: 3rem 2rem 2rem;
+            border-top: 1px solid rgba(255, 107, 53, 0.2);
+        }
+        footer a { color: rgba(240,240,240,0.7); text-decoration: none; }
+        footer a:hover { color: var(--orange); }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .workflow-step { flex-direction: column; align-items: center; text-align: center; }
+        }
     </style>
 </head>
 <body>
+
     <nav>
         <a href="/" class="nav-logo">AI Sales Pipeline</a>
         <ul class="nav-links">
-            <li><a href="/features.html">Features</a></li>
+            <li><a href="/#features">Features</a></li>
             <li><a href="/pricing.html">Pricing</a></li>
-            <li><a href="/#how-it-works">How It Works</a></li>
+            <li><a href="/comparison.html">Compare</a></li>
+            <li><a href="/#faq">FAQ</a></li>
         </ul>
         <a href="/#contact" class="nav-cta">Book Demo</a>
     </nav>
 
     <section class="hero">
-        <h1>Seller Workflows</h1>
-        <p class="hero-subtitle">Purpose-built automation for FSBO, expired listings, and downsizers. Each workflow is optimized for the unique psychology of motivated sellers.</p>
+        <div class="breadcrumb">
+            <a href="/">Home</a> &rsaquo; <a href="/#features">Features</a> &rsaquo; Seller Workflows
+        </div>
+        <h1>Seller Lead Workflows for Real Estate Agents</h1>
+        <p class="hero-subtitle">Pre-built automation sequences for FSBO, expired listings, downsizers, and pre-foreclosure sellers. NEPQ and Reverse Selling psychology scripts baked into every touchpoint so you win more listing appointments on autopilot.</p>
     </section>
 
+    <!-- Stats Bar -->
     <div class="stats-bar">
-        <div><div class="stat-number">25%</div><div class="stat-label">FSBO Conversion</div></div>
-        <div><div class="stat-number">40%</div><div class="stat-label">Expired Listings</div></div>
-        <div><div class="stat-number">18%</div><div class="stat-label">Downsizer Response</div></div>
-        <div><div class="stat-number">100%</div><div class="stat-label">Automated</div></div>
+        <div>
+            <div class="stat-number">3x</div>
+            <div class="stat-label">More Listing Appointments</div>
+        </div>
+        <div>
+            <div class="stat-number">30+</div>
+            <div class="stat-label">Pre-Built Sequences</div>
+        </div>
+        <div>
+            <div class="stat-number">85%</div>
+            <div class="stat-label">Contact Rate on Expireds</div>
+        </div>
+        <div>
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Automated Follow-Up</div>
+        </div>
     </div>
 
+    <!-- What It Is -->
     <section class="section">
-        <h2>Sellers Need Different Messaging</h2>
-        <p>FSBOs think they can do it themselves. Expired listings are frustrated and skeptical. Downsizers have emotional attachments and logistical concerns. Each group requires a completely different approach.</p>
-        <p>Our seller workflows are built by studying thousands of successful conversions. We know exactly what messaging works for each seller type, when to send it, and how to overcome their specific objections.</p>
-        <p>The AI doesn't just send generic seller content. It understands the psychology of each segment and adapts accordingly. The result? Higher response rates, more appointments, and more listings.</p>
+        <h2>What Is Seller Lead Automation?</h2>
+        <p>Every seller lead type has a different mindset. A FSBO homeowner believes they can sell without an agent. An expired listing seller is frustrated and skeptical after a failed attempt. A downsizer is emotionally attached to a family home. A pre-foreclosure owner is stressed and running out of time.</p>
+        <p>Generic follow-up treats them all the same and converts almost none of them. <strong>Real estate seller lead automation</strong> from <a href="/">AI Sales Pipeline</a> solves that problem by giving you purpose-built workflows for every seller segment. Each sequence uses the right messaging, the right timing, and the right channel to match how that specific seller thinks and feels.</p>
+        <p>Every workflow is powered by NEPQ (Neuro-Emotional Persuasion Questions) and Reverse Selling methodology. Instead of pitching your services, the AI asks strategic questions that help sellers realize on their own why they need a professional agent. The result is less resistance, more trust, and significantly higher conversion rates compared to traditional cold outreach.</p>
+        <p>Whether you pull leads from <strong>Espresso Agent</strong>, your local MLS, or third-party data providers, AI Sales Pipeline takes those raw seller leads and runs them through intelligent, multi-channel sequences that combine <a href="/features/ai-sms-real-estate.html">AI SMS</a>, <a href="/features/ai-email-real-estate.html">AI email</a>, and <a href="/features/ai-voice-calls-real-estate.html">AI voice calls</a> into a coordinated campaign designed to book listing appointments.</p>
     </section>
 
+    <!-- How It Works -->
     <section class="section">
-        <h2>Workflow Types</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>🏠 FSBO Automation</h3>
-                <p>For sale by owner leads need education, not persuasion. The workflow delivers market data, pricing insights, and subtle proof that agents deliver better results — without being pushy.</p>
+        <h2>How Seller Workflows Work</h2>
+        <div class="workflow-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h3>Import Seller Leads</h3>
+                <p>Connect Espresso Agent, upload a CSV from your MLS, or let leads flow in from your website and ads. The system automatically categorizes each lead as FSBO, expired, downsizer, pre-foreclosure, or custom segment.</p>
             </div>
-            <div class="feature-card">
-                <h3>📉 Expired Listing</h3>
-                <p>Expired sellers are frustrated. This workflow acknowledges their experience, identifies what went wrong, and positions you as the solution — with empathy first.</p>
+        </div>
+        <div class="workflow-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3>Auto-Assign the Right Workflow</h3>
+                <p>Based on the lead type, AI Sales Pipeline assigns the matching pre-built sequence. A new FSBO gets the 30-day FSBO campaign. A freshly expired listing gets the day-one blitz. Each workflow is optimized for that seller's specific psychology and timeline.</p>
             </div>
-            <div class="feature-card">
-                <h3>👴 Downsizer Campaign</h3>
-                <p>Empty nesters and retirees have emotional attachments and practical concerns. The workflow addresses both with sensitivity and practical guidance.</p>
+        </div>
+        <div class="workflow-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3>Multi-Channel Outreach Begins</h3>
+                <p>The AI sends the first touchpoint within minutes. It might start with a personalized SMS, follow up with an email containing a market analysis, and then schedule an AI voice call. The channel and timing are optimized based on the seller's engagement patterns.</p>
             </div>
-            <div class="feature-card">
-                <h3>📊 Market Report</h3>
-                <p>Regular neighborhood market updates keep you top-of-mind with potential sellers. Automated, personalized, and highly effective for future listings.</p>
+        </div>
+        <div class="workflow-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <h3>NEPQ Conversations Drive Engagement</h3>
+                <p>When the seller responds, the AI engages using NEPQ methodology. Instead of saying "I can sell your home," it asks, "What would it mean for you if your home sold for full market value in the next 30 days?" These questions create emotional engagement and open the door to real conversation.</p>
             </div>
-            <div class="feature-card">
-                <h3>💰 Equity Alert</h3>
-                <p>Automatically notify homeowners when their equity hits certain thresholds or when market conditions favor selling. Strike while motivation is high.</p>
-            </div>
-            <div class="feature-card">
-                <h3>🎯 Referral Request</h3>
-                <p>Systematic follow-up with past clients and SOI for referrals. Stay connected without being annoying.</p>
+        </div>
+        <div class="workflow-step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+                <h3>Appointment Booked</h3>
+                <p>Once the seller shows interest, the AI moves to appointment booking. It offers available time slots, confirms the meeting, and sends you a full lead brief including the seller's situation, motivation level, and any objections raised during the conversation. You walk into every listing appointment prepared.</p>
             </div>
         </div>
     </section>
 
+    <!-- Key Capabilities -->
     <section class="section">
-        <h2>What Makes These Work</h2>
-        <p><strong>Pattern Interrupt:</strong> First messages that break expectations and create curiosity</p>
-        <p><strong>Value First:</strong> Education and insights before any ask — positioning you as the expert</p>
-        <p><strong>Social Proof:</strong> Success stories and data that build credibility</p>
-        <p><strong>Objection Handling:</strong> Preemptive responses to common concerns</p>
-        <p><strong>Urgency:</strong> Market conditions and timing that motivate action</p>
-        <p><strong>Easy Out:</strong> Low-pressure CTAs that make responding feel safe</p>
+        <h2>Key Capabilities</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>FSBO-Specific Sequences</h3>
+                <p>A dedicated 30-to-90-day campaign designed around the FSBO mindset. The AI delivers market data, pricing comparisons, and buyer-agent statistics that educate without pressuring. As days on market increase, messaging shifts to address growing frustration with the process.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Expired Listing Day-One Blitz</h3>
+                <p>Speed matters with expireds. The moment a listing expires, the AI launches a coordinated blitz across SMS, email, and voice. The first message acknowledges their frustration, the second offers a fresh marketing plan, and the third books the appointment before competitors even make contact.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Downsizer Nurture Campaigns</h3>
+                <p>Empty nesters and retirees are not in a rush. The downsizer workflow uses a slower, empathetic cadence with content about right-sizing, equity opportunities, and lifestyle benefits. It builds a relationship over 6 to 12 months until the seller is emotionally ready to make a move.</p>
+            </div>
+            <div class="feature-card">
+                <h3>NEPQ Psychology Scripts</h3>
+                <p>Every SMS, email, and voice script is built on Neuro-Emotional Persuasion Questions and Reverse Selling principles. The AI never pitches. It asks questions that guide sellers to their own conclusions about needing professional representation, resulting in far less resistance.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Multi-Channel Orchestration</h3>
+                <p>Sellers get reached on the channel they respond to. The workflow intelligently sequences <a href="/features/ai-sms-real-estate.html">SMS</a>, <a href="/features/ai-email-real-estate.html">email</a>, and <a href="/features/ai-voice-calls-real-estate.html">voice calls</a> based on what is working. If a seller opens emails but ignores texts, the system adapts and sends more emails.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Espresso Agent Integration</h3>
+                <p>Directly connected to Espresso Agent so new FSBO, expired, and pre-foreclosure leads flow into the right workflow automatically. No manual imports, no delays. Leads enter your pipeline the moment they appear in Espresso Agent and outreach starts immediately.</p>
+            </div>
+        </div>
     </section>
 
+    <!-- Real Estate Use Cases -->
+    <section class="section">
+        <h2>Real Estate Use Cases</h2>
+
+        <div class="use-case-card">
+            <h3>FSBO 30-Day Follow-Up Campaign</h3>
+            <p>A homeowner lists their property as FSBO on Zillow. Within minutes, AI Sales Pipeline sends a friendly text referencing their listing and asking a NEPQ question: "Have you had a chance to compare your asking price to recent comps in the neighborhood?" Over the next 30 days, the AI sends market data, buyer-agent statistics, and educational content. By week three, when the FSBO has fielded lowball offers and tire-kicker showings, the AI asks, "If I could show you a strategy to net more than your current asking price, even after commission, would that be worth a 15-minute conversation?" The listing appointment books itself.</p>
+        </div>
+
+        <div class="use-case-card">
+            <h3>Expired Listing Day-One Blitz</h3>
+            <p>A listing expires at midnight. At 8:01 AM, the AI sends an empathetic SMS: "I noticed your home on Oak Street came off the market. That must be frustrating after months of showings. I have some thoughts on why it may not have sold and what a different approach could look like." Simultaneously, an email with a custom market analysis arrives, and an AI voice call is scheduled for the afternoon. This multi-channel blitz ensures you make contact before the seller is overwhelmed by dozens of generic agent calls. The NEPQ approach stands out because it leads with empathy rather than a pitch.</p>
+        </div>
+
+        <div class="use-case-card">
+            <h3>Downsizer Nurture Sequence</h3>
+            <p>An empty-nester couple attends your seminar on right-sizing in retirement. They are not ready to sell yet. The AI places them in a 12-month downsizer workflow that sends monthly market updates for their neighborhood, articles about simplifying life after the kids leave, and equity snapshots showing what their home is worth. Every touchpoint is gentle and informational. Six months in, when the couple starts seriously discussing a move, they already trust you as the expert. The AI recognizes increased engagement and shifts to appointment-focused messaging.</p>
+        </div>
+
+        <div class="use-case-card">
+            <h3>Pre-Listing Presentation Automation</h3>
+            <p>Once a listing appointment is booked, a separate workflow activates. The AI sends the seller a pre-listing packet with your track record, marketing plan preview, and testimonials. The morning of the appointment, the seller receives a personalized message confirming the meeting and a question about their top priorities. You arrive with full context on what matters most to the seller, giving you a massive advantage over agents who walk in cold. This pairs perfectly with <a href="/features/ai-clone-video-real-estate.html">AI clone video</a> for a personalized introduction.</p>
+        </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section class="section">
+        <h2>Why Seller Workflows Matter for Your Business</h2>
+        <div class="impact-grid">
+            <div class="impact-card">
+                <h3>More Listings Without More Hours</h3>
+                <p>Prospecting for seller leads is the most time-consuming part of a listing agent's day. Automated workflows handle the repetitive outreach and follow-up so you can focus on face-to-face meetings and closings. Agents using seller workflows report winning 3x more listing appointments without adding hours to their week.</p>
+            </div>
+            <div class="impact-card">
+                <h3>Higher Conversion Rates</h3>
+                <p>NEPQ-based messaging converts at significantly higher rates than traditional scripts. By asking sellers the right questions instead of delivering a pitch, the AI creates genuine curiosity and emotional engagement. Sellers who feel understood are sellers who list with you.</p>
+            </div>
+            <div class="impact-card">
+                <h3>Consistent Pipeline</h3>
+                <p>Most agents prospect when they need listings and stop when they get busy. Automated seller workflows keep your pipeline full regardless of your schedule. Every FSBO, expired, and downsizer lead gets professional follow-up, creating a steady stream of listing appointments month after month.</p>
+            </div>
+        </div>
+        <p style="margin-top:2rem;">Combined with <a href="/features/lead-scoring-real-estate.html">AI lead scoring</a>, your seller workflows become even more powerful. The system prioritizes the hottest seller leads for immediate attention while keeping long-term prospects in nurture mode. Check our <a href="/pricing.html">pricing page</a> to see which plan includes the full seller workflow suite.</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>What types of seller leads do the workflows support?</h3>
+            <p>AI Sales Pipeline includes pre-built workflows for FSBO (For Sale By Owner), expired listings, downsizers and empty nesters, pre-foreclosure homeowners, and sphere-of-influence seller referrals. Each workflow uses messaging tailored to the unique psychology and objections of that seller type.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What are NEPQ scripts and how are they used in seller workflows?</h3>
+            <p>NEPQ stands for Neuro-Emotional Persuasion Questions. These are psychology-based sales questions built into every touchpoint of the seller workflows. Instead of pitching your services, the AI asks questions that help sellers realize on their own why they need a professional agent, leading to higher conversion rates and less resistance.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Does the seller workflow integrate with Espresso Agent?</h3>
+            <p>Yes. AI Sales Pipeline integrates directly with Espresso Agent, allowing you to import FSBO, expired, and pre-foreclosure leads automatically. New leads flow into the appropriate workflow the moment they appear in Espresso Agent, so your outreach starts immediately.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How long do the seller follow-up sequences last?</h3>
+            <p>Sequence length varies by seller type. FSBO campaigns run 30 to 90 days with increasing urgency. Expired listing sequences start with a day-one blitz and continue for 60 days. Downsizer nurture campaigns can run 6 to 12 months with a slower, relationship-building cadence. All timelines are fully adjustable.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I customize the seller workflow scripts?</h3>
+            <p>Absolutely. Every script, message, and touchpoint is fully customizable. You can edit the pre-built NEPQ and Reverse Selling scripts, add your own messaging, adjust timing, and change the channel mix between SMS, email, and voice calls. You can also use the <a href="/features/custom-ai-brain-real-estate.html">Custom AI Brain</a> to train the AI on your personal selling style.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What channels do the seller workflows use?</h3>
+            <p>Seller workflows are multi-channel by default. They combine AI SMS, AI email, and AI voice calls into a coordinated sequence. The system automatically determines the best channel and time to reach each seller based on their engagement patterns and response history.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
     <section class="cta-section">
-        <h2>Get More Listings on Autopilot</h2>
-        <p>Seller workflows that actually convert.</p>
-        <a href="/#contact" class="cta-button">Start Free Trial →</a>
-        <br>
-        <a href="/" class="back-link">← Back to Home</a>
+        <h2>Start Winning More Listing Appointments Today</h2>
+        <p>Pre-built seller workflows with NEPQ scripts, multi-channel outreach, and Espresso Agent integration. Set it up once and let the AI fill your listing pipeline.</p>
+        <a href="/#contact" class="cta-button">Book Your Demo</a>
+    </section>
+
+    <!-- Related Features -->
+    <section class="section">
+        <h2>Related Features</h2>
+        <div class="related-grid">
+            <a href="/features/buyer-workflows-real-estate.html" class="related-card">
+                <h4>Buyer Workflows</h4>
+                <p>Intelligent buyer qualification and long-term nurture sequences that convert inquiries into closings.</p>
+            </a>
+            <a href="/features/ai-sms-real-estate.html" class="related-card">
+                <h4>AI SMS</h4>
+                <p>Instant, personalized text messages that engage seller leads within seconds of entering your pipeline.</p>
+            </a>
+            <a href="/features/ai-voice-calls-real-estate.html" class="related-card">
+                <h4>AI Voice Calls</h4>
+                <p>Automated phone calls with natural-sounding AI that follows your NEPQ scripts and books appointments.</p>
+            </a>
+            <a href="/features/custom-ai-brain-real-estate.html" class="related-card">
+                <h4>Custom AI Brain</h4>
+                <p>Train the AI on your personal selling style, market knowledge, and closing techniques.</p>
+            </a>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 AI Sales Pipeline. All rights reserved.</p>
+        <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem;">
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Features</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/features/ai-sms-real-estate.html">AI SMS</a></li>
+                    <li><a href="/features/ai-email-real-estate.html">AI Email</a></li>
+                    <li><a href="/features/ai-voice-calls-real-estate.html">AI Voice Calls</a></li>
+                    <li><a href="/features/ai-clone-video-real-estate.html">AI Clone Video</a></li>
+                    <li><a href="/features/lead-scoring-real-estate.html">Lead Scoring</a></li>
+                    <li><a href="/features/facebook-retargeting-real-estate.html">Facebook Retargeting</a></li>
+                    <li><a href="/features/seller-workflows-real-estate.html">Seller Workflows</a></li>
+                    <li><a href="/features/buyer-workflows-real-estate.html">Buyer Workflows</a></li>
+                    <li><a href="/features/custom-ai-brain-real-estate.html">Custom AI Brain</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Resources</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/ai-crm-real-estate.html">AI CRM for Real Estate</a></li>
+                    <li><a href="/ai-crm-new-jersey.html">AI CRM for NJ Agents</a></li>
+                    <li><a href="/fsbo-automation.html">FSBO Automation</a></li>
+                    <li><a href="/expired-listing-automation.html">Expired Listing Automation</a></li>
+                    <li><a href="/comparison.html">CRM Comparison</a></li>
+                    <li><a href="/pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Company</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/#contact">Contact Us</a></li>
+                    <li><a href="mailto:hello@aisalespipeline.com">hello@aisalespipeline.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align:center;padding-top:2rem;border-top:1px solid rgba(255,107,53,0.1);color:rgba(240,240,240,0.6);font-size:0.9rem;">
+            <p>&copy; 2026 AI Sales Pipeline. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>

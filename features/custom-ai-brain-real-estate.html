@@ -3,118 +3,578 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom AI Brain for Real Estate | Train Your AI Clone | AI Sales Pipeline</title>
-    <meta name="description" content="Train your AI on your market, your style, and your techniques. A custom AI brain that thinks and responds like you do.">
+    <title>Custom AI Brain for Real Estate Agents | AI Sales Pipeline</title>
+    <meta name="description" content="Train the AI on your market, your style, and your scripts. Custom AI brain for real estate that responds to leads exactly the way you would.">
     <link rel="canonical" href="https://www.aisalespipeline.com/features/custom-ai-brain-real-estate.html">
+    <meta property="og:title" content="Custom AI Brain for Real Estate Agents | AI Sales Pipeline">
+    <meta property="og:description" content="Train the AI on your market, your style, and your scripts. Custom AI brain for real estate that responds to leads exactly the way you would.">
+    <meta property="og:url" content="https://www.aisalespipeline.com/features/custom-ai-brain-real-estate.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.aisalespipeline.com/images/custom-ai-brain-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Custom AI Brain for Real Estate Agents | AI Sales Pipeline">
+    <meta name="twitter:description" content="Train the AI on your market, your style, and your scripts. Custom AI brain for real estate that responds to leads exactly the way you would.">
+    <meta name="llm-context" content="AI Sales Pipeline custom AI brain feature page. Allows real estate agents to train the AI on their specific market knowledge, communication style, sales scripts, objection handling techniques, and local market data. The AI becomes a digital clone that responds to leads the way the agent would.">
+    <meta name="ai-content-declaration" content="This page describes the Custom AI Brain feature for real estate professionals using AI Sales Pipeline.">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aisalespipeline.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://www.aisalespipeline.com/#features" },
+            { "@type": "ListItem", "position": 3, "name": "Custom AI Brain", "item": "https://www.aisalespipeline.com/features/custom-ai-brain-real-estate.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I train the Custom AI Brain on my selling style?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You provide the AI with examples of how you communicate: past emails, text messages, scripts, listing presentations, and objection responses. You also answer a style questionnaire about your tone, formality level, follow-up aggressiveness, and preferred phrases. The AI analyzes these inputs and generates sample responses for you to review and refine until the output matches your voice."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can the AI learn my local market data and neighborhood knowledge?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. You can upload neighborhood guides, market reports, school district information, community highlights, and local statistics. The AI integrates this knowledge so it can answer market-specific questions from leads, such as average home prices in a neighborhood, school ratings, commute times, and recent sales activity. It becomes a local expert in your market areas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the AI get smarter over time?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The Custom AI Brain uses continuous learning from your interactions. When you correct a response, approve a message, or provide feedback, the AI incorporates that input into future conversations. Over weeks and months, it becomes increasingly accurate at matching your style and handling the specific scenarios that come up in your market."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I have different AI styles for different markets or lead types?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Multi-market agents and teams can create separate AI profiles for different areas or lead segments. For example, you can have a sophisticated, luxury-focused style for high-end listings and a warm, approachable style for first-time buyers. Each profile uses different vocabulary, tone, market data, and scripts while maintaining your core personality."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is the Custom AI Brain different from generic AI chatbots?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Generic AI chatbots use one-size-fits-all responses that sound robotic and impersonal. The Custom AI Brain is trained specifically on your communication patterns, your market expertise, and your sales methodology. Leads cannot tell the difference between the AI and you because the responses genuinely reflect your knowledge, personality, and approach."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens if the AI says something I would not say?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You have full control over the AI's boundaries. You can set guardrails that prevent it from making promises, quoting specific prices, or discussing topics outside your comfort zone. You also review conversations and can flag responses that need correction. Each correction makes the AI more accurate going forward. For sensitive topics, the AI is designed to escalate to you directly."
+                }
+            }
+        ]
+    }
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --dark-bg: #0a0a0a; --dark-alt: #111111; --orange: #ff6b35; --orange-dark: #ff5a1f; --white: #ffffff; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: var(--dark-bg); color: var(--white); line-height: 1.6; }
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; background-color: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 107, 53, 0.2); }
+        :root {
+            --dark-bg: #0a0a0a;
+            --dark-alt: #111111;
+            --orange: #ff6b35;
+            --orange-dark: #ff5a1f;
+            --white: #ffffff;
+            --blue-accent: #00d4ff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+        }
         .nav-logo { font-size: 1.5rem; font-weight: 700; color: var(--white); text-decoration: none; }
         .nav-links { display: flex; gap: 2rem; list-style: none; }
         .nav-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
         .nav-links a:hover { color: var(--orange); }
-        .nav-cta { background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: var(--white); padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
-        .hero { padding: 8rem 2rem 4rem; background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, var(--dark-bg) 100%); text-align: center; }
-        .hero h1 { font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, var(--white), var(--orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
-        .hero-subtitle { font-size: 1.2rem; color: rgba(240, 240, 240, 0.8); max-width: 700px; margin: 0 auto 2rem; }
-        .section { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; }
-        .section h2 { font-size: 2rem; color: var(--orange); margin-bottom: 1.5rem; }
-        .section p { color: rgba(240, 240, 240, 0.8); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .feature-card { background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05)); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,107,53,0.2); }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .hero {
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, var(--dark-bg) 100%);
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--white), var(--orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: rgba(240, 240, 240, 0.8);
+            max-width: 750px;
+            margin: 0 auto 2rem;
+        }
+        .breadcrumb {
+            text-align: center;
+            padding: 1rem 2rem 0;
+            font-size: 0.85rem;
+            color: rgba(240,240,240,0.5);
+        }
+        .breadcrumb a { color: rgba(240,240,240,0.6); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--orange); }
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            font-size: 2rem;
+            color: var(--orange);
+            margin-bottom: 1.5rem;
+        }
+        .section h3 {
+            color: var(--orange);
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+        .section p, .section li {
+            color: rgba(240, 240, 240, 0.8);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .section a { color: var(--orange); text-decoration: none; }
+        .section a:hover { text-decoration: underline; }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .feature-card {
+            background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05));
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,107,53,0.2);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        .feature-card:hover {
+            border-color: var(--orange);
+            transform: translateY(-3px);
+        }
         .feature-card h3 { color: var(--orange); margin-bottom: 1rem; }
         .feature-card p { color: rgba(240, 240, 240, 0.7); font-size: 0.95rem; }
-        .stats-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 3rem 2rem; background: linear-gradient(90deg, rgba(255,107,53,0.1), rgba(0,212,255,0.1)); text-align: center; }
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 3rem 2rem;
+            background: linear-gradient(90deg, rgba(255,107,53,0.1), rgba(0,212,255,0.1));
+            text-align: center;
+        }
         .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--orange); }
         .stat-label { color: rgba(240, 240, 240, 0.7); font-size: 0.9rem; }
-        .cta-section { padding: 4rem 2rem; text-align: center; background: linear-gradient(135deg, rgba(255,107,53,0.15), var(--dark-bg)); }
-        .cta-button { display: inline-block; background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: var(--white); padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-top: 1.5rem; }
-        .back-link { display: inline-block; margin-top: 2rem; color: var(--orange); text-decoration: none; }
-        footer { background-color: var(--dark-alt); padding: 2rem; text-align: center; border-top: 1px solid rgba(255, 107, 53, 0.2); color: rgba(240, 240, 240, 0.6); }
-        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-links { display: none; } }
+        .workflow-step {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+        .step-number {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--white);
+        }
+        .step-content h3 { margin-bottom: 0.5rem; }
+        .step-content p { margin-bottom: 0; }
+        .use-case-card {
+            background: var(--dark-alt);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--orange);
+            margin-bottom: 1.5rem;
+        }
+        .use-case-card h3 { color: var(--orange); margin-bottom: 0.75rem; }
+        .use-case-card p { color: rgba(240,240,240,0.75); font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .impact-card {
+            background: var(--dark-alt);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0,212,255,0.15);
+            text-align: center;
+        }
+        .impact-card h3 { color: var(--blue-accent); margin-bottom: 0.75rem; }
+        .impact-card p { color: rgba(240,240,240,0.7); font-size: 0.95rem; }
+        .faq-item {
+            border-bottom: 1px solid rgba(255,107,53,0.15);
+            padding: 1.5rem 0;
+        }
+        .faq-item h3 { color: var(--white); font-size: 1.1rem; margin-bottom: 0.75rem; }
+        .faq-item p { color: rgba(240,240,240,0.75); font-size: 0.95rem; margin-bottom: 0; }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .related-card {
+            background: var(--dark-alt);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255,107,53,0.15);
+            text-decoration: none;
+            transition: border-color 0.3s, transform 0.3s;
+            display: block;
+        }
+        .related-card:hover { border-color: var(--orange); transform: translateY(-2px); }
+        .related-card h4 { color: var(--orange); margin-bottom: 0.5rem; font-size: 1rem; }
+        .related-card p { color: rgba(240,240,240,0.6); font-size: 0.85rem; margin-bottom: 0; }
+        .cta-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255,107,53,0.15), var(--dark-bg));
+        }
+        .cta-section h2 { color: var(--white); font-size: 2.2rem; margin-bottom: 1rem; }
+        .cta-section p { color: rgba(240,240,240,0.8); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .cta-button:hover { transform: scale(1.05); }
+        footer {
+            background-color: var(--dark-alt);
+            padding: 3rem 2rem 2rem;
+            border-top: 1px solid rgba(255, 107, 53, 0.2);
+        }
+        footer a { color: rgba(240,240,240,0.7); text-decoration: none; }
+        footer a:hover { color: var(--orange); }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .workflow-step { flex-direction: column; align-items: center; text-align: center; }
+        }
     </style>
 </head>
 <body>
+
     <nav>
         <a href="/" class="nav-logo">AI Sales Pipeline</a>
         <ul class="nav-links">
-            <li><a href="/features.html">Features</a></li>
+            <li><a href="/#features">Features</a></li>
             <li><a href="/pricing.html">Pricing</a></li>
-            <li><a href="/#how-it-works">How It Works</a></li>
+            <li><a href="/comparison.html">Compare</a></li>
+            <li><a href="/#faq">FAQ</a></li>
         </ul>
         <a href="/#contact" class="nav-cta">Book Demo</a>
     </nav>
 
     <section class="hero">
-        <h1>Custom AI Brain</h1>
-        <p class="hero-subtitle">Train your AI on your market knowledge, your communication style, and your closing techniques. An AI that sounds exactly like you.</p>
+        <div class="breadcrumb">
+            <a href="/">Home</a> &rsaquo; <a href="/#features">Features</a> &rsaquo; Custom AI Brain
+        </div>
+        <h1>Custom AI Brain for Real Estate Agents</h1>
+        <p class="hero-subtitle">Train the AI on your specific market, your selling style, your scripts, and your closing techniques. It becomes your digital clone, responding to leads the way you would, with your market knowledge and your personality.</p>
     </section>
 
+    <!-- Stats Bar -->
     <div class="stats-bar">
-        <div><div class="stat-number">100%</div><div class="stat-label">Customizable</div></div>
-        <div><div class="stat-number">Your</div><div class="stat-label">Voice</div></div>
-        <div><div class="stat-number">Your</div><div class="stat-label">Style</div></div>
-        <div><div class="stat-number">Your</div><div class="stat-label">Knowledge</div></div>
+        <div>
+            <div class="stat-number">95%</div>
+            <div class="stat-label">Voice Match Accuracy</div>
+        </div>
+        <div>
+            <div class="stat-number">2 hrs</div>
+            <div class="stat-label">Setup Time</div>
+        </div>
+        <div>
+            <div class="stat-number">40%</div>
+            <div class="stat-label">Higher Reply Rates</div>
+        </div>
+        <div>
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Your Clone Works</div>
+        </div>
     </div>
 
+    <!-- What It Is -->
     <section class="section">
-        <h2>Generic AI Isn't Enough</h2>
-        <p>Most AI tools use one-size-fits-all responses. They work, but they don't sound like YOU. They don't know YOUR market. They don't use YOUR techniques.</p>
-        <p>Custom AI Brain changes that. You train your AI with your past emails, your scripts, your market knowledge, and your preferences. It learns how you communicate and responds the way you would — just faster and at scale.</p>
-        <p>The result? Leads can't tell they're talking to AI. It sounds like you because it IS you — your knowledge, your personality, your approach — amplified by automation.</p>
+        <h2>What Is the Custom AI Brain?</h2>
+        <p>Most AI tools sound the same. They use generic, polished language that could come from any company in any industry. Your leads can tell. The messages feel automated, impersonal, and forgettable. That is why most AI follow-up gets ignored.</p>
+        <p><strong>Custom AI training for real estate</strong> changes the equation entirely. With <a href="/">AI Sales Pipeline</a>, you train the AI on your actual communication style, your market expertise, your favorite scripts, and your proven objection-handling techniques. The result is an AI that does not sound like a chatbot. It sounds like you.</p>
+        <p>When a lead receives a text message from your Custom AI Brain, it reads exactly like something you would write. It uses your vocabulary, your tone, your level of formality, and your personality. It references local landmarks, school districts, and neighborhood details that only someone who knows your market would mention. It handles objections the way you handle them, using the scripts and techniques that have worked for you in real conversations.</p>
+        <p>This is not about replacing you. It is about cloning the best version of you so that every lead gets your A-game, even when you are on a listing appointment, at your kids' soccer game, or asleep at 2 AM. The Custom AI Brain works across all channels: <a href="/features/ai-sms-real-estate.html">AI SMS</a>, <a href="/features/ai-email-real-estate.html">AI email</a>, <a href="/features/ai-voice-calls-real-estate.html">AI voice calls</a>, and even <a href="/features/ai-clone-video-real-estate.html">AI clone video</a>.</p>
     </section>
 
+    <!-- How It Works -->
     <section class="section">
-        <h2>What You Can Train</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>💬 Communication Style</h3>
-                <p>Formal or casual? Short and direct or detailed and consultative? The AI learns your natural writing and speaking patterns.</p>
+        <h2>How Custom AI Training Works</h2>
+        <div class="workflow-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h3>Upload Your Content</h3>
+                <p>Provide the AI with examples of how you communicate. This includes past emails to clients, text message threads, listing presentations, scripts you use on the phone, objection-handling responses, and marketing materials. The more content you provide, the more accurately the AI matches your voice. Most agents need about 30 minutes to gather and upload their best material.</p>
             </div>
-            <div class="feature-card">
-                <h3>🏘️ Market Knowledge</h3>
-                <p>Feed the AI your local market data, neighborhood insights, school ratings, and market trends. It becomes a local expert.</p>
+        </div>
+        <div class="workflow-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3>Define Your Style and Preferences</h3>
+                <p>Complete a guided style questionnaire that covers your communication preferences. Are you casual or formal? Short and direct or detailed and consultative? How aggressive is your follow-up? What phrases do you always use? What topics are off-limits? This questionnaire gives the AI the guardrails and personality traits it needs to sound authentically like you.</p>
             </div>
-            <div class="feature-card">
-                <h3>📋 Sales Techniques</h3>
-                <p>Train it on your objection handling, your closing techniques, your NEPQ questions. Your AI uses your proven methods.</p>
+        </div>
+        <div class="workflow-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3>Feed Your Market Knowledge</h3>
+                <p>Upload your local market data, neighborhood guides, school district information, community amenities, market trend reports, and any other local expertise you want the AI to reference. You can organize this by area so the AI uses the right market data when talking to leads in different neighborhoods or zip codes.</p>
             </div>
-            <div class="feature-card">
-                <h3>📑 Scripts & Templates</h3>
-                <p>Upload your best-performing scripts and email templates. The AI uses them as a foundation and personalizes from there.</p>
+        </div>
+        <div class="workflow-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <h3>Review and Refine</h3>
+                <p>The AI generates sample responses to common lead scenarios: a new Zillow inquiry, a FSBO objection, a buyer asking about school districts, a price reduction conversation. You review each response and provide feedback. "Too formal." "I would never say that." "Add a question at the end." The AI adjusts until every response feels like it came from your keyboard.</p>
             </div>
-            <div class="feature-card">
-                <h3>🎯 Preferences</h3>
-                <p>How aggressive or passive? How often to follow up? What tone to use with different lead types? You set the rules.</p>
-            </div>
-            <div class="feature-card">
-                <h3>📚 Continuous Learning</h3>
-                <p>The AI improves over time, learning from every interaction. It gets smarter and more effective the longer you use it.</p>
+        </div>
+        <div class="workflow-step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+                <h3>Deploy and Continuously Improve</h3>
+                <p>Your Custom AI Brain goes live across all your workflows: <a href="/features/seller-workflows-real-estate.html">seller workflows</a>, <a href="/features/buyer-workflows-real-estate.html">buyer workflows</a>, and ad-hoc conversations. As the AI interacts with leads, you can review conversations, flag responses that need adjustment, and approve messages you want to reinforce. The AI learns from every correction and gets more accurate over time.</p>
             </div>
         </div>
     </section>
 
+    <!-- Key Capabilities -->
     <section class="section">
-        <h2>Training Process</h2>
-        <p><strong>Step 1: Upload Content:</strong> Past emails, scripts, marketing materials, market reports — anything that shows how you communicate.</p>
-        <p><strong>Step 2: Define Style:</strong> Answer questions about your preferences, tone, and approach. Set boundaries and guidelines.</p>
-        <p><strong>Step 3: Review & Refine:</strong> The AI generates sample responses. You provide feedback until it's perfect.</p>
-        <p><strong>Step 4: Deploy:</strong> Your custom AI goes live, handling leads with your voice and knowledge.</p>
-        <p><strong>Step 5: Monitor & Improve:</strong> Track performance, provide ongoing feedback, and watch your AI get even better.</p>
+        <h2>Key Capabilities</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Market-Specific Training</h3>
+                <p>Feed the AI hyperlocal knowledge about your farm areas. Average home prices, days on market, school ratings, upcoming developments, best restaurants, commute times to major employers. When a lead asks "What's the market like in Westfield?", the AI answers with the depth and specificity of a local expert because it has your data.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Personal Style Matching</h3>
+                <p>The AI learns your unique communication fingerprint. If you start texts with "Hey" instead of "Hi," the AI does too. If you use exclamation points sparingly, so does the AI. If you always close with a question, the AI adopts that habit. The match is so precise that leads who know you personally cannot tell the difference.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Custom Scripts and Objection Handling</h3>
+                <p>Upload the scripts that close deals for you. Your FSBO pitch, your expired listing opener, your price reduction conversation, your "why should I list with you" response. The AI uses these proven scripts as its foundation and personalizes them for each lead's specific situation. Your best material, deployed at scale.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Local Market Data Integration</h3>
+                <p>Connect live market data feeds so the AI always has current information. When a seller asks what homes in their area are selling for, the AI pulls recent comps. When a buyer asks about market trends, the AI references the latest statistics. The data stays fresh without you manually updating it.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Continuous Learning</h3>
+                <p>The Custom AI Brain is not static. Every interaction makes it smarter. When you correct a response, the AI learns what to say differently next time. When you approve a conversation, the AI reinforces that pattern. After a few weeks of active use, the AI has absorbed hundreds of your real-world responses and becomes remarkably accurate.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Brand Voice Consistency</h3>
+                <p>Whether a lead contacts you via text at 3 PM or email at 3 AM, they get the same quality of response. The same tone, the same knowledge, the same professionalism. For teams, this means every agent's leads get the quality of follow-up that matches the team leader's standards, not the newest agent's inexperience.</p>
+            </div>
+        </div>
     </section>
 
+    <!-- Real Estate Use Cases -->
+    <section class="section">
+        <h2>Real Estate Use Cases</h2>
+
+        <div class="use-case-card">
+            <h3>Luxury Market Agent Needing Sophisticated Language</h3>
+            <p>You specialize in properties above two million dollars. Your clients expect polished, articulate communication. Generic AI that sends "Hey! Saw u were looking at homes!" would destroy your brand. Your Custom AI Brain is trained on the elevated language you use with luxury buyers and sellers. It references architectural styles, premium finishes, and lifestyle amenities with the vocabulary your market demands. When a lead inquires about a waterfront estate, the AI responds with the sophistication that matches the price point: thoughtful, knowledgeable, and never salesy. Your brand stays intact while the AI handles initial outreach and qualification around the clock.</p>
+        </div>
+
+        <div class="use-case-card">
+            <h3>Team Leader Standardizing Follow-Up Quality</h3>
+            <p>You run a team of eight agents. Some are excellent at follow-up. Others let leads slip through the cracks. The Custom AI Brain solves this by giving every team member an AI that matches your quality standards. You train the AI on your best scripts, your proven objection handling, and your communication style. Every lead assigned to every agent gets follow-up that meets your standard, not their weakest moment. New agents ramp up faster because the AI handles conversations they are not yet skilled enough to manage. Experienced agents get more time for high-value activities because the AI handles the repetitive early-stage conversations.</p>
+        </div>
+
+        <div class="use-case-card">
+            <h3>Agent With a Unique Selling Approach</h3>
+            <p>Your entire brand is built around being the "data-driven agent." You win listings by showing sellers detailed market analytics and pricing strategies. Generic AI cannot replicate that approach. Your Custom AI Brain is loaded with your market data methodology. When a FSBO lead responds, the AI sends a neighborhood pricing analysis the way you would: with specific numbers, recent comp breakdowns, and days-on-market trends. It asks the NEPQ questions you have perfected. The lead thinks they are having a conversation with the most data-savvy agent in town, and they are, just at a scale you could never achieve manually. This pairs naturally with <a href="/features/lead-scoring-real-estate.html">lead scoring</a> to prioritize which leads deserve your personal attention.</p>
+        </div>
+
+        <div class="use-case-card">
+            <h3>Multi-Market Agent Needing Different Scripts Per Area</h3>
+            <p>You work two distinct markets: a suburban family market and an urban condo market. The messaging that works for young families looking for good schools does not work for downtown professionals looking for walkability. With the Custom AI Brain, you create separate market profiles. The suburban profile references school districts, yard sizes, and family-friendly amenities. The urban profile talks about walkability scores, nightlife, and commute times to the financial district. When a lead comes in, the AI automatically uses the right profile based on the property or area of interest. One agent, two markets, zero confusion.</p>
+        </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section class="section">
+        <h2>Why Custom AI Training Matters for Your Business</h2>
+        <div class="impact-grid">
+            <div class="impact-card">
+                <h3>Authenticity That Converts</h3>
+                <p>Leads respond to authenticity. When a message sounds like a real person who knows their market, reply rates jump. Agents using the Custom AI Brain see 40% higher response rates compared to generic AI templates because leads genuinely feel like they are talking to a knowledgeable local agent, not a bot.</p>
+            </div>
+            <div class="impact-card">
+                <h3>Scale Without Sacrificing Quality</h3>
+                <p>The biggest challenge in real estate is that your time is finite. You can personally follow up with maybe 20 leads per day. The Custom AI Brain follows up with hundreds, and every single conversation sounds like you wrote it. Your best effort, applied to every lead, every time. That is how top producers operate.</p>
+            </div>
+            <div class="impact-card">
+                <h3>Protect and Amplify Your Brand</h3>
+                <p>Your personal brand is your most valuable asset. Generic AI puts that brand at risk by sending messages that do not sound like you. The Custom AI Brain protects your brand by ensuring every touchpoint reflects your voice, your expertise, and your standards. It does not dilute your brand. It amplifies it across every lead interaction.</p>
+            </div>
+        </div>
+        <p style="margin-top:2rem;">The Custom AI Brain powers every other feature in the platform. It makes your <a href="/features/seller-workflows-real-estate.html">seller workflows</a> sound like you. It makes your <a href="/features/buyer-workflows-real-estate.html">buyer workflows</a> feel personal. It gives your <a href="/features/ai-voice-calls-real-estate.html">AI voice calls</a> your personality. Visit our <a href="/pricing.html">pricing page</a> to see which plans include Custom AI Brain, or <a href="/comparison.html">compare us to other CRMs</a> that still use generic templates.</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>How do I train the Custom AI Brain on my selling style?</h3>
+            <p>You provide the AI with examples of how you communicate: past emails, text messages, scripts, listing presentations, and objection responses. You also answer a style questionnaire about your tone, formality level, follow-up aggressiveness, and preferred phrases. The AI analyzes these inputs and generates sample responses for you to review and refine until the output matches your voice.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can the AI learn my local market data and neighborhood knowledge?</h3>
+            <p>Yes. You can upload neighborhood guides, market reports, school district information, community highlights, and local statistics. The AI integrates this knowledge so it can answer market-specific questions from leads, such as average home prices in a neighborhood, school ratings, commute times, and recent sales activity. It becomes a local expert in your market areas.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Does the AI get smarter over time?</h3>
+            <p>Yes. The Custom AI Brain uses continuous learning from your interactions. When you correct a response, approve a message, or provide feedback, the AI incorporates that input into future conversations. Over weeks and months, it becomes increasingly accurate at matching your style and handling the specific scenarios that come up in your market.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I have different AI styles for different markets or lead types?</h3>
+            <p>Yes. Multi-market agents and teams can create separate AI profiles for different areas or lead segments. For example, you can have a sophisticated, luxury-focused style for high-end listings and a warm, approachable style for first-time buyers. Each profile uses different vocabulary, tone, market data, and scripts while maintaining your core personality.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How is the Custom AI Brain different from generic AI chatbots?</h3>
+            <p>Generic AI chatbots use one-size-fits-all responses that sound robotic and impersonal. The Custom AI Brain is trained specifically on your communication patterns, your market expertise, and your sales methodology. Leads cannot tell the difference between the AI and you because the responses genuinely reflect your knowledge, personality, and approach.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What happens if the AI says something I would not say?</h3>
+            <p>You have full control over the AI's boundaries. You can set guardrails that prevent it from making promises, quoting specific prices, or discussing topics outside your comfort zone. You also review conversations and can flag responses that need correction. Each correction makes the AI more accurate going forward. For sensitive topics, the AI is designed to escalate to you directly.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
     <section class="cta-section">
-        <h2>Create Your AI Twin</h2>
-        <p>An AI that thinks, speaks, and sells like you do.</p>
-        <a href="/#contact" class="cta-button">Start Free Trial →</a>
-        <br>
-        <a href="/" class="back-link">← Back to Home</a>
+        <h2>Build Your AI Clone Today</h2>
+        <p>Train the AI on your style, your market, and your scripts. Every lead gets your best effort, 24 hours a day, without you lifting a finger.</p>
+        <a href="/#contact" class="cta-button">Book Your Demo</a>
+    </section>
+
+    <!-- Related Features -->
+    <section class="section">
+        <h2>Related Features</h2>
+        <div class="related-grid">
+            <a href="/features/ai-clone-video-real-estate.html" class="related-card">
+                <h4>AI Clone Video</h4>
+                <p>Extend your digital clone into personalized video messages that build trust before the first meeting.</p>
+            </a>
+            <a href="/features/seller-workflows-real-estate.html" class="related-card">
+                <h4>Seller Workflows</h4>
+                <p>FSBO and expired listing sequences powered by your Custom AI Brain's voice and market knowledge.</p>
+            </a>
+            <a href="/features/buyer-workflows-real-estate.html" class="related-card">
+                <h4>Buyer Workflows</h4>
+                <p>Buyer qualification and nurturing that sounds like you, not a generic chatbot.</p>
+            </a>
+            <a href="/features/ai-voice-calls-real-estate.html" class="related-card">
+                <h4>AI Voice Calls</h4>
+                <p>Phone conversations powered by your scripts, your objection handling, and your personality.</p>
+            </a>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 AI Sales Pipeline. All rights reserved.</p>
+        <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem;">
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Features</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/features/ai-sms-real-estate.html">AI SMS</a></li>
+                    <li><a href="/features/ai-email-real-estate.html">AI Email</a></li>
+                    <li><a href="/features/ai-voice-calls-real-estate.html">AI Voice Calls</a></li>
+                    <li><a href="/features/ai-clone-video-real-estate.html">AI Clone Video</a></li>
+                    <li><a href="/features/lead-scoring-real-estate.html">Lead Scoring</a></li>
+                    <li><a href="/features/facebook-retargeting-real-estate.html">Facebook Retargeting</a></li>
+                    <li><a href="/features/seller-workflows-real-estate.html">Seller Workflows</a></li>
+                    <li><a href="/features/buyer-workflows-real-estate.html">Buyer Workflows</a></li>
+                    <li><a href="/features/custom-ai-brain-real-estate.html">Custom AI Brain</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Resources</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/ai-crm-real-estate.html">AI CRM for Real Estate</a></li>
+                    <li><a href="/ai-crm-new-jersey.html">AI CRM for NJ Agents</a></li>
+                    <li><a href="/fsbo-automation.html">FSBO Automation</a></li>
+                    <li><a href="/expired-listing-automation.html">Expired Listing Automation</a></li>
+                    <li><a href="/comparison.html">CRM Comparison</a></li>
+                    <li><a href="/pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Company</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/#contact">Contact Us</a></li>
+                    <li><a href="mailto:hello@aisalespipeline.com">hello@aisalespipeline.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align:center;padding-top:2rem;border-top:1px solid rgba(255,107,53,0.1);color:rgba(240,240,240,0.6);font-size:0.9rem;">
+            <p>&copy; 2026 AI Sales Pipeline. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>

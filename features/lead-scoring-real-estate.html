@@ -3,118 +3,797 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Lead Scoring for Real Estate | Prioritize Your Best Leads | AI Sales Pipeline</title>
-    <meta name="description" content="AI-powered lead scoring for real estate agents. Automatically prioritize hot leads and focus your time on prospects ready to transact.">
+    <title>AI Lead Scoring for Real Estate Agents | AI Sales Pipeline</title>
+    <meta name="description" content="AI lead scoring for real estate. Analyze 50+ data points to rank leads as hot, warm, or cold in real-time. Know who to call first every morning.">
+    <meta name="keywords" content="AI lead scoring for real estate, real estate lead scoring, lead prioritization, CRM lead scoring, AI lead ranking">
     <link rel="canonical" href="https://www.aisalespipeline.com/features/lead-scoring-real-estate.html">
+    <meta property="og:title" content="AI Lead Scoring for Real Estate Agents | AI Sales Pipeline">
+    <meta property="og:description" content="AI analyzes 50+ behavioral data points to rank every lead in your pipeline. Know exactly who to call first and never waste time on cold leads again.">
+    <meta property="og:url" content="https://www.aisalespipeline.com/features/lead-scoring-real-estate.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AI Sales Pipeline">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Lead Scoring for Real Estate Agents | AI Sales Pipeline">
+    <meta name="twitter:description" content="AI analyzes 50+ behavioral data points to rank every lead in your pipeline. Know exactly who to call first and never waste time on cold leads again.">
+    <meta name="llm-context" content="AI Sales Pipeline is an AI-powered real estate CRM. This page covers the AI Lead Scoring feature which analyzes 50+ data points to rank leads and predict transaction timelines.">
+    <meta name="ai-content-declaration" content="This page describes a real product feature of AI Sales Pipeline. Content is factual and describes actual platform capabilities.">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aisalespipeline.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://www.aisalespipeline.com/#features" },
+            { "@type": "ListItem", "position": 3, "name": "Lead Scoring", "item": "https://www.aisalespipeline.com/features/lead-scoring-real-estate.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does AI lead scoring work for real estate agents?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI lead scoring analyzes 50+ behavioral and demographic data points for every lead in your pipeline. This includes website activity, listing views, email engagement, SMS responses, call interactions, lead source quality, search criteria changes, and timing patterns. The AI assigns each lead a score and classifies them as hot, warm, or cold — updating in real-time as new data comes in."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What data points does the lead scoring AI analyze?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The AI evaluates over 50 signals including: listing view frequency and recency, search criteria specificity, email open and click rates, SMS reply rates, call answer rates, website visit frequency, time spent on property pages, saved listing activity, price range changes, financing status signals, lead source quality history, response speed patterns, and seasonal buying indicators."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How accurate is AI lead scoring compared to manual lead qualification?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI lead scoring is significantly more accurate than manual qualification because it processes data continuously and without bias. While an agent might check in on a lead once a week, the AI monitors every interaction in real-time. Agents using AI lead scoring report converting leads 3x faster because they focus their energy on the right prospects at the right time."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does lead scoring update automatically or do I have to refresh it?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Lead scores update automatically in real-time. Every time a lead opens an email, views a listing, responds to a text, or takes any trackable action, their score adjusts immediately. If a cold lead suddenly starts viewing properties aggressively, you will receive a priority notification within minutes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can AI lead scoring help me prioritize my morning call list?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely — this is one of the most popular use cases. Every morning, AI Sales Pipeline generates a prioritized call list sorted by lead score. Your hottest leads appear at the top so you always start your day with the prospects most likely to convert. The list updates throughout the day as new engagement data comes in."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does lead scoring work with leads from Zillow, Realtor.com, and Facebook ads?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. AI lead scoring works with leads from every source — Zillow, Realtor.com, Facebook ads, Google ads, your website, open houses, referrals, and manual entries. The AI also factors in lead source quality when calculating scores, since conversion rates vary significantly by source."
+                }
+            }
+        ]
+    }
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --dark-bg: #0a0a0a; --dark-alt: #111111; --orange: #ff6b35; --orange-dark: #ff5a1f; --white: #ffffff; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: var(--dark-bg); color: var(--white); line-height: 1.6; }
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; background-color: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 107, 53, 0.2); }
-        .nav-logo { font-size: 1.5rem; font-weight: 700; color: var(--white); text-decoration: none; }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        :root {
+            --dark-bg: #0a0a0a;
+            --dark-alt: #111111;
+            --orange: #ff6b35;
+            --orange-dark: #ff5a1f;
+            --white: #ffffff;
+            --blue-accent: #00d4ff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        a { color: var(--orange); }
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
         .nav-links a:hover { color: var(--orange); }
-        .nav-cta { background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: var(--white); padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
-        .hero { padding: 8rem 2rem 4rem; background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, var(--dark-bg) 100%); text-align: center; }
-        .hero h1 { font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, var(--white), var(--orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
-        .hero-subtitle { font-size: 1.2rem; color: rgba(240, 240, 240, 0.8); max-width: 700px; margin: 0 auto 2rem; }
-        .section { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; }
-        .section h2 { font-size: 2rem; color: var(--orange); margin-bottom: 1.5rem; }
-        .section p { color: rgba(240, 240, 240, 0.8); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .feature-card { background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05)); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,107,53,0.2); }
-        .feature-card h3 { color: var(--orange); margin-bottom: 1rem; }
-        .feature-card p { color: rgba(240, 240, 240, 0.7); font-size: 0.95rem; }
-        .stats-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 3rem 2rem; background: linear-gradient(90deg, rgba(255,107,53,0.1), rgba(0,212,255,0.1)); text-align: center; }
-        .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--orange); }
-        .stat-label { color: rgba(240, 240, 240, 0.7); font-size: 0.9rem; }
-        .cta-section { padding: 4rem 2rem; text-align: center; background: linear-gradient(135deg, rgba(255,107,53,0.15), var(--dark-bg)); }
-        .cta-button { display: inline-block; background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: var(--white); padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-top: 1.5rem; }
-        .back-link { display: inline-block; margin-top: 2rem; color: var(--orange); text-decoration: none; }
-        footer { background-color: var(--dark-alt); padding: 2rem; text-align: center; border-top: 1px solid rgba(255, 107, 53, 0.2); color: rgba(240, 240, 240, 0.6); }
-        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-links { display: none; } }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .breadcrumb {
+            max-width: 1000px;
+            margin: 5.5rem auto 0;
+            padding: 0.8rem 2rem;
+            font-size: 0.85rem;
+            color: rgba(240, 240, 240, 0.5);
+        }
+        .breadcrumb a {
+            color: rgba(240, 240, 240, 0.6);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover { color: var(--orange); }
+        .hero {
+            padding: 2rem 2rem 4rem;
+            background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, var(--dark-bg) 100%);
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--white), var(--orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: rgba(240, 240, 240, 0.8);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            font-size: 2rem;
+            color: var(--orange);
+            margin-bottom: 1.5rem;
+        }
+        .section p, .section li {
+            color: rgba(240, 240, 240, 0.8);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .section ul { margin-left: 1.5rem; margin-bottom: 1.5rem; }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .feature-card {
+            background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05));
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,107,53,0.2);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--orange);
+        }
+        .feature-card h3 {
+            color: var(--orange);
+            margin-bottom: 1rem;
+            font-size: 1.15rem;
+        }
+        .feature-card p {
+            color: rgba(240, 240, 240, 0.7);
+            font-size: 0.95rem;
+        }
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 3rem 2rem;
+            background: linear-gradient(90deg, rgba(255,107,53,0.1), rgba(0,212,255,0.1));
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--orange);
+        }
+        .stat-label {
+            color: rgba(240, 240, 240, 0.7);
+            font-size: 0.9rem;
+        }
+        .step-list {
+            counter-reset: steps;
+            list-style: none;
+            margin: 2rem 0;
+            padding: 0;
+        }
+        .step-list li {
+            counter-increment: steps;
+            padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, rgba(255,107,53,0.06), rgba(0,212,255,0.03));
+            border-radius: 10px;
+            border-left: 3px solid var(--orange);
+            position: relative;
+        }
+        .step-list li::before {
+            content: counter(steps);
+            position: absolute;
+            left: 1.2rem;
+            top: 1.4rem;
+            width: 2rem;
+            height: 2rem;
+            background: var(--orange);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .step-list li strong {
+            color: var(--white);
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .use-case {
+            background: linear-gradient(135deg, rgba(255,107,53,0.06), rgba(0,212,255,0.03));
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,107,53,0.15);
+            margin-bottom: 1.5rem;
+        }
+        .use-case h3 {
+            color: var(--orange);
+            margin-bottom: 0.8rem;
+            font-size: 1.15rem;
+        }
+        .use-case p {
+            color: rgba(240, 240, 240, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        .use-case .scenario {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            margin-top: 0.8rem;
+            color: rgba(240, 240, 240, 0.65);
+            font-size: 0.92rem;
+            border-left: 2px solid var(--blue-accent);
+        }
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .impact-card {
+            background: rgba(255,107,53,0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255,107,53,0.1);
+            text-align: center;
+        }
+        .impact-card h4 {
+            color: var(--orange);
+            margin-bottom: 0.5rem;
+        }
+        .impact-card p {
+            color: rgba(240, 240, 240, 0.7);
+            font-size: 0.92rem;
+        }
+        .faq-section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .faq-section h2 {
+            font-size: 2rem;
+            color: var(--orange);
+            margin-bottom: 2rem;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(255,107,53,0.06), rgba(0,212,255,0.03));
+            border-radius: 10px;
+            border: 1px solid rgba(255,107,53,0.12);
+        }
+        .faq-item h3 {
+            color: var(--white);
+            font-size: 1.05rem;
+            margin-bottom: 0.8rem;
+        }
+        .faq-item p {
+            color: rgba(240, 240, 240, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .cta-section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255,107,53,0.15), var(--dark-bg));
+        }
+        .cta-section h2 {
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 0.8rem;
+        }
+        .cta-section p {
+            color: rgba(240, 240, 240, 0.7);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .cta-button:hover { transform: scale(1.05); }
+        .related-features {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .related-features h2 {
+            font-size: 2rem;
+            color: var(--orange);
+            margin-bottom: 2rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .related-card {
+            background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05));
+            padding: 1.8rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,107,53,0.2);
+            text-decoration: none;
+            transition: transform 0.3s, border-color 0.3s;
+            display: block;
+        }
+        .related-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--orange);
+        }
+        .related-card h3 {
+            color: var(--orange);
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+        .related-card p {
+            color: rgba(240, 240, 240, 0.6);
+            font-size: 0.88rem;
+        }
+        footer {
+            background-color: var(--dark-alt);
+            padding: 3rem 2rem 2rem;
+            border-top: 1px solid rgba(255, 107, 53, 0.2);
+            color: rgba(240, 240, 240, 0.6);
+        }
+        footer a {
+            color: rgba(240, 240, 240, 0.7);
+            text-decoration: none;
+        }
+        footer a:hover { color: var(--orange); }
+        .inline-link {
+            color: var(--orange);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,107,53,0.3);
+        }
+        .inline-link:hover { border-bottom-color: var(--orange); }
+        .data-points-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .data-category {
+            background: rgba(0,0,0,0.25);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255,107,53,0.1);
+        }
+        .data-category h4 {
+            color: var(--orange);
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+        .data-category ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .data-category ul li {
+            color: rgba(240, 240, 240, 0.65);
+            font-size: 0.9rem;
+            padding: 0.25rem 0;
+            margin-bottom: 0.2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .step-list li { padding-left: 3.8rem; }
+        }
     </style>
 </head>
 <body>
+
     <nav>
         <a href="/" class="nav-logo">AI Sales Pipeline</a>
         <ul class="nav-links">
-            <li><a href="/features.html">Features</a></li>
+            <li><a href="/#features">Features</a></li>
             <li><a href="/pricing.html">Pricing</a></li>
-            <li><a href="/#how-it-works">How It Works</a></li>
+            <li><a href="/comparison.html">Compare</a></li>
+            <li><a href="/#faq">FAQ</a></li>
         </ul>
         <a href="/#contact" class="nav-cta">Book Demo</a>
     </nav>
 
+    <div class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/#features">Features</a> &rsaquo; Lead Scoring
+    </div>
+
     <section class="hero">
-        <h1>AI Lead Scoring</h1>
-        <p class="hero-subtitle">Automatically identify your hottest leads. Stop wasting time on tire-kickers and focus on prospects ready to buy or sell today.</p>
+        <h1>AI Lead Scoring for Real Estate Agents</h1>
+        <p class="hero-subtitle">Stop guessing which leads to call first. AI analyzes 50+ behavioral data points and tells you exactly who is ready to buy or sell right now — updated in real-time, every single day.</p>
     </section>
 
     <div class="stats-bar">
-        <div><div class="stat-number">3x</div><div class="stat-label">Faster Conversion</div></div>
-        <div><div class="stat-number">40%</div><div class="stat-label">Time Saved</div></div>
-        <div><div class="stat-number">85%</div><div class="stat-label">Accuracy</div></div>
-        <div><div class="stat-number">Real-Time</div><div class="stat-label">Updates</div></div>
+        <div>
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Data Points Analyzed</div>
+        </div>
+        <div>
+            <div class="stat-number">3x</div>
+            <div class="stat-label">Faster Conversions</div>
+        </div>
+        <div>
+            <div class="stat-number">Real-Time</div>
+            <div class="stat-label">Score Updates</div>
+        </div>
+        <div>
+            <div class="stat-number">40%</div>
+            <div class="stat-label">Time Saved Daily</div>
+        </div>
     </div>
 
+    <!-- What It Is Section -->
     <section class="section">
-        <h2>Not All Leads Are Created Equal</h2>
-        <p>You know this intuitively. Some leads are ready to move next week. Others are "just looking" and won't buy for 18 months. The problem? Most agents treat them the same — wasting precious time on leads that will never convert while hot prospects cool off.</p>
-        <p>AI Lead Scoring changes the game. Our machine learning model analyzes dozens of signals in real-time to predict which leads are most likely to transact — and when. It's like having a crystal ball that tells you exactly where to focus your energy.</p>
-        <p>The AI doesn't just look at what leads tell you. It analyzes their behavior — which listings they view, how often they return, what they click, when they're active, and dozens of other signals. It knows the difference between a casual browser and a motivated buyer before they even realize it themselves.</p>
+        <h2>What Is AI Lead Scoring?</h2>
+        <p>Every real estate agent knows the frustration: you have 200 leads in your <a href="/" class="inline-link">CRM</a>, but you only have time to call 20 today. Which 20 do you pick? Most agents guess. They call whoever came in most recently, or they work through the list alphabetically. Meanwhile, a lead who has been silently viewing listings every night for the past week — a buyer who is about to pull the trigger — sits untouched in the middle of the list.</p>
+        <p>AI lead scoring eliminates that guessing game entirely. Our AI continuously monitors every lead in your pipeline, tracking over 50 behavioral and demographic signals. It knows which leads are actively searching, which ones are engaging with your outreach, which ones are showing signs of urgency, and which ones are months away from making a decision.</p>
+        <p>Every lead receives a dynamic score and a classification: hot, warm, or cold. Hot leads get flagged for immediate action. Warm leads enter nurture sequences powered by <a href="/features/ai-email-real-estate.html" class="inline-link">AI email</a> and <a href="/features/ai-sms-real-estate.html" class="inline-link">AI SMS</a>. Cold leads get long-term drip campaigns. The result is a pipeline where no lead is forgotten and your time is spent on the people most likely to close.</p>
+        <p>This is not a static score assigned once and forgotten. Lead scores update in real-time. A cold lead who suddenly starts viewing properties every day will jump to hot within hours. You will get a priority notification the moment it happens so you can pick up the phone while that lead is still in buying mode.</p>
     </section>
 
+    <!-- How It Works Section -->
     <section class="section">
-        <h2>How Lead Scoring Works</h2>
+        <h2>How AI Lead Scoring Works</h2>
+        <p>The scoring engine runs automatically inside your <a href="/" class="inline-link">AI Sales Pipeline</a> account. There is nothing to configure — it starts learning from day one.</p>
+        <ol class="step-list">
+            <li>
+                <strong>Data Collection Across Every Touchpoint</strong>
+                The AI tracks every interaction a lead has with your business — email opens, SMS replies, website visits, listing views, call responses, ad clicks, form submissions, and more. Every action feeds into the scoring model.
+            </li>
+            <li>
+                <strong>Behavioral Pattern Analysis</strong>
+                The AI does not just count actions. It identifies patterns. A lead who views 12 listings in one night is behaving differently than one who views 1 listing per week. The AI recognizes urgency signals, comparison shopping behavior, and buying intent patterns.
+            </li>
+            <li>
+                <strong>Source Quality Assessment</strong>
+                Not all lead sources are equal. A referral from a past client converts at a different rate than a Zillow inquiry. The AI factors in historical conversion data by source, adjusting scores so you focus on the leads with the highest probability of closing.
+            </li>
+            <li>
+                <strong>Real-Time Score Calculation</strong>
+                Every new data point triggers an instant score recalculation. The AI weighs recency heavily — recent activity counts more than activity from three weeks ago. This ensures your scores always reflect the current state of each lead's interest.
+            </li>
+            <li>
+                <strong>Classification and Prioritization</strong>
+                Leads are classified as hot, warm, or cold. Your dashboard shows a prioritized list with hot leads at the top. You can filter by score, by source, by timeline, or by any combination. Your morning call list builds itself.
+            </li>
+            <li>
+                <strong>Automated Workflow Triggers</strong>
+                Score changes trigger automated actions. A lead that moves from warm to hot triggers an immediate phone alert. A lead that drops from warm to cold shifts into a long-term nurture sequence. The right action happens at the right time without manual intervention.
+            </li>
+        </ol>
+    </section>
+
+    <!-- Key Capabilities Section -->
+    <section class="section">
+        <h2>Key Capabilities</h2>
         <div class="feature-grid">
             <div class="feature-card">
-                <h3>🔥 Hot/Warm/Cold</h3>
-                <p>Every lead gets a temperature score. Hot leads need immediate attention. Warm leads need nurturing. Cold leads get long-term follow-up.</p>
+                <h3>50+ Data Point Analysis</h3>
+                <p>The AI evaluates behavioral signals, engagement metrics, demographic data, source quality, timing patterns, and conversation sentiment. More data means more accurate scoring.</p>
             </div>
             <div class="feature-card">
-                <h3>📊 Behavioral Analysis</h3>
-                <p>The AI tracks page views, time on site, property saves, price alerts, return visits, and more to gauge intent.</p>
+                <h3>Real-Time Score Updates</h3>
+                <p>Scores recalculate the instant new data arrives. A lead who opens your email, clicks a listing link, and views 4 properties in one session will see their score jump within minutes.</p>
             </div>
             <div class="feature-card">
-                <h3>💬 Engagement Scoring</h3>
-                <p>Email opens, SMS replies, call answers — every interaction updates the score. High engagement = high priority.</p>
+                <h3>Engagement Tracking</h3>
+                <p>Every interaction is measured — email opens, click-throughs, SMS replies, call pickups, voicemail listens, video views, and website behavior. The AI knows exactly how engaged each lead is.</p>
             </div>
             <div class="feature-card">
-                <h3>⏰ Timeline Prediction</h3>
-                <p>The AI estimates when a lead is likely to transact — "Ready now," "3 months," "6+ months" — so you can plan accordingly.</p>
+                <h3>Timeline Prediction</h3>
+                <p>Beyond hot/warm/cold, the AI estimates when a lead is likely to transact. "Ready now," "1-3 months," or "6+ months." This helps you plan your pipeline and set realistic expectations.</p>
             </div>
             <div class="feature-card">
-                <h3>🎯 Automated Routing</h3>
-                <p>Hot leads trigger immediate alerts and fast-track workflows. Your best opportunities never sit in a queue.</p>
+                <h3>Priority Notifications</h3>
+                <p>When a lead's score spikes — indicating a surge in buying intent — you receive an instant push notification and text alert. Never miss the moment a cold lead turns hot.</p>
             </div>
             <div class="feature-card">
-                <h3>📈 Constant Learning</h3>
-                <p>The model improves over time, learning from your actual closed deals to get even more accurate.</p>
+                <h3>Continuous Learning</h3>
+                <p>The model improves over time by learning from your actual closed deals. It discovers which patterns in your specific market predict conversions, making scores more accurate every month.</p>
             </div>
         </div>
     </section>
 
+    <!-- What the AI Analyzes -->
     <section class="section">
-        <h2>What The AI Considers</h2>
-        <p><strong>Demographics:</strong> Location, price range, property type preferences, financing status</p>
-        <p><strong>Behavior:</strong> Search frequency, listing views, time on site, saved properties, price changes viewed</p>
-        <p><strong>Engagement:</strong> Email opens, click-through rates, SMS responses, call interactions</p>
-        <p><strong>Source:</strong> Organic search, paid ads, referrals, Zillow, Facebook — each scored differently</p>
-        <p><strong>Timing:</strong> Days since last activity, response speed, seasonal patterns</p>
+        <h2>What the AI Analyzes</h2>
+        <p>Here is a breakdown of the data categories the scoring engine evaluates for every lead in your pipeline.</p>
+        <div class="data-points-grid">
+            <div class="data-category">
+                <h4>Behavioral Signals</h4>
+                <ul>
+                    <li>Listing view frequency and recency</li>
+                    <li>Time spent on property pages</li>
+                    <li>Saved and favorited listings</li>
+                    <li>Search criteria specificity</li>
+                    <li>Price range refinement over time</li>
+                    <li>Return visit frequency</li>
+                    <li>Map search zoom level and area</li>
+                </ul>
+            </div>
+            <div class="data-category">
+                <h4>Engagement Metrics</h4>
+                <ul>
+                    <li>Email open and click-through rates</li>
+                    <li>SMS reply rate and speed</li>
+                    <li>Call answer rate</li>
+                    <li>Voicemail listen completion</li>
+                    <li>Video watch duration</li>
+                    <li>Form completion rate</li>
+                    <li>Link click patterns</li>
+                </ul>
+            </div>
+            <div class="data-category">
+                <h4>Source & Demographics</h4>
+                <ul>
+                    <li>Lead source and historical conversion rate</li>
+                    <li>Geographic location match</li>
+                    <li>Price range alignment with market</li>
+                    <li>Pre-qualification or financing status</li>
+                    <li>Timeline stated vs. behavior observed</li>
+                    <li>Referral connection strength</li>
+                    <li>Multi-channel engagement breadth</li>
+                </ul>
+            </div>
+            <div class="data-category">
+                <h4>Timing & Recency</h4>
+                <ul>
+                    <li>Days since last activity</li>
+                    <li>Activity acceleration or deceleration</li>
+                    <li>Time-of-day engagement patterns</li>
+                    <li>Weekend vs. weekday activity</li>
+                    <li>Seasonal buying pattern alignment</li>
+                    <li>Speed of response to outreach</li>
+                    <li>Consistency of engagement over weeks</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
+    <!-- Real Estate Use Cases Section -->
+    <section class="section">
+        <h2>Real Estate Use Cases</h2>
+
+        <div class="use-case">
+            <h3>Prioritizing Your Morning Call List</h3>
+            <p>You sit down with your coffee at 8 AM. Instead of scrolling through a messy spreadsheet, your AI Sales Pipeline dashboard shows you a ranked list of leads sorted by score. The top 10 are all hot — they have been actively viewing properties, replying to texts, and showing urgency signals. You call them first. By 10 AM, you have booked two showings and a listing appointment.</p>
+            <div class="scenario"><strong>Before AI scoring:</strong> Call 30 leads randomly, book 1 appointment. <strong>After AI scoring:</strong> Call 10 prioritized leads, book 3 appointments.</div>
+        </div>
+
+        <div class="use-case">
+            <h3>Identifying Re-Engaged Old Leads</h3>
+            <p>A lead from six months ago — one you had written off — suddenly starts viewing listings every evening for a week straight. They open three of your emails in two days. The AI catches this pattern immediately and bumps their score from cold to hot. You get a priority notification and call them that afternoon. Turns out their lease is ending and they need to buy within 60 days.</p>
+            <div class="scenario">Without AI scoring, this lead would have stayed buried in your database. With scoring, they become your next closing.</div>
+        </div>
+
+        <div class="use-case">
+            <h3>Focusing Ad Spend on Converting Sources</h3>
+            <p>The AI tracks conversion rates by lead source over time. After 90 days, the data is clear: your Google PPC leads score 40% higher on average than your Zillow leads, but your <a href="/features/facebook-retargeting-real-estate.html" class="inline-link">Facebook retargeting</a> leads score highest of all. You shift budget accordingly, doubling down on the sources that produce the hottest leads and reducing spend on sources with consistently low scores.</p>
+            <div class="scenario">Lead scoring turns your marketing budget into a data-driven investment instead of a guessing game.</div>
+        </div>
+
+        <div class="use-case">
+            <h3>Team Lead Distribution</h3>
+            <p>If you run a team, lead scoring ensures fair and effective distribution. Hot leads go to your most experienced closers. Warm leads go to agents who are strong at nurturing. New agents get warm leads with coaching opportunities. The result: higher team-wide conversion rates and less frustration from agents receiving dead-end leads. This is especially powerful for <a href="/fsbo-automation.html" class="inline-link">FSBO campaigns</a> and <a href="/expired-listing-automation.html" class="inline-link">expired listing outreach</a> where lead quality varies widely.</p>
+            <div class="scenario">Distribute the right leads to the right agents at the right time — automatically.</div>
+        </div>
+    </section>
+
+    <!-- Why It Matters Section -->
+    <section class="section">
+        <h2>Why Lead Scoring Matters for Your Business</h2>
+        <p>Time is the most valuable asset in real estate. Every minute spent chasing a lead who will not transact for 18 months is a minute not spent on the buyer who is ready this week. Lead scoring is the tool that separates the two.</p>
+        <p>The math is straightforward. If you convert 2% of cold leads and 15% of hot leads, and AI scoring helps you spend 80% of your time on hot leads instead of spreading your effort evenly, your closing rate climbs dramatically — without adding a single new lead to your pipeline.</p>
+
+        <div class="impact-grid">
+            <div class="impact-card">
+                <h4>Close More Deals</h4>
+                <p>Agents using AI lead scoring report converting leads 3x faster because they reach the right prospects at the peak of their interest.</p>
+            </div>
+            <div class="impact-card">
+                <h4>Save 40% of Your Time</h4>
+                <p>Stop wasting hours on leads who are not ready. Focus your calling, texting, and showing time on people the AI has identified as high-probability converters.</p>
+            </div>
+            <div class="impact-card">
+                <h4>Never Miss a Hot Lead</h4>
+                <p>Real-time notifications ensure you know the moment a lead's behavior shifts from casual browsing to active buying. You call while they are still in decision mode.</p>
+            </div>
+            <div class="impact-card">
+                <h4>Optimize Marketing ROI</h4>
+                <p>Source-level scoring data shows you exactly which marketing channels produce the highest-quality leads, so you can allocate your budget for maximum return.</p>
+            </div>
+        </div>
+
+        <p style="margin-top: 2rem;">Lead scoring works best as part of a complete system. Pair it with <a href="/features/ai-voice-calls-real-estate.html" class="inline-link">AI voice calls</a> to automatically dial hot leads, <a href="/features/ai-clone-video-real-estate.html" class="inline-link">AI clone video</a> for high-engagement outreach, and <a href="/features/buyer-workflows-real-estate.html" class="inline-link">buyer workflows</a> that adapt based on score. View our <a href="/pricing.html" class="inline-link">pricing</a> to see which plan fits your business.</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>How does AI lead scoring work for real estate agents?</h3>
+            <p>AI lead scoring analyzes 50+ behavioral and demographic data points for every lead in your pipeline. This includes website activity, listing views, email engagement, SMS responses, call interactions, lead source quality, search criteria changes, and timing patterns. The AI assigns each lead a score and classifies them as hot, warm, or cold — updating in real-time as new data comes in.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What data points does the lead scoring AI analyze?</h3>
+            <p>The AI evaluates over 50 signals including: listing view frequency and recency, search criteria specificity, email open and click rates, SMS reply rates, call answer rates, website visit frequency, time spent on property pages, saved listing activity, price range changes, financing status signals, lead source quality history, response speed patterns, and seasonal buying indicators.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How accurate is AI lead scoring compared to manual lead qualification?</h3>
+            <p>AI lead scoring is significantly more accurate than manual qualification because it processes data continuously and without bias. While an agent might check in on a lead once a week, the AI monitors every interaction in real-time. Agents using AI lead scoring report converting leads 3x faster because they focus their energy on the right prospects at the right time.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Does lead scoring update automatically or do I have to refresh it?</h3>
+            <p>Lead scores update automatically in real-time. Every time a lead opens an email, views a listing, responds to a text, or takes any trackable action, their score adjusts immediately. If a cold lead suddenly starts viewing properties aggressively, you will receive a priority notification within minutes.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can AI lead scoring help me prioritize my morning call list?</h3>
+            <p>Absolutely — this is one of the most popular use cases. Every morning, AI Sales Pipeline generates a prioritized call list sorted by lead score. Your hottest leads appear at the top so you always start your day with the prospects most likely to convert. The list updates throughout the day as new engagement data comes in.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Does lead scoring work with leads from Zillow, Realtor.com, and Facebook ads?</h3>
+            <p>Yes. AI lead scoring works with leads from every source — Zillow, Realtor.com, Facebook ads, Google ads, your website, open houses, referrals, and manual entries. The AI also factors in lead source quality when calculating scores, since conversion rates vary significantly by source.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
     <section class="cta-section">
-        <h2>Focus on Leads That Matter</h2>
-        <p>Stop guessing. Start knowing.</p>
-        <a href="/#contact" class="cta-button">Start Free Trial →</a>
+        <h2>Stop Guessing. Start Knowing.</h2>
+        <p>Let AI tell you exactly which leads to call, when to call them, and why they are ready to move. See AI lead scoring in action with a personalized demo.</p>
         <br>
-        <a href="/" class="back-link">← Back to Home</a>
+        <a href="/#contact" class="cta-button">Book Your Demo</a>
+    </section>
+
+    <!-- Related Features Section -->
+    <section class="related-features">
+        <h2>Related Features</h2>
+        <div class="related-grid">
+            <a href="/features/ai-voice-calls-real-estate.html" class="related-card">
+                <h3>AI Voice Calls</h3>
+                <p>Automatically dial hot leads the moment their score spikes. AI makes the call, qualifies the prospect, and books the appointment.</p>
+            </a>
+            <a href="/features/facebook-retargeting-real-estate.html" class="related-card">
+                <h3>Facebook Retargeting</h3>
+                <p>Sync lead score segments to Facebook for targeted ads. Show different creative to hot, warm, and cold audiences.</p>
+            </a>
+            <a href="/features/buyer-workflows-real-estate.html" class="related-card">
+                <h3>Buyer Workflows</h3>
+                <p>Automated buyer nurture sequences that adapt based on lead score. Hot leads get fast-tracked. Warm leads get educated.</p>
+            </a>
+            <a href="/features/seller-workflows-real-estate.html" class="related-card">
+                <h3>Seller Workflows</h3>
+                <p>Score-driven seller outreach that prioritizes motivated sellers and adjusts follow-up intensity based on engagement signals.</p>
+            </a>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 AI Sales Pipeline. All rights reserved.</p>
+        <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem;">
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Features</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/features/ai-sms-real-estate.html">AI SMS</a></li>
+                    <li><a href="/features/ai-email-real-estate.html">AI Email</a></li>
+                    <li><a href="/features/ai-voice-calls-real-estate.html">AI Voice Calls</a></li>
+                    <li><a href="/features/ai-clone-video-real-estate.html">AI Clone Video</a></li>
+                    <li><a href="/features/lead-scoring-real-estate.html">Lead Scoring</a></li>
+                    <li><a href="/features/facebook-retargeting-real-estate.html">Facebook Retargeting</a></li>
+                    <li><a href="/features/seller-workflows-real-estate.html">Seller Workflows</a></li>
+                    <li><a href="/features/buyer-workflows-real-estate.html">Buyer Workflows</a></li>
+                    <li><a href="/features/custom-ai-brain-real-estate.html">Custom AI Brain</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Resources</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/ai-crm-real-estate.html">AI CRM for Real Estate</a></li>
+                    <li><a href="/ai-crm-new-jersey.html">AI CRM for NJ Agents</a></li>
+                    <li><a href="/fsbo-automation.html">FSBO Automation</a></li>
+                    <li><a href="/expired-listing-automation.html">Expired Listing Automation</a></li>
+                    <li><a href="/comparison.html">CRM Comparison</a></li>
+                    <li><a href="/pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color:var(--orange);margin-bottom:1rem;">Company</h4>
+                <ul style="list-style:none;">
+                    <li><a href="/#contact">Contact Us</a></li>
+                    <li><a href="mailto:hello@aisalespipeline.com">hello@aisalespipeline.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align:center;padding-top:2rem;border-top:1px solid rgba(255,107,53,0.1);color:rgba(240,240,240,0.6);font-size:0.9rem;">
+            <p>&copy; 2026 AI Sales Pipeline. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
