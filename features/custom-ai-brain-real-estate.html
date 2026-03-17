@@ -1,660 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom AI Real Estate Assistant | AI Sales Pipeline</title>
-    <meta name="description" content="Custom AI real estate assistant. Train AI on YOUR scripts, YOUR market, YOUR philosophy. Mirror Brandon Mulrenin, Jeremy Miner, Tom Ferry. Most powerful differentiator.">
-    <meta name="canonical" href="https://aisalespipeline.com/features/custom-ai-brain-real-estate.html">
-    <meta name="ai-content-declaration" content="This page contains AI-generated content created by AI Sales Pipeline">
-    <meta name="llm-context" content="Premium feature page for custom AI training in real estate. Focuses on personalization, script training, and methodology customization.">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Custom AI Real Estate Assistant | AI Sales Pipeline">
-    <meta property="og:description" content="Train AI on YOUR scripts, YOUR market, YOUR philosophy. AI speaks your language at infinite scale. Most powerful differentiator.">
-    <meta property="og:image" content="https://aisalespipeline.com/og-image-custom-ai.png">
-    <meta property="og:url" content="https://aisalespipeline.com/features/custom-ai-brain-real-estate.html">
-    <meta property="og:type" content="article">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Custom AI Real Estate Assistant | AI Sales Pipeline">
-    <meta name="twitter:description" content="Your AI. Your scripts. Your methodology. Infinite scale. This is the game-changer.">
-    <meta name="twitter:image" content="https://aisalespipeline.com/og-image-custom-ai.png">
-    
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Custom AI Brain for Real Estate",
-      "applicationCategory": "BusinessApplication",
-      "offers": {"@type": "Offer", "price": "Contact for pricing", "priceCurrency": "USD"}
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aisalespipeline.com"},
-        {"@type": "ListItem", "position": 2, "name": "Features", "item": "https://aisalespipeline.com/#features"},
-        {"@type": "ListItem", "position": 3, "name": "Custom AI Brain for Real Estate", "item": "https://aisalespipeline.com/features/custom-ai-brain-real-estate.html"}
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type": "Question", "name": "What is a custom AI brain for real estate?", "acceptedAnswer": {"@type": "Answer", "text": "A custom AI trained on YOUR scripts, YOUR market knowledge, YOUR sales philosophy, and YOUR methodology. AI learns from your recordings, documents, and past conversations. It speaks like you, sells like you, and thinks like you—at infinite scale."}},
-        {"@type": "Question", "name": "What kind of data trains the AI brain?", "acceptedAnswer": {"@type": "Answer", "text": "Training data includes: your past conversations with leads, your sales scripts, your market analysis documents, your closing techniques, your objection handling, your follow-up cadences. Every word you've said to a lead teaches AI how you think."}},
-        {"@type": "Question", "name": "Can I train AI on my mentor's methodology?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If you follow Brandon Mulrenin Reverse Selling, Jeremy Miner NEPQ, Tom Ferry, or Mike Ferry, we can train AI on their frameworks and language. AI becomes your implementation of their methodology at scale."}},
-        {"@type": "Question", "name": "How is privacy handled with AI training?", "acceptedAnswer": {"@type": "Answer", "text": "All training data is encrypted, isolated, and never shared. Your scripts, your conversations, your market data—completely private. Your AI is yours alone. Competitors never see your methodology."}},
-        {"@type": "Question", "name": "How does custom AI outperform generic AI?", "acceptedAnswer": {"@type": "Answer", "text": "Generic AI is trained on millions of conversations and doesn't know your market, your scripts, your philosophy. Custom AI is trained on YOUR data, YOUR approach, YOUR success. It's 100x more powerful because it's literally an extension of you."}}
-      ]
-    }
-    </script>
-
+    <title>Custom AI Brain for Real Estate | Train Your AI Clone | AI Sales Pipeline</title>
+    <meta name="description" content="Train your AI on your market, your style, and your techniques. A custom AI brain that thinks and responds like you do.">
+    <link rel="canonical" href="https://www.aisalespipeline.com/features/custom-ai-brain-real-estate.html">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #0a0a0a;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-        
-        /* Sticky Navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background-color: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 1rem 2rem;
-        }
-        
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        nav .logo {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #ff6b35;
-            text-decoration: none;
-        }
-        
-        nav .links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        nav .links a {
-            color: #888;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
-        
-        nav .links a:hover {
-            color: #ff6b35;
-        }
-        
-        /* Breadcrumb */
-        .breadcrumb {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-            font-size: 0.9rem;
-            color: #888;
-        }
-        
-        .breadcrumb a {
-            color: #ff6b35;
-            text-decoration: none;
-        }
-        
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Hero Section */
-        .hero {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-            text-align: center;
-        }
-        
-        .hero-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 2rem;
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #ffffff 0%, #888 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero .subtitle {
-            font-size: 1.3rem;
-            color: #888;
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: #ff6b35;
-            color: #0a0a0a;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
-        }
-        
-        .cta-button:hover {
-            background-color: #ff8c5a;
-            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.4);
-            transform: translateY(-2px);
-        }
-        
-        /* Sections */
-        .section {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-        }
-        
-        .section h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
-        
-        .section-intro {
-            font-size: 1.1rem;
-            color: #888;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-        
-        /* What Is Section */
-        .what-is-box {
-            background-color: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        /* Process Steps */
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .process-step {
-            background-color: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .process-step:hover {
-            background-color: rgba(255, 107, 53, 0.1);
-            border-color: rgba(255, 107, 53, 0.3);
-            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
-        }
-        
-        .step-number {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background-color: #ff6b35;
-            color: #0a0a0a;
-            border-radius: 50%;
-            line-height: 50px;
-            text-align: center;
-            font-weight: 700;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .process-step h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: #ffffff;
-        }
-        
-        .process-step p {
-            color: #888;
-            font-size: 0.95rem;
-        }
-        
-        /* Benefits Grid */
-        .benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .benefit-card {
-            background-color: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
-        
-        .benefit-card:hover {
-            background-color: rgba(255, 107, 53, 0.1);
-            border-color: rgba(255, 107, 53, 0.3);
-            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
-            transform: translateY(-4px);
-        }
-        
-        .benefit-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .benefit-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: #ffffff;
-        }
-        
-        .benefit-card p {
-            color: #888;
-            font-size: 0.95rem;
-        }
-        
-        /* Scenario Box */
-        .scenario-box {
-            background-color: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-left: 4px solid #ff6b35;
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
-            font-style: italic;
-            color: #888;
-            line-height: 1.8;
-        }
-        
-        /* Use Cases */
-        .use-cases {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .use-case {
-            background-color: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
-        
-        .use-case:hover {
-            border-color: rgba(255, 107, 53, 0.5);
-            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.15);
-        }
-        
-        .use-case h3 {
-            color: #ff6b35;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .use-case p {
-            color: #888;
-            font-size: 0.95rem;
-        }
-        
-        /* FAQ */
-        .faq-item {
-            background-color: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .faq-item:hover {
-            background-color: rgba(255, 107, 53, 0.1);
-            border-color: rgba(255, 107, 53, 0.3);
-        }
-        
-        .faq-question {
-            font-weight: 600;
-            color: #ffffff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .faq-answer {
-            color: #888;
-            margin-top: 1rem;
-            display: none;
-            line-height: 1.8;
-        }
-        
-        .faq-item.active .faq-answer {
-            display: block;
-        }
-        
-        .faq-toggle {
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .faq-item.active .faq-toggle {
-            transform: rotate(180deg);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background-color: rgba(255, 107, 53, 0.1);
-            border: 1px solid rgba(255, 107, 53, 0.3);
-            border-radius: 12px;
-            padding: 3rem 2rem;
-            text-align: center;
-            margin: 4rem 0;
-        }
-        
-        .cta-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .cta-section p {
-            color: #888;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: rgba(255, 255, 255, 0.02);
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 2rem;
-            text-align: center;
-            color: #888;
-            margin-top: 4rem;
-        }
-        
-        footer a {
-            color: #ff6b35;
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .hero .subtitle { font-size: 1.1rem; }
-            .section h2 { font-size: 1.5rem; }
-            nav .links { gap: 1rem; }
-            .process-steps, .benefits, .use-cases { grid-template-columns: 1fr; }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --dark-bg: #0a0a0a; --dark-alt: #111111; --orange: #ff6b35; --orange-dark: #ff5a1f; --white: #ffffff; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: var(--dark-bg); color: var(--white); line-height: 1.6; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; background-color: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 107, 53, 0.2); }
+        .nav-logo { font-size: 1.5rem; font-weight: 700; color: var(--white); text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--orange); }
+        .nav-cta { background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: var(--white); padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; }
+        .hero { padding: 8rem 2rem 4rem; background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, var(--dark-bg) 100%); text-align: center; }
+        .hero h1 { font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, var(--white), var(--orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
+        .hero-subtitle { font-size: 1.2rem; color: rgba(240, 240, 240, 0.8); max-width: 700px; margin: 0 auto 2rem; }
+        .section { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; }
+        .section h2 { font-size: 2rem; color: var(--orange); margin-bottom: 1.5rem; }
+        .section p { color: rgba(240, 240, 240, 0.8); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .feature-card { background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05)); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,107,53,0.2); }
+        .feature-card h3 { color: var(--orange); margin-bottom: 1rem; }
+        .feature-card p { color: rgba(240, 240, 240, 0.7); font-size: 0.95rem; }
+        .stats-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 3rem 2rem; background: linear-gradient(90deg, rgba(255,107,53,0.1), rgba(0,212,255,0.1)); text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--orange); }
+        .stat-label { color: rgba(240, 240, 240, 0.7); font-size: 0.9rem; }
+        .cta-section { padding: 4rem 2rem; text-align: center; background: linear-gradient(135deg, rgba(255,107,53,0.15), var(--dark-bg)); }
+        .cta-button { display: inline-block; background: linear-gradient(135deg, var(--orange), var(--orange-dark)); color: var(--white); padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; margin-top: 1.5rem; }
+        .back-link { display: inline-block; margin-top: 2rem; color: var(--orange); text-decoration: none; }
+        footer { background-color: var(--dark-alt); padding: 2rem; text-align: center; border-top: 1px solid rgba(255, 107, 53, 0.2); color: rgba(240, 240, 240, 0.6); }
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-links { display: none; } }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
-        <div class="container">
-            <a href="https://aisalespipeline.com" class="logo">📊 AI Sales Pipeline</a>
-            <ul class="links">
-                <li><a href="https://aisalespipeline.com/#features">Features</a></li>
-                <li><a href="https://aisalespipeline.com/#pricing">Pricing</a></li>
-                <li><a href="https://aisalespipeline.com/#contact" class="cta-button">Book Demo</a></li>
-            </ul>
-        </div>
+        <a href="/" class="nav-logo">AI Sales Pipeline</a>
+        <ul class="nav-links">
+            <li><a href="/features.html">Features</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="/#how-it-works">How It Works</a></li>
+        </ul>
+        <a href="/#contact" class="nav-cta">Book Demo</a>
     </nav>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <a href="https://aisalespipeline.com">Home</a> > <a href="https://aisalespipeline.com/#features">Features</a> > Custom AI Real Estate Assistant
+    <section class="hero">
+        <h1>Custom AI Brain</h1>
+        <p class="hero-subtitle">Train your AI on your market knowledge, your communication style, and your closing techniques. An AI that sounds exactly like you.</p>
+    </section>
+
+    <div class="stats-bar">
+        <div><div class="stat-number">100%</div><div class="stat-label">Customizable</div></div>
+        <div><div class="stat-number">Your</div><div class="stat-label">Voice</div></div>
+        <div><div class="stat-number">Your</div><div class="stat-label">Style</div></div>
+        <div><div class="stat-number">Your</div><div class="stat-label">Knowledge</div></div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-icon">🧠</div>
-        <h1>Custom AI Real Estate Assistant</h1>
-        <p class="subtitle">Train AI on YOUR scripts, YOUR market, YOUR philosophy. AI speaks your language at infinite scale. The most powerful differentiator ever created.</p>
-        <a href="https://aisalespipeline.com/#contact" class="cta-button">Start Custom Training</a>
-    </section>
-
-    <!-- What Is Custom AI -->
     <section class="section">
-        <h2>What Is a Custom AI Brain for Real Estate?</h2>
-        <div class="what-is-box">
-            <p class="section-intro">
-                A <strong>custom AI brain</strong> is not generic AI. It's a digital version of YOU. Trained on your scripts, your market knowledge, your closing techniques, your objection handling, your follow-up sequences. Every word you've ever said to a lead teaches this AI how you think, sell, and close. The AI doesn't just use industry best-practices—it uses YOUR best-practices. It doesn't sound like a bot. It sounds like you. It doesn't sell like a generic AI. It sells like YOU—but to 1,000 leads at the same time. This is not just more powerful than generic AI. This is a completely different game.
-            </p>
-        </div>
+        <h2>Generic AI Isn't Enough</h2>
+        <p>Most AI tools use one-size-fits-all responses. They work, but they don't sound like YOU. They don't know YOUR market. They don't use YOUR techniques.</p>
+        <p>Custom AI Brain changes that. You train your AI with your past emails, your scripts, your market knowledge, and your preferences. It learns how you communicate and responds the way you would — just faster and at scale.</p>
+        <p>The result? Leads can't tell they're talking to AI. It sounds like you because it IS you — your knowledge, your personality, your approach — amplified by automation.</p>
     </section>
 
-    <!-- The Process -->
     <section class="section">
-        <h2>How Custom AI Training Works</h2>
-        <p class="section-intro">From your data to infinite scale in 4 steps.</p>
-        <div class="process-steps">
-            <div class="process-step">
-                <div class="step-number">1</div>
-                <h3>We Gather Your Data</h3>
-                <p>Share your past conversations, sales scripts, email templates, market analysis, objection handling playbooks, closing techniques. Everything that makes you successful. Zero data leaves your encrypted vault.</p>
+        <h2>What You Can Train</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>💬 Communication Style</h3>
+                <p>Formal or casual? Short and direct or detailed and consultative? The AI learns your natural writing and speaking patterns.</p>
             </div>
-            <div class="process-step">
-                <div class="step-number">2</div>
-                <h3>AI Learns You</h3>
-                <p>Machine learning algorithms analyze your data, identify your patterns, learn your language, understand your methodology. AI becomes a digital version of your sales brain.</p>
+            <div class="feature-card">
+                <h3>🏘️ Market Knowledge</h3>
+                <p>Feed the AI your local market data, neighborhood insights, school ratings, and market trends. It becomes a local expert.</p>
             </div>
-            <div class="process-step">
-                <div class="step-number">3</div>
-                <h3>We Test & Refine</h3>
-                <p>Your custom AI is tested against real lead conversations. We fine-tune responses, verify accuracy, ensure it sounds like you. You review outputs before going live.</p>
+            <div class="feature-card">
+                <h3>📋 Sales Techniques</h3>
+                <p>Train it on your objection handling, your closing techniques, your NEPQ questions. Your AI uses your proven methods.</p>
             </div>
-            <div class="process-step">
-                <div class="step-number">4</div>
-                <h3>Deploy at Scale</h3>
-                <p>Custom AI goes live across all channels (SMS, email, voice, video). Now 1,000 leads experience YOUR approach simultaneously. One agent. Infinite capacity. Your methodology.</p>
+            <div class="feature-card">
+                <h3>📑 Scripts & Templates</h3>
+                <p>Upload your best-performing scripts and email templates. The AI uses them as a foundation and personalizes from there.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎯 Preferences</h3>
+                <p>How aggressive or passive? How often to follow up? What tone to use with different lead types? You set the rules.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📚 Continuous Learning</h3>
+                <p>The AI improves over time, learning from every interaction. It gets smarter and more effective the longer you use it.</p>
             </div>
         </div>
     </section>
 
-    <!-- Benefits -->
     <section class="section">
-        <h2>Key Benefits of Custom AI Brain</h2>
-        <p class="section-intro">Why custom beats generic by 100x.</p>
-        <div class="benefits">
-            <div class="benefit-card">
-                <div class="benefit-icon">⭐</div>
-                <h3>100x More Powerful</h3>
-                <p>Generic AI knows nothing about your market, your scripts, your philosophy. Custom AI is trained exclusively on your data. It's literally an extension of your brain at infinite scale.</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">🎯</div>
-                <h3>Speaks Your Language</h3>
-                <p>Generic AI sounds like a bot. Custom AI sounds like you. Your tone. Your phrases. Your approach. Leads feel like they're talking to YOU, because they are (through AI).</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">🚀</div>
-                <h3>Your Competitive Advantage</h3>
-                <p>Custom AI can't be copied. It's trained on your secrets, your methodology, your market insights. Competitors see generic chatbots. You have a digital clone of your brain.</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">💪</div>
-                <h3>Implements Your Philosophy</h3>
-                <p>Follow Brandon Mulrenin Reverse Selling? Jeremy Miner NEPQ? Tom Ferry principles? Custom AI learns YOUR implementation and scales it infinitely without losing your edge.</p>
-            </div>
-        </div>
+        <h2>Training Process</h2>
+        <p><strong>Step 1: Upload Content:</strong> Past emails, scripts, marketing materials, market reports — anything that shows how you communicate.</p>
+        <p><strong>Step 2: Define Style:</strong> Answer questions about your preferences, tone, and approach. Set boundaries and guidelines.</p>
+        <p><strong>Step 3: Review & Refine:</strong> The AI generates sample responses. You provide feedback until it's perfect.</p>
+        <p><strong>Step 4: Deploy:</strong> Your custom AI goes live, handling leads with your voice and knowledge.</p>
+        <p><strong>Step 5: Monitor & Improve:</strong> Track performance, provide ongoing feedback, and watch your AI get even better.</p>
     </section>
 
-    <!-- Real World Scenario -->
-    <section class="section">
-        <h2>Real World Scenario</h2>
-        <div class="scenario-box">
-            <p>
-                <strong>You've built a $5M real estate business using Brandon Mulrenin Reverse Selling.</strong> Your secret: provide massive value upfront (market analysis, strategic advice, neighborhood insights) before ever mentioning your services. Leads trust you. They convert.<br><br>
-                
-                <strong>Problem: You're limited to 20 conversations per day. You can only close so many deals.</strong><br><br>
-                
-                <strong>With Custom AI Brain:</strong><br><br>
-                
-                You upload all your past conversations (500+ with detailed notes). You share your Reverse Selling scripts. Your market analysis templates. Your "value first" playbook. Every interaction that's made you successful.<br><br>
-                
-                AI learns: how you ask questions, how you dig into buyer motivation, how you provide value without pitching, how you close. Your methodology. Your voice. Your approach.<br><br>
-                
-                <strong>Now:</strong> 1,000 leads experience YOUR Reverse Selling simultaneously. Each one receives personalized value analysis based on their situation. Each one feels like they're talking to YOU. Because they are—through custom AI trained exclusively on your methodology.<br><br>
-                
-                <strong>Result: 20 conversations/day becomes 1,000 interactions/day. Same conversion rate. 50x more closed deals. Same business principles. Infinite scale.</strong><br><br>
-                
-                Your competitors use generic chatbots that sound robotic. You use a digital clone of YOUR brain that sounds like you and sells like you. Unfair advantage.
-            </p>
-        </div>
+    <section class="cta-section">
+        <h2>Create Your AI Twin</h2>
+        <p>An AI that thinks, speaks, and sells like you do.</p>
+        <a href="/#contact" class="cta-button">Start Free Trial →</a>
+        <br>
+        <a href="/" class="back-link">← Back to Home</a>
     </section>
 
-    <!-- Use Cases -->
-    <section class="section">
-        <h2>Custom AI Can Learn From Any Methodology</h2>
-        <p class="section-intro">Train custom AI on your specific sales philosophy and market approach.</p>
-        <div class="use-cases">
-            <div class="use-case">
-                <h3>Brandon Mulrenin Reverse Selling</h3>
-                <p>Provide value-first. Build trust. Position yourself as strategic advisor, not salesperson. Custom AI learns your Reverse Selling implementation and deploys it at infinite scale.</p>
-            </div>
-            <div class="use-case">
-                <h3>Jeremy Miner NEPQ</h3>
-                <p>Need → Emotion → Problem → Question framework. Custom AI learns how you identify buyer needs, uncover emotional triggers, and asks questions that lead to commitments.</p>
-            </div>
-            <div class="use-case">
-                <h3>Tom Ferry / Mike Ferry Coaching</h3>
-                <p>Systems-based selling. Custom AI learns your team's proven systems, processes, follow-up sequences, and applies them consistently at scale.</p>
-            </div>
-            <div class="use-case">
-                <h3>Your Proprietary Approach</h3>
-                <p>Maybe you've developed your own methodology. Custom AI learns it, improves it, scales it. Every closing technique you've created gets deployed infinitely.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>What is a custom AI brain for real estate?</span>
-                <span class="faq-toggle">▼</span>
-            </div>
-            <div class="faq-answer">
-                A custom AI trained on YOUR scripts, YOUR market knowledge, YOUR sales philosophy, and YOUR methodology. AI learns from your recordings, documents, and past conversations. It speaks like you, sells like you, and thinks like you—at infinite scale.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>What kind of data trains the AI brain?</span>
-                <span class="faq-toggle">▼</span>
-            </div>
-            <div class="faq-answer">
-                Training data includes: your past conversations with leads, your sales scripts, your market analysis documents, your closing techniques, your objection handling, your follow-up cadences. Every word you've said to a lead teaches AI how you think.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>Can I train AI on my mentor's methodology?</span>
-                <span class="faq-toggle">▼</span>
-            </div>
-            <div class="faq-answer">
-                Yes. If you follow Brandon Mulrenin Reverse Selling, Jeremy Miner NEPQ, Tom Ferry, or Mike Ferry, we can train AI on their frameworks and language. AI becomes your implementation of their methodology at scale.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>How is privacy handled with AI training?</span>
-                <span class="faq-toggle">▼</span>
-            </div>
-            <div class="faq-answer">
-                All training data is encrypted, isolated, and never shared. Your scripts, your conversations, your market data—completely private. Your AI is yours alone. Competitors never see your methodology.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>How does custom AI outperform generic AI?</span>
-                <span class="faq-toggle">▼</span>
-            </div>
-            <div class="faq-answer">
-                Generic AI is trained on millions of conversations and doesn't know your market, your scripts, your philosophy. Custom AI is trained on YOUR data, YOUR approach, YOUR success. It's 100x more powerful because it's literally an extension of you.
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section cta-section">
-        <h2>This Is the Future of Real Estate</h2>
-        <p>Your brain. Your methodology. Infinite scale. One agent. Unlimited capacity.</p>
-        <a href="https://aisalespipeline.com/#contact" class="cta-button">Schedule Custom Training Consultation</a>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 AI Sales Pipeline. All rights reserved. | <a href="https://aisalespipeline.com">Home</a> | <a href="https://aisalespipeline.com/#pricing">Pricing</a> | <a href="https://aisalespipeline.com/#contact">Contact</a></p>
+        <p>&copy; 2024 AI Sales Pipeline. All rights reserved.</p>
     </footer>
-
-    <script>
-        // FAQ Accordion
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.addEventListener('click', () => {
-                item.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 </html>
