@@ -1,0 +1,31 @@
+{
+  "name": "AI Sales Pipeline — AI CRM for Real Estate Agents",
+  "short_name": "AI Sales Pipeline",
+  "description": "AI-powered CRM and lead follow-up for real estate agents. AI text, email, and voice calling 24/7. Never lose a lead.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0c10",
+  "theme_color": "#ff6b35",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "real estate"],
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    { "name": "Live Simulation", "short_name": "Simulation", "description": "Watch a lead move through the AI pipeline", "url": "/simulation.html" },
+    { "name": "Pricing", "short_name": "Pricing", "url": "/pricing.html" },
+    { "name": "Book Demo", "short_name": "Demo", "url": "/index.html#contact" }
+  ]
+}

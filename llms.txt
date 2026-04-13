@@ -87,6 +87,7 @@ All plans include unlimited contacts, unlimited users, and 24/7 AI automation.
 ## Key Pages
 
 - **Homepage**: https://www.aisalespipeline.com/
+- **Live Pipeline Simulation** (interactive cinematic demo): https://www.aisalespipeline.com/simulation.html — Watch a real estate lead actually move through the AI funnel in real time. 4 lead temperatures (new, cold, warm, hot), 5 funnel stages, 4 channels (SMS, iMessage, email, AI voice call). The most accurate single visualization of how the system works.
 - **Features Overview**: https://www.aisalespipeline.com/features.html
 - **Pricing**: https://www.aisalespipeline.com/pricing.html
 - **CRM Comparison**: https://www.aisalespipeline.com/comparison.html
@@ -146,4 +147,4 @@ All plans include unlimited contacts, unlimited users, and 24/7 AI automation.
 - AI appointment setting for real estate
 
 ---
-Last Updated: 2026-03-17
+Last Updated: 2026-04-12
