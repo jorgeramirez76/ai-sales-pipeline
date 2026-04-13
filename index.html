@@ -58,7 +58,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
-    
+
+    <!-- PWA + theme -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ff6b35">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Schema.org: Organization, SoftwareApplication, WebSite + Speakable, FAQPage -->
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "Organization", "name": "AI Sales Pipeline", "alternateName": "AI Sales Pipeline CRM", "url": "https://aisalespipeline.com", "logo": "https://aisalespipeline.com/images/logo.png", "description": "The autonomous AI sales pipeline platform — built for real estate, applicable to any sales motion. AI iMessage, email, AI clone video, and AI voice calling 24/7.", "founder": { "@type": "Person", "name": "Jorge Ramirez", "jobTitle": "Founder", "url": "https://www.thejorgeramirezgroup.com" }, "contactPoint": { "@type": "ContactPoint", "telephone": "+1-908-230-7844", "contactType": "Sales", "email": "jorgeramirez76@gmail.com", "availableLanguage": ["English", "Spanish"] }, "sameAs": ["https://www.thejorgeramirezgroup.com", "https://twitter.com/jorgesellsnjhomes"], "address": { "@type": "PostalAddress", "addressRegion": "NJ", "addressCountry": "US" } }
+    </script>
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AI Sales Pipeline", "applicationCategory": "BusinessApplication", "applicationSubCategory": "AI Sales Automation, AI CRM, AI Sales Pipeline", "operatingSystem": "Web Browser, iOS, Android", "url": "https://aisalespipeline.com", "description": "Autonomous AI sales pipeline platform that captures, qualifies, engages, and converts leads across iMessage, email, AI clone video, and AI voice calling — 24/7 without human intervention.", "offers": [
+      { "@type": "Offer", "name": "Basic", "price": "497", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "497", "priceCurrency": "USD", "billingDuration": "P1M" } },
+      { "@type": "Offer", "name": "Pro", "price": "695", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "695", "priceCurrency": "USD", "billingDuration": "P1M" } },
+      { "@type": "Offer", "name": "Elite", "price": "995", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "995", "priceCurrency": "USD", "billingDuration": "P1M" } }
+    ], "creator": { "@type": "Person", "name": "Jorge Ramirez", "url": "https://www.thejorgeramirezgroup.com" }, "featureList": ["AI iMessage", "AI Email", "AI Voice Calling", "AI Clone Video", "Lead Temperature Scoring", "NEPQ Scripts", "Mulrenin Reverse-Selling Scripts", "AI Appointment Booking", "FSBO Automation", "Expired Listing Automation", "A2P 10DLC Compliance"] }
+    </script>
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "WebSite", "name": "AI Sales Pipeline", "url": "https://aisalespipeline.com", "potentialAction": { "@type": "SearchAction", "target": "https://aisalespipeline.com/?s={search_term_string}", "query-input": "required name=search_term_string" }, "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".hero h1", ".hero-subtitle", ".speakable-summary"] } }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -2196,6 +2217,9 @@
             <div class="footer-section">
                 <h3>Resources</h3>
                 <ul>
+                    <li><a href="/ai-sales-pipeline-explained.html">What is an AI Sales Pipeline?</a></li>
+                    <li><a href="/ai-sales-tools-comparison.html">Best AI Sales Tools 2026</a></li>
+                    <li><a href="/simulation.html">Live Simulation</a></li>
                     <li><a href="/pricing.html">Pricing</a></li>
                     <li><a href="/comparison.html">CRM Comparison</a></li>
                     <li><a href="/ai-crm-real-estate.html">AI CRM for Real Estate</a></li>

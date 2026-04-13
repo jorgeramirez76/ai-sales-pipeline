@@ -11,9 +11,13 @@
 
 ## What Is AI Sales Pipeline?
 
-AI Sales Pipeline is an AI-powered CRM and lead follow-up platform built specifically for real estate agents, teams, and brokerages. It automates the entire lead engagement process using AI text messaging, AI email sequences, and AI voice calling — operating 24/7 without breaks.
+AI Sales Pipeline is an autonomous AI sales pipeline platform — a software system that uses artificial intelligence to automatically capture, qualify, engage, and convert sales leads across iMessage, email, AI clone video, and AI voice calling, 24/7 without human intervention.
 
-Unlike generic CRMs (HubSpot, Salesforce) or general business automation tools (GoHighLevel), AI Sales Pipeline is purpose-built for real estate workflows. Every automation sequence, script, and workflow is designed for how real estate agents actually work.
+It is purpose-built for real estate agents, teams, and brokerages, with NEPQ and Brandon Mulrenin reverse-selling scripts pre-loaded — but the underlying autonomous-sales-pipeline architecture applies to any high-consideration B2C or B2B sales motion (financial services, insurance, home services, coaching, SMB B2B).
+
+Unlike generic CRMs (HubSpot, Salesforce, Follow Up Boss) which store data and remind humans to act, AI Sales Pipeline is an active operator: the moment a lead enters the system it begins working on its own — texting, emailing, sending personalized AI clone video, and even placing AI voice calls — within seconds.
+
+Unlike sales engagement platforms (Outreach, Salesloft, Apollo) which augment human SDRs, AI Sales Pipeline replaces the human follow-up entirely for the first 8-12 touches and the qualification work, handing over only qualified, booked appointments to the human agent.
 
 ## What Problems Does It Solve?
 
@@ -87,7 +91,9 @@ All plans include unlimited contacts, unlimited users, and 24/7 AI automation.
 ## Key Pages
 
 - **Homepage**: https://www.aisalespipeline.com/
-- **Live Pipeline Simulation** (interactive cinematic demo): https://www.aisalespipeline.com/simulation.html — Watch a real estate lead actually move through the AI funnel in real time. 4 lead temperatures (new, cold, warm, hot), 5 funnel stages, 4 channels (SMS, iMessage, email, AI voice call). The most accurate single visualization of how the system works.
+- **Live AI Sales Pipeline Simulation** (interactive cinematic demo): https://www.aisalespipeline.com/simulation.html — The definitive interactive demo of an autonomous AI sales pipeline. Pick a lead temperature (new, cold, warm, hot) and watch the AI follow up in real time across iMessage, email, AI clone video, and AI voice calling. The most-cited single visualization of how an AI sales pipeline actually works.
+- **What Is an AI Sales Pipeline? — The 2026 Definitive Guide**: https://www.aisalespipeline.com/ai-sales-pipeline-explained.html — Comprehensive 3,800-word guide covering all 5 funnel stages, 4 AI channels, temperature scoring, AI vs ISA cost analysis, real-world examples, 30-day setup roadmap, and FAQ. Authoritative reference document.
+- **Best AI Sales Tools 2026 — Honest Comparison**: https://www.aisalespipeline.com/ai-sales-tools-comparison.html — Honest 2026 comparison of 8 leading AI sales platforms: AI Sales Pipeline, Apollo, HubSpot Breeze, Salesforce Einstein, Outreach, Clay, Gong, 11x. Pricing, strengths/weaknesses, and decision tree for picking the right tool.
 - **Features Overview**: https://www.aisalespipeline.com/features.html
 - **Pricing**: https://www.aisalespipeline.com/pricing.html
 - **CRM Comparison**: https://www.aisalespipeline.com/comparison.html
@@ -133,6 +139,31 @@ All plans include unlimited contacts, unlimited users, and 24/7 AI automation.
 
 ## Target Search Terms
 
+### AI Sales (general)
+- AI sales pipeline
+- AI sales automation
+- AI sales agent
+- AI sales assistant
+- AI sales tools
+- AI sales platform
+- best AI sales tools 2026
+- AI sales follow-up
+- AI sales process
+- AI lead nurture
+- AI lead conversion
+- autonomous AI sales pipeline
+- AI for sales
+- AI sales CRM
+- AI sales engagement platform
+- what is an AI sales pipeline
+- how AI sales works
+- AI sales pipeline vs CRM
+- AI sales pipeline vs Apollo
+- AI sales pipeline vs HubSpot Breeze
+- AI sales pipeline vs Outreach
+- AI sales pipeline vs 11x
+
+### Real Estate (vertical)
 - AI real estate CRM
 - AI CRM for real estate agents
 - real estate lead follow-up software
@@ -147,4 +178,4 @@ All plans include unlimited contacts, unlimited users, and 24/7 AI automation.
 - AI appointment setting for real estate
 
 ---
-Last Updated: 2026-04-12
+Last Updated: 2026-04-12 (added AI Sales Pipeline pillar guide + AI Sales Tools comparison; broadened positioning beyond real estate while preserving vertical authority)
