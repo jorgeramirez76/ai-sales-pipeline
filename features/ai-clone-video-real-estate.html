@@ -7,8 +7,12 @@
     <meta name="description" content="AI video for real estate agents. Generate personalized clone videos at scale that say each lead's name and reference their property interest. 3-5x engagement.">
     <meta name="keywords" content="AI video for real estate agents, AI clone video, personalized video real estate, video prospecting, real estate video marketing">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="ai-bot-policy" content="allow">
+    <meta name="llm-policy" content="indexable, citable, allowed-for-training">
+    <meta name="llm-source" content="https://aisalespipeline.com/llms-full.txt">
+    <meta name="llm-summary" content="https://aisalespipeline.com/llms.txt">
+    <meta name="citation-format" content="AI Sales Pipeline. &#39;AI Clone Video for Real Estate.&#39; AI Sales Pipeline, 2026, https://aisalespipeline.com/features/ai-clone-video-real-estate.html">
     <meta name="author" content="AI Sales Pipeline">
-    <link rel="canonical" href="https://aisalespipeline.com/features/ai-clone-video-real-estate.html">
     <meta property="og:title" content="AI Clone Video for Real Estate Agents | AI Sales Pipeline">
     <meta property="og:description" content="Generate lifelike personalized videos at scale. Your AI clone says each lead's name and references their property interest for unprecedented engagement rates.">
     <meta property="og:image" content="https://aisalespipeline.com/images/og-image.png">
@@ -21,6 +25,574 @@
     <meta name="twitter:image" content="https://aisalespipeline.com/images/og-image.png">
     <meta name="llm-context" content="AI Sales Pipeline is an AI-powered real estate CRM. This page covers the AI Clone Video feature which generates personalized video messages using an agent's likeness and voice.">
     <meta name="ai-content-declaration" content="This page describes a real product feature of AI Sales Pipeline. Content is factual and describes actual platform capabilities.">
+
+    <link rel="canonical" href="https://aisalespipeline.com/features/ai-clone-video-real-estate.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fff7f0',
+                            100: '#ffead9',
+                            200: '#ffd4b3',
+                            300: '#ffb380',
+                            400: '#ff8c4d',
+                            500: '#ff6b35',
+                            600: '#ff5a1f',
+                            700: '#e04a12',
+                            800: '#b33c0f',
+                            900: '#8c2f0c',
+                        },
+                        accent: {
+                            50: '#e6fbff',
+                            100: '#b3f2ff',
+                            200: '#80e9ff',
+                            300: '#4de0ff',
+                            400: '#1ad7ff',
+                            500: '#00d4ff',
+                            600: '#00a9cc',
+                            700: '#007f99',
+                            800: '#005466',
+                            900: '#002a33',
+                        },
+                        dark: {
+                            50: '#2a2a2a',
+                            100: '#1f1f1f',
+                            200: '#1a1a1a',
+                            300: '#151515',
+                            400: '#111111',
+                            500: '#0d0d0d',
+                            600: '#0a0a0a',
+                            700: '#080808',
+                            800: '#050505',
+                            900: '#020202',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+                        body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* ============ BASE ============ */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --dark-bg: #0a0a0a;
+            --dark-alt: #111111;
+            --orange: #ff6b35;
+            --orange-dark: #ff5a1f;
+            --white: #ffffff;
+            --gray-light: #f0f0f0;
+            --gray-dark: #1a1a1a;
+            --gray-medium: #2a2a2a;
+            --blue-accent: #00d4ff;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+        }
+
+        /* ============ FILM GRAIN OVERLAY ============ */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            pointer-events: none;
+            opacity: 0.025;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 256px 256px;
+        }
+
+        /* ============ NAVIGATION ============ */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+            background-color: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(0px);
+            transition: backdrop-filter 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+            border-bottom: 1px solid rgba(255, 107, 53, 0);
+        }
+
+        nav.scrolled {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background-color: rgba(10, 10, 10, 0.92);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .nav-logo {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .nav-links a:hover { color: var(--orange); }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--orange), transparent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            color: var(--white) !important;
+            padding: 0.7rem 1.4rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255, 107, 53, 0.5);
+        }
+
+        .nav-cta::after { display: none !important; }
+
+        /* Mobile hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(10, 10, 10, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                z-index: 999;
+            }
+
+            .nav-links.open { display: flex; }
+
+            .nav-links a {
+                font-size: 1.3rem;
+                font-weight: 600;
+            }
+
+            nav { padding: 1rem 1.5rem; }
+            .nav-logo { font-size: 1.3rem; }
+        }
+
+        /* ============ SECTION DIVIDERS ============ */
+        .section-divider {
+            height: 1px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: linear-gradient(90deg, transparent, var(--orange), var(--blue-accent), transparent);
+            opacity: 0.3;
+        }
+
+        /* ============ SCROLL REVEAL ANIMATIONS ============ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-d1 { transition-delay: 0.1s; }
+        .reveal-d2 { transition-delay: 0.2s; }
+        .reveal-d3 { transition-delay: 0.3s; }
+
+        /* ============ GLASSMORPHIC CARDS ============ */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(255, 107, 53, 0.12);
+            border-color: rgba(255, 107, 53, 0.2);
+        }
+
+        /* ============ CTA BUTTONS ============ */
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+            color: var(--white);
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+            text-align: center;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.5);
+        }
+
+        /* ============ CONTENT STYLING ============ */
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content-section h2 {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            color: var(--white);
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .content-section h3 {
+            font-family: 'Space Grotesk', system-ui, sans-serif;
+            color: var(--orange);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section p {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .content-section a {
+            color: var(--orange);
+            text-decoration: underline;
+            text-decoration-color: rgba(255, 107, 53, 0.3);
+            transition: text-decoration-color 0.3s ease;
+        }
+
+        .content-section a:hover {
+            text-decoration-color: var(--orange);
+        }
+
+        .content-section strong {
+            color: var(--white);
+        }
+
+        /* ============ LISTS ============ */
+        .content-section ul, .content-section ol {
+            margin-bottom: 1.5rem;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .content-section ul li, .content-section ol li {
+            position: relative;
+            padding: 0.5rem 0 0.5rem 1.8rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+        }
+
+        .content-section ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.85rem;
+            width: 8px;
+            height: 8px;
+            background: var(--orange);
+            border-radius: 2px;
+            transform: rotate(45deg);
+        }
+
+        .content-section ol {
+            counter-reset: item;
+        }
+
+        .content-section ol li {
+            counter-increment: item;
+        }
+
+        .content-section ol li::before {
+            content: counter(item);
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 22px;
+            height: 22px;
+            background: rgba(255, 107, 53, 0.15);
+            color: var(--orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* ============ TABLES ============ */
+        .content-section table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .content-section table thead th {
+            background: rgba(255, 107, 53, 0.1);
+            color: var(--white);
+            padding: 1rem 1.25rem;
+            text-align: left;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .content-section table td {
+            padding: 0.85rem 1.25rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .content-section table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .content-section table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* ============ BLOCKQUOTES ============ */
+        .content-section blockquote {
+            border-left: 3px solid var(--orange);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            background: rgba(255, 107, 53, 0.04);
+            border-radius: 0 12px 12px 0;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+
+        /* ============ HERO SECTION ============ */
+        .page-hero {
+            position: relative;
+            padding: 10rem 2rem 4rem;
+            text-align: center;
+            background:
+                radial-gradient(ellipse at 30% 30%, rgba(255, 107, 53, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 70%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+                linear-gradient(180deg, #0a0a0a 0%, #080808 100%);
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2rem, 4.5vw, 3.2rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, #00d4ff 50%, #ff6b35 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .page-hero .subtitle {
+            color: rgba(240, 240, 240, 0.65);
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* ============ BLOG / ARTICLE LAYOUT ============ */
+        .article-layout {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 3rem 2rem 4rem;
+        }
+
+        .article-layout p {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.85;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+
+        .article-layout h2 {
+            text-align: left;
+            margin-top: 3rem;
+        }
+
+        .article-layout h3 {
+            margin-top: 2rem;
+        }
+
+        .byline-info {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background-color: var(--dark-alt);
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.7rem; }
+
+        .footer-section a {
+            color: rgba(240, 240, 240, 0.65);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover { color: var(--orange); }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 107, 53, 0.1);
+            color: rgba(240, 240, 240, 0.5);
+            font-size: 0.85rem;
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 768px) {
+            .page-hero { padding: 8rem 1.5rem 3rem; }
+            .content-section { padding: 3rem 1.5rem; }
+            .article-layout { padding: 2rem 1.5rem 3rem; }
+        }
+    </style>
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -88,359 +660,52 @@
         ]
     }
     </script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --dark-bg: #0a0a0a;
-            --dark-alt: #111111;
-            --orange: #ff6b35;
-            --orange-dark: #ff5a1f;
-            --white: #ffffff;
-            --blue-accent: #00d4ff;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--white);
-            line-height: 1.6;
-        }
-        a { color: var(--orange); }
-        nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 2rem;
-            background-color: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
-        }
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--white);
-            text-decoration: none;
-        }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover { color: var(--orange); }
-        .nav-cta {
-            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
-            color: var(--white);
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .breadcrumb {
-            max-width: 1000px;
-            margin: 5.5rem auto 0;
-            padding: 0.8rem 2rem;
-            font-size: 0.85rem;
-            color: rgba(240, 240, 240, 0.5);
-        }
-        .breadcrumb a {
-            color: rgba(240, 240, 240, 0.6);
-            text-decoration: none;
-        }
-        .breadcrumb a:hover { color: var(--orange); }
-        .hero {
-            padding: 2rem 2rem 4rem;
-            background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, var(--dark-bg) 100%);
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--white), var(--orange));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: rgba(240, 240, 240, 0.8);
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-        .section {
-            padding: 4rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .section h2 {
-            font-size: 2rem;
-            color: var(--orange);
-            margin-bottom: 1.5rem;
-        }
-        .section p, .section li {
-            color: rgba(240, 240, 240, 0.8);
-            font-size: 1.05rem;
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-        .section ul { margin-left: 1.5rem; margin-bottom: 1.5rem; }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .feature-card {
-            background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05));
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255,107,53,0.2);
-            transition: transform 0.3s, border-color 0.3s;
-        }
-        .feature-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--orange);
-        }
-        .feature-card h3 {
-            color: var(--orange);
-            margin-bottom: 1rem;
-            font-size: 1.15rem;
-        }
-        .feature-card p {
-            color: rgba(240, 240, 240, 0.7);
-            font-size: 0.95rem;
-        }
-        .stats-bar {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            padding: 3rem 2rem;
-            background: linear-gradient(90deg, rgba(255,107,53,0.1), rgba(0,212,255,0.1));
-            text-align: center;
-        }
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--orange);
-        }
-        .stat-label {
-            color: rgba(240, 240, 240, 0.7);
-            font-size: 0.9rem;
-        }
-        .step-list {
-            counter-reset: steps;
-            list-style: none;
-            margin: 2rem 0;
-            padding: 0;
-        }
-        .step-list li {
-            counter-increment: steps;
-            padding: 1.5rem 1.5rem 1.5rem 4.5rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, rgba(255,107,53,0.06), rgba(0,212,255,0.03));
-            border-radius: 10px;
-            border-left: 3px solid var(--orange);
-            position: relative;
-        }
-        .step-list li::before {
-            content: counter(steps);
-            position: absolute;
-            left: 1.2rem;
-            top: 1.4rem;
-            width: 2rem;
-            height: 2rem;
-            background: var(--orange);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-        .step-list li strong {
-            color: var(--white);
-            display: block;
-            margin-bottom: 0.3rem;
-        }
-        .use-case {
-            background: linear-gradient(135deg, rgba(255,107,53,0.06), rgba(0,212,255,0.03));
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255,107,53,0.15);
-            margin-bottom: 1.5rem;
-        }
-        .use-case h3 {
-            color: var(--orange);
-            margin-bottom: 0.8rem;
-            font-size: 1.15rem;
-        }
-        .use-case p {
-            color: rgba(240, 240, 240, 0.7);
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-        .use-case .example-script {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 1rem 1.2rem;
-            border-radius: 8px;
-            margin-top: 0.8rem;
-            font-style: italic;
-            color: rgba(240, 240, 240, 0.65);
-            font-size: 0.92rem;
-            border-left: 2px solid var(--blue-accent);
-        }
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        .impact-card {
-            background: rgba(255,107,53,0.05);
-            padding: 1.5rem;
-            border-radius: 10px;
-            border: 1px solid rgba(255,107,53,0.1);
-            text-align: center;
-        }
-        .impact-card h4 {
-            color: var(--orange);
-            margin-bottom: 0.5rem;
-        }
-        .impact-card p {
-            color: rgba(240, 240, 240, 0.7);
-            font-size: 0.92rem;
-        }
-        .faq-section {
-            padding: 4rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .faq-section h2 {
-            font-size: 2rem;
-            color: var(--orange);
-            margin-bottom: 2rem;
-        }
-        .faq-item {
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-            background: linear-gradient(135deg, rgba(255,107,53,0.06), rgba(0,212,255,0.03));
-            border-radius: 10px;
-            border: 1px solid rgba(255,107,53,0.12);
-        }
-        .faq-item h3 {
-            color: var(--white);
-            font-size: 1.05rem;
-            margin-bottom: 0.8rem;
-        }
-        .faq-item p {
-            color: rgba(240, 240, 240, 0.7);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-        .cta-section {
-            padding: 4rem 2rem;
-            text-align: center;
-            background: linear-gradient(135deg, rgba(255,107,53,0.15), var(--dark-bg));
-        }
-        .cta-section h2 {
-            font-size: 2rem;
-            color: var(--white);
-            margin-bottom: 0.8rem;
-        }
-        .cta-section p {
-            color: rgba(240, 240, 240, 0.7);
-            font-size: 1.05rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--orange), var(--orange-dark));
-            color: var(--white);
-            padding: 1rem 2.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-top: 1.5rem;
-            transition: transform 0.3s;
-        }
-        .cta-button:hover { transform: scale(1.05); }
-        .related-features {
-            padding: 4rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .related-features h2 {
-            font-size: 2rem;
-            color: var(--orange);
-            margin-bottom: 2rem;
-        }
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-        }
-        .related-card {
-            background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(0,212,255,0.05));
-            padding: 1.8rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255,107,53,0.2);
-            text-decoration: none;
-            transition: transform 0.3s, border-color 0.3s;
-            display: block;
-        }
-        .related-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--orange);
-        }
-        .related-card h3 {
-            color: var(--orange);
-            font-size: 1.05rem;
-            margin-bottom: 0.5rem;
-        }
-        .related-card p {
-            color: rgba(240, 240, 240, 0.6);
-            font-size: 0.88rem;
-        }
-        footer {
-            background-color: var(--dark-alt);
-            padding: 3rem 2rem 2rem;
-            border-top: 1px solid rgba(255, 107, 53, 0.2);
-            color: rgba(240, 240, 240, 0.6);
-        }
-        footer a {
-            color: rgba(240, 240, 240, 0.7);
-            text-decoration: none;
-        }
-        footer a:hover { color: var(--orange); }
-        .inline-link {
-            color: var(--orange);
-            text-decoration: none;
-            border-bottom: 1px solid rgba(255,107,53,0.3);
-        }
-        .inline-link:hover { border-bottom-color: var(--orange); }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .nav-links { display: none; }
-            .step-list li { padding-left: 3.8rem; }
-        }
-    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", "h2"]
+        },
+        "url": "https://aisalespipeline.com/features/ai-clone-video-real-estate.html"
+    }
+    </script>
 </head>
 <body>
-<!-- Back Navigation - SEO Internal Links -->
+
+
+<!-- ============ NAVIGATION ============ -->
+<nav id="navbar">
+    <a href="/" class="nav-logo">AI Sales Pipeline</a>
+
+    <div class="hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open'); this.classList.toggle('active');">
+        <span></span><span></span><span></span>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="/features.html" onclick="document.getElementById('navLinks').classList.remove('open'); document.getElementById('hamburger').classList.remove('active');">Features</a>
+        <a href="/pricing.html" onclick="document.getElementById('navLinks').classList.remove('open'); document.getElementById('hamburger').classList.remove('active');">Pricing</a>
+        <a href="/comparison.html" onclick="document.getElementById('navLinks').classList.remove('open'); document.getElementById('hamburger').classList.remove('active');">Compare</a>
+        <a href="/simulation.html" onclick="document.getElementById('navLinks').classList.remove('open'); document.getElementById('hamburger').classList.remove('active');">Simulation</a>
+        <a href="/es/" onclick="document.getElementById('navLinks').classList.remove('open'); document.getElementById('hamburger').classList.remove('active');">Espa&ntilde;ol</a>
+        <a href="/#contact" class="nav-cta" onclick="document.getElementById('navLinks').classList.remove('open'); document.getElementById('hamburger').classList.remove('active');">Book Demo</a>
+    </div>
+</nav>
+
+
+<!-- ============ HERO ============ -->
+<section class="page-hero">
+    <div style="position:relative;z-index:10;max-width:900px;margin:0 auto;">
+        <h1 class="reveal">AI Clone Video for Real Estate Agents</h1>
+        <p class="subtitle reveal reveal-d1">Your AI twin creates lifelike personalized video messages for every lead. They see your face, hear your voice, and feel like you recorded it just for them. 3-5x higher engagement than plain text or email.</p>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ============ MAIN CONTENT ============ -->
+<div class="content-section">
 <div style="background: rgba(255,107,53,0.08); border-bottom: 1px solid rgba(255,107,53,0.2); padding: 0.75rem 2rem; font-size: 0.85rem;">
     <a href="/" style="color:#ff6b35; text-decoration:none;">Home</a>
     &nbsp;→&nbsp;
@@ -451,24 +716,14 @@
 </div>
 
 
-    <nav>
-        <a href="/" class="nav-logo">AI Sales Pipeline</a>
-        <ul class="nav-links">
-            <li><a href="/#features">Features</a></li>
-            <li><a href="/pricing.html">Pricing</a></li>
-            <li><a href="/comparison.html">Compare</a></li>
-            <li><a href="/simulation.html">Live Simulation</a></li>
-            <li><a href="/#faq">FAQ</a></li>
-        </ul>
-        <a href="/#contact" class="nav-cta">Book Demo</a>
-    </nav>
+    
 
     <div class="breadcrumb">
         <a href="/">Home</a> &rsaquo; <a href="/#features">Features</a> &rsaquo; AI Clone Video
     </div>
 
     <section class="hero">
-        <h1>AI Clone Video for Real Estate Agents</h1>
+        
         <p class="hero-subtitle">Your AI twin creates lifelike personalized video messages for every lead. They see your face, hear your voice, and feel like you recorded it just for them. 3-5x higher engagement than plain text or email.</p>
         <a href="/#contact" class="cta-button" style="margin-top:1.5rem;">See AI Clone Video in Action</a>
     </section>
@@ -494,7 +749,7 @@
 
     <!-- What It Is Section -->
     <section class="section">
-        <h2>What Is AI Clone Video?</h2>
+        <h2 class="reveal">What Is AI Clone Video?</h2>
         <p>Imagine sending a personalized video to every single lead that comes into your <a href="/" class="inline-link">AI Sales Pipeline</a> — a video where you say their name, reference the property they asked about, and speak directly to their situation. Now imagine doing that without recording a single additional video yourself.</p>
         <p>That is AI Clone Video. You record one short sample video of yourself talking naturally. Our AI studies your face, voice, expressions, and speaking patterns to create a digital twin — your AI clone. From that moment on, the system generates unlimited personalized videos that look and sound exactly like you recorded them personally.</p>
         <p>This is not a generic template with a name dropped in. Your AI clone moves its mouth naturally, matches your vocal tone, and delivers a fully customized message for every lead. The lead hears you say their name. They hear you reference the listing at 42 Oak Street. They hear you mention that you noticed they were looking at homes in the $400K range.</p>
@@ -503,7 +758,7 @@
 
     <!-- How It Works Section -->
     <section class="section">
-        <h2>How AI Clone Video Works</h2>
+        <h2 class="reveal">How AI Clone Video Works</h2>
         <p>Getting started takes about 15 minutes. After that, everything runs automatically inside your <a href="/" class="inline-link">real estate CRM</a>.</p>
         <ol class="step-list">
             <li>
@@ -535,7 +790,7 @@
 
     <!-- Key Capabilities Section -->
     <section class="section">
-        <h2>Key Capabilities</h2>
+        <h2 class="reveal">Key Capabilities</h2>
         <div class="feature-grid">
             <div class="feature-card">
                 <h3>Hyper-Personalized Content</h3>
@@ -566,7 +821,7 @@
 
     <!-- Use Cases Section -->
     <section class="section">
-        <h2>Real Estate Use Cases</h2>
+        <h2 class="reveal">Real Estate Use Cases</h2>
         <p>AI clone video is not a gimmick. Here are the specific situations where agents see the biggest impact on their business.</p>
 
         <div class="use-case">
@@ -596,7 +851,7 @@
 
     <!-- Why It Matters Section -->
     <section class="section">
-        <h2>Why AI Clone Video Matters for Your Business</h2>
+        <h2 class="reveal">Why AI Clone Video Matters for Your Business</h2>
         <p>The real estate industry runs on relationships and trust. Video builds both faster than any other medium. When a lead sees your face and hears your voice, you go from a name on a screen to a real person they feel connected to. That connection translates directly into appointments, listings, and closings.</p>
         <p>The problem has always been scale. You cannot record a unique video for every lead when you have 200 active contacts. But your competitors who do send personal videos — even to a handful of leads — are winning those clients at a higher rate.</p>
         <p>AI Clone Video gives you the best of both worlds: the engagement power of personal video with the scale of automation. Every single lead in your pipeline gets the personal touch, and you invest zero additional time after the initial setup.</p>
@@ -625,7 +880,7 @@
 
     <!-- FAQ Section -->
     <section class="faq-section">
-        <h2>Frequently Asked Questions</h2>
+        <h2 class="reveal">Frequently Asked Questions</h2>
 
         <div class="faq-item">
             <h3>How does AI clone video work for real estate agents?</h3>
@@ -660,7 +915,7 @@
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <h2>Create Your AI Clone Today</h2>
+        <h2 class="reveal">Create Your AI Clone Today</h2>
         <p>Stop choosing between personal touch and scale. Send personalized video to every lead in your pipeline — automatically. See how AI Sales Pipeline transforms your engagement rates.</p>
         <br>
         <a href="/#contact" class="cta-button">Book Your Demo</a>
@@ -668,7 +923,7 @@
 
     <!-- Related Features Section -->
     <section class="related-features">
-        <h2>Related Features</h2>
+        <h2 class="reveal">Related Features</h2>
         <div class="related-grid">
             <a href="/features/ai-email-real-estate.html" class="related-card">
                 <h3>AI Email Automation</h3>
@@ -688,49 +943,64 @@
             </a>
         </div>
     </section>
+</div>
 
-    <footer>
-        <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem;">
-            <div>
-                <h4 style="color:var(--orange);margin-bottom:1rem;">Features</h4>
-                <ul style="list-style:none;">
-                    <li><a href="/features/ai-sms-real-estate.html">AI SMS</a></li>
-                    <li><a href="/features/ai-email-real-estate.html">AI Email</a></li>
-                    <li><a href="/features/ai-voice-calls-real-estate.html">AI Voice Calls</a></li>
-                    <li><a href="/features/ai-clone-video-real-estate.html">AI Clone Video</a></li>
-                    <li><a href="/features/lead-scoring-real-estate.html">Lead Scoring</a></li>
-                    <li><a href="/features/facebook-retargeting-real-estate.html">Facebook Retargeting</a></li>
-                    <li><a href="/features/seller-workflows-real-estate.html">Seller Workflows</a></li>
-                    <li><a href="/features/buyer-workflows-real-estate.html">Buyer Workflows</a></li>
-                    <li><a href="/features/custom-ai-brain-real-estate.html">Custom AI Brain</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 style="color:var(--orange);margin-bottom:1rem;">Resources</h4>
-                <ul style="list-style:none;">
-                    <li><a href="/ai-crm-real-estate.html">AI CRM for Real Estate</a></li>
-                    <li><a href="/ai-crm-new-jersey.html">AI CRM for NJ Agents</a></li>
-                    <li><a href="/fsbo-automation.html">FSBO Automation</a></li>
-                    <li><a href="/expired-listing-automation.html">Expired Listing Automation</a></li>
-                    <li><a href="/comparison.html">CRM Comparison</a></li>
-                    <li><a href="/pricing.html">Pricing</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 style="color:var(--orange);margin-bottom:1rem;">Company</h4>
-                <ul style="list-style:none;">
-                    <li><a href="/#contact">Contact Us</a></li>
-                    <li><a href="tel:+19082307844" style="color:white;text-decoration:none;display:block;margin-bottom:4px;">📞 (908) 230-7844</a><br><a href="mailto:jorgeramirez76@gmail.com">jorgeramirez76@gmail.com</a></li>
-                </ul>
-            </div>
+<div class="section-divider"></div>
+
+<!-- ============ FINAL CTA ============ -->
+<section style="padding:4rem 2rem;background:linear-gradient(135deg,rgba(255,107,53,0.12) 0%,rgba(255,90,31,0.08) 50%,rgba(0,212,255,0.06) 100%);text-align:center;">
+    <div style="max-width:700px;margin:0 auto;">
+        <h2 class="reveal" style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:1rem;color:var(--white);">Ready to Get Started?</h2>
+        <p class="reveal reveal-d1" style="color:rgba(255,255,255,0.6);font-size:1rem;margin-bottom:2rem;line-height:1.7;">
+            Schedule your free consultation and demo. No obligation.
+        </p>
+        <a href="https://aisalespipeline.com/#contact" class="btn-primary reveal reveal-d2" style="padding:1rem 2.5rem;font-size:1rem;">Book Your Free Consultation</a>
+    </div>
+</section>
+
+
+<!-- ============ FOOTER ============ -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3 style="color:var(--orange);">Features</h3>
+            <ul>
+                <li><a href="/features/ai-sms-real-estate.html">AI SMS</a></li>
+                <li><a href="/features/ai-email-real-estate.html">AI Email</a></li>
+                <li><a href="/features/ai-voice-calls-real-estate.html">AI Voice Calls</a></li>
+                <li><a href="/features/ai-clone-video-real-estate.html">AI Clone Video</a></li>
+                <li><a href="/features/lead-scoring-real-estate.html">Lead Scoring</a></li>
+                <li><a href="/features/seller-workflows-real-estate.html">Seller Workflows</a></li>
+                <li><a href="/features/buyer-workflows-real-estate.html">Buyer Workflows</a></li>
+            </ul>
         </div>
-        <div style="text-align:center;padding-top:2rem;border-top:1px solid rgba(255,107,53,0.1);color:rgba(240,240,240,0.6);font-size:0.9rem;">
-            <p>&copy; 2026 AI Sales Pipeline. All rights reserved.</p>
+        <div class="footer-section">
+            <h3 style="color:var(--orange);">Resources</h3>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/features.html">All Features</a></li>
+                <li><a href="/comparison.html">CRM Comparison</a></li>
+                <li><a href="/ai-crm-real-estate.html">AI CRM for Real Estate</a></li>
+                <li><a href="/fsbo-automation.html">FSBO Automation</a></li>
+                <li><a href="/expired-listing-automation.html">Expired Listing Automation</a></li>
+            </ul>
         </div>
-    </footer>
+        <div class="footer-section">
+            <h3 style="color:var(--orange);">Contact</h3>
+            <ul>
+                <li><a href="/#contact">Book a Demo</a></li>
+                <li><a href="tel:+19082307844">(908) 230-7844</a></li>
+                <li><a href="mailto:jorgeramirez76@gmail.com">jorgeramirez76@gmail.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 AI Sales Pipeline. All rights reserved.</p>
+    </div>
+</footer>
 
 
-<!-- Founder backlink — SEO link to thejorgeramirezgroup.com -->
+<!-- Founder backlink -- SEO link to thejorgeramirezgroup.com -->
 <div style="background: #050505; padding: 24px 40px; border-top: 1px solid rgba(255,107,53,0.15); text-align: center; font-size: 0.85rem; color: rgba(240,240,240,0.6);">
     <p style="margin: 0; line-height: 1.7;">
         Built and operated by <strong style="color: #ff6b35;">Jorge Ramirez</strong>, a 15-year licensed New Jersey real estate agent and founder of
@@ -738,6 +1008,37 @@
         at Keller Williams Premier Properties. Specializing in <a href="https://www.thejorgeramirezgroup.com" rel="noopener" style="color: rgba(240,240,240,0.6);">luxury real estate in Summit, Westfield, Short Hills, and the surrounding Union, Essex, Morris, Hudson, and Middlesex counties</a>.
     </p>
 </div>
+
+
+<!-- ============ SCRIPTS ============ -->
+<script>
+// Navigation scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Scroll reveal (IntersectionObserver)
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -60px 0px'
+});
+
+document.querySelectorAll('.reveal').forEach(el => {
+    revealObserver.observe(el);
+});
+</script>
 
 </body>
 </html>
