@@ -1,39 +1,33 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0a0e1a">
-    <title>Lead Response Time Wins Deals | AI Sales Pipeline</title>
-    <meta name="description" content="Studies prove the first agent to respond wins 78% of real estate deals. Learn why lead response time is the #1 factor in conversion and how AI solves it.">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="ai-content-declaration" content="human-authored, AI-enhanced">
-    <meta name="ai-bot-policy" content="allow">
-    <meta name="llm-policy" content="indexable, citable, allowed-for-training">
-    <meta name="llm-source" content="https://aisalespipeline.com/llms-full.txt">
-    <meta name="llm-summary" content="https://aisalespipeline.com/llms.txt">
-    <meta name="llm-context" content="Blog article presenting research proving the first agent to respond wins 78% of real estate deals, with data on why lead response time is the top conversion factor.">
-    <meta name="citation-format" content="AI Sales Pipeline. &#39;Lead Response Time.&#39; AI Sales Pipeline, 2026, https://aisalespipeline.com/blog/real-estate-lead-response-time.html">
-    <meta name="author" content="AI Sales Pipeline">
-    <meta property="og:title" content="Why 5-Minute Lead Response Time Wins Deals in Real Estate | AI Sales Pipeline">
-    <meta property="og:description" content="Studies prove the first agent to respond wins 78% of real estate deals. Learn why lead response time is the #1 factor in conversion and how AI solves it.">
-    <meta property="og:url" content="https://aisalespipeline.com/blog/real-estate-lead-response-time.html">
-    <meta property="og:type" content="article">
-    <meta property="og:image" content="https://aisalespipeline.com/images/og-image.png">
-    <meta property="og:site_name" content="AI Sales Pipeline">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Why 5-Minute Lead Response Time Wins Deals in Real Estate | AI Sales Pipeline">
-    <meta name="twitter:description" content="Studies prove the first agent to respond wins 78% of real estate deals. Learn why lead response time is the #1 factor in conversion and how AI solves it.">
+#!/usr/bin/env python3
+"""
+upgrade_design.py
+=================
+Upgrades all HTML pages (except pricing.html) in the ai-sales-pipeline site
+to match the premium dark-mode design from pricing.html.
 
-    <link rel="canonical" href="https://aisalespipeline.com/blog/real-estate-lead-response-time.html">
-    <link rel="alternate" hreflang="en-US" href="https://aisalespipeline.com/blog/real-estate-lead-response-time.html">
-    <link rel="alternate" hreflang="x-default" href="https://aisalespipeline.com/blog/real-estate-lead-response-time.html">
+Preserves ALL meta tags, JSON-LD schemas, title tags, canonical/alternate links,
+and body content. Only changes: visual design (fonts, colors, layout, nav, footer,
+animations).
+"""
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+import os
+import re
+import shutil
+import html as html_mod
 
-    <script src="https://cdn.tailwindcss.com"></script>
+BASE_DIR = "/Users/teddy/ai-sales-pipeline"
+PRICING_FILE = os.path.join(BASE_DIR, "pricing.html")
+
+# Files to skip
+SKIP_FILES = {"pricing.html"}
+
+# ──────────────────────────────────────────────
+# 1. PREMIUM DESIGN TEMPLATE ELEMENTS
+# ──────────────────────────────────────────────
+
+GOOGLE_FONTS = '    <link rel="preconnect" href="https://fonts.googleapis.com">\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">'
+
+TAILWIND_CDN = """    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -83,9 +77,9 @@
                 }
             }
         }
-    </script>
+    </script>"""
 
-    <style>
+PREMIUM_CSS = """    <style>
         /* ============ BASE ============ */
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -592,96 +586,32 @@
             .content-section { padding: 3rem 1.5rem; }
             .article-layout { padding: 2rem 1.5rem 3rem; }
         }
-    </style>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How fast should I respond to real estate leads?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Research shows you need to respond within 5 minutes to maximize conversion rates. Leads contacted within 60 seconds are dramatically more likely to engage than leads contacted after 30 minutes. AI automation is the only reliable way to achieve this consistently."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What is the average lead response time for real estate agents?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The average real estate agent responds to leads in 47 hours. This is why most lead generation budgets are wasted — the leads exist but agents can't respond fast enough to capture them."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Does AI Sales Pipeline really respond in under 60 seconds?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. AI Sales Pipeline responds to new leads in under 60 seconds, 24 hours a day, 7 days a week. The system connects to your lead sources and triggers immediately when a new lead comes in, regardless of what you're doing."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What should the first message to a real estate lead say?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The first message should be personalized, conversational, and ask a question that invites a response. AI Sales Pipeline uses NEPQ-scripted opening messages that reference the lead's specific inquiry and ask a qualifying question to start a dialogue."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How does fast response affect real estate conversion rates?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Studies show agents who respond within 5 minutes convert leads at 21x the rate of agents who respond after 30 minutes. In practical terms, this means most of your lead generation spend is wasted if you're not responding immediately."
-                }
-            }
-        ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aisalespipeline.com/"},
-            {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aisalespipeline.com/blog/"},
-            {"@type": "ListItem", "position": 3, "name": "5-Minute Lead Response Time", "item": "https://aisalespipeline.com/blog/real-estate-lead-response-time.html"}
-        ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Why 5-Minute Lead Response Time Wins Deals in Real Estate",
-        "description": "Studies prove the first agent to respond wins 78% of real estate deals. Learn why lead response time is the #1 factor in conversion and how AI solves it.",
-        "author": {"@type": "Organization", "name": "AI Sales Pipeline"},
-        "publisher": {"@type": "Organization", "name": "AI Sales Pipeline", "url": "https://aisalespipeline.com"},
-        "datePublished": "2026-03-28",
-        "dateModified": "2026-03-28",
-        "mainEntityOfPage": "https://aisalespipeline.com/blog/real-estate-lead-response-time.html"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "speakable": {
-            "@type": "SpeakableSpecification",
-            "cssSelector": ["h1", ".article-intro"]
-        },
-        "url": "https://aisalespipeline.com/blog/real-estate-lead-response-time.html"
-    }
-    </script>
-</head>
-<body>
-<a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:0;padding:8px 16px;background:#000;color:#fff;z-index:9999;" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Skip to main content</a>
+    </style>"""
 
 
+def get_nav_html(is_spanish=False):
+    """Return the glassmorphic nav HTML."""
+    if is_spanish:
+        return """
+<!-- ============ NAVIGATION ============ -->
+<nav id="navbar">
+    <a href="/es/" class="nav-logo">AI Sales Pipeline</a>
+
+    <div class="hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open'); this.classList.toggle('active');">
+        <span></span><span></span><span></span>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="/features.html" onclick="document.getElementById('navLinks').classList.remove('open'); document.getElementById('hamburger').classList.remove('active');">Funciones</a>
+        <a href="/pricing.html" onclick="document.getElementById('navLinks').classList.remove('open'); document.getElementById('hamburger').classList.remove('active');">Precios</a>
+        <a href="/comparison.html" onclick="document.getElementById('navLinks').classList.remove('open'); document.getElementById('hamburger').classList.remove('active');">Comparar</a>
+        <a href="/simulation.html" onclick="document.getElementById('navLinks').classList.remove('open'); document.getElementById('hamburger').classList.remove('active');">Simulacion</a>
+        <a href="/" onclick="document.getElementById('navLinks').classList.remove('open'); document.getElementById('hamburger').classList.remove('active');">English</a>
+        <a href="/#contact" class="nav-cta" onclick="document.getElementById('navLinks').classList.remove('open'); document.getElementById('hamburger').classList.remove('active');">Agendar Demo</a>
+    </div>
+</nav>"""
+    else:
+        return """
 <!-- ============ NAVIGATION ============ -->
 <nav id="navbar">
     <a href="/" class="nav-logo">AI Sales Pipeline</a>
@@ -698,126 +628,54 @@
         <a href="/es/" onclick="document.getElementById('navLinks').classList.remove('open'); document.getElementById('hamburger').classList.remove('active');">Espa&ntilde;ol</a>
         <a href="/#contact" class="nav-cta" onclick="document.getElementById('navLinks').classList.remove('open'); document.getElementById('hamburger').classList.remove('active');">Book Demo</a>
     </div>
-</nav>
+</nav>"""
 
 
-<!-- ============ HERO ============ -->
-<section class="page-hero">
-    <div style="position:relative;z-index:10;max-width:900px;margin:0 auto;">
-        <h1 class="reveal">Why 5-Minute Lead Response Time Wins Deals in Real Estate</h1>
-    </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ============ MAIN CONTENT ============ -->
-<div class="article-layout content-section">
-<article id="main" class="article-body">
-
-        <p class="article-intro">The research is unambiguous: the first agent to respond to a real estate inquiry wins the client 78% of the time. If you're responding in 30 minutes, an hour, or the next day — you've already lost most of your leads before the conversation even starts.</p>
-
-        <h2 class="reveal">The Lead Response Time Research</h2>
-        <p>Multiple independent studies on lead response time in sales all reach the same conclusion:</p>
-        <ul>
-            <li><strong>Inside Sales study</strong>: Leads contacted within 5 minutes are 21x more likely to convert than leads contacted after 30 minutes</li>
-            <li><strong>NAR research</strong>: 78% of buyers choose the first agent to respond to their inquiry</li>
-            <li><strong>MIT study</strong>: Response within 1 minute vs. 30 minutes = 391% higher contact rate</li>
-        </ul>
-        <p>These aren't marginal improvements. This is the difference between winning and losing most of your lead investment.</p>
-
-        <h2 class="reveal">Why Real Estate Agents Respond Slowly</h2>
-        <p>It's not laziness. Most agents genuinely want to respond fast. But the reality of the job makes immediate response nearly impossible:</p>
-        <ul>
-            <li>You're in a showing with another client</li>
-            <li>You're in a listing presentation</li>
-            <li>It's 11pm and a Zillow lead just came in</li>
-            <li>You're on the phone with someone else</li>
-            <li>You're driving between appointments</li>
-        </ul>
-        <p>The average real estate agent responds to leads in 47 hours. Not minutes. Hours. That gap is where your competitors win.</p>
-
-        <h2 class="reveal">What Happens to a Lead in the First 5 Minutes</h2>
-        <p>When a buyer or seller fills out a form on Zillow, Facebook, or your website, they're in a window of peak intent. They just did the thing. They want information now. If they don't hear from someone in 5 minutes, they:</p>
-        <ol>
-            <li>Submit the same form on 2-3 other sites (Zillow connects to multiple agents)</li>
-            <li>Get a call back from a faster agent who converts them on the spot</li>
-            <li>Cool off and move on with their day</li>
-        </ol>
-        <p>Your lead generation is only as valuable as your lead response speed.</p>
-
-        <h2 class="reveal">How AI Solves the Response Time Problem</h2>
-        <p>The only reliable way to guarantee sub-60-second response times across every lead source, 24/7, including nights and weekends, is automation.</p>
-        <p><a href="/features/ai-sms-real-estate.html" style="color:#ff6b35;">AI SMS automation</a> from AI Sales Pipeline responds to new leads in under 60 seconds with a personalized, conversational message that starts a qualification dialogue. By the time you see the notification, the AI has already made contact, started a conversation, and often scheduled the appointment.</p>
-        
-        <h2 class="reveal">AI Response That Doesn't Sound Like a Bot</h2>
-        <p>The key to AI follow-up working is that it sounds human. AI Sales Pipeline uses conversational AI trained on real estate scripts and NEPQ psychology principles. The messages don't say "Hi, I'm an automated bot." They say things like:</p>
-        <blockquote>"Hi [Name], I saw you were looking at homes in [area] — is $[price range] still your target? I have a few listings that might be a great fit that just came on the market this week."</blockquote>
-        <p>Real, contextual, compelling. Leads respond. Appointments get booked. Deals get closed.</p>
-
-        <h2 class="reveal">Setting Up a 60-Second Response System</h2>
-        <p>With <a href="/features.html" style="color:#ff6b35;">AI Sales Pipeline</a>, your response system is configured during setup and runs automatically thereafter. Every new lead from every source — Zillow, Facebook Lead Ads, Google, IDX — triggers immediate AI outreach. You never miss another lead.</p>
-        <p>See how it works on our <a href="/pricing.html" style="color:#ff6b35;">pricing page</a> or book a free demo to see it in action.</p>
-    
-
-        <div class="cta-box">
-            <h3>Ready to Automate Your Real Estate Business?</h3>
-            <p>AI Sales Pipeline gives you the tools to respond faster, follow up longer, and close more deals — on autopilot.</p>
-            <a href="/pricing.html" class="cta-btn" style="margin-right:1rem;">See Pricing</a>
-            <a href="/features.html" class="cta-btn" style="background: transparent; border: 2px solid var(--orange);">Explore Features</a>
+def get_footer_html(is_spanish=False):
+    """Return the dark footer HTML."""
+    if is_spanish:
+        return """
+<!-- ============ FOOTER ============ -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3 style="color:var(--orange);">Funciones</h3>
+            <ul>
+                <li><a href="/features/ai-sms-real-estate.html">SMS con IA</a></li>
+                <li><a href="/features/ai-email-real-estate.html">Email con IA</a></li>
+                <li><a href="/features/ai-voice-calls-real-estate.html">Llamadas con IA</a></li>
+                <li><a href="/features/ai-clone-video-real-estate.html">Video Clon IA</a></li>
+                <li><a href="/features/lead-scoring-real-estate.html">Puntuacion de Leads</a></li>
+                <li><a href="/features/seller-workflows-real-estate.html">Flujos de Vendedores</a></li>
+                <li><a href="/features/buyer-workflows-real-estate.html">Flujos de Compradores</a></li>
+            </ul>
         </div>
-    </article>
-
-    <section class="faq-section">
-        <h2 class="reveal">Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3 class="faq-q">How fast should I respond to real estate leads?</h3>
-                <div class="faq-a"><p>Research shows you need to respond within 5 minutes to maximize conversion rates. Leads contacted within 60 seconds are dramatically more likely to engage than leads contacted after 30 minutes. AI automation is the only reliable way to achieve this consistently.</p></div>
-            </div>
-            <div class="faq-item">
-                <h3 class="faq-q">What is the average lead response time for real estate agents?</h3>
-                <div class="faq-a"><p>The average real estate agent responds to leads in 47 hours. This is why most lead generation budgets are wasted — the leads exist but agents can't respond fast enough to capture them.</p></div>
-            </div>
-            <div class="faq-item">
-                <h3 class="faq-q">Does AI Sales Pipeline really respond in under 60 seconds?</h3>
-                <div class="faq-a"><p>Yes. AI Sales Pipeline responds to new leads in under 60 seconds, 24 hours a day, 7 days a week. The system connects to your lead sources and triggers immediately when a new lead comes in, regardless of what you're doing.</p></div>
-            </div>
-            <div class="faq-item">
-                <h3 class="faq-q">What should the first message to a real estate lead say?</h3>
-                <div class="faq-a"><p>The first message should be personalized, conversational, and ask a question that invites a response. AI Sales Pipeline uses NEPQ-scripted opening messages that reference the lead's specific inquiry and ask a qualifying question to start a dialogue.</p></div>
-            </div>
-            <div class="faq-item">
-                <h3 class="faq-q">How does fast response affect real estate conversion rates?</h3>
-                <div class="faq-a"><p>Studies show agents who respond within 5 minutes convert leads at 21x the rate of agents who respond after 30 minutes. In practical terms, this means most of your lead generation spend is wasted if you're not responding immediately.</p></div>
-            </div>
-    </section>
-
-    
-    <section style="margin: 3rem auto; max-width: 800px; padding: 2rem; background: rgba(255,107,53,0.05); border: 1px solid rgba(255,107,53,0.2); border-radius: 12px;" class="reveal">
-        <h2 style="color:#ff6b35; font-size:1.3rem; margin-bottom:1.2rem;" class="reveal">Related Articles</h2>
-        <ul style="list-style:none; padding:0; margin:0; line-height:2.2;">
-            <li>→ <a href="/blog/ai-follow-up-real-estate-leads.html" style="color:#ff6b35; text-decoration:none;">AI Follow-Up for Real Estate Leads: Never Miss a Deal</a></li>
-            <li>→ <a href="/blog/real-estate-lead-scoring-ai.html" style="color:#ff6b35; text-decoration:none;">Real Estate Lead Scoring with AI: Prioritize Hot Leads</a></li>
-            <li>→ <a href="/blog/gohighlevel-real-estate-setup.html" style="color:#ff6b35; text-decoration:none;">GoHighLevel Real Estate Setup Guide 2025</a></li>
-            <li>→ <a href="/fsbo-automation.html" style="color:#ff6b35; text-decoration:none;">FSBO Lead Automation</a></li>
-            <li>→ <a href="/expired-listing-automation.html" style="color:#ff6b35; text-decoration:none;">Expired Listing Automation</a></li>
-        </ul>
-    </section>
-</div>
-
-<div class="section-divider"></div>
-
-<!-- ============ FINAL CTA ============ -->
-<section style="padding:4rem 2rem;background:linear-gradient(135deg,rgba(255,107,53,0.12) 0%,rgba(255,90,31,0.08) 50%,rgba(0,212,255,0.06) 100%);text-align:center;">
-    <div style="max-width:700px;margin:0 auto;">
-        <h2 class="reveal" style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:1rem;color:var(--white);">Ready to Get Started?</h2>
-        <p class="reveal reveal-d1" style="color:rgba(255,255,255,0.6);font-size:1rem;margin-bottom:2rem;line-height:1.7;">
-            Schedule your free consultation and demo. No obligation.
-        </p>
-        <a href="https://aisalespipeline.com/#contact" class="btn-primary reveal reveal-d2" style="padding:1rem 2.5rem;font-size:1rem;">Book Your Free Consultation</a>
+        <div class="footer-section">
+            <h3 style="color:var(--orange);">Recursos</h3>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/features.html">Todas las Funciones</a></li>
+                <li><a href="/comparison.html">Comparacion de CRM</a></li>
+                <li><a href="/ai-crm-real-estate.html">CRM con IA para Inmobiliarias</a></li>
+                <li><a href="/fsbo-automation.html">Automatizacion FSBO</a></li>
+                <li><a href="/expired-listing-automation.html">Listados Vencidos</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3 style="color:var(--orange);">Contacto</h3>
+            <ul>
+                <li><a href="/#contact">Agendar Demo</a></li>
+                <li><a href="tel:+19082307844">(908) 230-7844</a></li>
+                <li><a href="mailto:jorgeramirez76@gmail.com">jorgeramirez76@gmail.com</a></li>
+            </ul>
+        </div>
     </div>
-</section>
-
-
+    <div class="footer-bottom">
+        <p>&copy; 2026 AI Sales Pipeline. Todos los derechos reservados.</p>
+    </div>
+</footer>"""
+    else:
+        return """
 <!-- ============ FOOTER ============ -->
 <footer>
     <div class="footer-content">
@@ -856,9 +714,10 @@
     <div class="footer-bottom">
         <p>&copy; 2026 AI Sales Pipeline. All rights reserved.</p>
     </div>
-</footer>
+</footer>"""
 
 
+FOUNDER_BACKLINK = """
 <!-- Founder backlink -- SEO link to thejorgeramirezgroup.com -->
 <div style="background: #050505; padding: 24px 40px; border-top: 1px solid rgba(255,107,53,0.15); text-align: center; font-size: 0.85rem; color: rgba(240,240,240,0.6);">
     <p style="margin: 0; line-height: 1.7;">
@@ -866,9 +725,10 @@
         <a href="https://www.thejorgeramirezgroup.com" rel="noopener" style="color: #ff6b35; text-decoration: underline;">The Jorge Ramirez Group</a>
         at Keller Williams Premier Properties. Specializing in <a href="https://www.thejorgeramirezgroup.com" rel="noopener" style="color: rgba(240,240,240,0.6);">luxury real estate in Summit, Westfield, Short Hills, and the surrounding Union, Essex, Morris, Hudson, and Middlesex counties</a>.
     </p>
-</div>
+</div>"""
 
 
+BOTTOM_SCRIPTS = """
 <!-- ============ SCRIPTS ============ -->
 <script>
 // Navigation scroll effect
@@ -897,7 +757,413 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => {
     revealObserver.observe(el);
 });
-</script>
+</script>"""
+
+
+# ──────────────────────────────────────────────
+# 2. PARSING HELPERS
+# ──────────────────────────────────────────────
+
+def extract_head_meta(html_content):
+    """Extract all meta tags, title, canonical/alternate links, and JSON-LD blocks from <head>."""
+    head_match = re.search(r'<head[^>]*>(.*?)</head>', html_content, re.DOTALL | re.IGNORECASE)
+    if not head_match:
+        return "", "", [], [], []
+
+    head = head_match.group(1)
+
+    # Title
+    title_match = re.search(r'<title[^>]*>.*?</title>', head, re.DOTALL | re.IGNORECASE)
+    title_tag = title_match.group(0) if title_match else "<title>AI Sales Pipeline</title>"
+
+    # Meta tags (self-closing or not)
+    meta_tags = re.findall(r'<meta\s[^>]*/?>', head, re.IGNORECASE)
+
+    # Canonical + alternate + other important link tags (not stylesheet, not preconnect, not fonts)
+    link_tags = re.findall(r'<link\s[^>]*/?>', head, re.IGNORECASE)
+    seo_links = []
+    for lt in link_tags:
+        # Keep canonical, alternate, manifest, apple-touch-icon, icon
+        if any(attr in lt.lower() for attr in ['rel="canonical"', "rel='canonical'",
+                                                 'rel="alternate"', "rel='alternate'",
+                                                 'rel="manifest"', "rel='manifest'",
+                                                 'rel="icon"', "rel='icon'",
+                                                 'rel="apple-touch-icon"', "rel='apple-touch-icon'"]):
+            seo_links.append(lt)
+
+    # JSON-LD schema blocks
+    jsonld_blocks = re.findall(
+        r'<script\s+type=["\']application/ld\+json["\'][^>]*>.*?</script>',
+        head, re.DOTALL | re.IGNORECASE
+    )
+
+    return title_tag, meta_tags, seo_links, jsonld_blocks, head
+
+
+def extract_body_content(html_content):
+    """Extract the main body content, stripping old nav/header and footer."""
+    body_match = re.search(r'<body[^>]*>(.*?)</body>', html_content, re.DOTALL | re.IGNORECASE)
+    if not body_match:
+        return ""
+
+    body = body_match.group(1)
+
+    # Remove old navigation/header blocks
+    # Pattern: <nav ...>...</nav> or <header ...>...</header> at the start
+    body = re.sub(r'^\s*<!--[^>]*NAVIGATION[^>]*-->\s*', '', body, flags=re.IGNORECASE)
+    body = re.sub(r'<nav\b[^>]*>.*?</nav>', '', body, count=1, flags=re.DOTALL | re.IGNORECASE)
+
+    # Remove old footer
+    body = re.sub(r'<footer\b[^>]*>.*?</footer>', '', body, count=1, flags=re.DOTALL | re.IGNORECASE)
+
+    # Remove old header elements (styled headers that act as nav)
+    # Only remove if it's a site header, not a content header
+    header_match = re.search(r'<header\b[^>]*class=["\'][^"\']*(?:blog-header|site-header|main-header)[^"\']*["\'][^>]*>.*?</header>', body, re.DOTALL | re.IGNORECASE)
+    if not header_match:
+        # Check for a header at the very start that's nav-like
+        header_match = re.search(r'^\s*<header\b[^>]*>.*?</header>', body, re.DOTALL | re.IGNORECASE)
+        if header_match:
+            header_content = header_match.group(0)
+            # If header contains nav-like links, remove it
+            if re.search(r'<a\b[^>]*>.*?(?:Features|Pricing|Home|Demo).*?</a>', header_content, re.IGNORECASE):
+                body = body[:header_match.start()] + body[header_match.end():]
+
+    # Remove any old founder backlink div
+    body = re.sub(
+        r'<!--\s*Founder backlink.*?-->\s*<div[^>]*>.*?thejorgeramirezgroup.*?</div>',
+        '', body, flags=re.DOTALL | re.IGNORECASE
+    )
+    # Also catch the backlink without a comment
+    body = re.sub(
+        r'<div[^>]*style="[^"]*background:\s*#050505[^"]*"[^>]*>.*?thejorgeramirezgroup.*?</div>',
+        '', body, flags=re.DOTALL | re.IGNORECASE
+    )
+
+    # Remove old inline scripts at the bottom (nav scroll, IntersectionObserver, etc.)
+    body = re.sub(
+        r'<script>\s*(?://\s*Navigation|//\s*Scroll|//\s*FAQ|//\s*Nav|const\s+navbar|window\.addEventListener|document\.querySelectorAll\([\'"]\.reveal).*?</script>',
+        '', body, flags=re.DOTALL | re.IGNORECASE
+    )
+
+    # Remove old <style> blocks that might be in the body
+    body = re.sub(r'<style\b[^>]*>.*?</style>', '', body, flags=re.DOTALL | re.IGNORECASE)
+
+    # Remove GA / analytics scripts at the bottom (keep them — we re-add them)
+    # Actually, let's keep GA scripts
+    ga_scripts = re.findall(
+        r'(?:<!--\s*(?:Google|GA|Analytics).*?-->\s*)?<script[^>]*(?:google|analytics|gtag|gtm)[^>]*>.*?</script>',
+        body, re.DOTALL | re.IGNORECASE
+    )
+
+    # Clean up empty divs and excessive whitespace
+    body = body.strip()
+
+    return body, ga_scripts
+
+
+def detect_page_type(filepath):
+    """Detect whether a file is blog, feature, spanish, or core page."""
+    rel_path = os.path.relpath(filepath, BASE_DIR)
+
+    if rel_path.startswith("blog/") or "blog-" in rel_path:
+        return "blog"
+    elif rel_path.startswith("features/"):
+        return "feature"
+    elif rel_path.startswith("es/"):
+        return "spanish"
+    else:
+        return "core"
+
+
+def extract_page_title_text(html_content):
+    """Extract the h1 text from the page for the hero section."""
+    h1_match = re.search(r'<h1[^>]*>(.*?)</h1>', html_content, re.DOTALL | re.IGNORECASE)
+    if h1_match:
+        # Strip HTML tags from inside h1
+        return re.sub(r'<[^>]+>', '', h1_match.group(1)).strip()
+    return ""
+
+
+def extract_subtitle(html_content):
+    """Try to extract a subtitle or first descriptive paragraph."""
+    # Look for a .byline, .subtitle, or first p after h1
+    byline_match = re.search(r'<p\s+class=["\'][^"\']*byline[^"\']*["\'][^>]*>(.*?)</p>', html_content, re.DOTALL | re.IGNORECASE)
+    if byline_match:
+        return re.sub(r'<[^>]+>', '', byline_match.group(1)).strip()
+
+    subtitle_match = re.search(r'<p\s+class=["\'][^"\']*subtitle[^"\']*["\'][^>]*>(.*?)</p>', html_content, re.DOTALL | re.IGNORECASE)
+    if subtitle_match:
+        return re.sub(r'<[^>]+>', '', subtitle_match.group(1)).strip()
+
+    return ""
+
+
+def clean_body_for_dark(body_content):
+    """Override old light-mode inline styles to dark equivalents."""
+    replacements = [
+        # Background colors -> dark
+        (r'background:\s*#fff(?:fff)?(?:\s*;)', 'background: var(--dark-bg);'),
+        (r'background:\s*white(?:\s*;)', 'background: var(--dark-bg);'),
+        (r'background-color:\s*#fff(?:fff)?(?:\s*;)', 'background-color: var(--dark-bg);'),
+        (r'background-color:\s*white(?:\s*;)', 'background-color: var(--dark-bg);'),
+        (r'background:\s*#f[0-9a-f]{5}(?:\s*;)', 'background: var(--dark-alt);'),
+        (r'background:\s*#e[0-9a-f]{5}(?:\s*;)', 'background: var(--dark-alt);'),
+        # Text colors -> white
+        (r'color:\s*#333(?:333)?(?:\s*;)', 'color: var(--white);'),
+        (r'color:\s*#222(?:222)?(?:\s*;)', 'color: var(--white);'),
+        (r'color:\s*#000(?:000)?(?:\s*;)', 'color: var(--white);'),
+        (r'color:\s*black(?:\s*;)', 'color: var(--white);'),
+        (r'color:\s*#555(?:555)?(?:\s*;)', 'color: rgba(255, 255, 255, 0.75);'),
+        (r'color:\s*#666(?:666)?(?:\s*;)', 'color: rgba(255, 255, 255, 0.65);'),
+        (r'color:\s*#777(?:777)?(?:\s*;)', 'color: rgba(255, 255, 255, 0.6);'),
+        (r'color:\s*#888(?:888)?(?:\s*;)', 'color: rgba(255, 255, 255, 0.55);'),
+        (r'color:\s*#999(?:999)?(?:\s*;)', 'color: rgba(255, 255, 255, 0.5);'),
+        # Blue headers -> orange or white
+        (r'background:\s*linear-gradient\(135deg,\s*#0052cc[^)]*\)', 'background: linear-gradient(135deg, rgba(255, 107, 53, 0.08), rgba(0, 212, 255, 0.05))'),
+        (r'background:\s*#0052cc(?:\s*;)', 'background: var(--dark-bg);'),
+        (r'color:\s*#0052cc(?:\s*;)', 'color: var(--orange);'),
+        # Borders
+        (r'border(?:-bottom|-top|-left|-right)?:\s*1px\s+solid\s+#(?:e[0-9a-f]{5}|d[0-9a-f]{5}|ccc)(?:\s*;)', 'border: 1px solid rgba(255, 255, 255, 0.06);'),
+        # Box shadows that reference light colors
+        (r'box-shadow:\s*[^;]*rgba\(0,\s*0,\s*0,\s*0\.1\)[^;]*;', 'box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);'),
+    ]
+
+    result = body_content
+    for pattern, replacement in replacements:
+        result = re.sub(pattern, replacement, result, flags=re.IGNORECASE)
+
+    return result
+
+
+def strip_old_header_element(body):
+    """Remove <header> elements that serve as page headers (not content headers)."""
+    # Remove blog-header class headers
+    body = re.sub(
+        r'<header\s+class=["\']blog-header["\'][^>]*>.*?</header>',
+        '', body, flags=re.DOTALL | re.IGNORECASE
+    )
+    # Remove standalone header with just h1/subtitle
+    body = re.sub(
+        r'<header\b[^>]*>\s*<h1\b.*?</header>',
+        '', body, flags=re.DOTALL | re.IGNORECASE
+    )
+    return body
+
+
+# ──────────────────────────────────────────────
+# 3. PAGE REBUILDER
+# ──────────────────────────────────────────────
+
+def rebuild_page(filepath):
+    """Read, parse, and rebuild an HTML file with the premium design."""
+    rel_path = os.path.relpath(filepath, BASE_DIR)
+    page_type = detect_page_type(filepath)
+    is_spanish = (page_type == "spanish")
+
+    with open(filepath, 'r', encoding='utf-8') as f:
+        original = f.read()
+
+    # Detect lang attribute
+    lang_match = re.search(r'<html\s+lang=["\']([^"\']+)["\']', original, re.IGNORECASE)
+    lang = lang_match.group(1) if lang_match else ("es-US" if is_spanish else "en-US")
+
+    # Extract SEO elements from head
+    title_tag, meta_tags, seo_links, jsonld_blocks, raw_head = extract_head_meta(original)
+
+    # Extract page title text for hero
+    page_title = extract_page_title_text(original)
+    subtitle = extract_subtitle(original)
+
+    # Extract body content
+    body_content, ga_scripts = extract_body_content(original)
+
+    # Strip old header elements from body
+    body_content = strip_old_header_element(body_content)
+
+    # Remove the h1 from body content (we'll put it in the hero)
+    if page_title:
+        body_content = re.sub(r'<h1\b[^>]*>.*?</h1>', '', body_content, count=1, flags=re.DOTALL | re.IGNORECASE)
+
+    # Remove byline from body if it exists (we show it in hero)
+    body_content = re.sub(
+        r'<p\s+class=["\'][^"\']*byline[^"\']*["\'][^>]*>.*?</p>',
+        '', body_content, count=1, flags=re.DOTALL | re.IGNORECASE
+    )
+
+    # Clean light-mode inline styles
+    body_content = clean_body_for_dark(body_content)
+
+    # Remove old header-like blocks that remain
+    # Remove <header> ... </header> that might contain background:linear-gradient
+    body_content = re.sub(
+        r'<header\b[^>]*style="[^"]*background[^"]*"[^>]*>.*?</header>',
+        '', body_content, flags=re.DOTALL | re.IGNORECASE
+    )
+
+    # Wrap content sections with reveal class
+    # Add .reveal to h2 tags
+    body_content = re.sub(
+        r'<h2\b([^>]*)>',
+        lambda m: '<h2' + m.group(1) + ' class="reveal">' if 'class=' not in m.group(1) else '<h2' + m.group(1).replace('class="', 'class="reveal ').replace("class='", "class='reveal ") + '>',
+        body_content,
+        flags=re.IGNORECASE
+    )
+
+    # Wrap <section> tags with reveal if they don't have it
+    body_content = re.sub(
+        r'<section\b([^>]*)>',
+        lambda m: '<section' + m.group(1) + ' class="reveal">' if 'class=' not in m.group(1) else '<section' + m.group(1) + '>',
+        body_content,
+        flags=re.IGNORECASE
+    )
+
+    # Determine content wrapper class
+    if page_type == "blog":
+        wrapper_class = "article-layout content-section"
+    else:
+        wrapper_class = "content-section"
+
+    # Build meta tags string — filter out charset and viewport since we hardcode them
+    filtered_meta = [m for m in meta_tags
+                     if 'charset=' not in m.lower()
+                     and 'name="viewport"' not in m.lower()
+                     and "name='viewport'" not in m.lower()]
+    meta_str = "\n".join(f"    {m}" for m in filtered_meta)
+    seo_links_str = "\n".join(f"    {l}" for l in seo_links)
+    jsonld_str = "\n".join(f"    {j}" for j in jsonld_blocks)
+
+    # Check if preconnect already in meta
+    has_preconnect = any('fonts.googleapis.com' in m for m in meta_tags) or any('fonts.googleapis.com' in l for l in seo_links)
+
+    # Build the hero section
+    hero_html = f'''
+<!-- ============ HERO ============ -->
+<section class="page-hero">
+    <div style="position:relative;z-index:10;max-width:900px;margin:0 auto;">
+        <h1 class="reveal">{page_title if page_title else "AI Sales Pipeline"}</h1>'''
+
+    if subtitle:
+        hero_html += f'\n        <p class="subtitle reveal reveal-d1">{subtitle}</p>'
+
+    hero_html += '''
+    </div>
+</section>
+
+<div class="section-divider"></div>'''
+
+    # Build the new page
+    new_html = f'''<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {title_tag}
+{meta_str}
+
+{seo_links_str}
+
+{GOOGLE_FONTS}
+
+{TAILWIND_CDN}
+
+{PREMIUM_CSS}
+
+{jsonld_str}
+</head>
+<body>
+
+{get_nav_html(is_spanish)}
+
+{hero_html}
+
+<!-- ============ MAIN CONTENT ============ -->
+<div class="{wrapper_class}">
+{body_content}
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ============ FINAL CTA ============ -->
+<section style="padding:4rem 2rem;background:linear-gradient(135deg,rgba(255,107,53,0.12) 0%,rgba(255,90,31,0.08) 50%,rgba(0,212,255,0.06) 100%);text-align:center;">
+    <div style="max-width:700px;margin:0 auto;">
+        <h2 class="reveal" style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:1rem;color:var(--white);">{"Listo para Empezar?" if is_spanish else "Ready to Get Started?"}</h2>
+        <p class="reveal reveal-d1" style="color:rgba(255,255,255,0.6);font-size:1rem;margin-bottom:2rem;line-height:1.7;">
+            {"Agenda tu consulta gratuita. Sin compromiso." if is_spanish else "Schedule your free consultation and demo. No obligation."}
+        </p>
+        <a href="https://aisalespipeline.com/#contact" class="btn-primary reveal reveal-d2" style="padding:1rem 2.5rem;font-size:1rem;">{"Agendar Demo Gratis" if is_spanish else "Book Your Free Consultation"}</a>
+    </div>
+</section>
+
+{get_footer_html(is_spanish)}
+
+{FOUNDER_BACKLINK}
+
+{BOTTOM_SCRIPTS}
 
 </body>
 </html>
+'''
+
+    return new_html
+
+
+# ──────────────────────────────────────────────
+# 4. MAIN EXECUTION
+# ──────────────────────────────────────────────
+
+def collect_html_files():
+    """Collect all HTML files to process."""
+    files = []
+    for root, dirs, filenames in os.walk(BASE_DIR):
+        for fname in filenames:
+            if fname.endswith('.html') and fname not in SKIP_FILES:
+                full_path = os.path.join(root, fname)
+                # Skip any .bak files
+                if not full_path.endswith('.bak'):
+                    files.append(full_path)
+    # Deduplicate
+    return sorted(set(files))
+
+
+def main():
+    files = collect_html_files()
+    print(f"\n{'='*60}")
+    print(f"  PREMIUM DESIGN UPGRADE")
+    print(f"  Found {len(files)} HTML files to process")
+    print(f"  Template: pricing.html (will NOT be modified)")
+    print(f"{'='*60}\n")
+
+    success_count = 0
+    error_count = 0
+
+    for filepath in files:
+        rel_path = os.path.relpath(filepath, BASE_DIR)
+        page_type = detect_page_type(filepath)
+
+        try:
+            # Create backup
+            bak_path = filepath + ".bak"
+            shutil.copy2(filepath, bak_path)
+
+            # Rebuild
+            new_html = rebuild_page(filepath)
+
+            # Write
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(new_html)
+
+            success_count += 1
+            print(f"  [OK] {rel_path:<55} ({page_type})")
+
+        except Exception as e:
+            error_count += 1
+            print(f"  [ERR] {rel_path:<55} -> {e}")
+
+    print(f"\n{'='*60}")
+    print(f"  COMPLETE: {success_count} upgraded, {error_count} errors")
+    print(f"  Backups saved as *.bak alongside each file")
+    print(f"{'='*60}\n")
+
+
+if __name__ == "__main__":
+    main()

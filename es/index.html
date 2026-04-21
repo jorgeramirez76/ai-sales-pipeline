@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0e1a">
     <title>CRM con IA para Agentes Inmobiliarios | AI Sales Pipeline</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="CRM con IA para agentes inmobiliarios. Automatiza SMS, email y llamadas con IA 24/7. Responde a leads en 60 segundos. Prueba gratis.">
@@ -1102,10 +1103,14 @@
             <h2 style="font-size: 2.5rem; font-weight: 800; color: white; margin-bottom: 16px;" class="reveal">Mira el Sistema Completo de un Vistazo</h2>
             <p style="color: rgba(255, 255, 255, 0.55); font-size: 1.1rem; margin-bottom: 60px;">Del primer contacto al cierre de venta — totalmente automatizado, totalmente personalizado.</p>
             <div style="max-width: 1100px; margin: 0 auto;">
+                <picture>
+                <source type="image/webp" srcset="images/infographic-new.webp">
+                <source type="image/png" srcset="images/infographic-new.png">
                 <img src="images/infographic-new.png"
                      alt="Diagrama del sistema AI Sales Pipeline mostrando el flujo completo de automatización de seguimiento de leads: captura de leads de Zillow, Facebook y Google, puntuación con IA, seguimiento automatizado por SMS, correo y llamadas, video clon con IA, y remarketing en Facebook"
                      id="infographic-main"
-                     style="width: 100%; height: auto; border-radius: 16px; transform: scale(0.2); opacity: 0; transition: transform 1.0s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease; box-shadow: 0 0 0 rgba(255,107,53,0);">
+                     style="width: 100%; height: auto; border-radius: 16px; transform: scale(0.2); opacity: 0; transition: transform 1.0s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease; box-shadow: 0 0 0 rgba(255,107,53,0);" width="1400" height="363" loading="lazy" decoding="async">
+            </picture>
             </div>
         </section>
         <script>
@@ -1427,22 +1432,22 @@
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                     <div>
                         <label style="display:block; color: rgba(255, 255, 255, 0.55); font-size:0.85rem; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.05em;">Nombre *</label>
-                        <input type="text" name="first_name" required placeholder="Jorge" style="width:100%; padding:14px 18px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; color:white; font-size:1rem; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#ff6b35'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+                        <input type="text" name="first_name" required placeholder="Jorge" style="width:100%; padding:14px 18px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; color:white; font-size:1rem; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#ff6b35'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'" id="field-first_name" aria-label="First name" autocomplete="given-name">
                     </div>
                     <div>
                         <label style="display:block; color: rgba(255, 255, 255, 0.55); font-size:0.85rem; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.05em;">Apellido *</label>
-                        <input type="text" name="last_name" required placeholder="Ramirez" style="width:100%; padding:14px 18px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; color:white; font-size:1rem; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#ff6b35'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+                        <input type="text" name="last_name" required placeholder="Ramirez" style="width:100%; padding:14px 18px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; color:white; font-size:1rem; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#ff6b35'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'" id="field-last_name" aria-label="Last name" autocomplete="family-name">
                     </div>
                 </div>
                 
                 <div>
                     <label style="display:block; color: rgba(255, 255, 255, 0.55); font-size:0.85rem; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.05em;">Correo Electrónico *</label>
-                    <input type="email" name="email" required placeholder="you@example.com" style="width:100%; padding:14px 18px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; color:white; font-size:1rem; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#ff6b35'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+                    <input type="email" name="email" required placeholder="you@example.com" style="width:100%; padding:14px 18px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; color:white; font-size:1rem; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#ff6b35'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'" id="field-email" aria-label="Email address" autocomplete="email">
                 </div>
                 
                 <div>
                     <label style="display:block; color: rgba(255, 255, 255, 0.55); font-size:0.85rem; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.05em;">Número de Teléfono *</label>
-                    <input type="tel" name="phone" required placeholder="(908) 555-0100" style="width:100%; padding:14px 18px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; color:white; font-size:1rem; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#ff6b35'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+                    <input type="tel" name="phone" required placeholder="(908) 555-0100" style="width:100%; padding:14px 18px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; color:white; font-size:1rem; outline:none; box-sizing:border-box;" onfocus="this.style.borderColor='#ff6b35'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'" id="field-phone" aria-label="Phone number" autocomplete="tel">
                 </div>
                 
                 <div>

@@ -1,1 +1,4 @@
 SEO_AUDIT_*.md
+*.bak
+*.bak.*
+fix_seo_aeo.py
