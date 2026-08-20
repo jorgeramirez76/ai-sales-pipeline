@@ -62,7 +62,7 @@ Unlike sales engagement platforms (Outreach, Salesloft, Apollo) which augment hu
 
 All plans include unlimited contacts, unlimited users, and 24/7 AI automation.
 
-- **Basic Plan**: $497/month — AI text and email automation, 24/7 AI call answering, pipeline management, workflow builder, review automation. Includes 2,000 AI text messages, 250 AI voice minutes, and 5,000 emails per month.
+- **Basic Plan**: $397/month — AI text and email automation, 24/7 AI call answering, pipeline management, workflow builder, review automation. Includes 2,000 AI text messages, 250 AI voice minutes, and 5,000 emails per month.
 - **Pro Plan**: $695/month — Everything in Basic plus video email, WhatsApp, social DM automation, AI content generation (power dialer rolling out). Includes 5,000 AI text messages, 750 AI voice minutes, and 15,000 emails per month.
 - **Elite Plan**: $995/month — Everything in Pro plus branded apps, API access, reseller mode, custom AI voice training, monthly strategy calls. Includes 12,000 AI text messages, 1,500 AI voice minutes, and 40,000 emails per month.
 - **One-Time Setup**: $999 — Full system configuration, AI training, integrations, NEPQ script setup, and personalized onboarding
