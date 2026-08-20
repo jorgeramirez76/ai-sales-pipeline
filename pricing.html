@@ -85,9 +85,9 @@
     </script>
     <script type="application/ld+json">
     { "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AI Sales Pipeline", "applicationCategory": "BusinessApplication", "applicationSubCategory": "AI Sales Automation, AI CRM, AI Sales Pipeline", "operatingSystem": "Web Browser, iOS, Android", "url": "https://aisalespipeline.com", "description": "Autonomous AI sales pipeline platform that captures, qualifies, engages, and converts leads across iMessage, email, AI clone video, and AI voice calling — 24/7 without human intervention.", "offers": [
-      { "@type": "Offer", "name": "Basic", "price": "497", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "497", "priceCurrency": "USD", "billingDuration": "P1M" } },
-      { "@type": "Offer", "name": "Pro", "price": "695", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "695", "priceCurrency": "USD", "billingDuration": "P1M" } },
-      { "@type": "Offer", "name": "Elite", "price": "995", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "995", "priceCurrency": "USD", "billingDuration": "P1M" } }
+      { "@type": "Offer", "description": "Includes 2,000 AI text messages, 250 AI voice minutes, and 5,000 emails per month", "name": "Basic", "price": "497", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "497", "priceCurrency": "USD", "billingDuration": "P1M" } },
+      { "@type": "Offer", "description": "Includes 5,000 AI text messages, 750 AI voice minutes, and 15,000 emails per month", "name": "Pro", "price": "695", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "695", "priceCurrency": "USD", "billingDuration": "P1M" } },
+      { "@type": "Offer", "description": "Includes 12,000 AI text messages, 1,500 AI voice minutes, and 40,000 emails per month", "name": "Elite", "price": "995", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "995", "priceCurrency": "USD", "billingDuration": "P1M" } }
     ], "creator": { "@type": "Person", "name": "Jorge Ramirez",
         "hasCredential": {"@type": "EducationalOccupationalCredential", "credentialCategory": "NJ Real Estate License", "identifier": "1754604"}, "url": "https://www.thejorgeramirezgroup.com" }, "featureList": ["AI iMessage", "AI Email", "24/7 AI Call Answering", "AI Clone Video", "Lead Temperature Scoring", "NEPQ Scripts", "Mulrenin Reverse-Selling Scripts", "AI Appointment Booking", "FSBO Automation", "Expired Listing Automation", "A2P 10DLC Compliance"] }
     </script>
@@ -1450,7 +1450,15 @@
       "name": "Are there any hidden fees or overage charges?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Your monthly plan includes all SMS, email, voice, and AI features. Unlimited contacts, unlimited users, unlimited campaigns. No per-contact fees. No overage charges. The price you see is the price you pay."
+        "text": "No hidden fees. Contacts, users, workflows, and campaigns are unlimited at every tier, and there are no per-contact fees. Each plan includes a generous monthly pool of AI texts, voice minutes, and emails — sized so a typical agent at that lead volume never reaches it. If you do run hot, you add a usage block (see Usage Add-Ons above); we tell you before you get there and we never stop your AI mid-conversation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I go over my monthly usage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We tell you before you get there — and we never stop your AI mid-conversation with a lead. If you're running hot, you add a usage block ($35 per 1,000 texts, $79 per 250 voice minutes, $19 per 10,000 emails) and keep going. Blocks are one-time and don't change your monthly plan. Most agents never touch them: the allowances are sized so a typical agent at that lead volume stays comfortably inside."
       }
     },
     {
@@ -1458,7 +1466,7 @@
       "name": "How many leads/month is each plan designed for?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Basic: 50-150 leads/month. Pro: 100-500+ leads/month. Elite: 500+ leads/month across unlimited sub-accounts. These are guidelines, not hard limits."
+        "text": "Basic: 50-150 leads/month (2,000 AI texts, 250 voice minutes, 5,000 emails). Pro: 100-500 leads/month (5,000 texts, 750 minutes, 15,000 emails). Elite: 500+ leads/month (12,000 texts, 1,500 minutes, 40,000 emails). Lead counts are guidelines; the usage pools are the actual included amounts, and you can add blocks any time."
       }
     },
     {
@@ -1540,7 +1548,7 @@
     <!-- PRICING CARDS -->
     <section class="pricing-section" id="pricing">
         <h2 class="section-title">Monthly Plans</h2>
-        <p style="text-align:center;color:rgba(240,240,240,0.6);max-width:600px;margin:0 auto 3rem;">Choose the plan that matches your growth stage. All plans include unlimited contacts, unlimited users, and 24/7 AI automation.</p>
+        <p style="text-align:center;color:rgba(240,240,240,0.6);max-width:600px;margin:0 auto 3rem;">Choose the plan that matches your growth stage. All plans include unlimited contacts, unlimited users, unlimited workflows, and 24/7 AI automation, plus a monthly pool of AI texts, voice minutes, and emails.</p>
         <div class="pricing-grid">
             <div class="pricing-card">
                 <div class="pricing-name">Basic</div>
@@ -1548,6 +1556,14 @@
                 <div class="pricing-period">per month &bull; billed monthly</div>
                 <div style="background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.2);padding:0.7rem;border-radius:8px;margin-bottom:1.5rem;text-align:center;">
                     <strong style="color:var(--orange);font-size:0.85rem;">&#128176; Annual: $4,970/year (Save $994)</strong>
+                </div>
+                <div style="background:rgba(0,212,255,0.07);border:1px solid rgba(0,212,255,0.25);padding:0.85rem 1rem;border-radius:8px;margin-bottom:1.2rem;">
+                    <div style="color:var(--blue-accent);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;margin-bottom:0.5rem;">Monthly usage included</div>
+                    <div style="color:rgba(240,240,240,0.85);font-size:0.9rem;line-height:1.9;">
+                        <strong style="color:#fff;">2,000</strong> AI text messages<br>
+                        <strong style="color:#fff;">250</strong> AI voice minutes<br>
+                        <strong style="color:#fff;">5,000</strong> emails
+                    </div>
                 </div>
                 <ul class="pricing-features">
                     <li>AI Text &amp; Email Automation</li>
@@ -1579,6 +1595,14 @@
                 <div style="background:rgba(255,107,53,0.08);border:1px solid rgba(255,107,53,0.2);padding:0.7rem;border-radius:8px;margin-bottom:1.5rem;text-align:center;">
                     <strong style="color:var(--orange);font-size:0.85rem;">&#128176; Annual: $6,950/year (Save $1,390)</strong>
                 </div>
+                <div style="background:rgba(0,212,255,0.07);border:1px solid rgba(0,212,255,0.25);padding:0.85rem 1rem;border-radius:8px;margin-bottom:1.2rem;">
+                    <div style="color:var(--blue-accent);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;margin-bottom:0.5rem;">Monthly usage included</div>
+                    <div style="color:rgba(240,240,240,0.85);font-size:0.9rem;line-height:1.9;">
+                        <strong style="color:#fff;">5,000</strong> AI text messages<br>
+                        <strong style="color:#fff;">750</strong> AI voice minutes<br>
+                        <strong style="color:#fff;">15,000</strong> emails
+                    </div>
+                </div>
                 <ul class="pricing-features">
                     <li><strong style="color:var(--white);">Everything in Basic, plus:</strong></li>
                     <li>Video Email Follow-Up (VSSL)</li>
@@ -1605,6 +1629,14 @@
                 <div style="background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.15);padding:0.7rem;border-radius:8px;margin-bottom:1.5rem;text-align:center;">
                     <strong style="color:var(--blue-accent);font-size:0.85rem;">&#128176; Annual: $9,950/year (Save $1,990)</strong>
                 </div>
+                <div style="background:rgba(0,212,255,0.07);border:1px solid rgba(0,212,255,0.25);padding:0.85rem 1rem;border-radius:8px;margin-bottom:1.2rem;">
+                    <div style="color:var(--blue-accent);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;margin-bottom:0.5rem;">Monthly usage included</div>
+                    <div style="color:rgba(240,240,240,0.85);font-size:0.9rem;line-height:1.9;">
+                        <strong style="color:#fff;">12,000</strong> AI text messages<br>
+                        <strong style="color:#fff;">1,500</strong> AI voice minutes<br>
+                        <strong style="color:#fff;">40,000</strong> emails
+                    </div>
+                </div>
                 <ul class="pricing-features">
                     <li><strong style="color:var(--white);">Everything in Pro, plus:</strong></li>
                     <li>IDX Property Alerts Automation</li>
@@ -1622,6 +1654,28 @@
                 </ul>
                 <p style="background:rgba(0,212,255,0.04);border-left:3px solid var(--blue-accent);padding:0.8rem;border-radius:6px;color:rgba(240,240,240,0.7);font-size:0.85rem;margin-bottom:1.5rem;"><strong style="color:var(--white);">Best for:</strong> Large teams, brokerages, agencies, resellers, enterprise needs</p>
                 <a href="/#contact" class="pricing-cta" style="display:block;text-align:center;text-decoration:none;">Book Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- USAGE ADD-ONS -->
+    <section style="padding:4rem 2rem;" id="usage">
+        <div style="max-width:820px;margin:0 auto;">
+            <h2 class="section-title" style="color:var(--orange);">Usage Add-Ons</h2>
+            <p style="text-align:center;color:rgba(240,240,240,0.6);max-width:640px;margin:0 auto 2.5rem;line-height:1.8;">Every plan includes a monthly pool of AI texts, voice minutes, and emails, sized so a typical agent at that lead volume never reaches it. Have a big month? Add what you need, when you need it.</p>
+            <div style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;background:var(--dark-alt);border-radius:12px;overflow:hidden;">
+                <tr style="background:rgba(255,255,255,0.04);">
+                    <th style="padding:1rem;text-align:left;color:rgba(240,240,240,0.55);font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;">Add-on block</th>
+                    <th style="padding:1rem;text-align:right;color:rgba(240,240,240,0.55);font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;">Price</th>
+                </tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:1rem;color:rgba(240,240,240,0.85);">1,000 additional AI text messages</td><td style="padding:1rem;text-align:right;color:var(--white);font-weight:700;">$35</td></tr>
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:1rem;color:rgba(240,240,240,0.85);">250 additional AI voice minutes</td><td style="padding:1rem;text-align:right;color:var(--white);font-weight:700;">$79</td></tr>
+                <tr><td style="padding:1rem;color:rgba(240,240,240,0.85);">10,000 additional emails</td><td style="padding:1rem;text-align:right;color:var(--white);font-weight:700;">$19</td></tr>
+            </table>
+            </div>
+            <div style="margin-top:1.5rem;padding:1.1rem 1.4rem;border:1px solid rgba(76,175,80,0.3);background:rgba(76,175,80,0.06);border-radius:10px;">
+                <p style="margin:0;color:rgba(240,240,240,0.8);line-height:1.8;font-size:0.95rem;"><strong style="color:#7bd88a;">We never cut your AI off mid-conversation.</strong> You get a heads-up as you approach your monthly pool, and nothing is added to your bill without your say-so. Blocks are one-time &mdash; they don't change your monthly plan, and unused plan allowance doesn't roll over.</p>
             </div>
         </div>
     </section>
@@ -1663,8 +1717,9 @@
         <div class="faq-container">
             <div class="faq-item"><div class="faq-question">What's included in the $999 setup fee?<span class="faq-toggle">&#9660;</span></div><div class="faq-answer">Everything. Your complete system configuration, all lead source integrations (Zillow, Realtor.com, Facebook, Google, Espresso Agent, IDX Broker, etc.), pre-loaded NEPQ and Reverse Selling workflow sequences, custom AI voice training, landing page builds, and a live onboarding call where we walk you and your team through the entire system.</div></div>
             <div class="faq-item"><div class="faq-question">Is there a contract? Can I cancel?<span class="faq-toggle">&#9660;</span></div><div class="faq-answer">No contract. Month-to-month billing on all plans. You can cancel anytime, but we're confident you won't want to once you see the results. If you choose annual billing, you'll lock in significant savings (10-20% discount).</div></div>
-            <div class="faq-item"><div class="faq-question">Are there any hidden fees or overage charges?<span class="faq-toggle">&#9660;</span></div><div class="faq-answer">No. Your monthly plan includes all SMS, email, voice, and AI features. Unlimited contacts, unlimited users, unlimited campaigns. No per-contact fees. No overage charges. The price you see is the price you pay.</div></div>
-            <div class="faq-item"><div class="faq-question">How many leads/month is each plan designed for?<span class="faq-toggle">&#9660;</span></div><div class="faq-answer"><strong>Basic:</strong> 50-150 leads/month. <strong>Pro:</strong> 100-500+ leads/month. <strong>Elite:</strong> 500+ leads/month across unlimited sub-accounts. These are guidelines, not hard limits.</div></div>
+            <div class="faq-item"><div class="faq-question">Are there any hidden fees or overage charges?<span class="faq-toggle">&#9660;</span></div><div class="faq-answer">No hidden fees. Contacts, users, workflows, and campaigns are unlimited at every tier, and there are no per-contact fees. Each plan includes a generous monthly pool of AI texts, voice minutes, and emails &mdash; sized so a typical agent at that lead volume never reaches it. If you do run hot, you add a usage block (see Usage Add-Ons above); we tell you before you get there and we never stop your AI mid-conversation.</div></div>
+            <div class="faq-item"><div class="faq-question">What happens if I go over my monthly usage?<span class="faq-toggle">&#9660;</span></div><div class="faq-answer">We tell you before you get there &mdash; and we never stop your AI mid-conversation with a lead. If you're running hot, you add a usage block ($35 per 1,000 texts, $79 per 250 voice minutes, $19 per 10,000 emails) and keep going. Blocks are one-time and don't change your monthly plan. Most agents never touch them: the allowances are sized so a typical agent at that lead volume stays comfortably inside.</div></div>
+            <div class="faq-item"><div class="faq-question">How many leads/month is each plan designed for?<span class="faq-toggle">&#9660;</span></div><div class="faq-answer"><strong>Basic:</strong> 50-150 leads/month (2,000 AI texts, 250 voice minutes, 5,000 emails). <strong>Pro:</strong> 100-500 leads/month (5,000 texts, 750 minutes, 15,000 emails). <strong>Elite:</strong> 500+ leads/month (12,000 texts, 1,500 minutes, 40,000 emails). Lead counts are guidelines; the usage pools are the actual included amounts, and you can add blocks any time.</div></div>
             <div class="faq-item"><div class="faq-question">Can I upgrade or downgrade my plan?<span class="faq-toggle">&#9660;</span></div><div class="faq-answer">Yes. Upgrade or downgrade anytime. If you upgrade, we'll prorate the difference. If you downgrade, we'll credit the overage to your next billing cycle. No penalties.</div></div>
             <div class="faq-item"><div class="faq-question">What payment methods do you accept?<span class="faq-toggle">&#9660;</span></div><div class="faq-answer">We accept all major credit cards (Visa, Mastercard, American Express) and ACH transfers for annual plans. Invoicing available for annual contracts. Payment is processed securely through Stripe.</div></div>
             <div class="faq-item"><div class="faq-question">Is there a free trial?<span class="faq-toggle">&#9660;</span></div><div class="faq-answer">We offer a personalized demo and consultation (free) to see if AI Sales Pipeline is right for you. Once you decide to move forward, we do a 7-14 day custom build. The setup fee ($999) is a one-time investment.</div></div>
