@@ -41,7 +41,7 @@
 
     <!-- AI Content Declaration -->
     <meta name="ai-content-declaration" content="human-authored">
-    <meta name="llm-context" content="AI Sales Pipeline is an AI-powered real estate CRM and lead follow-up platform. It automates lead engagement using AI text messaging, AI email sequences, and AI voice calling 24/7. Built specifically for real estate agents, teams, and brokerages. Core capabilities include: 60-second lead response, NEPQ psychology-based follow-up scripts, FSBO and expired listing automation, AI clone video personalization, lead scoring, Facebook retargeting, appointment booking, and pipeline management. Pricing: $497/mo Basic, $695/mo Pro, $995/mo Elite, plus $4,995 one-time setup. The platform replaces the need for an ISA (Inside Sales Agent) at a fraction of the cost.">
+    <meta name="llm-context" content="AI Sales Pipeline is an AI-powered real estate CRM and lead follow-up platform. It automates lead engagement using AI text messaging, AI email sequences, and 24/7 AI call answering. Built specifically for real estate agents, teams, and brokerages. Core capabilities include: 60-second lead response, NEPQ psychology-based follow-up scripts, FSBO and expired listing automation, AI clone video personalization, lead scoring, Facebook retargeting, appointment booking, and pipeline management. Pricing: $497/mo Basic, $695/mo Pro, $995/mo Elite, plus $999 one-time setup. The platform replaces the need for an ISA (Inside Sales Agent) at a fraction of the cost.">
     
     <!-- Canonical & Language -->
     <link rel="canonical" href="https://aisalespipeline.com/">
@@ -82,16 +82,16 @@
 
     <!-- Schema.org: Organization, SoftwareApplication, WebSite + Speakable, FAQPage -->
     <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "Organization", "name": "AI Sales Pipeline", "alternateName": "AI Sales Pipeline CRM", "url": "https://aisalespipeline.com", "logo": "https://aisalespipeline.com/images/logo.png", "description": "The autonomous AI sales pipeline platform — built for real estate, applicable to any sales motion. AI iMessage, email, AI clone video, and AI voice calling 24/7.", "founder": { "@type": "Person", "name": "Jorge Ramirez",
+    { "@context": "https://schema.org", "@type": "Organization", "name": "AI Sales Pipeline", "alternateName": "AI Sales Pipeline CRM", "url": "https://aisalespipeline.com", "logo": "https://aisalespipeline.com/images/logo.png", "description": "The AI sales pipeline platform built for real estate. AI text messaging, AI email, AI clone video, and 24/7 AI call answering with missed-call text-back.", "founder": { "@type": "Person", "name": "Jorge Ramirez",
         "hasCredential": {"@type": "EducationalOccupationalCredential", "credentialCategory": "NJ Real Estate License", "identifier": "1754604"}, "jobTitle": "Founder", "url": "https://www.thejorgeramirezgroup.com" }, "contactPoint": { "@type": "ContactPoint", "telephone": "+1-908-230-7844", "contactType": "Sales", "email": "jorgeramirez76@gmail.com", "availableLanguage": ["English", "Spanish"] }, "sameAs": ["https://www.thejorgeramirezgroup.com", "https://twitter.com/jorgesellsnjhomes"], "address": { "@type": "PostalAddress", "addressRegion": "NJ", "addressCountry": "US" } }
     </script>
     <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AI Sales Pipeline", "applicationCategory": "BusinessApplication", "applicationSubCategory": "AI Sales Automation, AI CRM, AI Sales Pipeline", "operatingSystem": "Web Browser, iOS, Android", "url": "https://aisalespipeline.com", "description": "Autonomous AI sales pipeline platform that captures, qualifies, engages, and converts leads across iMessage, email, AI clone video, and AI voice calling — 24/7 without human intervention.", "offers": [
+    { "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AI Sales Pipeline", "applicationCategory": "BusinessApplication", "applicationSubCategory": "AI Sales Automation, AI CRM, AI Sales Pipeline", "operatingSystem": "Web Browser, iOS, Android", "url": "https://aisalespipeline.com", "description": "AI sales pipeline platform that captures, qualifies, engages, and converts leads across text messaging, email, AI clone video, and 24/7 AI call answering — with human takeover any time.", "offers": [
       { "@type": "Offer", "name": "Basic", "price": "497", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "497", "priceCurrency": "USD", "billingDuration": "P1M" } },
       { "@type": "Offer", "name": "Pro", "price": "695", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "695", "priceCurrency": "USD", "billingDuration": "P1M" } },
       { "@type": "Offer", "name": "Elite", "price": "995", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "995", "priceCurrency": "USD", "billingDuration": "P1M" } }
     ], "creator": { "@type": "Person", "name": "Jorge Ramirez",
-        "hasCredential": {"@type": "EducationalOccupationalCredential", "credentialCategory": "NJ Real Estate License", "identifier": "1754604"}, "url": "https://www.thejorgeramirezgroup.com" }, "featureList": ["AI iMessage", "AI Email", "AI Voice Calling", "AI Clone Video", "Lead Temperature Scoring", "NEPQ Scripts", "Mulrenin Reverse-Selling Scripts", "AI Appointment Booking", "FSBO Automation", "Expired Listing Automation", "A2P 10DLC Compliance"] }
+        "hasCredential": {"@type": "EducationalOccupationalCredential", "credentialCategory": "NJ Real Estate License", "identifier": "1754604"}, "url": "https://www.thejorgeramirezgroup.com" }, "featureList": ["AI Text Messaging", "AI Email", "24/7 AI Call Answering", "AI Clone Video", "Lead Temperature Scoring", "NEPQ Scripts", "Mulrenin Reverse-Selling Scripts", "AI Appointment Booking", "FSBO Automation", "Expired Listing Automation", "A2P 10DLC Compliance"] }
     </script>
     <script type="application/ld+json">
     { "@context": "https://schema.org", "@type": "WebSite", "name": "AI Sales Pipeline", "url": "https://aisalespipeline.com", "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".hero h1", ".hero-subtitle", ".speakable-summary"] } }
@@ -257,11 +257,43 @@
 
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(5,8,15,0.98);
+                flex-direction: column;
+                padding: 10px 24px 16px;
+                gap: 0;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links li {
+                padding: 10px 0;
+            }
+
+            nav#navbar .nav-toggle {
+                display: block;
             }
 
             .nav-logo {
                 font-size: 1.5rem;
             }
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.7rem;
+            line-height: 1;
+            cursor: pointer;
+            padding: 4px 10px;
         }
 
         /* ============ HERO SECTION ============ */
@@ -272,7 +304,7 @@
                 url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80');
             background-size: cover, cover, cover;
             background-position: center, center, center;
-            background-attachment: fixed, fixed, fixed;
+            background-attachment: scroll, scroll, scroll;
             background-blend-mode: normal, multiply, normal;
             min-height: 100vh;
             display: flex;
@@ -683,7 +715,7 @@
                 url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1920&q=80&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-attachment: scroll;
             padding: 5rem 2rem;
             position: relative;
         }
@@ -1346,226 +1378,87 @@
         }
     </style>
     
-    <!-- JSON-LD Schema Markup -->
-    <!-- Organization Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "AI Sales Pipeline",
-        "url": "https://aisalespipeline.com",
-        "logo": "https://aisalespipeline.com/images/logo.png",
-        "description": "AI-powered real estate CRM automating lead capture, follow-up and conversions 24/7",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Sales",
-            "email": "jorgeramirez76@gmail.com",
-            "telephone": "+1-908-230-7844"
-        },
-        "sameAs": [
-            "https://twitter.com/aisalespipeline",
-            "https://linkedin.com/company/aisalespipeline"
-        ]
-    }
-    </script>
-    
-    <!-- Software Application Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "AI Sales Pipeline",
-        "description": "AI-powered real estate CRM with automated lead follow-up via AI text messaging, email, and voice calling. Built for real estate agents, teams, and brokerages.",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web-based, iOS, Android",
-        "offers": [
-            {
-                "@type": "Offer",
-                "name": "Basic Plan",
-                "priceCurrency": "USD",
-                "price": "497",
-                "priceValidUntil": "2026-12-31",
-                "description": "Solo agents — AI text, email, voice automation, pipeline management, and more"
-            },
-            {
-                "@type": "Offer",
-                "name": "Pro Plan",
-                "priceCurrency": "USD",
-                "price": "695",
-                "priceValidUntil": "2026-12-31",
-                "description": "Growing agents and teams — all Basic features plus video email, WhatsApp, power dialer, and AI content generation"
-            },
-            {
-                "@type": "Offer",
-                "name": "Elite Plan",
-                "priceCurrency": "USD",
-                "price": "995",
-                "priceValidUntil": "2026-12-31",
-                "description": "Teams and brokerages — all Pro features plus branded apps, API access, reseller mode, and strategy calls"
-            }
-        ],
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "ratingCount": "47"
-        }
-    }
-    </script>
-    
-    <!-- HowTo Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        "name": "How AI Sales Pipeline Works",
-        "description": "5-step process to automate your real estate sales",
-        "step": [
-            {
-                "@type": "HowToStep",
-                "position": 1,
-                "name": "Connect Your Data",
-                "description": "Integrate with your existing CRM, websites, and lead sources"
-            },
-            {
-                "@type": "HowToStep",
-                "position": 2,
-                "name": "AI Analyzes Leads",
-                "description": "Our AI instantly qualifies leads and prioritizes high-value prospects"
-            },
-            {
-                "@type": "HowToStep",
-                "position": 3,
-                "name": "Automated Follow-Up",
-                "description": "Intelligent follow-up sequences across email, SMS, and phone"
-            },
-            {
-                "@type": "HowToStep",
-                "position": 4,
-                "name": "Real-Time Notifications",
-                "description": "Get alerted when a lead is ready to move forward"
-            },
-            {
-                "@type": "HowToStep",
-                "position": 5,
-                "name": "Close More Deals",
-                "description": "Convert more leads with AI-powered timing and personalization"
-            }
-        ]
-    }
-    </script>
     
     <!-- FAQ Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is AI Sales Pipeline?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "AI Sales Pipeline is an AI-powered CRM built specifically for real estate agents. It automates lead follow-up using AI text messaging, AI email sequences, and AI voice calling — responding to every new lead in under 60 seconds, 24/7. The platform includes lead scoring, FSBO automation, expired listing automation, appointment booking, and pipeline management, all designed for real estate workflows."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How much time does AI Sales Pipeline save?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Most agents save 15-20 hours per week on lead follow-up, qualification, and administrative tasks. This frees you to focus on high-value activities like listing presentations and client relationships."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Does AI Sales Pipeline work for FSBO automation?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. AI Sales Pipeline has specialized modules for FSBO (For Sale By Owner) automation, including automated outreach, value proposition messaging, and follow-up sequences optimized for FSBO conversion."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I automate expired listing follow-up?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely. The Expired Listing Automation module automatically identifies expired listings, crafts personalized outreach messages, and manages multi-touch follow-up sequences until you get the listing."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is AI Sales Pipeline available in New Jersey?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. AI Sales Pipeline serves real estate agents throughout New Jersey, including North Jersey, Central Jersey, and South Jersey markets. We're fully localized for NJ real estate practices."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How does AI Sales Pipeline compare to GoHighLevel?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Unlike GoHighLevel, which is a general business automation tool, AI Sales Pipeline is purpose-built for real estate. We have specialized features for real estate workflows, deeper integrations with real estate platforms, and AI tuned specifically for real estate sales cycles."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Does it work with HubSpot?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. AI Sales Pipeline integrates seamlessly with HubSpot CRM. We enhance HubSpot's capabilities with real estate-specific AI automation and lead intelligence."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What about data security and privacy?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "AI Sales Pipeline uses enterprise-grade encryption, GDPR/CCPA compliance, and regular security audits. Your lead data is your property and never sold or shared."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I cancel anytime?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. All plans are month-to-month with no long-term contracts. You can cancel anytime with one click."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Do you offer a free trial?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We offer a free personalized consultation and demo to show you exactly how AI Sales Pipeline works for your market and lead sources. Once you decide to move forward, our team handles the full 14-day setup."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How is AI Sales Pipeline different from GoHighLevel or HubSpot?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "GoHighLevel is a generic business automation tool. HubSpot is an enterprise CRM. Neither is built for real estate. AI Sales Pipeline is purpose-built for real estate agents with pre-loaded NEPQ psychology scripts, real estate lead source integrations (Zillow, Realtor.com, IDX), FSBO and expired listing automation modules, and AI that responds to leads in under 60 seconds."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How much does AI Sales Pipeline cost?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Plans start at $497/month for solo agents (Basic), $695/month for growing agents and teams (Pro), and $995/month for brokerages (Elite). A one-time $4,995 setup fee covers full system configuration, AI training, integrations, and personalized onboarding. Annual billing saves 10-20%. We offer a 90-day money-back guarantee on the setup fee."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Does AI Sales Pipeline work for FSBO and expired listing leads?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. The FSBO automation module integrates with Espresso Agent for daily data import, then runs power dialer calls, voicemail drops, and NEPQ-crafted SMS sequences automatically. The expired listing module starts multi-channel outreach the morning a listing expires. Both modules include AI appointment booking."
-                }
-            }
-        ]
+      "@type": "Question",
+      "name": "How does the AI Clone Video actually work? ▼",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use cutting-edge AI video generation to create a lifelike video of you. You record a sample video, our AI learns your facial expressions and voice patterns, and then generates personalized videos for each lead. They'll hear their name, see you addressing them directly, and feel like they got a personal message — because they did."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I customize the messaging and workflows? ▼",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Every workflow is fully customizable. You can adjust messaging, timing, triggers, and sequences. We also have pre-built templates for FSBO, Expired, Downsizer, and Buyer workflows that you can modify to fit your style."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What integrations do you support? ▼",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We integrate with Zillow, Follow Up Boss, Pipedrive, HubSpot, Google Sheets, Facebook Ads, and more. If you need an integration with another platform, let us know — we're constantly adding new connections."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to set up? ▼",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your system is live in 7-14 days. We build everything &mdash; lead-source integrations, NEPQ workflows, your AI training &mdash; and you show up to the launch call. Complex multi-agent setups get white-glove onboarding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this compliant with FTC regulations? ▼",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our system includes opt-out mechanisms, clear disclosures about automated outreach, and compliance tools to ensure you meet all FTC, TCPA, and GDPR requirements. We're constantly updated as regulations evolve."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this for both buyer and seller leads? ▼",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We have specialized workflows for both. Our system can intelligently route leads based on their intent, and you can customize your approach for buyers vs. sellers within the same dashboard. See our seller workflows and buyer workflows feature pages for details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is AI Sales Pipeline different from GoHighLevel or HubSpot? ▼",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GoHighLevel is a generic business automation tool. HubSpot is an enterprise CRM. Neither is built for real estate. AI Sales Pipeline is purpose-built for real estate agents with pre-loaded NEPQ scripts, real estate lead source integrations (Zillow, Realtor.com, IDX), FSBO and expired listing automation modules, and AI that responds to leads in 60 seconds. See the full comparison."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does AI Sales Pipeline cost? ▼",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plans start at $497/month for solo agents (Basic), $695/month for growing agents and teams (Pro), and $995/month for brokerages and teams (Elite). There is a one-time $999 setup fee that covers full system configuration, AI training, integrations, and personalized onboarding. We offer a 90-day money-back guarantee on the setup fee. See full pricing details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does AI Sales Pipeline work for FSBO and expired listing leads? ▼",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — these are two of our strongest features. The FSBO module runs NEPQ-scripted SMS and email sequences automatically, and the expired listing module starts outreach the morning a listing expires. Power dialer campaigns and voicemail drops are rolling out; FSBO data imports (including Espresso Agent lists) get set up during your build. Learn about FSBO automation or expired listing automation."
+      }
     }
+  ]
+}
     </script>
     
     <!-- BreadcrumbList Schema -->
@@ -1599,60 +1492,6 @@
     }
     </script>
 
-    <!-- LocalBusiness schema for NJ regional SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "@id": "https://aisalespipeline.com/#localbusiness",
-        "name": "AI Sales Pipeline",
-        "description": "AI-powered CRM and lead automation platform for real estate agents in New Jersey and nationwide. Built by a 15-year licensed NJ realtor.",
-        "url": "https://aisalespipeline.com/",
-        "image": "https://aisalespipeline.com/images/logo.png",
-        "logo": "https://aisalespipeline.com/images/logo.png",
-        "telephone": "+1-908-230-7844",
-        "email": "jorgeramirez76@gmail.com",
-        "priceRange": "$497-$995",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Summit",
-            "addressRegion": "NJ",
-            "postalCode": "07901",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "40.7155",
-            "longitude": "-74.3649"
-        },
-        "areaServed": [
-            {"@type": "State", "name": "New Jersey"},
-            {"@type": "Country", "name": "United States"}
-        ],
-        "founder": {
-            "@type": "Person",
-            "name": "Jorge Ramirez",
-            "jobTitle": "Founder & Real Estate Agent",
-            "worksFor": {
-                "@type": "Organization",
-                "name": "The Jorge Ramirez Group at Keller Williams Premier Properties"
-            }
-        },
-        "sameAs": [
-            "https://www.facebook.com/jorgeramirezrealtor",
-            "https://www.instagram.com/jorgesellsnjhomes",
-            "https://www.linkedin.com/in/jorge-ramirez-realtor",
-            "https://www.thejorgeramirezgroup.com"
-        ],
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-            "opens": "00:00",
-            "closes": "23:59",
-            "description": "AI automation runs 24/7"
-        }
-    }
-    </script>
 </head>
 <body>
     <!-- NAVIGATION -->
@@ -1664,6 +1503,7 @@
         <ul class="nav-links">
             <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#features">Features</a></li>
+            <li><a href="/industries/">Industries</a></li>
             <li><a href="/simulation.html">Live Simulation</a></li>
             <li><a href="/pricing.html">Pricing</a></li>
             <li><a href="/comparison.html">Compare</a></li>
@@ -1671,6 +1511,7 @@
         </ul>
         <a href="/es/" class="nav-lang" hreflang="es-US" title="Cambiar a Español" aria-label="Switch to Spanish version">🇪🇸 ES</a>
         <a href="#contact" class="nav-cta">Book Demo</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="var n=document.querySelector('.nav-links');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'));">☰</button>
     </nav>
 
     <!-- HERO SECTION -->
@@ -1689,7 +1530,7 @@
             </p>
             <div class="hero-ctas">
                 <a href="#contact" class="cta-primary">Book Your Free Demo</a>
-                <a href="#how-it-works" class="cta-secondary">See How It Works</a>
+                <a href="/simulation.html" class="cta-secondary">▶ Watch the AI Work a Lead (Interactive Demo)</a>
             </div>
         </div>
         <div class="scroll-indicator" aria-hidden="true">
@@ -1699,54 +1540,35 @@
         </div>
     </section>
 
-    <!-- TRUSTED BY / SOCIAL PROOF BAR -->
-    <section class="trusted-by" aria-label="Trusted technology integrations">
-        <p class="trusted-label">Built on enterprise-grade technology, trusted by</p>
+    <!-- INFRASTRUCTURE BAR -->
+    <section class="trusted-by" aria-label="Technology infrastructure">
+        <p class="trusted-label">Runs on</p>
         <div class="trusted-logos">
-            <div class="trusted-logo">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
-                <span>Facebook</span>
-            </div>
-            <div class="trusted-logo">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
-                <span>Twilio</span>
-            </div>
-            <div class="trusted-logo">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972a6.033 6.033 0 1 1 0-12.064c1.498 0 2.866.549 3.921 1.453l2.814-2.814A9.969 9.969 0 0 0 12.545 2.5C7.021 2.5 2.543 6.978 2.543 12.5s4.478 10 10.002 10c8.396 0 10.249-7.85 9.426-11.748l-9.426-.013z"/></svg>
-                <span>Google AI</span>
-            </div>
-            <div class="trusted-logo">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                <span>GitHub</span>
-            </div>
-            <div class="trusted-logo">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.372-12 12 0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm-1.165 18.422l-7.038-3.526v-2.45l7.038 3.526v2.45zm0-4.97l-7.038-3.526v-2.45l7.038 3.526v2.45zm9.368 4.97l-7.039-3.526v-2.45l7.039 3.526v2.45zm0-4.97l-7.039-3.526v-2.45l7.039 3.526v2.45z"/></svg>
-                <span>Anthropic</span>
-            </div>
-            <div class="trusted-logo">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
-                <span>OpenAI</span>
-            </div>
+            <div class="trusted-logo"><span>Twilio</span></div>
+            <div class="trusted-logo"><span>OpenAI</span></div>
+            <div class="trusted-logo"><span>Anthropic</span></div>
+            <div class="trusted-logo"><span>Google Cloud</span></div>
         </div>
+        <p class="trusted-label" style="margin-top:10px;">The same AI and telephony infrastructure used by Fortune 500 sales teams.</p>
     </section>
 
     <!-- STATS BAR -->
     <section class="stats-bar">
         <div class="stat-item">
-            <div class="stat-number"><span class="stat-counter">92</span>%</div>
-            <div class="stat-label">Lead Capture Rate</div>
-        </div>
-        <div class="stat-item">
             <div class="stat-number">&lt;<span class="stat-counter">60</span>s</div>
-            <div class="stat-label">Avg Response Time</div>
+            <div class="stat-label">First AI Response</div>
         </div>
         <div class="stat-item">
             <div class="stat-number">24/7</div>
-            <div class="stat-label">Automation</div>
+            <div class="stat-label">Nights, Weekends, Holidays</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number"><span class="stat-counter">300</span>%</div>
-            <div class="stat-label">ROI Increase</div>
+            <div class="stat-number">7&ndash;<span class="stat-counter">12</span></div>
+            <div class="stat-label">Automated Touches Per Lead</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number"><span class="stat-counter">2</span></div>
+            <div class="stat-label">Languages: English + Spanish</div>
         </div>
     </section>
 
@@ -1770,21 +1592,7 @@
     </section>
 
     <!-- HOW IT WORKS -->
-    <!-- DEFINITION SECTION FOR SEO -->
-    <section style="background: #0f0f0f; padding: 60px 40px; max-width: 1200px; margin: 0 auto;">
-        <div style="max-width: 800px;">
-            <h2 style="font-size: 28px; color: #ff6b35; margin-bottom: 20px;">What is AI Sales Pipeline?</h2>
-            <p style="color: #e0e0e0; font-size: 16px; line-height: 1.8; margin-bottom: 15px;">
-                <strong>AI Sales Pipeline is an AI-powered CRM and lead follow-up system built specifically for real estate agents.</strong> It automates your entire sales process — from the moment a lead enters your pipeline through conversion — using <a href="/features/ai-sms-real-estate.html" style="color:#ff6b35;">AI text messaging</a>, <a href="/features/ai-email-real-estate.html" style="color:#ff6b35;">AI email sequences</a>, and <a href="/features/ai-voice-calls-real-estate.html" style="color:#ff6b35;">AI voice calling</a>. Unlike generic CRMs like HubSpot or general automation tools like GoHighLevel, every feature is purpose-built for how real estate agents actually work.
-            </p>
-            <p style="color: #e0e0e0; font-size: 16px; line-height: 1.8; margin-bottom: 15px;">
-                The platform responds to new leads in under 60 seconds, qualifies them using <a href="/features/lead-scoring-real-estate.html" style="color:#ff6b35;">AI lead scoring</a>, and follows up persistently across SMS, email, and voice channels using NEPQ psychology-based scripts. It even generates personalized <a href="/features/ai-clone-video-real-estate.html" style="color:#ff6b35;">AI clone videos</a> of you — your face, your voice, your mannerisms — customized for each individual lead.
-            </p>
-            <p style="color: #e0e0e0; font-size: 16px; line-height: 1.8; margin-bottom: 15px;">
-                With specialized modules for <a href="/fsbo-automation.html" style="color:#ff6b35;">FSBO automation</a> and <a href="/expired-listing-automation.html" style="color:#ff6b35;">expired listing automation</a>, plus <a href="/features/seller-workflows-real-estate.html" style="color:#ff6b35;">seller workflows</a> and <a href="/features/buyer-workflows-real-estate.html" style="color:#ff6b35;">buyer workflows</a>, AI Sales Pipeline helps agents save 15-20+ hours per week on follow-up while dramatically increasing conversion rates. <a href="/pricing.html" style="color:#ff6b35;">See pricing</a> or <a href="/comparison.html" style="color:#ff6b35;">compare to other CRMs</a>.
-            </p>
-        </div>
-    </section>
+
 
     <section class="how-it-works" id="how-it-works">
         <h2 class="section-title">How It Works</h2>
@@ -1821,7 +1629,7 @@
                 <div class="step-card">
                     <div class="step-number">04</div>
                     <div class="step-title">AI CLONE VIDEO</div>
-                    <p class="step-description">The system generates a lifelike AI video of YOU — your face, your voice, your mannerisms — customized for each individual lead. It says their name. It references details from prior conversations. Nothing like it exists anywhere else.</p>
+                    <p class="step-description">The system generates a lifelike AI video of YOU — your face, your voice, your mannerisms — customized for each individual lead. It says their name. It references details from prior conversations. No mainstream real estate CRM offers this today.</p>
                 </div>
             </div>
 
@@ -1835,6 +1643,21 @@
             </div>
         </div>
     </section>
+
+    <!-- DEFINITION SECTION FOR SEO -->
+    <section style="background: #0f0f0f; padding: 48px 40px; max-width: 1200px; margin: 0 auto;">
+        <div style="max-width: 800px;">
+            <h2 style="font-size: 28px; color: #ff6b35; margin-bottom: 16px;">What is AI Sales Pipeline?</h2>
+            <p style="color: #e0e0e0; font-size: 16px; line-height: 1.8; margin-bottom: 15px;">
+                <strong>AI Sales Pipeline is an AI-powered CRM and lead follow-up system built specifically for real estate agents.</strong> It answers every new lead in under 60 seconds and follows up persistently across <a href="/features/ai-sms-real-estate.html" style="color:#ff6b35;">AI text</a>, <a href="/features/ai-email-real-estate.html" style="color:#ff6b35;">AI email</a>, and <a href="/features/ai-clone-video-real-estate.html" style="color:#ff6b35;">personalized AI video</a> using NEPQ psychology-based scripts &mdash; so nothing in your pipeline goes cold while you're at appointments.
+            </p>
+            <p style="color: #888; font-size: 14.5px; line-height: 1.8;">
+                Deep dives: <a href="/features/lead-scoring-real-estate.html" style="color:#ff6b35;">lead scoring</a> &middot; <a href="/fsbo-automation.html" style="color:#ff6b35;">FSBO automation</a> &middot; <a href="/expired-listing-automation.html" style="color:#ff6b35;">expired listings</a> &middot; <a href="/features/seller-workflows-real-estate.html" style="color:#ff6b35;">seller workflows</a> &middot; <a href="/features/buyer-workflows-real-estate.html" style="color:#ff6b35;">buyer workflows</a> &middot; <a href="/pricing.html" style="color:#ff6b35;">pricing</a> &middot; <a href="/comparison.html" style="color:#ff6b35;">compare CRMs</a> &middot; <a href="/ai-sales-pipeline-explained.html" style="color:#ff6b35;">the complete guide</a>
+            </p>
+        </div>
+    </section>
+
+
 
     
         <!-- INFOGRAPHIC SECTION -->
@@ -1900,21 +1723,21 @@
             <div class="feature-card">
                 <div class="feature-icon">🎙️</div>
                 <div class="feature-title">AI Voice Calling</div>
-                <p class="feature-description">AI places outbound calls, qualifies leads by phone, and books listing appointments on your calendar. Every call is recorded and transcribed. Includes power dialer for FSBO and expired prospecting.</p>
+                <p class="feature-description">AI answers your line 24/7, qualifies callers, and books listing appointments on your calendar. Missed calls get a personalized text back within seconds. Outbound AI calling campaigns are rolling out next.</p>
                 <a href="/features/ai-voice-calls-real-estate.html" style="display:inline-block; margin-top:12px; color:#ff6b35; font-size:0.85rem; font-weight:600; text-decoration:none;">Learn More →</a>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">🎬</div>
                 <div class="feature-title">AI Clone Video</div>
-                <p class="feature-description">AI generates a lifelike video of you — your face, your voice — personalized for each lead. It says their name and references their property interest. 3-5x higher engagement than plain text or email.</p>
+                <p class="feature-description">AI generates a lifelike video of you — your face, your voice — personalized for each lead. It says their name and references their property interest. Video follow-up gets dramatically more engagement than plain text.</p>
                 <a href="/features/ai-clone-video-real-estate.html" style="display:inline-block; margin-top:12px; color:#ff6b35; font-size:0.85rem; font-weight:600; text-decoration:none;">Learn More →</a>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">⭐</div>
                 <div class="feature-title">AI Lead Scoring</div>
-                <p class="feature-description">AI analyzes 50+ data points on every lead and ranks them as hot, warm, or cold. Know exactly who to call first every morning. Stop wasting time on leads that are not ready.</p>
+                <p class="feature-description">AI analyzes dozens of signals on every lead and ranks them as hot, warm, or cold. Know exactly who to call first every morning. Stop wasting time on leads that are not ready.</p>
                 <a href="/features/lead-scoring-real-estate.html" style="display:inline-block; margin-top:12px; color:#ff6b35; font-size:0.85rem; font-weight:600; text-decoration:none;">Learn More →</a>
             </div>
 
@@ -1950,43 +1773,14 @@
     </section>
 
     <!-- TESTIMONIALS SECTION -->
-    <section class="testimonials-section">
-        <h2 class="section-title">Real Results From Real Agents</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <p class="testimonial-text">"I was manually following up with 100+ leads per week. This system cuts my admin time by 80% while my conversion rate jumped to 34%. It's literally like having a team of assistants working 24/7."</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar" aria-hidden="true">SM</div>
-                    <div class="testimonial-author-text">
-                        <div class="testimonial-name">Sarah Martinez</div>
-                        <div class="testimonial-role">Real Estate Agent • Austin, TX</div>
-                    </div>
-                </div>
-                <div class="testimonial-metric">+$145K in new deals in 90 days</div>
-            </div>
-
-            <div class="testimonial-card">
-                <p class="testimonial-text">"The AI clone video feature is insane. Leads feel personally connected even though they're talking to AI. My deal close rate went from 12% to 29%. This isn't just a tool — it's a game changer."</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar blue" aria-hidden="true">MJ</div>
-                    <div class="testimonial-author-text">
-                        <div class="testimonial-name">Marcus Johnson</div>
-                        <div class="testimonial-role">Team Lead • Miami, FL</div>
-                    </div>
-                </div>
-                <div class="testimonial-metric">Closed 47 additional deals</div>
-            </div>
-
-            <div class="testimonial-card">
-                <p class="testimonial-text">"For the first time, I'm competing with big teams. My AI follows up faster and more consistently than offices 10x my size. I went from $400K to $1.2M in annual revenue in just 18 months."</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar purple" aria-hidden="true">JL</div>
-                    <div class="testimonial-author-text">
-                        <div class="testimonial-name">Jennifer Lee</div>
-                        <div class="testimonial-role">Solo Agent • Seattle, WA</div>
-                    </div>
-                </div>
-                <div class="testimonial-metric">200% revenue growth</div>
+    <section class="testimonials-section" id="founder">
+        <h2 class="section-title">Built by an Agent Who Needed It to Work</h2>
+        <div style="max-width:860px;margin:0 auto;display:flex;gap:36px;align-items:center;flex-wrap:wrap;justify-content:center;padding:0 24px;">
+            <img src="/images/jorge-ramirez.webp" alt="Jorge Ramirez, licensed New Jersey real estate agent and founder of AI Sales Pipeline" width="220" height="295" loading="lazy" style="border-radius:14px;flex:none;max-width:100%;box-shadow:0 12px 40px rgba(0,0,0,0.4);">
+            <div style="flex:1;min-width:280px;max-width:540px;">
+                <p style="color:#ccc;font-size:1.05rem;line-height:1.7;margin-bottom:14px;">I'm Jorge Ramirez, a licensed New Jersey real estate agent at Keller Williams since 2017. I built AI Sales Pipeline because I was losing deals to faster follow-up &mdash; now my own leads get a text back in under 60 seconds, in English or Spanish, while I'm at listing appointments.</p>
+                <p style="color:#ccc;font-size:1.05rem;line-height:1.7;margin-bottom:18px;">You're not buying software from a startup that's never held an open house. Book a demo and I'll show you the exact system running on my own business &mdash; live, not slides.</p>
+                <p style="margin:0;"><span style="color:#ff6b35;font-weight:700;">Jorge Ramirez</span><span style="color:#888;"> &middot; The Jorge Ramirez Group, Keller Williams &middot; Roselle Park, NJ</span></p>
             </div>
         </div>
     </section>
@@ -1994,14 +1788,15 @@
     <!-- PRICING SECTION -->
     <section class="pricing-section" id="pricing">
         <h2 class="section-title">Simple, Transparent Pricing</h2>
-        <div style="text-align:center; margin-bottom: 40px; padding: 28px 40px; background: linear-gradient(135deg, rgba(255,107,53,0.12) 0%, rgba(255,107,53,0.05) 100%); border: 1px solid rgba(255,107,53,0.3); border-radius: 12px; max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 48px;"><div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: #ff6b35; font-weight: 700; margin-bottom: 8px;">One-Time Setup Fee</div><div style="font-size: 2.8rem; font-weight: 800; color: white; margin-bottom: 8px;">$4,995</div><div style="color: #888; font-size: 1rem;">Full system configuration, AI training, integrations, NEPQ script setup, and personalized onboarding. We build everything — you show up to the launch call.</div></div><div class="pricing-grid">
+        <p style="text-align:center;max-width:700px;margin:0 auto 28px;color:#aaa;font-size:1.05rem;line-height:1.7;">A part-time human ISA costs $30,000+ a year, works 20 hours a week, and quits. The full system below costs a fraction of that &mdash; and answers every lead in 60 seconds, 365 nights a year.</p>
+        <div style="text-align:center; margin-bottom: 40px; padding: 28px 40px; background: linear-gradient(135deg, rgba(255,107,53,0.12) 0%, rgba(255,107,53,0.05) 100%); border: 1px solid rgba(255,107,53,0.3); border-radius: 12px; max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 48px;"><div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: #ff6b35; font-weight: 700; margin-bottom: 8px;">One-Time Setup Fee</div><div style="font-size: 2.8rem; font-weight: 800; color: white; margin-bottom: 8px;">$999</div><div style="color: #888; font-size: 1rem;">Full system configuration, AI training, integrations, NEPQ script setup, and personalized onboarding. We build everything — you show up to the launch call.</div></div><div class="pricing-grid">
             <div class="pricing-card">
                 <div class="pricing-name">Basic</div>
                 <div class="pricing-price">$497</div>
                 <div class="pricing-period">per month</div>
                 <ul class="pricing-features">
                     <li>AI Text &amp; Email Automation</li>
-                    <li>AI Voice Calling</li>
+                    <li>24/7 AI Call Answering</li>
                     <li>Missed Call Text-Back</li>
                     <li>Lead Pipeline Management</li>
                     <li>Workflow Builder (Unlimited)</li>
@@ -2043,6 +1838,10 @@
                 </ul>
                 <a href="#contact" class="pricing-cta" style="display:block;text-align:center;text-decoration:none;">Book Consultation</a>
             </div>
+        </div>
+        <div style="text-align:center;margin-top:2rem;max-width:640px;margin-left:auto;margin-right:auto;padding:18px 26px;border:1px solid rgba(76,175,80,0.35);border-radius:10px;background:rgba(76,175,80,0.07);">
+            <strong style="color:#7bd88a;">90-Day Money-Back Guarantee</strong>
+            <span style="color:#aaa;"> &mdash; if you don't see measurable results in your first 90 days, we refund the $999 setup fee.</span>
         </div>
         <p style="text-align:center;margin-top:1.5rem;"><a href="/pricing.html" style="color:var(--orange);text-decoration:none;font-weight:600;">See Full Pricing Details &amp; Plan Comparison →</a></p>
     </section>
@@ -2087,7 +1886,7 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    Most agents are up and running in 24 hours. We handle the integration, you provide some basic setup info, and our team gets your workflows configured. For more complex setups, we offer white-glove onboarding.
+                    Your system is live in 7-14 days. We build everything &mdash; lead-source integrations, NEPQ workflows, your AI training &mdash; and you show up to the launch call. Complex multi-agent setups get white-glove onboarding.
                 </div>
             </div>
 
@@ -2127,7 +1926,7 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    Plans start at $497/month for solo agents (Basic), $695/month for growing agents and teams (Pro), and $995/month for brokerages and teams (Elite). There is a one-time $4,995 setup fee that covers full system configuration, AI training, integrations, and personalized onboarding. We offer a 90-day money-back guarantee on the setup fee. <a href="/pricing.html" style="color:var(--orange);">See full pricing details</a>.
+                    Plans start at $497/month for solo agents (Basic), $695/month for growing agents and teams (Pro), and $995/month for brokerages and teams (Elite). There is a one-time $999 setup fee that covers full system configuration, AI training, integrations, and personalized onboarding. We offer a 90-day money-back guarantee on the setup fee. <a href="/pricing.html" style="color:var(--orange);">See full pricing details</a>.
                 </div>
             </div>
 
@@ -2137,7 +1936,7 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    Yes — these are two of our strongest features. The FSBO automation module integrates with Espresso Agent for daily FSBO data import, then runs power dialer calls, voicemail drops, and NEPQ SMS sequences automatically. The expired listing module does the same for expired listings, starting outreach the morning a listing expires. <a href="/fsbo-automation.html" style="color:var(--orange);">Learn about FSBO automation</a> or <a href="/expired-listing-automation.html" style="color:var(--orange);">expired listing automation</a>.
+                    Yes — these are two of our strongest features. The FSBO module runs NEPQ-scripted SMS and email sequences automatically, and the expired listing module starts outreach the morning a listing expires. Power dialer campaigns and voicemail drops are rolling out; FSBO data imports (including Espresso Agent lists) get set up during your build. <a href="/fsbo-automation.html" style="color:var(--orange);">Learn about FSBO automation</a> or <a href="/expired-listing-automation.html" style="color:var(--orange);">expired listing automation</a>.
                 </div>
             </div>
         </div>
@@ -2166,7 +1965,7 @@
                 <input type="hidden" name="_subject" value="New AI Sales Pipeline Demo Request">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://aisalespipeline.com/?submitted=true">
+                <input type="hidden" name="_next" value="https://aisalespipeline.com/thanks.html">
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                     <div>
@@ -2210,6 +2009,7 @@
                 </button>
                 
                 <p style="text-align:center; color:#555; font-size:0.85rem; margin-top:8px;">No pressure. No obligation. Just a conversation about your business.</p>
+                <p style="text-align:center; color:#555; font-size:0.78rem; margin-top:2px;">By submitting, you agree that we may contact you about your demo by phone, text, or email. Reply STOP to any text to opt out. See our <a href="/privacy.html" style="color:#777;">privacy policy</a>.</p>
             </form>
         </div>
     </section>
@@ -2269,7 +2069,7 @@
 <!-- Founder backlink section -->
 <div style="background: #050505; padding: 28px 40px; border-top: 1px solid rgba(255,107,53,0.15); text-align: center; font-size: 0.9rem; color: rgba(240,240,240,0.65);">
     <p style="margin: 0; line-height: 1.8; max-width: 900px; margin-left: auto; margin-right: auto;">
-        Built and operated by <strong style="color: #ff6b35;">Jorge Ramirez</strong>, a 15-year licensed New Jersey real estate agent and founder of
+        Built and operated by <strong style="color: #ff6b35;">Jorge Ramirez</strong>, a licensed New Jersey real estate agent since 2017 and founder of
         <a href="https://www.thejorgeramirezgroup.com" rel="noopener" style="color: #ff6b35; text-decoration: underline; font-weight: 600;">The Jorge Ramirez Group</a>
         at Keller Williams Premier Properties. Specializing in
         <a href="https://www.thejorgeramirezgroup.com" rel="noopener" style="color: rgba(240,240,240,0.7); text-decoration: underline;">luxury real estate in Summit, Westfield, Short Hills, and surrounding Union, Essex, Morris, Hudson, and Middlesex counties</a>.
@@ -2288,6 +2088,7 @@
     <li><a href="https://donotcall.gov/" rel="noopener noreferrer nofollow" target="_blank" style="color:#ff9558;">National Do Not Call Registry</a> — outreach compliance</li>
   </ul>
 </section>
+<p class="site-links" style="margin-top:14px;font-size:0.88rem;line-height:2;">Explore: <a href="/">Home</a> &middot; <a href="/features.html">Features</a> &middot; <a href="/industries/">Industries</a> &middot; <a href="/ai-persona/">AI Personas</a> &middot; <a href="/compare/">Compare CRMs</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/ai-sales-pipeline-explained.html">Complete Guide</a> &middot; <a href="/simulation.html">Live Demo</a> &middot; <a href="/pricing.html">Pricing</a> &middot; <a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/es/">Espa&ntilde;ol</a></p>
 </footer>
 
     <script>
@@ -2435,19 +2236,13 @@
             });
         });
 
-        // ============ RESPONSIVE MENU TOGGLE ============
-        // Mobile menu implementation (can be expanded)
-        const handleMobileMenu = () => {
-            const navLinks = document.querySelector('.nav-links');
-            if (window.innerWidth <= 768) {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-            }
-        };
-
-        window.addEventListener('resize', handleMobileMenu);
-        handleMobileMenu();
+        // ============ RESPONSIVE MENU ============
+        // Close the mobile menu after a link is tapped; CSS handles show/hide.
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            a.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('open');
+            });
+        });
 
         // ============ LAZY LOAD IMAGES ============
         if ('IntersectionObserver' in window) {

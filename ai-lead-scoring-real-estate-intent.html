@@ -125,7 +125,7 @@
               "name": "How is AI lead scoring different from a CRM lead score?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A traditional CRM lead score is usually a manually configured formula — points for opening an email, points for clicking a link, points for answering a form. It's static and rule-based. AI lead scoring uses machine learning models trained on actual outcomes (did the lead close?) across thousands of prior leads. The AI model discovers non-obvious correlations — for example, that Tuesday evening website visits correlate 3x higher with sell-intent than Saturday morning visits — that a human rule designer would never hand-code."
+                "text": "A traditional CRM lead score is usually a manually configured formula — points for opening an email, points for clicking a link, points for answering a form. It's static and rule-based. AI lead scoring uses machine learning models trained on actual outcomes (did the lead close?) across thousands of prior leads. The AI model discovers non-obvious correlations — for example, that Tuesday evening website visits might correlate far more strongly with sell-intent than Saturday morning visits — that a human rule designer would never hand-code."
               }
             },
             {
@@ -234,7 +234,7 @@
     <article id="main">
 
       <h2>The short answer</h2>
-      <p><strong>AI lead scoring for real estate</strong> combines three data layers — public records, behavioral tracking, and demographic context — to assign each homeowner a probability score (typically 0-100) indicating how likely they are to list their home within 30, 60, or 90 days. Agents then focus outreach on the top decile, where conversion rates run 2-3x higher than blind list-working.</p>
+      <p><strong>AI lead scoring for real estate</strong> combines three data layers — public records, behavioral tracking, and demographic context — to assign each homeowner a probability score (typically 0-100) indicating how likely they are to list their home within 30, 60, or 90 days. Agents then focus outreach on the top decile, where conversion rates run far higher than blind list-working.</p>
 
       <div class="callout">
         <p><strong>What it actually does</strong> — narrows a 10,000-homeowner list down to the 300-500 most likely to list soon, so an agent's limited outreach time goes where it converts.</p>
@@ -279,11 +279,11 @@
 
       <h2>How the AI model combines signals</h2>
       <p>Modern AI lead scoring uses a <strong>gradient-boosted decision tree</strong> or <strong>neural network</strong> model trained on historical data — thousands of homeowners where we know the outcome (did they list? when?) paired with the signals they exhibited in the preceding months.</p>
-      <p>The model learns non-obvious correlations that a human rule designer would never hand-code. For example, in our training data:</p>
+      <p>The model learns non-obvious correlations that a human rule designer would never hand-code. Published work on intent models has surfaced patterns like these (illustrative):</p>
       <ul>
-        <li>Homeowners who visit the valuation tool twice in 14 days list within 90 days <strong>4.2x more often</strong> than those who visit once</li>
-        <li>Homeowners with 9+ years tenure AND a divorce filing in the past 18 months list within 90 days <strong>11x more often</strong> than the baseline</li>
-        <li>Tuesday-evening website visits (7-10pm) correlate <strong>3x higher</strong> with sell-intent than Saturday morning — hypothesis: Tuesday is when financial decisions get made after the weekend's emotional conversations</li>
+        <li>Homeowners who visit a valuation tool twice in 14 days listing far more often than those who visit once</li>
+        <li>Long-tenure homeowners with a recent life event (e.g., divorce filing) listing at a multiple of the baseline rate</li>
+        <li>Tuesday-evening website visits (7-10pm) correlating more strongly with sell-intent than Saturday morning (illustrative) — hypothesis: Tuesday is when financial decisions get made after the weekend's emotional conversations</li>
       </ul>
       <p>None of these rules would be written by hand. The AI finds them by analyzing millions of signal-outcome pairs.</p>
 
@@ -370,7 +370,7 @@
       </div>
       <div class="faq">
         <h3>Can I build my own AI lead scoring model?</h3>
-        <p>Possible but hard. You need at least 1,000 historical closed-lead records (with both positive and negative outcomes), the data-science skill to train a model, and the infrastructure to run it in production. For most agents, using a pre-built model (like the one baked into AI Sales Pipeline, which is trained on ~50,000 NJ transactions) is 10x more cost-effective than custom-building.</p>
+        <p>Possible but hard. You need at least 1,000 historical closed-lead records (with both positive and negative outcomes), the data-science skill to train a model, and the infrastructure to run it in production. For most agents, using a pre-built model (like the one baked into AI Sales Pipeline) is 10x more cost-effective than custom-building.</p>
       </div>
       <div class="faq">
         <h3>Is AI lead scoring ethical?</h3>
@@ -409,6 +409,7 @@
       <p>908-230-7844 · <a href="mailto:jorgeramirez76@gmail.com">jorgeramirez76@gmail.com</a></p>
       <p><a href="/">Home</a> · <a href="/pricing.html">Pricing</a> · <a href="/features.html">Features</a> · <a href="/comparison.html">Compare</a> · <a href="/simulation.html">Demo</a></p>
       <p>Website by <a href="https://clickmingo.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">ClickMingo</a></p>
-    </footer>
+    <p class="site-links" style="margin-top:14px;font-size:0.88rem;line-height:2;">Explore: <a href="/">Home</a> &middot; <a href="/features.html">Features</a> &middot; <a href="/industries/">Industries</a> &middot; <a href="/ai-persona/">AI Personas</a> &middot; <a href="/compare/">Compare CRMs</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/ai-sales-pipeline-explained.html">Complete Guide</a> &middot; <a href="/simulation.html">Live Demo</a> &middot; <a href="/pricing.html">Pricing</a> &middot; <a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/es/">Espa&ntilde;ol</a></p>
+</footer>
 </body>
 </html>
