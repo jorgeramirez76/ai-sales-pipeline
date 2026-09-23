@@ -5,7 +5,7 @@
   <!-- Homepage with hreflang annotations -->
   <url>
     <loc>https://aisalespipeline.com/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://aisalespipeline.com/"/>
@@ -17,7 +17,7 @@
   <!-- Spanish homepage with hreflang annotations -->
   <url>
     <loc>https://aisalespipeline.com/es/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://aisalespipeline.com/"/>
@@ -28,7 +28,7 @@
 
   <url>
     <loc>https://aisalespipeline.com/pricing.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -52,13 +52,13 @@
   </url>
   <url>
     <loc>https://aisalespipeline.com/ai-sales-tools-comparison.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://aisalespipeline.com/features.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -112,7 +112,7 @@
   </url>
   <url>
     <loc>https://aisalespipeline.com/features/ai-clone-video-real-estate.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -196,13 +196,13 @@
   </url>
   <url>
     <loc>https://aisalespipeline.com/blog/real-estate-automation-guide.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aisalespipeline.com/blog/real-estate-crm-for-solo-agents.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
