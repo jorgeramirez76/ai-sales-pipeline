@@ -1,0 +1,17 @@
+name = "aisalespipeline-demo"
+main = "worker.mjs"
+compatibility_date = "2026-10-06"
+workers_dev = true
+
+# Configure MAIL_FROM (verified sender), MAIL_TO, TURNSTILE_SECRET_KEY and
+# RESEND_API_KEY with `wrangler secret put`; no credentials belong in this repo.
+# Confirm these namespace IDs are unused in the destination Cloudflare account.
+[[ratelimits]]
+name = "IP_LIMITER"
+namespace_id = "2026100601"
+simple = { limit = 20, period = 60 }
+
+[[ratelimits]]
+name = "EMAIL_LIMITER"
+namespace_id = "2026100602"
+simple = { limit = 3, period = 60 }

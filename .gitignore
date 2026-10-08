@@ -2,3 +2,11 @@ SEO_AUDIT_*.md
 *.bak
 *.bak.*
 fix_seo_aeo.py
+
+# Demo API local credentials/build output
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+.wrangler/
+node_modules/
