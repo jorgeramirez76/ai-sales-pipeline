@@ -65,7 +65,7 @@ A: GoHighLevel is a generic business automation tool built for any industry. AI 
 A: HubSpot is an enterprise CRM designed for B2B sales teams. It is not built for real estate workflows. AI Sales Pipeline is purpose-built for real estate agents with features HubSpot does not offer: AI voice calling, AI clone video, NEPQ-based scripts, FSBO automation, and 60-second lead response times.
 
 **Q: Does AI Sales Pipeline replace an Inside Sales Agent (ISA)?**
-A: Yes. A human ISA typically costs $50,000-$67,500 per year plus benefits, takes weeks to train, and works only during business hours. AI Sales Pipeline costs $8,340-$11,940 per year, requires no training, and runs 24/7 without sick days or turnover. It performs the same lead qualification and follow-up tasks an ISA would.
+A: Yes. A human ISA typically costs $50,000-$67,500 per year plus benefits, takes weeks to train, and works only during business hours. AI Sales Pipeline plans cost $4,764-$11,940 per year ($397-$995/month) plus a one-time setup fee of $2,499 for Keller Williams (KW) agents or $4,000 for non-KW agents, require no training, and run 24/7 without sick days or turnover. It performs the same lead qualification and follow-up tasks an ISA would.
 
 **Q: Does AI Sales Pipeline work for FSBO leads?**
 A: Yes. AI Sales Pipeline has a dedicated FSBO module that runs NEPQ-scripted SMS and email sequences automatically; FSBO list imports (including Espresso Agent data) are configured during your build, and power dialer calls plus voicemail drops are rolling out. The module is designed to multiply FSBO appointment volume without manual dialing.

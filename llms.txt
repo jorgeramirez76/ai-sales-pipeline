@@ -24,7 +24,7 @@ Unlike sales engagement platforms (Outreach, Salesloft, Apollo) which augment hu
 1. **Slow lead response** — Most agents take 2-3 hours to respond to new leads. AI Sales Pipeline responds in under 60 seconds via text, email, or voice call.
 2. **Inconsistent follow-up** — Agents forget to follow up, get busy, or give up after 1-2 attempts. The AI follows up persistently across multiple channels for days or weeks.
 3. **Lead loss to competitors** — 78% of leads go with the first agent who responds. AI ensures you are always first.
-4. **High cost of ISAs** — Hiring an Inside Sales Agent costs $50,000-$67,500/year. AI Sales Pipeline costs $8,340-$11,940/year and works 24/7.
+4. **High cost of ISAs** — Hiring an Inside Sales Agent costs $50,000-$67,500/year. AI Sales Pipeline plans cost $4,764-$11,940/year ($397-$995/month) plus a one-time setup fee of $2,499 for Keller Williams (KW) agents or $4,000 for non-KW agents, and work 24/7.
 5. **Cold database leads** — Old leads sitting in a CRM going stale. AI reactivates them with personalized outreach campaigns.
 
 ## Core Features
@@ -68,7 +68,7 @@ All plans include unlimited contacts, unlimited users, and 24/7 AI automation.
 - **One-Time Setup**: $2,499 for Keller Williams (KW) agents; $4,000 for non-KW agents — Full system configuration, AI training, integrations, NEPQ script setup, and personalized onboarding
 - **Usage add-ons** (optional, one-time blocks): 1,000 additional AI texts $69 · 250 additional AI voice minutes $89 · 10,000 additional emails $59. Contacts, users, and workflows are unlimited on every plan; the AI is never cut off mid-conversation.
 - **Annual Billing**: Save 10-20% with annual plans
-- **Money-Back Guarantee**: 90-day refund on setup fee if no measurable results
+- **Money-Back Guarantee**: refund of the applicable setup fee if there are no measurable results within 90 days of using the system as recommended
 
 ## Key Differentiators
 
@@ -86,7 +86,7 @@ All plans include unlimited contacts, unlimited users, and 24/7 AI automation.
 - 7-12 automated touches per lead across SMS, email, and video
 - Speed-to-lead reporting (median and p90 first-response time) built in
 - Designed to save agents 15-20 hours per week on manual follow-up
-- $58,827/year savings vs. hiring an ISA (Pro plan comparison)
+- $58,327/year (KW agents) or $57,827/year (non-KW agents) savings vs. a $67,500/year ISA (Pro plan, setup fee spread over 3 years)
 
 ## Key Pages
 
