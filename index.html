@@ -2214,21 +2214,6 @@
             });
         });
 
-        // ============ INFOGRAPHIC ANIMATION OBSERVER ============
-        const infographicContainer = document.querySelector('.infographic-container');
-        const infographicObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.dataset.animated) {
-                    entry.target.dataset.animated = 'true';
-                    entry.target.style.animation = 'unfold 1s ease-out forwards';
-                }
-            });
-        }, { threshold: 0.3 });
-
-        if (infographicContainer) {
-            infographicObserver.observe(infographicContainer);
-        }
-
         // ============ FEATURE CARD CLICK HANDLERS ============
         document.querySelectorAll('.feature-card').forEach(card => {
             const link = card.querySelector('a[href^="/features/"]');
@@ -2306,20 +2291,6 @@
         window.addEventListener('load', () => {
             document.body.style.opacity = '1';
         });
-    
-        // Infographic unfold animation
-        const infographicImg = document.getElementById('infographic-img');
-        if (infographicImg) {
-            const infObs = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => entry.target.classList.add('visible'), 200);
-                        infObs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            infObs.observe(infographicImg);
-        }
     
     </script>
 </body>

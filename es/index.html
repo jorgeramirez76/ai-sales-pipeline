@@ -989,9 +989,9 @@
             <p style="color: rgba(255, 255, 255, 0.55); font-size: 1.1rem; margin-bottom: 60px;">Del primer contacto al cierre de venta — totalmente automatizado, totalmente personalizado.</p>
             <div style="max-width: 1100px; margin: 0 auto;">
                 <picture>
-                <source type="image/webp" srcset="images/infographic-new.webp">
-                <source type="image/png" srcset="images/infographic-new.png">
-                <img src="images/infographic-new.png"
+                <source type="image/webp" srcset="/images/infographic-new.webp">
+                <source type="image/png" srcset="/images/infographic-new.png">
+                <img src="/images/infographic-new.png"
                      alt="Diagrama del sistema AI Sales Pipeline mostrando el flujo completo de automatización de seguimiento de leads: captura de leads de Zillow, Facebook y Google, puntuación con IA, seguimiento automatizado por SMS, correo y llamadas, video clon con IA, y remarketing en Facebook"
                      id="infographic-main"
                      style="width: 100%; height: auto; border-radius: 16px; transform: scale(0.2); opacity: 0; transition: transform 1.0s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.6s ease; box-shadow: 0 0 0 rgba(255,107,53,0);" width="1400" height="363" loading="lazy" decoding="async">
@@ -1464,21 +1464,6 @@
             });
         });
 
-        // ============ INFOGRAPHIC ANIMATION OBSERVER ============
-        const infographicContainer = document.querySelector('.infographic-container');
-        const infographicObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.dataset.animated) {
-                    entry.target.dataset.animated = 'true';
-                    entry.target.style.animation = 'unfold 1s ease-out forwards';
-                }
-            });
-        }, { threshold: 0.3 });
-
-        if (infographicContainer) {
-            infographicObserver.observe(infographicContainer);
-        }
-
         // ============ FEATURE CARD CLICK HANDLERS ============
         document.querySelectorAll('.feature-card').forEach(card => {
             const link = card.querySelector('a[href^="/features/"]');
@@ -1552,20 +1537,6 @@
             document.body.style.opacity = '1';
         });
     
-        // Infographic unfold animation
-        const infographicImg = document.getElementById('infographic-img');
-        if (infographicImg) {
-            const infObs = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => entry.target.classList.add('visible'), 200);
-                        infObs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            infObs.observe(infographicImg);
-        }
-    
     </script>
 </div>
 
@@ -1638,16 +1609,6 @@
 
 <!-- ============ SCRIPTS ============ -->
 <script>
-// Navigation scroll effect
-var navbarEl2 = document.getElementById('navbarEl2');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbarEl2.classList.add('scrolled');
-    } else {
-        navbarEl2.classList.remove('scrolled');
-    }
-});
-
 // Scroll reveal (IntersectionObserver)
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
