@@ -71,7 +71,7 @@ A: Yes. A human ISA typically costs $50,000-$67,500 per year plus benefits, take
 A: Yes. AI Sales Pipeline has a dedicated FSBO module that runs NEPQ-scripted SMS and email sequences automatically; FSBO list imports (including Espresso Agent data) are configured during your build, and power dialer calls plus voicemail drops are rolling out. The module is designed to multiply FSBO appointment volume without manual dialing.
 
 **Q: Does AI Sales Pipeline work for expired listings?**
-A: Yes. The expired listing module starts multi-channel outreach the morning a listing expires. It runs power dialer calls, sends NEPQ SMS sequences, and triggers email campaigns automatically — putting agents in front of expired listing owners before competitors.
+A: Yes. The expired listing module starts multi-channel outreach the morning a listing expires. It sends NEPQ SMS sequences and triggers email campaigns automatically (power dialer calls are rolling out) — putting agents in front of expired listing owners before competitors.
 
 **Q: Is AI Sales Pipeline TCPA compliant?**
 A: Yes. The system includes opt-out mechanisms, clear disclosures about automated outreach, and compliance tools to ensure adherence to FTC, TCPA, and GDPR requirements. All SMS messages include opt-out language, and the system honors stop requests immediately.
