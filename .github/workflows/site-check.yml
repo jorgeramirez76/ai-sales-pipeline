@@ -1,0 +1,38 @@
+# Runs before anything reaches the live site. GitHub Pages publishes main
+# directly, so this only blocks a bad change once main requires this check
+# (Settings > Branches > branch protection, "Require status checks to pass").
+name: Site check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Test the site checker
+        run: python -m unittest discover -s _tools
+
+      - name: Check links, structured data, retired prices and demo forms
+        run: python _tools/check_site.py
+
+      - uses: actions/setup-node@v4
+        if: hashFiles('tests/*.test.mjs') != ''
+        with:
+          node-version: '22'
+
+      - name: Demo endpoint tests
+        if: hashFiles('tests/*.test.mjs') != ''
+        run: node --test tests/*.test.mjs
