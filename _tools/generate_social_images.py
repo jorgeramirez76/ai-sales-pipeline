@@ -9,7 +9,7 @@ link was getting a broken image preview.
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
 
-OUT = Path('/Users/teddy/ai-sales-pipeline/images')
+OUT = Path(__file__).resolve().parent.parent / 'images'
 
 # Brand colors (from index.html CSS)
 DARK_BG = (10, 10, 10)

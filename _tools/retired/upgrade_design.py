@@ -13,7 +13,16 @@ animations).
 import os
 import re
 import shutil
+import sys
 import html as html_mod
+
+# RETIRED - DO NOT RUN. Kept only for history. Running it would rewrite every
+# page except pricing.html: it drops the GA4 tag (it keeps only <meta>, some
+# <link> and JSON-LD tags from each <head>), re-adds the Tailwind Play CDN that
+# the August truth pass removed, and replaces every footer with an old template
+# that has no Privacy/Terms links or ClickMingo / Jorge Ramirez Group credit.
+if __name__ == "__main__":
+    sys.exit("upgrade_design.py is retired and must not be run; see the comment at the top of the file.")
 
 BASE_DIR = "/Users/teddy/ai-sales-pipeline"
 PRICING_FILE = os.path.join(BASE_DIR, "pricing.html")
