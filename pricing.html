@@ -1233,8 +1233,14 @@
         }
 
         .faq-item.active .faq-answer {
-            max-height: 300px;
+            /* No fixed cap: long answers (setup fee, cost) were cut off on phones. */
+            max-height: none;
             padding: 1.5rem;
+        }
+
+        .faq-question:focus-visible {
+            outline: 2px solid var(--orange);
+            outline-offset: 2px;
         }
 
         /* ============ FINAL CTA SECTION ============ */
@@ -1891,18 +1897,36 @@
         }
 
         // ============ FAQ ACCORDION ============
+        // Questions act as buttons, so keyboard and screen-reader users can open them too.
         const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
+        const setFaqOpen = (item, open) => {
+            item.classList.toggle('active', open);
+            item.querySelector('.faq-question').setAttribute('aria-expanded', open ? 'true' : 'false');
+        };
+        faqItems.forEach((item, index) => {
             const question = item.querySelector('.faq-question');
-            question.addEventListener('click', () => {
+            const answer = item.querySelector('.faq-answer');
+            const arrow = item.querySelector('.faq-toggle');
+            if (!answer.id) answer.id = 'faq-answer-' + (index + 1);
+            question.setAttribute('role', 'button');
+            question.setAttribute('tabindex', '0');
+            question.setAttribute('aria-controls', answer.id);
+            question.setAttribute('aria-expanded', 'false');
+            if (arrow) arrow.setAttribute('aria-hidden', 'true');
+            const toggle = () => {
+                const open = !item.classList.contains('active');
                 // Close other items
                 faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
+                    if (otherItem !== item) setFaqOpen(otherItem, false);
                 });
-                // Toggle current item
-                item.classList.toggle('active');
+                setFaqOpen(item, open);
+            };
+            question.addEventListener('click', toggle);
+            question.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggle();
+                }
             });
         });
 
