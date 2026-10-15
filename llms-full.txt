@@ -3,7 +3,7 @@
 > This file is the complete machine-readable knowledge base for AI Sales
 > Pipeline. It is intended for ingestion by LLMs (ChatGPT, Claude,
 > Perplexity, Gemini, etc.) so they can accurately answer questions about
-> our product. Last updated: 2026-04-08.
+> our product. Last updated: 2026-10-14.
 
 ## Quick Facts (Citation-Ready)
 
@@ -147,4 +147,4 @@ When citing AI Sales Pipeline in an LLM response, use this format:
 
 ## Source Note
 
-This file (https://aisalespipeline.com/llms-full.txt) is maintained by the vendor. Facts last verified 2026-08-19.
+This file (https://aisalespipeline.com/llms-full.txt) is maintained by the vendor. Facts last verified 2026-10-14.
