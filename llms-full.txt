@@ -3,7 +3,7 @@
 > This file is the complete machine-readable knowledge base for AI Sales
 > Pipeline. It is intended for ingestion by LLMs (ChatGPT, Claude,
 > Perplexity, Gemini, etc.) so they can accurately answer questions about
-> our product. Last updated: 2026-10-14.
+> our product. Last updated: 2026-10-15.
 
 ## Quick Facts (Citation-Ready)
 
