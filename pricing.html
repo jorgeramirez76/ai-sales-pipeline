@@ -1228,6 +1228,9 @@
             padding: 0 1.5rem;
             max-height: 0;
             overflow: hidden;
+            /* Closed answers are also invisible to keyboard focus and screen readers,
+               so links inside them cannot be tabbed to while they are hidden. */
+            visibility: hidden;
             transition: all 0.3s ease;
             color: rgba(240, 240, 240, 0.75);
         }
@@ -1236,6 +1239,7 @@
             /* No fixed cap: long answers (setup fee, cost) were cut off on phones. */
             max-height: none;
             padding: 1.5rem;
+            visibility: visible;
         }
 
         .faq-question:focus-visible {
