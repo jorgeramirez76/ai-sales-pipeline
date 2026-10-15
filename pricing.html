@@ -873,38 +873,6 @@
             background-clip: text;
         }
 
-        .infographic-container {
-            max-width: 900px;
-            margin: 0 auto;
-            transform: scaleY(0);
-            transform-origin: top;
-            animation: unfold 1s ease-out forwards;
-        }
-
-        @keyframes unfold {
-            from {
-                transform: scaleY(0);
-                opacity: 0;
-            }
-            to {
-                transform: scaleY(1);
-                opacity: 1;
-            }
-        }
-
-        .infographic-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(255, 107, 53, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .infographic-container img:hover {
-            transform: scale(1.02);
-            box-shadow: 0 30px 80px rgba(255, 107, 53, 0.3);
-        }
-
         /* ============ FEATURES SECTION ============ */
         .features-section {
             padding: 5rem 2rem;
@@ -1948,21 +1916,6 @@
             });
         });
 
-        // ============ INFOGRAPHIC ANIMATION OBSERVER ============
-        const infographicContainer = document.querySelector('.infographic-container');
-        const infographicObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.dataset.animated) {
-                    entry.target.dataset.animated = 'true';
-                    entry.target.style.animation = 'unfold 1s ease-out forwards';
-                }
-            });
-        }, { threshold: 0.3 });
-
-        if (infographicContainer) {
-            infographicObserver.observe(infographicContainer);
-        }
-
         // ============ FEATURE CARD CLICK HANDLERS ============
         document.querySelectorAll('.feature-card').forEach(card => {
             const link = card.querySelector('a[href^="/features/"]');
@@ -2032,20 +1985,6 @@
         window.addEventListener('load', () => {
             document.body.style.opacity = '1';
         });
-    
-        // Infographic unfold animation
-        const infographicImg = document.getElementById('infographic-img');
-        if (infographicImg) {
-            const infObs = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => entry.target.classList.add('visible'), 200);
-                        infObs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            infObs.observe(infographicImg);
-        }
     
     </script>
 </body>
