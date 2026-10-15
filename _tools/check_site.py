@@ -9,8 +9,11 @@ What it checks (each one has bitten this site before):
      <loc> and every manifest icon must point at a file that exists. Same-site
      links that carry a #fragment must land on an element with that id.
   2. Structured data: every <script type="application/ld+json"> block must
-     parse, and every schema.org Offer price must be a current plan price.
-  3. Retired facts: old prices and old guarantee wording must not reappear.
+     parse, every schema.org Offer, AggregateOffer and price specification
+     price must be a current plan price, and FAQPage question names must not
+     carry the accordion's toggle arrow.
+  3. Retired facts: old prices and old guarantee wording must not reappear in
+     any published page, text, data, Markdown or script file.
      When a price changes, add the OLD value to RETIRED below in the same PR.
   4. Demo forms: the English and Spanish demo forms must send the same field
      names and lead-volume options. When the demo Worker (_demo-api/worker.mjs)
@@ -37,7 +40,7 @@ PLAN_PRICES = {"397", "695", "995"}
 OFFER_EXCEPTIONS = {("simulation.html", "WebApplication", "0")}
 
 # Retired values. Each entry is (regex, why). Matching is case-insensitive and
-# runs over every published .html/.txt/.json/.xml file.
+# runs over every published file with a RETIRED_SUFFIXES extension.
 RETIRED = [
     (r"\$999(?![\d,])", "old $999 setup fee (now $2,499 KW / $4,000 non-KW)"),
     (r"\$497(?![\d,])", "old $497 Basic price (now $397)"),
@@ -46,9 +49,18 @@ RETIRED = [
     (r"\$8,340-\$11,940", "old annual range that left out Basic and the setup fee"),
     (r"\$495-", "plan range that never existed (plans are $397/$695/$995)"),
     (r"\$1,995", "plan price that never existed (plans are $397/$695/$995)"),
+    (r"12[-\u2013]18%", "old ISA cost ratio from the $999 setup fee (Pro and Elite are now roughly 14-20%)"),
+    (r"\$6,000-\$?12,000", "old annual range (plans are $4,764-$11,940 a year plus the setup fee)"),
     (r"free trial available", "there is no free trial (see the pricing FAQ)"),
     (r"refund[^<.]{0,80}\.\s*no questions", "the guarantee is conditional (terms.html), not 'no questions asked'"),
 ]
+RETIRED_SUFFIXES = (".html", ".txt", ".json", ".xml", ".md", ".js")
+
+# schema.org types that carry a price, and the properties that hold it.
+PRICED_TYPES = {"Offer", "AggregateOffer"}
+PRICE_KEYS = ("price", "lowPrice", "highPrice", "minPrice", "maxPrice")
+# Accordion toggle glyphs that must not leak into FAQPage question names.
+TOGGLE_GLYPHS = "\u25bc\u25b2\u25be\u25b4\u25b6\u25ba"
 
 # FormSubmit settings that the demo-protection activation script strips out.
 FORM_CONFIG_FIELDS = {"_subject", "_template", "_next", "_captcha", "_autoresponse"}
@@ -164,19 +176,54 @@ def resolve(root: Path, page: Path, url: str) -> tuple[Path | None, str]:
     return target, fragment
 
 
+def is_priced(types) -> bool:
+    return any(t in PRICED_TYPES or str(t).endswith("PriceSpecification") for t in types)
+
+
 def offers(node, holder_type=None):
-    """Yield (holder @type, offer dict) for every Offer in a JSON-LD tree."""
+    """Yield (holder @type, priced node) for every Offer, AggregateOffer and
+    price specification in a JSON-LD tree. The holder is the nearest enclosing
+    type that is not itself priced (for example SoftwareApplication), so a
+    price specification inside an Offer reports the same holder as its Offer."""
     if isinstance(node, dict):
         t = node.get("@type")
         types = t if isinstance(t, list) else [t]
-        if "Offer" in types:
+        priced = is_priced(types)
+        if priced:
             yield holder_type, node
-        own = t if isinstance(t, str) else holder_type
+        own = holder_type if priced or not isinstance(t, str) else t
         for value in node.values():
             yield from offers(value, own)
     elif isinstance(node, list):
         for value in node:
             yield from offers(value, holder_type)
+
+
+def prices(node: dict) -> list[str]:
+    """Every price value on a priced node. An Offer must have a price, so a
+    missing one is returned as '' and reported."""
+    found = [str(node[k]).strip() for k in PRICE_KEYS if k in node]
+    types = node.get("@type")
+    types = types if isinstance(types, list) else [types]
+    if not found and "Offer" in types:
+        found = [""]
+    return found
+
+
+def faq_questions(node):
+    """Yield the name of every Question inside a FAQPage in a JSON-LD tree."""
+    if isinstance(node, dict):
+        t = node.get("@type")
+        types = t if isinstance(t, list) else [t]
+        if "FAQPage" in types:
+            for item in node.get("mainEntity") or []:
+                if isinstance(item, dict):
+                    yield str(item.get("name", ""))
+        for value in node.values():
+            yield from faq_questions(value)
+    elif isinstance(node, list):
+        for value in node:
+            yield from faq_questions(value)
 
 
 def worker_contract(root: Path):
@@ -189,8 +236,12 @@ def worker_contract(root: Path):
     volumes = re.search(r"if \(!\[([^\]]*)\]\.includes\(lead\.leads_per_month\)", source)
     if not fields:
         return "could not find `const FIELDS = new Set([...])` in _demo-api/worker.mjs"
+    if not volumes:
+        return ("could not find the leads_per_month allowlist "
+                "(`if (![...].includes(lead.leads_per_month)`) in _demo-api/worker.mjs; "
+                "update worker_contract() in _tools/check_site.py to match the Worker")
     allowed = set(re.findall(r"'([^']*)'", fields.group(1)))
-    allowed_volumes = set(re.findall(r"'([^']*)'", volumes.group(1))) if volumes else None
+    allowed_volumes = set(re.findall(r"'([^']*)'", volumes.group(1)))
     return allowed, allowed_volumes
 
 
@@ -260,16 +311,20 @@ def check(root: Path) -> list[str]:
                 problems.append(f"{rel(page)}:{line}: JSON-LD does not parse ({exc})")
                 continue
             for holder, offer in offers(data):
-                price = str(offer.get("price", "")).strip()
-                if price in PLAN_PRICES or (rel(page), holder, price) in OFFER_EXCEPTIONS:
-                    continue
-                problems.append(
-                    f"{rel(page)}:{line}: {holder} Offer price {price!r} is not a plan price ({', '.join(sorted(PLAN_PRICES))})"
-                )
+                kind = offer.get("@type")
+                for price in prices(offer):
+                    if price in PLAN_PRICES or (rel(page), holder, price) in OFFER_EXCEPTIONS:
+                        continue
+                    problems.append(
+                        f"{rel(page)}:{line}: {holder} {kind} price {price!r} is not a plan price ({', '.join(sorted(PLAN_PRICES))})"
+                    )
+            for name in faq_questions(data):
+                if any(glyph in name for glyph in TOGGLE_GLYPHS):
+                    problems.append(f"{rel(page)}:{line}: FAQPage question {name!r} contains a toggle arrow")
 
     # 3. Retired facts.
     patterns = [(re.compile(rx, re.IGNORECASE), why) for rx, why in RETIRED]
-    for path in published_files(root, (".html", ".txt", ".json", ".xml")):
+    for path in published_files(root, RETIRED_SUFFIXES):
         for number, text in enumerate(path.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
             for rx, why in patterns:
                 if rx.search(text):
@@ -307,10 +362,9 @@ def check(root: Path) -> list[str]:
                 extra = names[n] - allowed
                 if extra:
                     problems.append(f"{n}: fields {sorted(extra)} are not in the Worker FIELDS allowlist; it would reject every submission")
-                if allowed_volumes is not None:
-                    missing = {v for v in volumes[n] if v} - allowed_volumes
-                    if missing:
-                        problems.append(f"{n}: leads_per_month options {sorted(missing)} would be rejected by the Worker")
+                missing = {v for v in volumes[n] if v} - allowed_volumes
+                if missing:
+                    problems.append(f"{n}: leads_per_month options {sorted(missing)} would be rejected by the Worker")
     return problems
 
 

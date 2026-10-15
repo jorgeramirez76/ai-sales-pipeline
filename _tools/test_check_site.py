@@ -66,6 +66,27 @@ class CheckSiteTest(unittest.TestCase):
         self.assertEqual(len(problems), 1)
         self.assertIn("bad.html", problems[0])
 
+    def test_aggregate_offer_and_price_specification_are_checked(self):
+        agg = '<script type="application/ld+json">{"@type": "Product", "offers": {"@type": "AggregateOffer", "lowPrice": "%s", "highPrice": "%s"}}</script>'
+        spec = ('<script type="application/ld+json">{"@type": "SoftwareApplication", "offers": {"@type": "Offer", "price": "397", '
+                '"priceSpecification": {"@type": "UnitPriceSpecification", "price": "%s"}}}</script>')
+        problems = self.site({
+            "good.html": page(head=agg % ("397", "995") + spec % "397"),
+            "bad-agg.html": page(head=agg % ("299", "995")),
+            "bad-spec.html": page(head=spec % "497"),
+        })
+        self.assertEqual(len(problems), 2)
+        self.assertTrue(any("bad-agg.html" in p and "'299'" in p for p in problems))
+        self.assertTrue(any("bad-spec.html" in p and "SoftwareApplication UnitPriceSpecification" in p for p in problems))
+
+    def test_faq_question_with_toggle_arrow_is_reported(self):
+        ld = ('<script type="application/ld+json">{"@type": "FAQPage", "mainEntity": ['
+              '{"@type": "Question", "name": "%s", "acceptedAnswer": {"@type": "Answer", "text": "A"}}]}</script>')
+        problems = self.site({"good.html": page(head=ld % "How much?"), "bad.html": page(head=ld % "How much? \u25bc")})
+        self.assertEqual(len(problems), 1)
+        self.assertIn("bad.html", problems[0])
+        self.assertIn("toggle arrow", problems[0])
+
     def test_simulation_free_web_app_is_allowed(self):
         ld = '<script type="application/ld+json">{"@type": "WebApplication", "offers": {"@type": "Offer", "price": "0"}}</script>'
         self.assertEqual(self.site({"simulation.html": page(head=ld)}), [])
@@ -81,6 +102,24 @@ class CheckSiteTest(unittest.TestCase):
             "llms.txt": "Pro costs $8,673/year.\nISA salary $67,500/year is fine.\n",
         })
         self.assertEqual(len(problems), 3)
+
+    def test_old_isa_ratio_and_annual_range_are_reported(self):
+        problems = self.site({
+            "a.html": page("<p>4.5x the coverage at 12-18% of the cost.</p>"),
+            "b.html": page("<p>Roughly $6,000-12,000 per year.</p><p>$6,000-$12,000 fully loaded.</p>"),
+        })
+        self.assertEqual(len(problems), 2)
+        self.assertEqual(self.site({"a.html": page("<p>Pro and Elite cost roughly 14-20% of an ISA.</p>")}), [])
+
+    def test_published_markdown_and_scripts_are_scanned(self):
+        problems = self.site({
+            "README.md": "The old $999 setup fee.\n",
+            "scripts/a.js": "const note = 'Free trial available';\n",
+            "_demo-api/README.md": "$999 is fine in an unpublished folder.\n",
+        })
+        self.assertEqual(len(problems), 2)
+        self.assertTrue(any(p.startswith("README.md:1:") for p in problems))
+        self.assertTrue(any(p.startswith("scripts/a.js:1:") for p in problems))
 
     def test_competitor_and_isa_figures_are_not_flagged(self):
         self.assertEqual(self.site({"a.html": page("<p>ISA: $67,500/year. GHL: $97/mo. A $9,999 tool.</p>")}), [])
@@ -99,6 +138,12 @@ class CheckSiteTest(unittest.TestCase):
         # Both forms offer "1-25", which this Worker would reject.
         self.assertEqual(len(problems), 2)
         self.assertTrue(all("would be rejected by the Worker" in p for p in problems))
+
+    def test_worker_without_a_readable_volume_allowlist_fails_closed(self):
+        worker = "const FIELDS = new Set(['first_name', 'email', 'leads_per_month', '_honey']);\n"
+        problems = self.site({"_demo-api/worker.mjs": worker})
+        self.assertEqual(len(problems), 1)
+        self.assertIn("leads_per_month allowlist", problems[0])
 
     def test_underscore_folders_are_not_checked(self):
         self.assertEqual(self.site({"_tools/x.html": page('<img src="nope.png"> $999')}), [])
